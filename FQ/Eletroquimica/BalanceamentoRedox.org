@@ -1,0 +1,234 @@
+* Balanceamento Redox
+
+
+** Método de Balanceamento Redox
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+- 1º Passo: ::  Atribuir Nox de todos os elementos.
+
+#+begin_export latex
+\begin{reactions*}
+ "\OX{Ox1,\ox*{0,P}}" \; \; + \; \; "\OX{Red1,\ox*{+1,H}\ox*{+5,N}\ox*{-2,O3}}" \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}" -> \; "\OX{ox2,\ox*{+1,H3}\ox*{+5,P}\ox*{-2,O3}}" \; \;  +  \; \; "\OX{Red2,\ox*{+2,N}\ox*{-2,O}}"
+ \end{reactions*}
+#+end_export
+
+- 2º Passo: ::  Identificar o elementos que oxida e sofre reduz (Nox que sofre variação)
+
+#+begin_export latex
+\begin{reactions*}
+ "\OX{Ox1,{\color{red}\ox*{0,P}}}" \; + "\OX{Red1,\ox*{+1,H}{\color{blue}\ox*{+5,N}}\ox*{-2,O3}}"  \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}"  ->  "\OX{ox2,\ox*{+1,H3}{\color{red}\ox*{+5,P}}\ox*{-2,O4}}" + "\OX{Red2,{\color{blue}\ox*{+2,N}}\ox*{-2,O}}"
+ \end{reactions*}
+ \vspace{0.2cm}
+#+end_export
+\framebreak
+
+ - 3º Passo: :: Calculemos agora as variações de Nox desses elementos, que chamaremos de (delta). Criamos então dois ramais; o de oxidação e o de redução.
+
+ #+begin_export latex
+\begin{center}
+\vspace{0.9cm}
+\ch{
+ "\OX{Ox1,{\color{red}\ox*{0,P}}}" \; + "\OX{Red1,H{\color{blue}\ox*{+5,N}}}" O3  \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}"  ->  H3 "\OX{ox2,{\color{red}\ox*{+5,P}}}" O4 + "\OX{Red2,{\color{blue}\ox*{+2,N}}O}"
+ }
+\redox(Ox1,ox2)[->,red]{\small Oxidação: $\Delta$E=5-0=5e$^-$}
+\redox(Red1,Red2)[->,blue][-1]{\small Redução: $\Delta$E=5-2=3e$^-$}
+\vspace{.5cm}
+\end{center}
+
+ #+end_export
+
+- 4º Passo: :: Escolha o lado, reagentes ou produtos, que apresenta o maior n° de átomos dos elementos que sofreram alteração no Nox para iniciar o balanceamento.
+
+#+begin_export latex
+\begin{center}
+\vspace{1.2cm}
+\ch{
+ "\OX{Ox1,{\color{red}\ox*{0,P}}}" \; + "\OX{Red1,H{\color{blue}\ox*{+5,N}}}" O3  \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}"  ->  H3 "\OX{ox2,{\color{red}\ox*{+5,P}}}" O4 + "\OX{Red2,{\color{blue}\ox*{+2,N}}O}"
+ }
+\redox(Ox1,ox2)[->,red]{\small Oxidação: $\Delta$E=5e$^- \times 1$ = 5}
+\redox(Red1,Red2)[->,blue][-1]{\small Redução: $\Delta$E=3e$^-\times 1$ = 3}
+\end{center}
+\vspace{1cm}
+#+end_export
+
+- 5º Passo: :: Como o total de elétrons *CEDIDOS* e  *RECEBIDOS* devem ser iguais, devemos inverter estas variações usando-as como coeficientes.
+
+  #+begin_export latex
+
+\begin{reaction*}    
+    "\begingroup\color{blue}" 3 "\endgroup" P \; \;  + \; \; "\begingroup\color{red}" 5 "\endgroup" HNO3 \; \;  + \; \;  H2O ->\;  H3PO4 \;\;  + \;\;  NO
+    \end{reaction*}
+  #+end_export
+
+- 6º Passo: :: Por fim  balanceamento por tentativa
+
+#+begin_export latex
+
+\begin{reaction*}    
+    "\begingroup\color{blue}" 3 "\endgroup" P \; \;  + \; \; "\begingroup\color{red}" 5 "\endgroup" HNO3 \; \;  + \; \; 2  H2O ->\; 3  H3PO4 \;\;  + \;\; 5 NO
+    \end{reaction*}
+#+end_export
+
+
+** Auto Oxirredução 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+- Encontraremos reações de oxirredução em o mesmo elemento sofre *Oxidação* e *Redução* ao mesmo tempo
+
+- Nox de todos os elementos 
+
+#+begin_export latex
+\begin{reactions*}
+ "\OX{Ox1,\ox*{0,C$\ell$2}}" \; \; + \; \; "\OX{Red1,\ox*{+1,Na}\ox*{-2,O}\ox*{+1,H}}" \; \; -> \; \; "\ox*{+1,Na}\ox*{-1,C$\ell$}"  \; \; + "\OX{ox2,\ox*{+1,Na}\ox*{+5,C$\ell$}\ox*{-2,O3}}" \; \;  +  \; \; "\OX{Red2,\ox*{+1,H2}\ox*{-2,O}}"
+ \end{reactions*}
+#+end_export
+
+- Identificar os elementos que oxidam e reduz ao mesmo tempo.
+
+#+begin_export latex  
+\begin{reactions*}
+ "{\color{blue}\OX{Red1,\ox*{0,C$\ell$2}}}" \; \; + \; \; "\ox*{+1,Na}\ox*{-2,O}\ox*{+1,H}" \; \; -> \; \; "\OX{Red,\ox*{+1,Na}{\color{blue}\ox*{-1,C$\ell$}}}"  \; \; + "\OX{ox2,\ox*{+1,Na}{\color{red}\ox*{+5,C$\ell$}}\ox*{-2,O3}}" \; \;  +  \; \; "\ox*{+1,H2}\ox*{-2,O}"
+ \end{reactions*}
+\framebreak
+#+end_export
+
+- Variação de Nox
+
+  #+begin_export latex
+\vspace{1cm}
+  \ch{
+ "{\color{blue}\OX{RED1,\ox*{0,C$\ell$2}}}" \; \; + \; \; "\ox*{+1,Na}\ox*{-2,O}\ox*{+1,H}" \; \; -> \; \; "\OX{RED2,\ox*{+1,Na}{\color{blue}\ox*{-1,C$\ell$}}}"  \; \; + "\OX{OX1,\ox*{+1,Na}{\color{red}\ox*{+5,C$\ell$}}\ox*{-2,O3}}" \; \;  +  \; \; "\ox*{+1,H2}\ox*{-2,O}"
+ }
+\redox(RED1,OX1)[->,red]{\small Oxidação: $\Delta$E=5-0=5e$^-$}
+\redox(RED1,RED2)[->,blue][-1]{\small Redução: $\Delta$E=0-(-1)=1e$^-$}
+\vspace{.7cm}
+  #+end_export
+
+
+- Numero de elétrons envolvidos: Neste caso calculamos a variação total no 2º membro da equação
+ 
+
+  #+begin_export latex
+\vspace{1cm}
+  \ch{
+ "{\color{blue}\OX{RED1,\ox*{0,C$\ell$2}}}" \; \; + \; \; "\ox*{+1,Na}\ox*{-2,O}\ox*{+1,H}" \; \; -> \; \; "\OX{RED2,\ox*{+1,Na}{\color{blue}\ox*{-1,C$\ell$}}}"  \; \; + "\OX{OX1,\ox*{+1,Na}{\color{red}\ox*{+5,C$\ell$}}\ox*{-2,O3}}" \; \;  +  \; \; "\ox*{+1,H2}\ox*{-2,O}"
+ }
+\redox(RED1,OX1)[->,red]{\small Oxidação: $\Delta$E=5e$^- \times 1$=5}
+\redox(RED1,RED2)[->,blue][-1]{\small Redução: $\Delta$E=1e$^- \times$ = 1}
+\vspace{.7cm}
+  #+end_export
+
+- Inverter os valores da redução para oxidação e vice versa e acertar os demais por tentativa
+
+#+begin_export latex
+  \begin{center}
+\begin{reaction*}    
+   3 C$\ell$2 + 6 NaOH ->  "\begingroup\color{red}" 5 "\endgroup" NaC$\ell$ +  "\begingroup\color{blue}" 1 "\endgroup" NaC$\ell$O3 + 3 H2O
+    \end{reaction*}
+\end{center}
+#+end_export
+
+
+
+
+
+** Balanceamento com Íons  
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+Um caso especial é quando envolve *ÍONS*, pois deveremos,também, balancear as cargas dos íons.
+
+
+#+begin_export latex
+\begin{reactions*}
+MnO4^-    +     NO2^-   +      H^+   ->     Mn^2+  +      NO3^-     +     H2O
+\end{reactions*}
+#+end_export
+
+
+- 1ºPasso: :: Atribuir Nox dos elementos
+
+  #+begin_export latex
+\begin{reactions*}
+"{\color{blue}\OX{Red1,\ox*{+7,Mn}}}" "\ox*{-2,O4^{-}}"   \; \; + \; \;     "\OX{OXD1,{\color{red}\ox*{+3,N}}}" "\ox*{-2,O2^{-}}" \; \; + \; \; "\ox*{+1,H^+}" \; \;  ->  \; \;  "{\color{blue}\OX{Red2,Mn}}" ^{2+} \; \;  +  \; \;  "{\color{red}\OX{OXD2,\ox*{+5,N}}}" "\ox*{-2,O3^{-}}" \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}"
+\end{reactions*}
+  #+end_export
+
+ - 2º Passo: :: Separar a oxidação e redução
+
+#+begin_export latex
+
+\begin{center}
+\vspace{.5cm}
+\ch{
+"{\color{blue}\OX{Red1,\ox*{+7,Mn}}}" "\ox*{-2,O4^{-}}"   \; \; + \; \;     "\OX{OXD1,{\color{red}\ox*{+3,N}}}" "\ox*{-2,O2^{-}}" \; \; + \; \; "\ox*{+1,H^+}" \; \;  ->  \; \;  "{\color{blue}\OX{Red2,Mn}}" ^{2+} \; \;  +  \; \;  "{\color{red}\OX{OXD2,\ox*{+5,N}}}" "\ox*{-2,O3^{-}}" \; \; + \; \; "\ox*{+1,H2}\ox*{-2,O}"
+}
+\redox(OXD1,OXD2)[->,red]{\small Oxidação: $\Delta$E=5-3=2e$^-$}
+\redox(Red1,Red2)[->,blue][-1]{\small Redução: $\Delta$E=7-2=5e$^-$}
+\end{center}
+\framebreak
+#+end_export
+
+
+
+-  3º Passo: :: Inverter a oxidação e redução e finalizar a reação 
+
+#+begin_export latex
+\begin{reactions*}
+2 MnO4^-    +    5 NO2^-   +     6 H^+   ->   2  Mn^2+  +      5 NO3^-     +    3 H2O
+\end{reactions*}
+#+end_export
+
+- 4ºPasso: :: Verificar o balanço de cargas 
+
+- 1º membro:  $2 \cdot \textcolor{red}{(– 1)} +  5 \cdot \textcolor{red}{(– 1)} +  6\cdot\textcolor{red}{(+1)} =  – 1$
+- 2º membro:  $2 \cdot \textcolor{red}{(+2)} +  5 \cdot \textcolor{red}{(– 1)} =  – 1$
+
+* Exercícios
+
+** Exercícios
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+
+#+begin_export latex
+\begin{description}
+\item[1)] \ch{KI + KNO2 + H2SO4 ->  I2 + NO + K2SO4 + H2O}\vspace{1cm}
+\item[2)] \ch{KI + H2SO4 -> K2SO4 + I2 + H2S + H2O}  \vspace{1cm}
+\item[3)] \ch{C + H2SO4 -> CO2 + SO2 + H2O}  \vspace{1cm}
+\item[4)] \ch{KSCN + H2O + I2 -> KHSO4 + HI + ICN}  \vspace{1cm}
+\item[5)] \ch{FeSO4 + KMnO4 + H2SO4 -> Fe2(SO4)3 + K2SO4 + MnSO4 + H2O}  \vspace{1cm}
+\end{description}
+#+end_export
+
+
+
+
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/D9EYqWaQ5qAyaFZ} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/M5ADQBCQdYNHrXj}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+

@@ -1,0 +1,29 @@
+* Isomeria Plana
+
+
+* Isomeria Espacial
+
+** Isomeria Geométrica
+
+
+
+
+ -  Conhecida como a isomeria /cis-trans/.
+ -  Ocorre em compostos com dupla ligação ou cíclicos .
+ - Compostos com dupla ligação
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+[   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
+    hydrogen/.style={circle, ball color=white, minimum size=2.5mm, inner sep=0},
+    carbon/.style={circle, ball color=black!75, minimum size=7mm, inner sep=0}
+]
+\draw   (196.35,141.5) -- (330.17,141.5) -- (272.82,186) -- (139,186) -- cycle ;
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+
+
+*  Isomeria Óptica

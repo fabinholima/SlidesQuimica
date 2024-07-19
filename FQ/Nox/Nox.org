@@ -1,0 +1,407 @@
+* Nox
+** Número de Oxidação ( Nox )
+
+#+ATTR_LATEX: :options [logo=\bccrayon,noborder=true, marge =0]{Definição}
+#+begin_bclogo
+- É o número que mede a *CARGA REAL* ou *APARENTE* de uma espécie química
+- Para saber quem perde elétrons e quem ganha, atribui-se *números de oxidação*
+#+end_bclogo
+
+
+
+* Regras de Nox
+
+** 1ª Regra
+
+Todo átomo em uma substância simples possui Nox igual a *ZERO*.
+
+#+begin_export latex
+\begin{itemize}
+\item \ch{O2}, \ch{H2}, \ch{C_{\gr}}, He, Xe, Fe e Cr \vspace{1cm}
+\item \ch{"\OX{o1,\ox*{0,O2}}"}, \ch{"\OX{h1,\ox*{0,H2}}"}, \ch{"\OX{c1,\ox*{0,C}}"}, \ch{"\OX{He1,\ox*{0,He}}"}, \ch{"\OX{Fe1,\ox*{0,Fe}}"} e \ch{"\OX{o1,\ox*{0,Cr}}"}
+\end{itemize}
+#+end_export
+
+** 2ª Regra
+
+O número de oxidação de um íon monoatômico é igual à sua *carga*.
+
+- @@latex: \ch{Ag+}, \ch{Au^3+},\ch{Fe^3+}, \ch{Fe^2+}, \ch{C$\ell$^1-}, \ch{S^2-}, \ch{O^2-} @@
+
+** 3ª Regra
+
+Quando temos o hidrogênios nas fórmulas
+
+
+*** Hidrogênio Nox                                            
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :END:
+    #+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large H\;Br};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=+1};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+    #+end_export
+
+*** Hidretos Nox -1                                              
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+    #+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large Na\;H};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=-1};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+    #+end_export
+
+    
+** 4ª Regra
+
+O oxigênio tem seus vários Noxs
+
+*** Oxigênio Nox -2                                              :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :END:
+O grupo \ch{O^2-} na maioria dos compostos inorgânicos.
+    
+  #+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large H\textsubscript{2}\;O};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=-2};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+    #+end_export
+    
+*** Peróxidos Nox -1                                             :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+    Grupo \ch{(O2)^2-}, nos peróxidos o oxigênio apresenta número de oxidação igual a -1, e não -2 como costuma ter na maioria dos compostos.
+
+
+  #+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large H\textsubscript{2}\;O\textsubscript{2}};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=-1};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+    #+end_export
+    
+** 
+    
+*** Superperóxidos Nox -1/2                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :END:
+
+
+Fórmulas Geral: \ch{YO4} ou \ch{X2O4}
+
+    
+#+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large Cs\textsubscript{2}\;O\textsubscript{4}};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=-1/2};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+
+Outro exemplo
+
+\ch{RaO4}
+#+end_export
+    
+
+
+    
+*** Fluoretos Nox +2                                       :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+
+
+  #+begin_export latex
+\begin{tikzpicture}
+\node[draw=none] at (0, 0)   (a) {\Large O \;F\textsubscript{2}};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\Large \bfseries Nox=+2};
+\draw[->] (a)--(b);
+\end{tikzpicture}
+    #+end_export
+
+    
+    
+
+** 5ª Regra
+
+Alguns átomos em uma substância composta possui Nox *CONSTANTE*
+|----------+-----+-----------------|
+| Elemento | Nox | Fórmula         |
+|----------+-----+-----------------|
+| Ag       |  +1 | AgC$\ell$       |
+| Zn       |  +2 | ZnO             |
+| A$\ell$  |  +3 | \ch{A$\ell$2O3} |
+|----------+-----+-----------------|
+#+ATTR_LATEX: :options [logo=\bcattention]{Calcogênios}
+#+begin_bclogo
+\small
+Calcogênios (O, S, Se, Te, Po) quando for o mais eletronegativo (no final da fórmula)
+\vspace{-.2cm}
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}
+%\node[draw=none] at (0, 0)   (a) {\Large O \;F\textsubscript{2}};
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) {\bfseries Nox=-2};
+%\draw[->] (a)--(b);
+\end{tikzpicture}
+\end{center}
+#+end_export
+\vspace{-.3cm}
+- Ex: \ch{H2S}, \ch{CO2}, \ch{A$\ell$2O3} 
+#+end_bclogo
+
+
+#+ATTR_LATEX: :options [logo=\bctakecare]{Halogênios}
+#+begin_bclogo
+\small
+Halogênios (F, C$\ell$, Br, I, At) quando for o mais eletronegativo (no final da fórmula)
+\vspace{-0.25cm}
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}
+\node[draw=red,fill=yellow!25] at (0,-1.25)(b) { \bfseries Nox=-1};
+\end{tikzpicture}
+\end{center}
+#+end_export
+- Ex: HF, \ch{CaBr2}, \ch{A$\ell$I3}  
+#+end_bclogo
+
+
+
+** 6ª Regra
+
+A soma algébrica do Nox de todos os átomos em uma substância composta é igual a *ZERO*
+
+
+#+begin_export latex
+\chemsetup[redox]{pos=top,roman=false}
+\begin{tikzpicture}
+\node[draw=none] at (-3,0) (matriz) {\begin{minipage}{5cm}
+\[ \renewcommand{\arraystretch}{1.4}
+  \,\:\begin{matrix}
+     \ch{H2} & \vrule & \OX{x,S} & \vrule & \ch{O4} \\
+    \hline
+    +1 & \vrule & \ch{S} & \vrule & -2 \\
+    \hline
+  +2 & \vrule & \ch{S} & \vrule & -8 \\
+    \hline
+     +2 & &  \ch{S} &  & -8 & =0\\
+    \end{matrix}
+\,\: 
+\]
+\end{minipage}};
+\node[draw=red, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-3,-1.9) (aa) {S=+6};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\node[draw=none] at (3,0) (matriz) {\begin{minipage}{\textwidth}
+\[ \renewcommand{\arraystretch}{1.4}
+  \,\:\begin{matrix}
+     \ch{Na2} & \vrule & \ch{Cr2} & \vrule & \ch{O7} \\
+    \hline
+    +1 & \vrule & \ch{Cr} & \vrule & -2 \\
+    \hline
+     +2 & \vrule & 2\cdot\ch{Cr} & \vrule & -14 \\
+    \hline
+     +2 & &  2\cdot \ch{Cr} &  & -14 & =0\\
+    \end{matrix}
+\,\: 
+\]
+\end{minipage}};
+\node[draw=red, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (3.5,-1.9) (aa) {Cr=+6};
+\end{tikzpicture}
+
+#+end_export
+
+** 7ª Regra
+A soma algébrica do Nox de todos os átomos em Um complexo é igual à *CARGA DO ÍON* 
+
+
+
+#+begin_export latex
+
+\chemsetup[redox]{pos=top,roman=false}
+\begin{tikzpicture}
+\node[draw=none] at (-3,0) (matriz) {\begin{minipage}{5cm}
+\[ \renewcommand{\arraystretch}{1.4}
+  \,\:\begin{matrix}
+      & \OX{x,S} & \vrule & \ch{O4}^{-2} \\
+    \hline
+      & \ch{S} & \vrule & -2 \\
+    \hline
+   & \ch{S} & \vrule & -8 \\
+    \hline
+      &  \ch{S} &  & -8 & =-2\\
+    \end{matrix}
+\,\: 
+\]
+\end{minipage}};
+\node[draw=red, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-3,-1.9) (aa) {S=+6};
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\node[draw=none] at (3,0) (matriz) {\begin{minipage}{\textwidth}
+\[ \renewcommand{\arraystretch}{1.4}
+  \,\:\begin{matrix}
+      \ch{P2} & \vrule & \ch{O7}^{-4} \\
+    \hline
+     \ch{P} & \vrule & -2 \\
+    \hline
+      2\cdot\ch{P} & \vrule & -14 \\
+    \hline
+        2\cdot \ch{P} &  & -14 & =-4\\
+    \end{matrix}
+\,\: 
+\]
+\end{minipage}};
+\node[draw=red, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (3.5,-1.9) (aa) {P=+5};
+\end{tikzpicture}
+#+end_export
+
+
+** Tabela Nox Regras
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+#+ATTR_LATEX:  :environment  tabular  :align |p{3.5cm}|p{3cm}|c|c|
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Elementos} @@ | @@latex: \cellcolor{green!20} {\bfseries Situação}@@ | @@latex: \cellcolor{green!20} {\bfseries Nox}@@ | @@latex: \cellcolor{green!20} {\bfseries Exemplos} @@            |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Simples                                                | Qualquer caso                                        |                                       zero      | \ch{H2}, \ch{N2}, C                                              |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Íon                                                    | Qualquer caso                                        |                                       carga íon | \ch{Na^1+}, \ch{Ca^2+}                                           |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Metais Alcalinos  (Li, Na, K, Rb, Cs e Fr)             | Em substâncias compostas                             |                                             + 1 | \ch{NaOH}, \ch{LiF}, \ch{K2O}                                              |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Metais Alcalinos- Terrosos (Be, Mg, Ca, Sr, Ba, e Ra)  | Em substâncias compostas                             |                                             + 2 | @@latex: \ch{CaC$\ell$2}, MgO, SrS \ch{\textcolor{red}{Ba}SO4}@@ |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Prata: Ag                                              | Em substâncias compostas                             |                                              +1 | \ch{AgBr},  \ch{Ag2O}                                            |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Zinco:                                                 | Em substâncias compostas                             |                                              +2 | \ch{ZnBr2}                                                       |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Alumínio: @@latex: \ch{A$\ell$}@@                      | Em substâncias compostas                             |                                              +3 | \ch{A$\ell$2O3}, \ch{A$\ell$I3}                                  |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+| Enxofre: S                                             | Em sulfetos (quando  S for mais eletronegativo)      |                                              -2 | \ch{H2S},  \ch{Na2S},                                            |
+|--------------------------------------------------------+------------------------------------------------------+-------------------------------------------------+------------------------------------------------------------------|
+\framebreak
+
+
+
+#+ATTR_LATEX:  :environment  tabular  :align |p{3.5cm}|p{3cm}|c|c|
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Elementos} @@ | @@latex: \cellcolor{green!20} {\bfseries Situação}@@           | @@latex: \cellcolor{green!20} {\bfseries Nox}@@ | @@latex: \cellcolor{green!20} {\bfseries Exemplos} @@ |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| Halogênio (F, Cl, Br, I)                               | Ligado a ametais (quando o haleto for mais eletronegativo)     |                                              -1 | \ch{NaF}, \ch{KBr}                                    |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| Hidrogenio: H                                          | Ligado a ametais (quando o hidrogênio for mais eletronegativo) |                                              +1 | \ch{HBr}, \ch{H2SO4}, \ch{HIO3}                       |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| Oxigenio: O                                            | Na maioria da substâncias compostas                            |                                              -2 | \ch{H2SO4}, \ch{HIO3}                                 |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| Peróxido: @@latex: \ch{O2^{-2}}@@                      | Alguns compostos                                               |                                              -1 | \ch{H2O2}, \ch{Na2O2}                                 |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+| Superóxido: \ch{X2O4}, \ch{YO4}                        | Alguns compostos                                               |                                           - 1/2 | \ch{CaO4}, \ch{K2O4}                                  |
+|--------------------------------------------------------+----------------------------------------------------------------+-------------------------------------------------+-------------------------------------------------------|
+
+
+
+
+* Óxido-Redução
+** Oxidação
+
+#+ATTR_LATEX: :options [noborder=true, couleurBarre=red]{DEFINIÇÃO}
+#+begin_bclogo
+*Oxidação:* É a *perda* de elétrons por parte de um átomo de uma espécie química.
+#+end_bclogo
+
+
+#+begin_export latex
+\begin{reaction*}
+X⁰_{\sld} -> X^{n+}_{\aq}
+\end{reaction*}
+#+end_export
+
+- Aumenta o *NOX*
+- Perder elétrons
+- Agente redutor ou simplesmente redutor
+  
+
+
+** Redução
+
+
+#+ATTR_LATEX: :options [noborder=true, couleurBarre=red]{DEFINIÇÃO}
+#+begin_bclogo
+*Redução:* É a *ganho* de elétrons por parte de um átomo de uma espécie química.
+#+end_bclogo
+
+#+begin_export latex
+\begin{reaction*}
+X^{n+}_{\aq} -> X⁰_{\sld}
+\end{reaction*}
+#+end_export
+
+- Diminuir o *NOX*
+- Ganhar elétrons
+- Agente oxidante ou simplesmente oxidante.  
+  
+
+** Óxido-Redução
+
+#+begin_export latex
+%\begin{center}
+
+\begin{bclogo}[logo=\bctakecare, noborder=true, barre=none]{Exemplo}
+%\vspace{2cm}
+\begin{tikzpicture}
+\node[] at (1,1) (reacao) {\begin{minipage}{\textwidth}
+\Large
+\ch{
+  "\OX{o1,Zn}" {}^0 _\sld{} \quad \; + \; \;   "\OX{r1,Cu}" {}^2+ _{\aq} -> "\OX{r2,Cu}" {}^0 _\sld{} \; \; + \; \; "\OX{o2,Zn}" {}^2+ _\aq
+}
+\redox(o1,o2)[->,red]{\small oxidação (ganha 2 elétrons)}
+\redox(r1,r2)[->,blue][-1]{\small redução (perde 2 elétrons)}
+\end{minipage}
+};
+\pause 
+\node[draw=purple,circle,font={\footnotesize\bfseries},minimum size =1.7cm,line width=1.2pt] at (-5 ,1.2)(B1) { };
+%\pause 
+\node[draw=green,circle,font={\footnotesize\bfseries},minimum size =1.7cm,line width=1.2pt] at (-3 ,1.2)(B2) { };
+%%%%%
+\node[draw=green, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-2.5,-1.0) (AO) {Agente Oxidante};
+%%
+\node[draw=purple, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-4,-2.5) (AR) {Agente Redutor};
+\draw[->] (B2) --(AO);
+\draw[->] (B1) --(AR);
+\end{tikzpicture}
+
+\end{bclogo}
+
+
+#+end_export
+
+
+
+
+

@@ -1,0 +1,52 @@
+* Carboidratos
+
+
+** Carboidratos
+
+Os carboidratos são compostos orgânicos que contêm: *C*, *H* e *O* em várias combinações
+
+Conhecidos como açúcar ou sacarídeo, originária do Latim /saccharum/ e do Grego /sakcharon/.
+
+#+ATTR_LATEX: :scale 0.25
+#+CAPTION: Molécula da glicose composta por carbono, hidrogênio e oxigênio.
+[[./glucose.png]]
+
+
+
+
+
+** Função
+
+*** 
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+#+ATTR_LATEX: scale 0.4
+    [[./esteira.png]]
+
+O carboidrato é a única fonte de energia aceita pelo cérebro, importante para o bom funcionamento do sistema nervoso.    
+***  
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- Fornecimento de energia
+  #+ATTR_LATEX: :options {Valores}
+  #+begin_bclogo 
+  1g = 4 Kcal 
+  #+end_bclogo
+- Reserva de energia
+- Estrutural
+
+  #+ATTR_LATEX: :scale 0.2
+  [[./pao.png]]
+
+  
+
+
+
+** Classificação
+
+

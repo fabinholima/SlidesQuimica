@@ -1,0 +1,737 @@
+* Radioatividade
+
+** Radioatividade
+
+#+ATTR_LATEX: :options [logo=\bcdanger]{DEFINIÇÃO}
+#+begin_bclogo
+É a desintegração espontânea ou provocada da matéria com emissões de radiações como consequência de uma estabilidade nuclear
+#+end_bclogo
+
+
+* Histórico
+
+** Descoberta da Radioatividade
+
+- Röntgen: :: Percebeu uma luz fluorescente que vinha do tubo de raios catódicos. O fenômeno foi chamado de raio X.
+- Henri Becquerel (1896): :: mostrou que sais de Urânio sensibilizam placas fotográficas usando  a deflexão por um campo magnético, ele descobriu 3 tipos de emissões radioativas: *neutra*, *positiva* e *negativa*.
+- Casal Curie: :: Isolar sais de rádio radioativo do mineral /pechblenda/ (uraninita).
+
+
+* Marie Curie
+** Marie Curie
+
+#+ATTR_LATEX: :float wrap :width 0.38\textwidth :placement {l}{0.5\textwidth}
+#+CAPTION: Marie Curie
+\vspace{-1.5cm}
+[[./Marie.jpeg]]
+
+Marie Skłodowska Curie foi uma cientista polonesa com naturalização francesa que conduziu pesquisas pioneiras no ramo da radioatividade. Foi a primeira mulher a ser laureada com um Prémio Nobel e a primeira pessoa e única mulher a ganhar o prêmio duas vezes. Em 1903, Marie dividiu o Nobel de *Física* com o seu marido Pierre Curie e o físico Henri Becquerel. A cientista também foi laureada com o Nobel de *Química* em 1911.
+
+Marie Curie morreu aos 66 anos, em 1934, em um sanatório em Sancellemoz, na França, por conta de uma anemia causada pela exposição a radiação.
+
+
+
+
+
+* Radiação
+** 
+A  radiação  é  a  propagação  de  energia  sob  várias  formas.  Dependendo  da  quantidade de energia, pode ser classificada em não ionizantes e ionizantes
+
+#+ATTR_LATEX: :scale 0.5
+[[./RadiacaoSymbol.jpg]]
+
+** Radiações não ionizantes
+
+    As radiações não ionizantes são caracterizadas por não possuírem energia suficiente para remover elétrons da eletrosfera do átomo, não ocasionando o processo de ionização da matéria. São classificadas de acordo com o compri-mento de onda: ultravioleta, luz visível, infravermelho, micro-ondas e ondas de rádio.  É  importante  ressaltar  que  quanto  menor  o  comprimento  de  onda, maior é a energia da radiação
+
+#+ATTR_LATEX: :scale 0.3 
+#+CAPTION: Espectro das ondas eletromagnéticas
+#+LABEL: espectro
+[[./espectro.png]]
+
+ 
+**  Radiações ionizantes
+
+    As radiações ionizantes possuem energia suficiente para provocar a ionização da matéria, ou seja, são capazes de promover a saída de elétrons da eletrosfera dos átomos, podendo causar modificações na estrutura de moléculas e do DNA (Figura ref:ionizado). Estas radiações podem ser corpusculares (partículas alfa e beta) ou ondas eletro-magnéticas (radiação gama).
+
+ #+ATTR_LATEX: :scale 0.3
+ #+CAPTION: Processo de ionização.
+ #+LABEL:ionizado
+ [[./ionizado.png]]
+
+
+
+* Partículas
+
+** 
+#+begin_center
+
+|-----------+---------------|
+| PARTÍCULA | SÍMBOLO       |
+|-----------+---------------|
+| PRÓTON    | $\rm _1P^1$  |
+| NÊUTRON   | $_0n^1$       |
+| PRÓTIO    | $_1P^1$       |
+| DEUTÉRIO  | \isotope{2,H} |
+| TRÍTIO    | \isotope{3,H} |
+| PRÓSITON  | $_{+1}^0\upbeta^{+}$ |
+|-----------+---------------|
+#+end_center
+
+**  Radiação Alfa ($\upalpha$)
+
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+    #+begin_export latex
+\begin{tikzpicture}[xscale=0.75,yscale=0.75]
+	%axis x
+	\definecolor{GreenOlive}{HTML}{006600}	
+	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (4,0) -- (8,0);
+	% axis Y
+	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (1.0,1) -- (1.0,4);
+	%% Text axis x
+	\node[draw=none, font=\bfseries] at (8.5,0) {Z};
+	%% Text axis Y
+	\node[draw=none, font=\bfseries] at (1,4.2) {E};
+	%%%%% Linha inferior 
+	\draw[line width=1pt] (3,1) --(6,1);
+	%% Linha superior 
+	\draw [line width=1pt,red] (5,6) --(8,6);
+	%\node (a) -- (b);
+	\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (6.5,6)--(4,1);
+	\node(a) at (2.3,1) {\isotope{222,Rn}};
+	\node(b) at (8.7,6) {\isotope{226,Ra}};
+	\node(c) at (5,4) [font=\bfseries]{$\upalpha$};
+\end{tikzpicture}
+    #+end_export
+
+    
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- A partícula alfa (\(\alpha\)) é composta por dois prótons e dois nêutrons (núcleo de hélio), é emitida com alta energia e possui baixo poder de penetração e alto poder ionizante.
+- São emissões típicas de átomos com alto peso atômico.
+- Esse tipo de radiação tem grande importância na medicina para o tratamento de doenças, como o câncer.
+- Exemplos de radionuclídeos emissores de alfa: rádio-223 (\(^{223}\)Ra), urânio-238 (\(^{238}\)U), plutônio-239 (\(^{239}\)Pu).
+
+   
+**  Beta ($\upbeta^-$)
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+#+begin_export latex
+\begin{tikzpicture}[xscale=.75,yscale=.75]
+	%axis x
+	\definecolor{GreenOlive}{HTML}{006600}	
+	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (4,0) -- (8,0);
+	% axis Y
+	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (2,1) -- (2,4);
+	%% Text axis x
+	\node[draw=none, font=\bfseries] at (8.5,0) {Z};
+	%% Text axis Y
+	\node[draw=none, font=\bfseries] at (2,4.2) {E};
+	%%%%% Linha inferior 
+	\draw[line width=1pt] (5,1) --(8,1);
+	%% Linha superior 
+	\draw [line width=1pt,red] (3,6) --(6,6);
+	%\node (a) -- (b);
+	\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (4.5,6)--(6.5,1);
+	\node(a) at (8.5,1) {\isotope{14,N}};
+	\node(b) at (6.5,6) {\isotope{14,C}};
+	\node(c) at (5,4) [font=\bfseries]{$\upbeta^-$};
+\end{tikzpicture}
+
+#+end_export
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+- A radiação beta é subdividida em dois tipos, beta menos (\(\upbeta ^-\)) e pósitron (\(\upbeta ^+\)). As emissões do tipo \(\upbeta ^-\)- possuem a mesma característica dos elétrons atômicos, com a diferença que sua origem se dá no núcleo que possui um número excessivo de nêutrons sendo, portanto, instável.
+- Neste decaimento o nêutron se “transforma” em um elétron (ejetado) e um próton (este permanece no núcleo). Assim como a  radiação  alfa,  elementos  emissores  de  beta  menos  (\(\upbeta ^-\))  podem  ser  usados  no  tratamento de doenças. Exemplos: lutécio-177 (@@latex: \ch{^{177}Lu}),  ítrio-90 (\ch{^{90}Y})@@.
+  
+** Pósitron ($\upbeta^+$)
+
+
+***                                                              :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+#+begin_export latex
+
+\begin{tikzpicture}[xscale=.75,yscale=.75]
+	%axis x
+\definecolor{GreenOlive}{HTML}{006600}	
+\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (4,0) -- (8,0);
+% axis Y
+\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (2,1) -- (2,4);
+%% Text axis x
+\node[draw=none, font=\bfseries] at (8.5,0) {Z};
+%% Text axis Y
+\node[draw=none, font=\bfseries] at (2,4.2) {E};
+%%%%% Linha inferior 
+\draw[line width=1pt] (3,1) --(6,1);
+%% Linha superior 
+\draw [line width=1pt,red] (5,6) --(8,6);
+%\node (a) -- (b);
+\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (6.5,6)--(4,1);
+\node(a) at (2.5,1) {\isotope{N}};
+\node(b) at (8.5,6) {\isotope{14,O}};
+\node(c) at (5,4) [font=\bfseries]{$\upbeta^+$};
+\end{tikzpicture}
+#+end_export
+
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+- Outro tipo de emissão beta é o pósitron (\(\upbeta ^+\)), que consiste na transformação de  um  próton  em  nêutron  e  pósitron  (antielétron),  uma  vez  que  o  núcleo  se  encontra  instável  devido  ao  número  elevado  de  prótons.
+- Após  sua  emissão  do  núcleo, os pósitrons são quase que instantaneamente aniquilados dando origem a dois fótons com mesma energia (511 keV) e direções opostas. Esse tipo de radiação é utilizado na medicina diagnóstica. Exemplo de radionuclídeos emissores de pósitrons: gálio-68 @@latex: (\ch{^{68}Ga}), flúor-18 (\ch{^{18}F})@@.
+
+
+** Radiação Gama
+
+   A radiação *gama* (\(\gamma\)) é conceituada como ondas eletromagnéticas emitidas do núcleo de um átomo. Apresenta energia superiores e alto poder de penetração, enquanto que os raios X são menos energéticos. Exemplo de radionuclídeos emissores de radiação gama: @@latex: \ch{^{99m}Tc}, cobalto-60 (\ch{^{60}Co})@@.
+
+
+
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+    #+begin_export latex
+\begin{tikzpicture}[xscale=.75,yscale=.75]
+	%\begin{tikzpicture}
+	%axis x
+	\definecolor{GreenOlive}{HTML}{006600}	
+	\definecolor{Purple}{HTML}{800080}
+	\definecolor{VioletRed}{HTML}{c71585}
+	%%%%% Linha inferior 
+	\draw[line width=1.5pt,Purple] (5,1) --(8,1);
+	\draw[line width=1.5pt,blue] (5,0) --(8,0);
+	%% Linha superior 
+	\draw [line width=1.5pt,red] (3,6) --(6,6);
+	%\node (a) -- (b);
+	\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (4.5,6)--(6.5,1);
+	\node(a) at (8.8,1) {\isotope{18,Ar}$^*$};
+	\node(a2) at (8.8,0) {\isotope{18,Ar}};
+	\node(b) at (6.8,6) {\isotope{38,Cl}};
+	\node(c) at (6.1,4) [font=\bfseries]{$\upbeta^-$};
+	\draw [->,decorate,decoration={snake,amplitude=.4mm,segment length=2mm,post length=2mm},VioletRed] (7,1) --(7,0);
+	\node(d) at (7.4,0.5) [font=\bfseries]{$\upgamma$};
+\end{tikzpicture}
+
+    #+end_export
+
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+    
+    
+    #+begin_export latex
+
+\begin{reaction*}
+	\isotope{Ra} -> \isotope{Rn} + $\upalpha$
+\end{reaction*}
+
+
+\begin{tikzpicture}[xscale=0.75,yscale=0.75]
+	%axis x
+	\definecolor{GreenOlive}{HTML}{006600}
+	\definecolor{Purple}{HTML}{800080}
+	\definecolor{VioletRed}{HTML}{c71585}
+%	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (4,0) -- (8,0);
+	% axis Y
+%	\draw [arrows = {-Stealth[length=10pt, inset=5pt]}] (1.0,1) -- (1.0,4);
+	%% Text axis x
+%	\node[draw=none, font=\bfseries] at (8.5,0) {Z};
+	%% Text axis Y
+%	\node[draw=none, font=\bfseries] at (1,4.2) {E};
+	%%%%% Linha inferior 
+	\draw[line width=1.5pt,Purple] (2,1) --(6,1);
+	\draw[line width=1.5pt,blue] (2,0) --(6,0);
+	%% Linha superior 
+	\draw [line width=1.5pt,red] (5,6) --(9,6);
+	%\node (a) -- (b);
+	\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (7,6)--(4,1);
+	\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]},GreenOlive] (8.5,6)--(6.,0);
+	\node(a) at (1.,1) {\isotope{222,Rn}$^*$};
+	\node(a) at (1,0) {\isotope{222,Rn}};
+	\node(b) at (9.7,6) {\isotope{226,Ra}};
+	\node(c) at (5,4) [font=\bfseries]{$\upalpha$};
+	\node(c1) at (8,3.5) [font=\bfseries]{$\upalpha$};
+	\draw [->,decorate,decoration={snake,amplitude=.4mm,segment length=2mm,post length=2mm},VioletRed] (4,1) --(4,0);
+	\node(d) at (4.4,0.5) [font=\bfseries]{$\upgamma$};
+\end{tikzpicture}
+
+#+end_export
+
+    
+   
+
+** Poder de penetração da radiação
+
+Com isso, os radionuclídeos emissores de alfa e beta podem ser utilizados na terapia de doenças e os emissores de gama, no diagnóstico.
+\vspace{0.0cm}
+#+ATTR_LATEX: :scale 0.28  :placement [H]
+#+CAPTION:  Poder de penetração das radiações.
+#+LABEL:poder
+[[./poder.png]]
+
+
+
+* Radionuclídeos
+
+** Radionuclídeos 
+
+Os radionuclídeos podem ser encontrados na natureza, como o @@latex: \ch{^238{U}} e o \ch{^{233}Ra}@@, ou podem ser produzidos artificialmente, de forma direta, em reatores nucleares e cíclotrons, ou de forma indireta, por geradores. O radionuclídeo é um átomo considerado instável em função de seu núcleo possuir energia “em excesso”.
+
+#+ATTR_LATEX: :scale 0.24  :placement [H]
+#+CAPTION: Processo de desintegração do radionuclídeo.
+#+LABEL: nucle
+[[./nucleo.png]]
+
+
+* Meia-vida
+
+** Meia-vida física
+Meia-vida física (\(t_{\frac{1}{2}}\)) corresponde ao tempo necessário para a atividade inicial de um elemento radioativo ser reduzida à metade por meio de seu decaimento e consequente emissão de radiação. A meia-vida de um radionuclídeo pode variar de poucos segundos a vários anos.
+
+
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+  #+begin_export latex
+\begin{equation}
+%t_{\frac{1}{2}}= \frac{0,693}{k}
+m=\frac{m_0}{2^x}
+\end{equation}
+
+\begin{equation}
+t=x\cdot P
+\end{equation}
+  #+end_export
+
+- $m$ :: massa final
+- $m_o$ :: massa inicial
+- $x$ :: número de períodos de meia-vida (x)
+- $P$ :: período da meia-vida
+- $t$ :: tempo de desintegração  
+
+  
+
+***                                                        :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+  
+#+ATTR_LATEX: :scale 0.21  :placement [H]
+#+CAPTION: Decaimento do @@latex: \isotope{131,I} @@ pela sua meia-vida física de 8 dias.
+#+LABEL:meiavida
+[[./meia-vida.png]]
+
+** Meia-vida biológica e efetiva
+
+A meia-vida biológica representa o tempo necessário para que o organismo excrete 50% do fármaco. Quando se trata de radiofármacos, é necessário levar em conta também a meia-vida efetiva, que é a soma da meia-vida física e a meia-vida biológica.
+
+A atividade de uma amostra é definida pelo número de desintegrações por segundo do núcleo instável de um radionuclídeo. Dessa forma, é possível mensurar a radioatividade de uma amostra. 
+
+** 
+
+\vspace{-1cm}
+#+ATTR_LATEX: :options {Exemplo}
+#+begin_boxex
+Um radioisótopo utilizado no tratamento radioterápico apresenta uma meia-vida (período de semidesintegração) de 5 horas. Se um técnico utilizar uma massa de 50 g no tratamento de um paciente, após quantas horas a massa seria reduzida para 6,25 g?
+
+a) 5 horas.  \quad b) 25 horas. \quad c) 15 horas. \quad d) 30 horas. \quad e) 10 horas.
+
+
+#+ATTR_LATEX: :options {Solução}
+#+begin_myrule
+#+ATTR_LATEX: :options {0.5\textwidth}
+#+begin_minipage
+
+*1º Passo:* Calcular o número de meias-vidas que foram necessárias para a redução de 50 g para 6,25 g por meio da fórmula a seguir.
+
+#+begin_export latex
+\begin{align*}
+m=\frac{m_0}{2^x} \\
+6,25 = \frac{50}{2^x}\\
+2^x= \frac{50}{6,25}\\
+2^x=8 \\
+2^x = 2^3 \\
+x= 3
+\end{align*}
+3 meias-vidas
+#+end_export
+#+end_minipage
+\hspace{0.05\textwidth}
+#+ATTR_LATEX: :options {0.4\textwidth}
+#+begin_minipage
+*2º Passo:* Em seguida, para calcular o tempo, basta utilizar a seguinte expressão:
+#+begin_export latex
+\begin{align*}
+t = x \cdot P \\
+t = 5 \cdot 3 \\
+t = 15 ~ \text{h}
+\end{align*}
+#+end_export
+#+end_minipage 
+#+end_myrule
+#+end_boxex
+
+
+* Reação Nuclear
+
+** Reação Nuclear
+
+É a propriedade que os núcleos instáveis possuem de emitir partículas e radiações eletromagnéticas, para se tornarem estáveis
+
+
+A radioatividade natural ocorre, geralmente, com os átomos de números atômicos maiores que 82
+
+
+A reação que ocorre nestas condições, isto é, alterando o núcleo do átomo chama-se *REAÇÃO NUCLEAR*
+
+
+* Decaimento Radioativo
+
+
+** Lei de Soddy
+
+*Decaimento alfa:* nela, o núcleo instável emite uma partícula alfa, que é um núcleo de Hélio. Como sabemos da tabela periódica, o Hélio tem dois prótons e dois nêutrons. Assim, o elemento perde 4 de massa, tendo seu número atômico diminuído em 2.
+
+#+begin_center
+@@latex:  \ch{^A_Z X -> ^4_2\(\alpha\) + ^{A-4}_{Z-2}Y} @@
+#+end_center
+
+#+ATTR_LATEX: :scale 0.2  :placement [H]
+[[./alfa.png]]
+
+** Lei de Soddy, Fajans e Russel
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks,label=
+:END:
+
+*Decaimento beta:* a partícula beta é um elétron ejetado de um nêutron. Como elétrons não têm massa, ela também não tem. O elemento radioativo tem um nêutron transformado em próton, então aumenta seu número atômico em 1.
+
+#+ATTR_LATEX: :scale 0.2  :placement [H]
+[[./beta.png]]
+
+#+ATTR_LATEX: :options [logo=\bcinfo]{Decaimento Beta}
+#+begin_bclogo
+#+begin_export latex
+\ch{^A_Z Q -> ^0_{-1} \(\beta\) + ^{A-0}_{Z+1}R}
+\begin{tikzpicture}[xscale=.6]
+ \shade[ball color=blue] (0,0) circle (6ex);
+ \node[draw=none,align=left,font=\bfseries] at (0,1.3) {Nêutron};
+ \node[draw=none,align=left,font=\bfseries] at (3,0) {\ch{->[Decaimento ~ $\upbeta^-$]}};
+\shade[ball color=red] (6,0) circle (6ex);
+ \node[draw=none,align=left,font=\bfseries] at (6,1.3) {Próton};
+ \shade[ball color=yellow] (10,0) circle (6ex);
+\node[draw=none,align=left,font=\bfseries] at (10,1.3) {elétron};
+\node[draw=none,align=left,font=\bfseries] at (8.,0) {+};
+ \shade[ball color=teal] (14,0) circle (6ex);
+ \node[draw=none,align=left,font=\bfseries] at (12.,0) {+};
+ \node[draw=none,align=left,font=\bfseries] at (14.,1.3) {antineutrino};
+\end{tikzpicture}
+
+#+end_export
+#+end_bclogo
+
+*Decaimento Pósitron*: No decaimento de pósitrons , perdemos uma carga positiva do núcleo. Isso significa que o número atômico diminuirá em uma unidade.
+
+#+ATTR_LATEX: :options [logo=\bcinfo]{Decaimento Positron}
+#+begin_bclogo
+#+begin_export latex
+\begin{tikzpicture}[xscale=0.6]
+	\shade[ball color=red] (0,0) circle (6ex);
+	\node[draw=none,align=left,font=\bfseries] at (0,1.3) {Próton};
+	\node[draw=none,align=left,font=\bfseries] at (3,0) {\ch{->[Decaimento ~ $\upbeta^+$]}};
+	\shade[ball color=blue] (6,0) circle (6ex);
+	\node[draw=none,align=left,font=\bfseries] at (6,1.3) {Nêutron};
+	\shade[ball color=gray] (10,0) circle (6ex);
+	\node[draw=none,align=left,font=\bfseries] at (10,1.3) {pósitron};
+	\node[draw=none,align=left,font=\bfseries] at (8.,0) {+};
+	\shade[ball color=green] (14,0) circle (6ex);
+	\node[draw=none,align=left,font=\bfseries] at (12.,0) {+};
+	\node[draw=none,align=left,font=\bfseries] at (14.,1.3) {neutrino};
+\end{tikzpicture}
+#+end_export
+#+end_bclogo
+
+** Radiação Gamma
+
+#+ATTR_LATEX: :scale .3  :placement [H]
+[[./gama.png]]
+
+
+
+** 
+\vspace{-1cm}
+#+ATTR_LATEX: :options {Exemplo}
+#+begin_boxex
+Ao se desintegrar, o átomo \isotope{222,Rn} emite 3 partículas alfa e 4 partículas beta. O nº atômico e o nº de massa do átomo final são, respectivamente:
+
+a) 84 e 210. \qquad     b) 210 e 84.  \qquad    c) 82 e 210. \qquad    d) 210 e 82. \qquad    e) 86 e 208.
+
+#+ATTR_LATEX: :options {Solução}
+#+begin_myrule
+
+#+begin_export latex
+\begin{align*}
+\isotope{222,Rn} \ch{->} 3 \cdot  \upalpha_2^4 \quad  +  \quad 4 \cdot_{-1}\upbeta^0 \quad + \quad  \rm{}_Z^AX
+\end{align*}
+
+\begin{columns}[T] % align columns
+\begin{column}{.48\textwidth}
+\color{red}\rule{\linewidth}{4pt}
+
+\begin{align*}
+	86 = & 3 \cdot 2 + 4 \cdot (– 1) + Z \\
+	86 = & 6 – 4 + Z \\
+	Z = & 86 – 2 \\
+	Z = & 84
+\end{align*}
+
+\end{column}%
+\hfill%
+\begin{column}{.48\textwidth}
+\color{blue}\rule{\linewidth}{4pt}
+
+\begin{align*}
+222 = 3 \cdot 4 + 4\cdot 0 + A \\
+222 = 12 + A \\
+A = 222 – 12 \\ 
+A = 210 \\ 
+\end{align*}
+\end{column}%
+\end{columns}
+#+end_export
+
+#+end_myrule
+
+#+end_boxex
+
+
+
+
+
+* Séries Radioativas
+
+** Séries Radioativas
+
+- É o conjunto de elementos que têm origem na missão de partículas alfa e beta, resultando, como elemento final, um isótopo estável do chumbo.
+  
+  #+ATTR_LATEX: :scale .6
+[[./serieradioativas.jpg]]
+
+* Fissão Nuclear
+** Fissão Nuclear
+
+A *fissão nuclear* é caracterizada pelo processo de quebra de núcleos grandes em núcleos menores, provocando a liberação de uma grande quantidade de energia.
+
+#+begin_export latex
+
+\begin{tikzpicture}[xscale=0.7,yscale=0.7]
+\begin{scope}
+		\shade[ball color=white] (-5,0) circle (2ex);
+		\node[draw=none,align=left,font=\bfseries] at (-5,0.75) {nêutron};
+		\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (-4,0)--(-1.5,0);
+		\node[starburst, fill=yellow, draw=red, line width=2pt,font=\bfseries] at (4,0){ Energia};
+		\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (1.5,0)--(4,2);
+		\draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (1.5,0)--(3.5,-2.5);
+		\shade[ball color=white] (7,1.5) circle (2ex);
+		\shade[ball color=white] (7,0) circle (2ex);
+		\shade[ball color=white] (7,-1.5) circle (2ex);
+\end{scope}
+%%%%% Uranio
+\begin{scope}[local bounding box=scope1]
+		\path (-2,-2) rectangle (2,2);
+	\pgfmathdeclarerandomlist{color}{{red}{white}}
+	\pgfmathsetseed{1}
+	\foreach \A/\R in {25/1,12/0.9,15/0.8,20/0.7,12/0.5,7/0.3,1/0}{
+		\pgfmathsetmacro{\S}{360/\A}
+		\foreach \B in {0,\S,...,360}{
+			\pgfmathrandomitem{\C}{color}
+			\shade[ball color=\C] (\B+\A:\R) circle (7pt);
+		}
+	}
+	\node[draw=none,align=left,font=\bfseries] at (-1,1.3) {\isotope{235,U}};
+\end{scope}
+\begin{scope}[shift={($(scope1.east)+(3cm,3)$)}]
+		\path (-2,-2) rectangle (2,2);
+	\pgfmathdeclarerandomlist{color}{{red}{white}}
+	\pgfmathsetseed{1}
+	\foreach \A/\R in {25/1,12/0.9,15/0.8,20/0.7,12/0.5,7/0.3,1/0}{
+		\pgfmathsetmacro{\S}{360/\A}
+		\foreach \B in {0,\S,...,360}{
+			\pgfmathrandomitem{\C}{color}
+			\shade[ball color=\C] (\B+\A:\R) circle (3.5pt);
+		}
+	}
+	\node[draw=none,align=left,font=\bfseries] at (-1,1.3) {\isotope{139,Ba}};
+\end{scope}
+\begin{scope}[shift={($(scope1.east)+(3cm,-3)$)}]
+	\path (-2,-2) rectangle (2,2);
+	\pgfmathdeclarerandomlist{color}{{red}{white}}
+	\pgfmathsetseed{1}
+	\foreach \A/\R in {25/1,12/0.9,15/0.8,20/0.7,12/0.5,7/0.3,1/0}{
+		\pgfmathsetmacro{\S}{360/\A}
+		\foreach \B in {0,\S,...,360}{
+			\pgfmathrandomitem{\C}{color}
+			\shade[ball color=\C] (\B+\A:\R) circle (3.pt);
+		}
+	}
+	\node[draw=none,align=left,font=\bfseries] at (-1,1.3) {\isotope{95,Kr}};
+\end{scope}
+\end{tikzpicture}
+
+#+end_export
+
+* Fusão Nuclear
+** Fusão Nuclear 
+
+A *fusão nuclear* é uma reação nuclear na qual dois núcleos de átomos leves se unem para formar outro núcleo mais pesado. 
+
+#+begin_export latex
+\begin{tikzpicture}[xscale=.75,yscale=.75]
+	
+	\node[align=center,font=\bfseries] at (-5,1) {Deutério};
+	\node[align=center,font=\bfseries] at (-5,-4) {Trítio};
+	%%%% Line Deuterio
+	 \draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (-4.5,0)--(-1,-1);
+	 %%% Line Tritio
+	 \draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (-4.5,-3)--(-1,-2);
+	 %%%% Line Helio
+	 \draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (3,-2)--(5.5,-3);
+	 \node[draw=none,align=left,font=\bfseries] at (6.3,-4.3) {\isotope{He}};
+	 % Line Neutron 
+	 \draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (3,-1)--(5.6, 0.4);
+	 \node[draw=none,align=left,font=\bfseries] at (5.5,1.3) {nêutron};
+	 %%% Line Energia
+	 \draw[line width=1pt,arrows = {-Stealth[length=10pt, inset=5pt]}] (2.5, -1.5)--(7, -1.5);
+	 \node[starburst, fill=yellow, draw=red, line width=2pt,font=\bfseries] at (9.3,-1.5){Energia};
+\begin{scope}[local bounding box=scope1]
+	\shade[ball color=white] (-5,0) circle (2ex);
+	\shade[ball color=red] (-5,0.5) circle (2ex);
+\end{scope}
+\begin{scope}[local bounding box=scope2,shift={($(scope1.south)+(5cm,-3)$)},anchor=below]
+	\shade[ball color=white] (-5,0) circle (2ex);
+	\shade[ball color=red] (-5,0.5) circle (2ex);
+	\shade[ball color=white] (-5,1) circle (2ex);
+\end{scope}
+\begin{scope}[local bounding box=scope3,shift={($(scope2.west)+(8cm,1.5)$)}]
+	\node[starburst, fill=yellow, draw=red, line width=2pt,font=\bfseries] at (-2,0){
+\begin{tikzpicture}
+	\shade[ball color=white] (-4.9,1.0) circle (2ex);
+	\shade[ball color=white] (-4.4,0.7) circle (2ex);
+	\shade[ball color=white] (-5,0) circle (2ex);
+	\shade[ball color=red] (-5,0.5) circle (2ex);
+	\shade[ball color=red] (-4.5,0.3) circle (2ex);
+\end{tikzpicture}
+};
+\end{scope}
+\begin{scope}[local bounding box=scope4,shift={($(scope3.west)+(12cm,-2)$)}]
+%\shade[ball color=white] (-4.9,1.0) circle (2ex);
+\shade[ball color=white] (-4.4,0.7) circle (2ex);
+\shade[ball color=white] (-5,0) circle (2ex);
+\shade[ball color=red] (-5,0.5) circle (2ex);
+\shade[ball color=red] (-4.5,0.3) circle (2ex);
+\end{scope}
+\begin{scope}[local bounding box=scope4,shift={($(scope3.west)+(12cm,2)$)}]
+	\shade[ball color=white] (-5,0) circle (2ex);
+\end{scope}
+\end{tikzpicture}
+
+#+end_export
+
+* Aplicação
+** Radioterapia
+
+A *radioterapia* é um tratamento no qual se utilizam radiações ionizantes (raio-X, por exemplo), um tipo de energia direcionada, para destruir ou impedir que as células do tumor aumentem.
+
+#+ATTR_LATEX: :scale .8
+[[../Radioatividade/radioterapia.jpg]]
+
+** Radiofármacos
+
+
+  
+O Tabela mostra os radiofármacos mais utilizados para tratamentos específicos. Para cada caso há um tempo de exposição e uma dose que varia de fração de segundos a horas.
+
+
+
+#+CAPTION: Radiofármacos específicos  para tratamento
+#+NAME:tabfarm
+#+ATTR_LATEX:  :align |c|c|
+|-----------------------------------------+--------------------------------------------------|
+| *Radiofármaco*                            | *Tratamento*                                       |
+|-----------------------------------------+--------------------------------------------------|
+| IODO (@@latex: \isotope{131,I}@@)       | Tumores de tiroíde, fígado e rins                |
+|-----------------------------------------+--------------------------------------------------|
+| CROMO (@@latex: \isotope{51,Cr}@@)      | Trato de patologias intestinais                  |
+|-----------------------------------------+--------------------------------------------------|
+| GÁLIO (@@latex: \isotope{67,Ga}@@)      | Tumores em tecidos moles.                        |
+|-----------------------------------------+--------------------------------------------------|
+| TECNÉSIO (@@latex: \isotope{99,Tc}@@)   | Tumores de cérebro, glândulas salivares, coração |
+|-----------------------------------------+--------------------------------------------------|
+| GADOLÍNIO (@@latex: \isotope{159,Gd}@@) | estomâgo, sistema ósseo, fígado, rins, pulmão    |
+|-----------------------------------------+--------------------------------------------------|
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/8ocJrDKNYRkxmfG} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+** Recomendações
+
+*** Filme
+
+Radioatividade 
+https://www.netflix.com/br/title/81168940
+
+*** Doccumentário 
+
+O brilho da morte 
+https://youtu.be/gCcTxnvZb-k?si=ITvRVFqsry2oGc1A
