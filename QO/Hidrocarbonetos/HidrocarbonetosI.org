@@ -1,0 +1,178 @@
+* Hidrocarbonetos
+** Hidrocarbonetos
+   São compostos orgânicos formados exclusivamente por átomos de carbono e de hidrogênio.
+#+begin_export latex
+%\include{../img/diagrama}
+#+end_export
+
+
+
+** Hidrocarbonetos
+- Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
+
+#+LABEL:torrefra
+#+CAPTION: Esquema de uma torre de fracionamento.
+#+attr_latex:  :width 0.4\textwidth
+[[../Hidrocarbonetos/torre.jpg]]
+
+** Frações Típicas do Petróleo
+
+
+#+ATTR_LATEX: :center nil :environment tabular :align |B|B|B|L|
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Fração}  @@ | @@latex: \cellcolor{green!20} {\bfseries T. de Ebulição (°C)}  @@ | @@latex: \cellcolor{green!20} {\bfseries Composição aproximada} @@ | @@latex: \cellcolor{green!20} {\bfseries Usos} @@        |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Gás residual                                         |                                                                 - | @@latex: \ch{C1-C2}@@                                              | gás combustível                                          |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Gás liquefeito de petróleo - GLP                     |                                                            Até 40 | @@latex: \ch{C3-C4} @@                                             | gás combustível engarrafado, uso doméstico e indrustrial |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Gasolina                                             |                                                            40-175 | \ch{C5-C10}                                                        | combustível de automóveis, solvente                      |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Querosene                                            |                                                           175-235 | \ch{C11-C12}                                                       | iluminação, combustível de aviões a jato                 |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Gasoléo leve                                         |                                                           235-305 | \ch{C13-C17}                                                       | diesel, fornos                                           |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Gasoléo pesado                                       |                                                           305-400 | \ch{C18-C25}                                                       | combustível, matéria-prima para lubrificantes            |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Lubrificantes                                        |                                                           400-510 | \ch{C26-C38}                                                       | óleos librificantes                                      |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+| Resíduo                                              |                                                      Acima de 510 | \ch{C38-}                                                          | asfalto, piche, impermeabilizantes                       |
+|------------------------------------------------------+-------------------------------------------------------------------+--------------------------------------------------------------------+----------------------------------------------------------|
+
+
+* Classificação
+
+** Grupos 
+- Os nomes /alcanos/, /alcenos/, /alcinos/, /alcadienos/ /ciclanos/, /ciclenos/ e /aromáticos/ designam grupos aos quais os hidrocarbonetos pertencem
+#+begin_export latex
+\include{img/hidro.tex}
+#+end_export
+
+** Subdivisões dos hidrocarbonetos
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+  
+   
+#+NAME: tabhibro
+#+CAPTION: Subdivisões importantes dos hidrocarbonetos
+#+ATTR_LATEX: :center nil :environment supertabular :align BBLB
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| @@latex:   \cellcolor{green!20} {\bfseries Subgrupo} @@ | @@latex: \cellcolor{green!20} {\bfseries Característica} @@ | @@latex: \cellcolor{green!20} {\bfseries Exemplos} @@                                                         | @@latex: \cellcolor{green!20} {\bfseries Fórmula geral} @@ |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Alcanos ou parafinas                                    | Cadeia aberta Ligações simples                              | \chemfig{H_3C-CH_2-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-CH([:-90]-CH_3)-CH_3}\qquad | \(\rm C_nH_{2n+2}\)                                        |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Alcenos, alquenos ou olefinas                           | Cadeia aberta com 1 ligação dupla                           | \chemfig{H_2C=CH-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)=CH-CH_3}                                        | \(\rm C_nH_{2n}\)                                          |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Alcinos ou alquinos                                     | Cadeia aberta 1 ligação tripla                              | \chemfig{HC~C-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-C~C-CH_3}                        | \(\rm C_nH_{2n-2}\)                                       |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Alcadienos ou dienos                                    | Cadeia aberta 2 ligações duplas                             | \chemfig{H_2C=C=CH_2}\qquad \chemfig{H_2C=CH-CH=CH_2}                                                         | \(\rm C_nH_{2n-2}\)                                        |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Ciclanos                                                | Cadeia fechada Ligações simples                             | \chemfig{*5(-----)} \qquad \chemfig{*6(------)}                                                               | \(\rm C_nH_{2n}\)                                          |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Ciclenos                                                | Cadeia fechada uma ligação dupla                            | \chemfig{*4(---(-)=)} \qquad \chemfig{*6(-----=)}                                                             | \(\rm C_nH_{2n-2}\)                                        |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+| Aromáticos                                              | Contêm anel benzênico                                       | \chemfig{**6(-----(-CH_3)-)} \qquad  \chemfig{*6(-=-(*6(-=-=---))=-=)}                                          | \(\rm C_nH_{2n-6} \)                                       |
+|---------------------------------------------------------+-------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------+------------------------------------------------------------|
+
+* Nomenclatura
+** Nomenclatura dos compostos orgânicos
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+  
+
+   #+latex: \begin{myrule}{Regra}
+   - A nomenclatura de compostos orgânicos segue as regras elaboradas pela IUPAC.
+
+   - De acordo com as regras da IUPAC, o nome de um composto orgânico é formado pela união de três fragmentos: *prefixo + infixo + sufixo*.
+
+   #+latex: \end{myrule}
+   
+** Nomenclatura dos compostos orgânicos
+   
+   - O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
+
+   #+NAME: tabcarbo
+#+CAPTION: Prefixo que indicam o número de carbonos
+#+ATTR_LATEX: :center nil :environment tabular :align BBBB
+|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Prefixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Número de carbonos} @@ | @@latex: \cellcolor{green!20} {\bfseries Prefixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Número de carbonos} @@ |
+|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
+| met                                                  |                                                               1 | undec                                                |                                                              11 |
+| et                                                   |                                                               2 | dodec                                                |                                                              12 |
+| prop                                                 |                                                               3 | tridec                                               |                                                              13 |
+| but                                                  |                                                               4 | tretadec                                             |                                                              14 |
+| pent                                                 |                                                               5 | pentadec                                             |                                                              15 |
+| hex                                                  |                                                               6 | hexadec                                              |                                                              16 |
+| hept                                                 |                                                               7 | hepdec                                               |                                                              17 |
+| oct                                                  |                                                               8 | octadec                                              |                                                              18 |
+| non                                                  |                                                               9 | nonadec                                              |                                                              19 |
+| dec                                                  |                                                              10 | icosa                                                |                                                              20 |
+|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
+
+** Nomenclatura dos compostos orgânicos
+
+- O *infixo* indica o tipo de ligação química entre os átomos de carbono.
+
+#+CAPTION: Infixos para a nomenclatura orgânica
+#+ATTR_LATEX: :center nil :environment tabular :align LL
+|-----------------------------------------------------+--------------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Infixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Tipo de Ligação} @@ |
+|-----------------------------------------------------+--------------------------------------------------------------|
+| an                                                  | simples                                                      |
+| en                                                  | dupla                                                        |
+| in                                                  | tripla                                                       |
+|-----------------------------------------------------+--------------------------------------------------------------|
+
+** Nomenclatura dos compostos orgânicos
+
+- O *sufixo*, a parte final, indica a *classe funcional do composto*.
+
+#+CAPTION: Sufixo para a nomenclatura orgânica
+#+ATTR_LATEX: :center nil :environment tabular :align BL
+|-----------------------------------------------------+---------------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Sufixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Classe funcional} @@ |
+|-----------------------------------------------------+---------------------------------------------------------------|
+| o                                                   | hidrocarbonet *o*                                               |
+| ol                                                  | álco *ol*                                                       |
+| al                                                  | *al* deído                                                      |
+| ona                                                 | cet *ona*                                                       |
+| óico                                                | ácido carboxíl *ico*                                          |
+|-----------------------------------------------------+---------------------------------------------------------------|
+
+
+** Nomenclatura dos compostos orgânicos
+   
+#+CAPTION: Infixos para a nomenclatura orgânica
+#+ATTR_LATEX: :center nil :environment tabular :align BBBB
+|-----------------------------------------------------+--------------------------------------------------------------|
+| @@latex: \cellcolor{green!20} {\bfseries Infixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Tipo de Ligação} @@ |
+|-----------------------------------------------------+--------------------------------------------------------------|
+| an                                                  | simples                                                      |
+| en                                                  | dupla                                                        |
+| in                                                  | tripla                                                       |
+|-----------------------------------------------------+--------------------------------------------------------------|
+
+
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/2qnZtdzAjYynDWw} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+   
+

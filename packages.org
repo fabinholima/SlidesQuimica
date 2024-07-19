@@ -1,0 +1,119 @@
+#+LATEX_HEADER:\usepackage[portuguese]{babel}
+#+LATEX_HEADER:\usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{colortbl}
+#+LATEX_HEADER: \usepackage[tikz]{bclogo}
+#+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
+#+LATEX_HEADER: \usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
+#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+#+LATEX_HEADER: \usepackage{tikzpeople}
+#+LATEX_HEADER: \usepackage{qrcode,hyperref}
+#+LATEX_HEADER: \usepackage{upgreek}
+#+LATEX_HEADER: %\usepackage[version=4]{mhchem}
+#+LATEX_HEADER: \usepackage{tabularray}
+#+LATEX_HEADER: \usepackage{chemfig,chemmacros,elements,chemformula}
+#+LATEX_HEADER: \chemsetup{modules={all}}
+#+LATEX_HEADER: \chemsetup[redox]{pos=top,roman=false}
+#+LATEX_HEADER: \chemsetup[redox]{pos=top}
+#+LATEX_HEADER: \chemsetup{redox/sep=.5em}
+#+LATEX_HEADER: \chemsetup[redox]{explicit-sign=true}
+#+LATEX_HEADER: \NewChemPhase\lqdd{\(\ell\)}
+#+LATEX_HEADER: \NewChemPhase\gr{grafite}
+#+LATEX_HEADER: \NewChemPhase\reac{reação}
+#+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+#+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}%,angle increment=30}
+#+LATEX_HEADER:  \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
+#+LATEX_HEADER: %%%% QRCODE
+
+#+LATEX_HEADER: \usepackage{pdfpages}
+#+LATEX_HEADER: \usepackage{mol2chemfig}
+#+LATEX_HEADER: \usepackage{subfig,caption}
+#+LATEX_HEADER: \usepackage{wrapfig}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setitemize{label=\usebeamerfont*{itemize item}%
+#+LATEX_HEADER: \usebeamercolor[fg]{itemize item}
+#+LATEX_HEADER: \usebeamertemplate {itemize item}}
+#+LATEX_HEADER: \usepackage{array,longtable} % ajust colunm table
+#+LATEX_HEADER: \usepackage{cancel}
+#+LATEX_HEADER: \usepackage[controls]{animate}
+#+LATEX_HEADER: \renewcommand{\CancelColor}{\color{red}}
+#+LATEX_HEADER: \newcolumntype{K}{>{\centering\arraybackslash}m{6.5cm}}
+#+LATEX_HEADER: \newcolumntype{L}{>{\centering\arraybackslash}m{5cm}}
+#+LATEX_HEADER: \newcolumntype{B}{>{\centering\arraybackslash}m{2.5cm}}
+#+LATEX_HEADER: \newcolumntype{N}{>{\centering\arraybackslash}m{1.4cm}}
+#+LATEX_HEADER: % custom negrito table
+#+LATEX_HEADER: \newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+#+LATEX_HEADER: \newcolumntype{^}{>{\currentrowstyle}}
+#+LATEX_HEADER: \newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+#+LATEX_HEADER:  #1\ignorespaces
+#+LATEX_HEADER: }
+#+LATEX_HEADER: \definecolor{col1}{HTML}{FF7878}
+#+LATEX_HEADER: \definecolor{col2}{HTML}{51B5F8}
+#+LATEX_HEADER: \definecolor{col3}{HTML}{68E1AA}
+#+LATEX_HEADER: \definecolor{col4}{HTML}{B869EA}
+#+LATEX_HEADER: \definecolor{col5}{HTML}{FF5500}
+#+LATEX_HEADER: \definecolor{col6}{HTML}{FFF8E7}
+#+LATEX_HEADER: \definecolor{col7}{HTML}{FF9966}
+#+LATEX_HEADER: \definecolor{col8}{HTML}{9400D3}
+#+LATEX_HEADER: \usepackage[export]{adjustbox}
+#+LATEX_HEADER: \usepackage[skins,most,many]{tcolorbox}
+#+LATEX_HEADER: \usepackage{endiagram}
+#+LATEX_HEADER: \tcbuselibrary{skins,raster,listings,breakable,vignette}
+#+LATEX_HEADER: \newcommand{\zx}[1]{\textcolor{blue!85!red}{\emph{#1}}}
+#+LATEX_HEADER: \newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER:	colback=blue!5!white, colframe=blue!75!black, 
+#+LATEX_HEADER:	fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER:	colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER:	attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER:	title=#2,#1}
+#+LATEX_HEADER: \newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER:	colback=green!5!white, colframe=blue!75!black, 
+#+LATEX_HEADER:	fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER:	colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER:	attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER:	title=#2,#1}
+#+LATEX_HEADER: \newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER:	colback=yellow!5!white, colframe=blue!75!black, 
+#+LATEX_HEADER:	fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER:	colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER:	attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER:	title=#2,#1}
+#+LATEX_HEADER: \newtcolorbox[auto counter]{boxex}[2][]{fontupper=\footnotesize,
+#+LATEX_HEADER: colback=white!40,colframe=black,fonttitle=\bfseries,sharp corners,
+#+LATEX_HEADER: title=Exemplo~\thetcbcounter~#1}
+
+#+LATEX_HEADER: \newcounter{mycounter}
+#+LATEX_HEADER: %%% Colobor
+
+#+LATEX_HEADER: %%% Example colorbox 
+
+#+LATEX_HEADER: \tcbset{examplebox/.style={enhanced,colback=white,colframe=green!65!black,
+#+LATEX_HEADER: enlarge top by=10mm,
+#+LATEX_HEADER:  overlay={%
+#+LATEX_HEADER: \path[fill=blue!65,line width=.4mm] (frame.north west)--++(17mm,0)coordinate(n2)--++(0,8mm)--++(-20mm,0) arc (-90:90:-4mm)--cycle;
+#+LATEX_HEADER: \node at ([shift={(5mm,4mm)}]frame.north west){\color{white}{\textbf{\sffamily Exemplo}}};
+#+LATEX_HEADER: \path[fill=green!65!blue] ([xshift=.4mm]n2)--++(0,8mm)--++(7mm,0)--++(0,-8mm)--cycle;
+#+LATEX_HEADER: \node at ([shift={(4mm,4mm)}]n2){\color{white}{\textbf{\sffamily \themycounter}}};
+#+LATEX_HEADER: \node at ([shift={(18mm,4mm)}]n2){\itshape\textbf{\sffamily Solu\c{c}\~ao}};
+#+LATEX_HEADER:}}}
+
+#+LATEX_HEADER: %% COnfig tikz molecules
+#+LATEX_HEADER: \usepackage{supertabular}
+#+LATEX_HEADER: \tikzset{
+#+LATEX_HEADER: bal/.style={
+#+LATEX_HEADER: circle, minimum size=2pt, inner sep=0pt,fill=orange,fill opacity=0.5
+#+LATEX_HEADER:},
+#+LATEX_HEADER:  rect/.style={
+#+LATEX_HEADER:  circle, minimum size=2pt, inner sep=.5pt,fill=red,fill opacity=0.5
+#+LATEX_HEADER:  },
+#+LATEX_HEADER:  bal2/.style={
+#+LATEX_HEADER:  circle, minimum size=2pt, inner sep=0pt,fill=blue,fill opacity=0.5
+#+LATEX_HEADER:  },
+#+LATEX_HEADER:  bal3/.style={
+#+LATEX_HEADER:  circle, minimum size=2pt, inner sep=0pt,fill=yellow,fill opacity=0.5
+#+LATEX_HEADER:  }
+#+LATEX_HEADER:}
+#+LATEX_HEADER: \definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
+#+LATEX_HEADER: \newcommand{\re}{\hspace{-1cm}}
+#+LATEX_HEADER: \newcommand{\af}{\hspace{2cm}}
+#+LATEX_HEADER: \graphicspath{{img}{QG/img}{FQ/img}}

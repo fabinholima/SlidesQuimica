@@ -1,0 +1,77 @@
+#+TITLE: Hidrocarbonetos
+#+AUTHOR: Fábio Lima
+#+DATE: 
+#+OPTIONS: H:2 toc:t num:t
+#+STARTUP:beamer
+#+LATEX_CLASS:beamer 
+#+LANGUAGE: en portuguese
+#+LATEX_CLASS_OPTIONS: [presentation,professionalfonts,smaller,aspectratio=169]
+
+#+BEAMER_THEME: minflat
+#+LATEX_HEADER: \date{}
+#+LATEX_HEADER:% \usetheme{minflat}
+
+
+#+INCLUDE: "packages.org"
+
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+
+#+LATEX_COMPILER: lualatex 
+
+
+
+
+
+#+INCLUDE: "QO/Hidrocarbonetos/HidrocarbonetosII.org"              
+
+
+
+
+#+begin_comment
+
+
+
+     
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages=1-33]{QG/GeometriaMolecular/GeometriaMolecular2.pdf}
+}
+
+
+
+#+INCLUDE: "FQ/Eletroquimica/BalanceamentoRedox2.org"
+
+
+
+#+INCLUDE: "FQ/Nox/Nox.org"
+
+#+INCLUDE: "FQ/Eletroquimica/BalanceamentoRedox.org"
+
+
+#+INCLUDE: "QO/Proteinas/Carboidratos.org"
+
+
+
+
+
+#+INCLUDE: "QG/SeparacaoMisturas/SeparacaoMisturas.org"
+
+
+
+
+#+INCLUDE: "FQ/Radioatividade/Radioatividade.org"
+
+#+end_comment
+
+
+
+
+
+#+begin_comment
+minflat
+BEAMER_THEME: Zurich [bullet=circle,bigpagenumber,topline=true,]
+BEAMER_THEME: Zurich [bullet=circle,bigpagenumber,topline=true,]
+[presentation,professionalfonts,compress,smaller,aspectratio=169]
+[xetex,notheorems,hyperref={pdfpagelabels=true},xcolor={table]
+#+end_comment

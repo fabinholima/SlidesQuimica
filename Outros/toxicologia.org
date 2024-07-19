@@ -1,0 +1,82 @@
+
+* Toxicologia Forense
+
+
+** Toxicologia Forense
+
+- A ciência forense é uma área interdisciplinar que envolve física, biologia, química, matemática e várias outras ciências de fronteira, como objetivo de dar suporte às investigações relativas à justiça *civil* e *criminal*.
+
+-  Em investigações decrimes, na vida real, o foco principal do profissional forense é confirmar a autoria ou descartar o envolvimento do(s) suspeito(s).
+
+** Objetivo Toxicologia Forense
+
+ - Detecção e identificação de substâncias tóxicas, em geral, no seguimento de solicitações processuais de investigação criminal por parte de diversos organismos.
+
+- Assim, pode dar pistas relativamente importantes a envenenamentos, intoxicações, uso de estupefacientes e outros.
+ 
+** Função da Toxicologia Forenqse
+
+- Identificaçãodo agente lesivo;
+- Substâncias que produzam alteração psíquica passageira ou permanente;
+- Intoxicação como circunstância qualificadora de um delito;
+- Intoxicaçãocomo delito;
+- Intoxicaçãocomo estado perigoso;
+
+  
+** Finalidade da Toxicologia Forense
+
+- Elucidar a *causa da morte*.
+- Confirmar a presença de princípio psicoativo/tóxico em material apreendido (pó, erva, alimentos, água, etc);
+-  confirmar a presença de drogas e fármacos em material biológico de indivíduos implicados em uso ilícito destas substâncias ou quando seu uso tenha contribuído para atitudes anti-sociais, como acidentes, crimes, roubos, etc.
+   
+
+** Investigação Toxicológica
+
+É o conjunto de processos analíticos que tem por objetivo a análise, identificação e determinação qualitativa ou quantitativa dos *tóxicos tanto in vivo como no cadáver*, com finalidadede permitir o diagnóstico da intoxicaçãoe o esclarecimentodos fatos.
+
+**  Etapas da Investigação Toxicológica
+
+ 
+
+* Análise Toxicológicas
+
+** 
+
+- Estabelecer a presença de substâncias tóxicas (identificar e quantificar toxicantes e seus metabólitos);
+- Estabelecer a ausência de outras substâncias relevantes;
+- Identificar e quantificar toxicantes e seus metabólitos;
+- Diferenciar toxicantes de compostos semelhantes;
+- Confiabilidade e interpretação de resultados;
+
+
+
+* Matriz
+
+** Verificação
+
+- Urina
+- Sangue
+- Saliva
+- Cabelo
+  
+
+** Materiais biológicos /post mortem/
+
+
+
+
+
+* Cadeia de Custódia
+
+
+
+
+** Ricina
+   
+#+BEGIN_SRC gnuplot   :file output.svg
+set terminal svg size 1200,800 fname 'Verdana, Helvetica, Arial, sans-serif'
+    plot log(x)
+#+END_SRC
+
+#+RESULTS:
+[[file:output.svg]]

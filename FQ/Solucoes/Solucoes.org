@@ -1,0 +1,65 @@
+* Soluções
+
+** Soluções
+
+- Solução: :: é uma mistura homogênea de soluto e solvente
+- Solvente: :: Componente cujo estado físico é preservado.
+- Soluto: :: Dissolvido no solvente
+
+   *Observação:* /Se todos os componentes estiverem no mesmo estado físico, o solvente é aquele presente em maior quantidade./
+
+** Solubilidade /versus/ Temperatura
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+	\begin{axis}[
+		ylabel=Solubilidade g/g \ch{H2O},
+		xlabel=Temperatura / \si{\celsius},
+		title=Curva de Solubilidade, 
+		legend style={draw=none},
+		legend pos=north west]
+		%% KNO3
+	\addplot[color=red,mark=*] coordinates {
+		(0,13.25)
+		(20,31.66)
+		(40,63.9)
+		(60,109.9)
+		(80,169)
+		(100,245.2)
+	};
+	%%% KI
+	\addplot[color=blue,mark=*] coordinates {
+		(0,127.8)
+		(20,144.51)
+		(40,161)
+		(60,176.2)
+		(80,191.5)
+		(100,208)
+	};
+	%% KClO4
+	\addplot[color=black,mark=*] coordinates {
+		(0,0.76)
+		(20,1.73)
+		(40,3.63)
+		(60,7.18)
+		(80,13.38)
+		(100,22.2)
+	};
+	%% NaCl
+	%35.6	35.8	36.42	37.05	38.05	39.2
+	\addplot[color=green,mark=*] coordinates {
+		(0,35.6)
+		(20,35.8)
+		(40,36.42)
+		(60,37.05)
+		(80,38.05)
+		(100,39.2)
+	};
+	\legend{\ch{KNO3}, KI, \ch{KC$\ell$O4}, \ch{NaC$\ell$}}
+	\end{axis}
+\end{tikzpicture}
+#+end_export
+
+A solubilidade de uma substância é a quantidade máxima de uma substância que pode ser dissolvida em uma quantidade fixa de solvente a uma determinada temperatura. A solubilidade de uma substância geralmente aumenta com a temperatura. Isso ocorre porque as moléculas da substância têm mais energia cinética a temperaturas mais altas, o que torna mais provável que elas colidam com as moléculas do solvente e se dissolvam.

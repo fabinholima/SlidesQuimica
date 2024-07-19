@@ -1,0 +1,12 @@
+* Propriedades Periódicas
+
+
+** Raio Atômico
+
+#+begin_export latex
+%%%%% ====== Raio Atomico
+\pgfPT[show periodic variations,cell style=pgfPTR, varR={c=white!50!red!70!,f= \large \bfseries}]
+#+end_export
+
+
+** Energia de Ionização 

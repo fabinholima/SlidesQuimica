@@ -1,0 +1,332 @@
+* Separação de Misturas
+
+** Misturas homogêneas
+
+As misturas homogêneas apresentam-se de forma uniforme, em apenas uma fase (monofásica). Um bom exemplo de sistema homogêneo é a mistura da água e açúcar.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/homogenea.png]]
+
+
+** Separação de misturas heterogêneas
+
+As misturas heterogêneas são aquelas constituídas por duas ou mais substâncias, que podem ser visualmente distinguíveis em um microscópio óptico. Nesse tipo de mistura os componentes ficam em fases diferentes. Um bom exemplo de sistema heterogêneo é a mistura da água e do óleo.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/heterogenea.png]]
+
+
+** Misturas Heterogêneas
+
+***                                            :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.48
+    :BEAMER_ENV: block
+    :END:
+- Decantação
+- Centrifugação
+- Sifonação
+- Catação
+- Ventilação
+- Filtração
+- Peneiração
+- Dissolução fracionada
+  
+***                                         :B_block:
+    :PROPERTIES:
+    :BEAMER_COL: 0.48
+    :BEAMER_ACT: <2->
+    :BEAMER_ENV: block
+    :END:
+    
+- Flotação
+- Separação magnética
+- Levigação
+- Cristalização fracionada
+- Sublimação
+- Destilação
+- Destilação fracionada
+- Cromatografia
+
+  
+**** This will be formatted as a beamer note                       :B_note:
+     :PROPERTIES:
+     :BEAMER_env: note
+     :END:
+
+
+* Decantação
+
+** Decantação
+
+ Usada na separação de misturas heterogêneas de solido/líquido ou de dois líquidos imiscíveis entre si.
+
+
+ [[../img/decantacao.jpg]]
+
+
+** Funil de Separação
+
+Para se separar misturas heterogêneas líquido/líquido pode se utilizar também um aparelho de vidro chamado, funil de separação ou funil de decantação, funil de bromo. 
+
+Após a decantação, abre-se cuidadosamente a torneira, deixando passar primeiro o líquido mais denso, e depois o menos denso, separando-os.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/decantação.jpg]]
+
+
+* Centrifugação
+
+** Centrifugação
+
+  Caso a decantação de uma mistura heterogênea seja muito lenta, pode-se utilizar uma alternativa mais rápida, a centrifugação. A centrifugação ocorre em um aparelho chamado *centrífuga*.
+
+A centrifugação consiste em submeter a mistura a uma rotação, onde a parte mais densa se deposita no fundo e a menos densa na parte superior.
+
+#+ATTR_LATEX: :scale 0.3
+[[../img/centrifugacao.jpg]]
+
+
+* Sifonação
+** Sifonação
+
+Esse método parte da decantação. Quando a mistura é deixada em repouso, após a separação das duas fases, se não for possível retirar o líquido para o outro recipiente, podemos retirá-lo por sifonação, através de um sifão, da sucção e da ação gravitacional.
+
+Usado para separar: *sólido + líquido* ou *líquido + líquido*.
+
+Exemplo: Água + cascalho.
+
+#+ATTR_LATEX: :scale 0.6
+[[../img/sifonacao.png]]
+
+
+* Catação
+** Catação
+
+A catação é um método de separação de misturas heterogêneas manualmente, utilizando apenas a mão ou tendo como auxílio algum instrumento, geralmente uma colher ou uma pinça.
+
+Nesse processo, que separa substâncias sólidas de outras substâncias também sólidas (sólido + sólido), para remover as partículas de uma mistura é necessário que elas.
+
+- Sejam visíveis a olho nu;
+- Estejam em pequenas quantidades;
+- possam ser distinguidas na mistura por cor, tamanho ou formato.
+
+  #+ATTR_LATEX: :scale 0.1
+[[../img/catacao.jpg]]
+
+
+* Ventilação
+** Ventilação
+*Ventilação* é um processo físico de separação de misturas heterogêneas. Que é utilizado quando os sólidos granulados que formaram a mistura possuem densidades sensivelmente diferentes. Nesse caso, passa-se uma forte corrente de ar pela mistura e o menos denso é arrastado pelo vento e separado dos mais densos.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/ventila.jpg]]
+
+
+* Evaporação
+** Evaporação
+Na separação de misturas homogêneas pode se empregar a técnica da evaporação. É um processo barato, e utilizado quando só há interesse na fase sólida.
+A técnica consiste na evaporação da fase líquida, retendo somente a fase sólida. Muito utilizada na separação do sal da água do mar.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/evaporacao_sal.jpg]]
+
+
+* Filtração
+** Filtração
+
+A filtração é um método físico de separação de misturas heterogêneas, quando temos um sólido disperso em um líquido ou gás. Basicamente, passa-se a mistura heterogênea por um filtro, isto é, um material poroso, no qual ficam retidas as partículas sólidas suspensas, a parte líquida ou gasosa atravessa o filtro.
+
+- *Filtração Simples*
+- *Filtração à vácuo*
+
+** Filtração Simples
+
+Usa-se um papel de filtro convenientemente dobrado em quatro, formando um cone, como na imagem abaixo:
+
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/filtracao.jpg]]
+
+
+** Filtração à vácuo
+
+Filtração a vácuo: Quando uma filtração é muito demorada, pode-se realizar a filtração a vácuo, também chamada de filtração por pressão reduzida, que acelera o processo.
+
+Em laboratório, esse tipo de filtração é realizado usando-se um funil de Buchner feito de porcelana que tem o fundo perfurado.
+
+#+ATTR_LATEX: :scale 0.4
+[[../img/filtracao-a-vacuo.jpg]]
+
+
+* Peneiração
+** Peneiração 
+A peneiração ou tamisação consiste em peneirar as substâncias para separar os componentes sólidos. A mais grossa fica retida na peneira à medida que a mais fina passa pelos furinhos do utensílio.
+
+#+ATTR_LATEX: :scale 0.4
+[[../img/peneiracao.jpg]]
+
+
+* Dissolução fracionada
+** Dissolução fracionada
+
+Dos muitos métodos que existem para separar misturas heterogêneas de dois ou mais sólidos, um deles é a dissolução fracionada. Essa técnica de separação está baseada na diferença de facilidade com que os os sólidos componentes de uma mistura dissolvem-se em determinado solvente.
+   
+A dissolução fracionada é aplicada quando se tem uma mistura de sólidos em que apenas um desses componentes é solúvel em um determinado líquido. Um exemplo de mistura, onde se é possível aplicar essa técnica, é uma mistura de açúcar e areia, ao adicionarmos água, apenas o açúcar irá se dissolver.
+
+#+ATTR_LATEX: :scale 0.3
+[[../img/dissolucao.jpg]]
+
+
+* Flotação
+** Flotação
+
+A flotação é um tipo de processo físico de separação de misturas heterogêneas. Essa técnica consiste em adicionar bolhas de ar ao meio para que as partículas em suspensão no líquido aglutinem-se a essas bolhas.
+
+#+ATTR_LATEX: :scale 0.4
+[[../img/flotacao.png]]
+
+
+* Separação magnética
+** Separação magnética
+
+
+A separação magnética é um método de separação de misturas heterogêneas de componentes sólidos, mais especificamente para separação de misturas contendo ferro magnético como o cobalto, o níquel e, principalmente, o ferro.
+
+#+ATTR_LATEX: :scale 0.2
+[[../img/separacao_magnetica.jpg]]
+
+
+* Levigação
+** Levigação
+Neste método, um dos sólidos da mistura possui menor densidade e pode ser carregado pela água corrente. Os garimpeiros costumam separar o ouro da areia dessa forma, pois quando passam a água corrente pela mistura, a areia, que é menos densa, é arrastada e o ouro, que é mais denso, permanece no fundo do recipiente que eles usam, que é denominado de bateia
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/levigacao.jpg]]
+
+
+* Cristalização fracionada
+** Cristalização fracionada
+A cristalização fracionada é um processo de separação de misturas, onde as substâncias da mistura são sólidas. Dissolvendo todos os componentes da mistura em líquido, que logo em seguida sofre evaporação, ele provoca a cristalização das substâncias separadamente.
+
+#+ATTR_LATEX: :scale 0.2
+[[../img/cristalizacao_fracionada.png]]
+
+
+* Floculação
+** Floculação
+É um processo de separação de misturas utilizado no tratamento da água para abastecimento público. O processo físico promove a aglutinação das partículas já coaguladas, facilitando o choque entre as mesmas devido à agitação lenta. A formação de flocos de impurezas facilita sua posterior remoção por sedimentação sob ação da gravidade, flotação ou filtração.
+
+#+ATTR_LATEX: :scale 0.6
+[[../img/floculacao.png]]
+
+
+* Sublimação
+** Sublimação 
+
+Técnica que permite separar uma substância sólida que sublime facilmente (um exemplo é o iodo como mostra a imagem) de outras com menos facilidade em sublimação.
+
+#+ATTR_LATEX: :scale 0.5
+[[../img/sublimacao.png]]
+
+
+* Destilação
+** Destilação Simples
+
+Usada em separação  de mistura homogênea sólido/líquido quando há interesse tanto na fase líquida quanto na fase sólida. A separação da substâncias ocorre pela diferença nos pontos de ebulição.
+
+#+ATTR_LATEX: :scale 0.3
+[[../img/destilacao-simples.jpg]]
+
+
+** Destilação Fracionada
+
+ Para misturas homogêneas de dois ou mais líquidos, utiliza-se a técnica da destilação fracionada. Assim como na destilação simples, a técnica é baseada na diferença dos pontos de ebulição das substâncias ali presente. 
+
+ #+ATTR_LATEX: :scale 0.5
+ [[../img/destilacao-fracionada.png]]
+
+
+
+
+
+** Destilação do Petróleo
+
+Processo utilizado na separação dos componentes do petróleo. Essa técnica também é empregada para a separação de gases na atmosfera. Onde o ar é resfriado até atingir o estado líquido e a seguir passa por *destilação fracionada*.
+   
+#+ATTR_LATEX: :scale 0.4
+[[../img/petroleo2.png]]
+
+
+
+* Cromatografia 
+** Cromatografia
+
+
+Processo de separação utilizado quando existem pequenas quantidades de amostras da mistura e das substâncias que a constituem têm diferentes capacidades de absorver num material sólido. *Misturas homogêneas*
+
+[[../img/cromatografia2.png]]
+
+
+
+
+* Liquefação Fracionada
+** Liquefação Fracionada
+É o método utilizado para fracionar os componentes gasosos presentes em uma mistura gasosa que é resfriada e comprimida até que todos os componentes sofram liquefação. A seguir, a mistura líquida e homogênea é destilada e as substâncias gasosas são obtidas separadamente. Essa técnica é muito utilizada para obter nitrogênio e argônio a partir do ar atmosférico.
+
+#+ATTR_LATEX: :scale 0.38
+[[../img/liquefacao_fracionada.png]]
+
+* Aplicação
+
+** Tratamento de Água
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+- Coagulação :: É quando a água bruta recebe, logo ao entrar na estação de tratamento, uma dosagem de sulfato de alumínio. Este elemento faz com que as partículas de sujeira iniciem um processo de união.
+- Floculação :: Quando, em tanques, continua o processo de união das impurezas, na água em movimento. As partículas se transformam em flocos de sujeira.
+- Decantação :: As impurezas, que se aglutinaram e formaram flocos, vão se separar da água pela ação da gravidade, indo para o fundo dos tanques ou ficando presas em suas paredes.
+- Filtração :: A água passa por grandes filtros com granulações diversas e carvão antracitoso (carvão mineral). Aí ficarão retidas as impurezas que passaram pelas fases anteriores.
+- Desinfecção :: É a cloração, para eliminar germes nocivos à saúde e garantir a qualidade da água até a torneira do consumidor. Nesse processo pode ser usado o hipoclorito de sódio, cloro gasoso ou dióxido de cloro.
+- Fluoretação :: É quando será adicionado fluossilicato de sódio ou ácido fluorssilícico em dosagens adequadas. A função disso é prevenir e reduzir a incidência de cárie dentária, especialmente nos consumidores de zero a 14 anos de idade, período de formação dos dentes.
+- Correção :: É a correção de pH, quando é adicionado carbonato de sódio para uma neutralização adequada à proteção da tubulação da rede e da residência dos usuários e não haver corrosões.
+
+[[../img/estacao_agua.png]]
+
+** Tratamento de Esgoto
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+O principal método de tratamento de esgoto e efluentes é o do lodo ativado, que consiste na degradação dos materiais orgânicos por bactérias aeróbias.
+
+
+- Peneiramento ou gradeamento :: O esgoto passa por grades ou peneiras para retenção de sólidos grandes;
+- Caixa de areia :: Aqui as areias, mais densas, são separadas do esgoto por decantação;
+- Decantação primária :: Em um decantador primário ocorre a sedimentação das outras partículas sólidas presentes;
+- Aeração :: Nos tanques de aeração, é inserido ar próximo à entrada de esgoto, fazendo multiplicar os micro-organismos presentes no esgoto, para que degradem o material orgânico através de seu metabolismo natural;
+- Decantação secundária :: Após a aeração, o efluente tratado é separado do lodo ativado, que é coagulado e decantado para o fundo do tanque. Parte deste lodo é retornado ao tanque de aeração para contribuir com a degradação das impurezas e o restante é separado para secagem e descarte apropriado. A água resultante pode ser descartada em um corpo hídrico ou reutilizada.
+
+#+ATTR_LATEX: :scale 0.7
+[[../img/estacao_esgoto.png]]
+
+
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/BEwSLgNXJmZayNG} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/QdQwFPgPcJ68tkJ}\\
+ \end{tabular}
+ \end{center}
+#+end_export

@@ -1,0 +1,165 @@
+* Funções Nitrogenadas
+
+** Definição
+
+As funções nitrogenadas são um grupo de compostos orgânicos que possuem átomos de nitrogênio unidos à cadeia carbônica.
+
+
+* Amina
+
+** Aminas
+
+A função orgânica amina é caracterizada pela ligação de ao menos uma cadeia carbônica ao átomo de nitrogênio. O grupo funcional das aminas é -N-R1R2R3 (os grupos R são cadeias carbônicas ou átomos de hidrogênio, sendo pelo menos um deles cadeia carbônica).
+
+#+begin_export latex
+\begin{bclogo}[logo=\bctakecare]{Grupo Funcional}
+\centering
+{\huge\bfseries \chemfig[atom style={scale=1},bond style={line width=2.5pt,}]{\mathbf{R_1}-\color{red}{\mathbf{N}}([:90]-\mathbf{R_2})-\mathbf{R_3}}}
+\end{bclogo}
+#+end_export
+
+** Classificação das aminas
+
+
+#+begin_export latex
+\begin{tikzpicture}[
+auto,
+ block/.style={
+      rectangle,
+      font=\bfseries,
+      draw=blue,
+      thick,
+      fill=blue!20,
+      text width=5em,
+      align=center,
+      rounded corners,
+      minimum height=2em
+    },
+    block2/.style={
+      rectangle,
+      draw=blue,
+      thick,
+      fill=yellow!10,
+      text width=12em,
+      align=center,
+      rounded corners,
+      minimum height=5em
+    },
+    block3/.style={
+      rectangle,
+      draw=blue,
+      font=\bfseries,
+      thick,
+      fill=green!10,
+      text width=10em,
+      align=left,
+      rounded corners,
+      minimum height=5em
+    }]
+    %%%%% Amonia
+\node[block] at (-2,1)(amonia) {\ch{NH3}};
+\node[block2] at (3,4) (amina1) {\chemfig{CH_3-NH_2} \\ \bfseries\textcolor{red}{Metilamina}};
+\node[block2] at (3,1) (amina2) {\chemfig{CH_3-N([:-90]-H)-CH_3} \\ \bfseries \textcolor{red}{Dimetilamina}};
+\node[block2] at (3,-2) (amina3) {\chemfig{CH_3-N([:-90]-CH_3)-CH_3} \\ \bfseries \textcolor{red}{Trimetilamina}};
+%%%%% Segundos Blocos
+\node[block3] at (9,4) (ap) {\textcolor{violet}{Amina primária}: possuem um único substituinte carbônico. };
+\node[block3] at (9,1) (as) {\textcolor{violet}{Amina secundária}: possuem dois substituintes carbônicos.};
+\node[block3] at (9,-2) (at) {\textcolor{violet}{Amina terciária}: possuem três substituintes carbônicos};
+%%%%% Setas 
+\draw[-latex] (amonia)|-(amina1);
+\draw[-latex] (amonia)--(amina2);
+\draw[-latex] (amonia)|-(amina3);
+%%%%%%% 
+\draw[-latex] (amina1)--(ap);
+\draw[-latex] (amina2)--(as);
+\draw[-latex] (amina3)--(at);
+\end{tikzpicture}
+
+#+end_export
+
+** Nomeclatura das aminas 
+
+No caso das aminas primárias, a construção do nome se dá considerando o número de carbonos (prefixo), a natureza da ligação entre carbonos (infixo) e usa-se o termo amina para o sufixo (final da palavra).
+
+
+** Uso das aminas
+
+As aminas são usadas na produção de corantes, sabões, fármacos, no processo de vulcanização da borracha, explosivos e outros processos industriais, sendo também encontradas em vegetais e formadas em processos de decomposição de matéria orgânica
+
+
+
+
+* Amidas
+
+** Amidas
+#+begin_export latex
+\begin{bclogo}[logo=\bctakecare]{Grupo Funcional Amida}
+\centering
+{\huge\bfseries \chemfig[atom style={scale=1},bond style={line width=1.0pt,}]{\mathbf{R_1}-\color{red}{C}(=[2,,,,red]\color{red}{O})-[8,,,,red]\color{red}{N}([:60]-[7,,,,black]\mathbf{R_3})-[9,,,,black]\mathbf{R_2}}}
+\end{bclogo}
+#+end_export
+** Classificação das amidas
+
+
+** Nomenclatura das amidas
+
+
+** Aplicação das amidas
+
+As amidas têm ampla aplicação no setor industrial e químico, estando presentes na produção de polímeros (como o náilon e o poliuretano), resinas, explosivos, fertilizantes, repelentes de insetos, adubos e fármacos.
+
+
+* Nitrila
+
+** Nitrila (ou cianetos)
+
+As nitrilas são compostos orgânicos caracterizados pela ligação tripla entre um átomo de carbono e um átomo de nitrogênio, apresentando o grupo funcional *\ch{-C#N}*. Nas nitrilas, o nitrogênio está na extremidade e o carbono está ligado diretamente à cadeia carbônica.
+
+
+#+begin_export latex
+\begin{center}
+\chemfig{\mathbf{R_1}-\color{red}{C}~[8,,,, red]\color{red}{N}}
+\end{center}
+#+end_export
+
+** Nomenclatura das nitrilas
+
+
+** Aplicação das nitrilas 
+
+
+* Isonitrila 
+
+** Isonitrila
+
+As isonitrilas, ou isonitrilos, são compostos formados pela ligação tripla entre um átomo de carbono e um átomo de nitrogênio, apresentando o grupo funcional \ch{-RN#C}. Nas isonitrilas, o carbono está na extremidade e o nitrogênio está ligado diretamente à cadeia carbônica.
+
+
+#+begin_export latex
+\begin{center}
+\chemfig{\mathbf{R_1}-\color{red}{N}~[8,,,, red]\color{red}{C}}
+\end{center}
+#+end_export
+
+** Nomenclatura das Isonitrila
+
+
+
+** Aplicação das Isonitrila
+
+
+
+* Nitrocompostos
+
+** Nitrocompostos
+
+Os nitrocompostos são compostos orgânicos que possuem o grupo nitro (\ch{-NO2}) unido a uma cadeia carbônica, que pode ser alifática (aberta ou linear) ou aromática.
+
+#+begin_export latex
+
+#+end_export
+
+** Nomenclatura das nitrocompostos
+
+
+** Aplicação dos nitrocompostos

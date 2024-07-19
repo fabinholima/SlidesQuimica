@@ -1,0 +1,450 @@
+* Eletroquímica
+
+** Definição
+
+#+ATTR_LATEX: :options [logo=\bcattention, noborder=true, barre=none]{Definição}
+#+begin_bclogo
+*Eletroquímica* é o ramo da química que trabalha com o uso de reações químicas espontâneas para produzir eletricidade, e com o uso da eletricidade para
+forçar reações químicas não espontâneas a acontecerem.
+#+end_bclogo
+
+* Fatos Históricos 
+
+** Galvani
+
+
+- Galvani  (1786) :: Propôs a “eletricidade animal” observando o contato de metais com os músculos da coxa de rãs.
+
+#+ATTR_LATEX: :scale 0.2  
+[[../Eletroquimica/Galvani.jpg]]
+
+#+ATTR_LATEX: :scale 0.3
+[[../Eletroquimica/pernara.png]]
+
+** Volta
+
+- Volta (1800) :: Construção da primeira pilha. “Rosário” (moedas de cobre + placas de zinco e feltro embebido em salmoura).
+
+#+ATTR_LATEX: :scale 0.3
+[[../Eletroquimica/volta.jpg]]
+
+* Óxido-Redução
+** Oxidação
+
+#+ATTR_LATEX: :options [noborder=true, couleurBarre=red]{DEFINIÇÃO}
+#+begin_bclogo
+*Oxidação:* É a *perda* de elétrons por parte de um átomo de uma espécie química.
+#+end_bclogo
+
+
+#+begin_export latex
+\begin{reaction*}
+X⁰_{\sld} -> X^{n+}_{\aq}
+\end{reaction*}
+#+end_export
+
+- Aumenta o *NOX*
+- Perder elétrons
+- Agente redutor ou simplesmente redutor
+  
+
+
+** Redução
+
+
+#+ATTR_LATEX: :options [noborder=true, couleurBarre=red]{DEFINIÇÃO}
+#+begin_bclogo
+*Redução:* É a *ganho* de elétrons por parte de um átomo de uma espécie química.
+#+end_bclogo
+
+#+begin_export latex
+\begin{reaction*}
+X^{n+}_{\aq} -> X⁰_{\sld}
+\end{reaction*}
+#+end_export
+
+- Diminuir o *NOX*
+- Ganhar elétrons
+- Agente oxidante ou simplesmente oxidante.  
+  
+
+** Óxido-Redução
+
+#+begin_export latex
+%\begin{center}
+
+\begin{bclogo}[logo=\bctakecare, noborder=true, barre=none]{Exemplo}
+%\vspace{2cm}
+\begin{tikzpicture}
+\node[] at (1,1) (reacao) {\begin{minipage}{\textwidth}
+\Large
+\ch{
+  "\OX{o1,Zn}" {}^0 _\sld{} \quad \; + \; \;   "\OX{r1,Cu}" {}^2+ _{\aq} -> "\OX{r2,Cu}" {}^0 _\sld{} \; \; + \; \; "\OX{o2,Zn}" {}^2+ _\aq
+}
+\redox(o1,o2)[->,red]{\small oxidação (ganha 2 elétrons)}
+\redox(r1,r2)[->,blue][-1]{\small redução (perde 2 elétrons)}
+\end{minipage}
+};
+\pause 
+\node[draw=purple,circle,font={\footnotesize\bfseries},minimum size =1.7cm,line width=1.2pt] at (-5 ,1.2)(B1) { };
+%\pause 
+\node[draw=green,circle,font={\footnotesize\bfseries},minimum size =1.7cm,line width=1.2pt] at (-3 ,1.2)(B2) { };
+%%%%%
+\node[draw=green, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-2.5,-1.0) (AO) {Agente Oxidante};
+%%
+\node[draw=purple, rectangle, minimum size =0.65cm,line width=1.4pt,font={\bfseries}] at (-4,-2.5) (AR) {Agente Redutor};
+\draw[->] (B2) --(AO);
+\draw[->] (B1) --(AR);
+\end{tikzpicture}
+
+\end{bclogo}
+
+
+#+end_export
+
+
+
+** Conceitos importantes
+
+#+ATTR_LATEX: :options [logo=\bcattention, noborder=true, barre=none]{Atenção}
+#+begin_bclogo
+- Nas pilhas os elétrons fluem do eletrodo onde ocorre a oxidação (*ânodo*) para o eletrodo que sofre redução (*cátodo*), através de um fio externo.
+- O voltímetro ligado a este fio irá medir a força eletromotriz (fem ou E).
+#+begin_export latex
+\begin{equation}
+U = E -r\cdot i 
+\end{equation}
+#+end_export
+- Na química, as pilhas são geradores ideais, com r=zero. Assim: U=E ,ou seja, a fem da pilha é igual a ddp ou @@latex:$\Delta$@@E
+#+end_bclogo
+
+
+** Uma Meia-Célula Eletroquímica
+
+#+begin_export latex
+
+\begin{center}
+
+% Gradient Info
+  
+\tikzset {_oxk0h5nal/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_vxnz1zrmu}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_9wh4pqhpc/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_qvr8v541s}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_v4i66phlz/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_ke7c36pbt}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_dfo8dm6tu/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_kmots4rvb}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_ym6eru0ic/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_33584leg4}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_x42ynzj8y/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_pnh8k8flg}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_6ykrydhda/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_q2r5fd5nn}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_l55nl2qi6/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_2l08x580o}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_y17qc1glz/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_h3uj6nky8}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_xo92zw4xj/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_2x43aixfw}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_653uzaewy/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_yoha1ihup}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_wft3ftdri/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_43b1waxnf}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_cvuesgzhc/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_x3wkwbu45}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_5ohr592hj/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_pgpoz4sjh}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.48,0.15,0.15);
+rgb(400bp)=(0.48,0.15,0.15)}
+
+% Gradient Info
+  
+\tikzset {_4poe4l3nk/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformscale{1 }  }}}
+\pgfdeclareradialshading{_ar3wjudho}{\pgfpoint{0bp}{0bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0,0,0);
+rgb(400bp)=(0,0,0)}
+
+% Gradient Info
+  
+\tikzset {_f0i6ajr5c/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformscale{1 }  }}}
+\pgfdeclareradialshading{_fx4z79xei}{\pgfpoint{0bp}{0bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0,0,0);
+rgb(400bp)=(0,0,0)}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,443); %set diagram left start at 0, and has height of 443
+
+%Shape: Arc [id:dp14785009663986903] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (320.05,52.98) .. controls (320.91,53.01) and (321.77,53.07) .. (322.64,53.18) .. controls (343.83,55.84) and (361.66,82.76) .. (362.48,113.3) .. controls (363.29,143.85) and (346.78,166.45) .. (325.59,163.79) .. controls (324.52,163.65) and (323.46,163.46) .. (322.41,163.2) -- (324.12,108.48) -- cycle ; \draw   (320.05,52.98) .. controls (320.91,53.01) and (321.77,53.07) .. (322.64,53.18) .. controls (343.83,55.84) and (361.66,82.76) .. (362.48,113.3) .. controls (363.29,143.85) and (346.78,166.45) .. (325.59,163.79) .. controls (324.52,163.65) and (323.46,163.46) .. (322.41,163.2) ;  
+%Shape: Arc [id:dp39940612141411447] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 80; green, 227; blue, 194 }  ,fill opacity=1 ] (317.05,184.98) .. controls (317.91,185.01) and (318.77,185.07) .. (319.64,185.18) .. controls (340.83,187.84) and (358.66,214.76) .. (359.48,245.3) .. controls (360.29,275.85) and (343.78,298.45) .. (322.59,295.79) .. controls (321.52,295.65) and (320.46,295.46) .. (319.41,295.2) -- (321.12,240.48) -- cycle ; \draw   (317.05,184.98) .. controls (317.91,185.01) and (318.77,185.07) .. (319.64,185.18) .. controls (340.83,187.84) and (358.66,214.76) .. (359.48,245.3) .. controls (360.29,275.85) and (343.78,298.45) .. (322.59,295.79) .. controls (321.52,295.65) and (320.46,295.46) .. (319.41,295.2) ;  
+%Shape: Can [id:dp35504891005744565] 
+\path  [shading=_vxnz1zrmu,_oxk0h5nal] (192,202.71) -- (192,265.29) .. controls (192,282.58) and (169.61,296.59) .. (142,296.59) .. controls (114.39,296.59) and (92,282.58) .. (92,265.29) -- (92,202.71) .. controls (92,185.42) and (114.39,171.41) .. (142,171.41) .. controls (169.61,171.41) and (192,185.42) .. (192,202.71) .. controls (192,219.99) and (169.61,234) .. (142,234) .. controls (114.39,234) and (92,219.99) .. (92,202.71) ; % for fading 
+ \draw   (192,202.71) -- (192,265.29) .. controls (192,282.58) and (169.61,296.59) .. (142,296.59) .. controls (114.39,296.59) and (92,282.58) .. (92,265.29) -- (92,202.71) .. controls (92,185.42) and (114.39,171.41) .. (142,171.41) .. controls (169.61,171.41) and (192,185.42) .. (192,202.71) .. controls (192,219.99) and (169.61,234) .. (142,234) .. controls (114.39,234) and (92,219.99) .. (92,202.71) ; % for border 
+
+%Shape: Can [id:dp963187380152863] 
+\draw   (192,140.12) -- (192,202.71) .. controls (192,219.99) and (169.61,234) .. (142,234) .. controls (114.39,234) and (92,219.99) .. (92,202.71) -- (92,140.12) .. controls (92,122.84) and (114.39,108.83) .. (142,108.83) .. controls (169.61,108.83) and (192,122.84) .. (192,140.12) .. controls (192,157.4) and (169.61,171.41) .. (142,171.41) .. controls (114.39,171.41) and (92,157.4) .. (92,140.12) ;
+%Shape: Can [id:dp12739180036757758] 
+\path  [shading=_qvr8v541s,_9wh4pqhpc] (150,123) -- (150,287) .. controls (150,288.66) and (145.52,290) .. (140,290) .. controls (134.48,290) and (130,288.66) .. (130,287) -- (130,123) .. controls (130,121.34) and (134.48,120) .. (140,120) .. controls (145.52,120) and (150,121.34) .. (150,123) .. controls (150,124.66) and (145.52,126) .. (140,126) .. controls (134.48,126) and (130,124.66) .. (130,123) ; % for fading 
+ \draw   (150,123) -- (150,287) .. controls (150,288.66) and (145.52,290) .. (140,290) .. controls (134.48,290) and (130,288.66) .. (130,287) -- (130,123) .. controls (130,121.34) and (134.48,120) .. (140,120) .. controls (145.52,120) and (150,121.34) .. (150,123) .. controls (150,124.66) and (145.52,126) .. (140,126) .. controls (134.48,126) and (130,124.66) .. (130,123) ; % for border 
+
+%Shape: Can [id:dp6076956187307776] 
+\draw  [fill={rgb, 255:red, 224; green, 201; blue, 201 }  ,fill opacity=1 ] (323,54.8) -- (323,160.81) .. controls (323,163.47) and (315.84,165.61) .. (307,165.61) .. controls (298.16,165.61) and (291,163.47) .. (291,160.81) -- (291,54.8) .. controls (291,52.15) and (298.16,50) .. (307,50) .. controls (315.84,50) and (323,52.15) .. (323,54.8) .. controls (323,57.45) and (315.84,59.6) .. (307,59.6) .. controls (298.16,59.6) and (291,57.45) .. (291,54.8) ;
+%Shape: Ellipse [id:dp07149355928455114] 
+\path  [shading=_ke7c36pbt,_v4i66phlz] (323,80.41) .. controls (323,77.88) and (324.57,75.83) .. (326.5,75.83) .. controls (328.43,75.83) and (330,77.88) .. (330,80.41) .. controls (330,82.95) and (328.43,85) .. (326.5,85) .. controls (324.57,85) and (323,82.95) .. (323,80.41) -- cycle ; % for fading 
+ \draw   (323,80.41) .. controls (323,77.88) and (324.57,75.83) .. (326.5,75.83) .. controls (328.43,75.83) and (330,77.88) .. (330,80.41) .. controls (330,82.95) and (328.43,85) .. (326.5,85) .. controls (324.57,85) and (323,82.95) .. (323,80.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp3744155067517916] 
+\path  [shading=_kmots4rvb,_dfo8dm6tu] (323,90.41) .. controls (323,87.88) and (324.57,85.83) .. (326.5,85.83) .. controls (328.43,85.83) and (330,87.88) .. (330,90.41) .. controls (330,92.95) and (328.43,95) .. (326.5,95) .. controls (324.57,95) and (323,92.95) .. (323,90.41) -- cycle ; % for fading 
+ \draw   (323,90.41) .. controls (323,87.88) and (324.57,85.83) .. (326.5,85.83) .. controls (328.43,85.83) and (330,87.88) .. (330,90.41) .. controls (330,92.95) and (328.43,95) .. (326.5,95) .. controls (324.57,95) and (323,92.95) .. (323,90.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp4848144726271919] 
+\path  [shading=_33584leg4,_ym6eru0ic] (323,100.41) .. controls (323,97.88) and (324.57,95.83) .. (326.5,95.83) .. controls (328.43,95.83) and (330,97.88) .. (330,100.41) .. controls (330,102.95) and (328.43,105) .. (326.5,105) .. controls (324.57,105) and (323,102.95) .. (323,100.41) -- cycle ; % for fading 
+ \draw   (323,100.41) .. controls (323,97.88) and (324.57,95.83) .. (326.5,95.83) .. controls (328.43,95.83) and (330,97.88) .. (330,100.41) .. controls (330,102.95) and (328.43,105) .. (326.5,105) .. controls (324.57,105) and (323,102.95) .. (323,100.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp9859917137434928] 
+\path  [shading=_pnh8k8flg,_x42ynzj8y] (323,122.41) .. controls (323,119.88) and (324.57,117.83) .. (326.5,117.83) .. controls (328.43,117.83) and (330,119.88) .. (330,122.41) .. controls (330,124.95) and (328.43,127) .. (326.5,127) .. controls (324.57,127) and (323,124.95) .. (323,122.41) -- cycle ; % for fading 
+ \draw   (323,122.41) .. controls (323,119.88) and (324.57,117.83) .. (326.5,117.83) .. controls (328.43,117.83) and (330,119.88) .. (330,122.41) .. controls (330,124.95) and (328.43,127) .. (326.5,127) .. controls (324.57,127) and (323,124.95) .. (323,122.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp6416773160048435] 
+\path  [shading=_q2r5fd5nn,_6ykrydhda] (323,132.41) .. controls (323,129.88) and (324.57,127.83) .. (326.5,127.83) .. controls (328.43,127.83) and (330,129.88) .. (330,132.41) .. controls (330,134.95) and (328.43,137) .. (326.5,137) .. controls (324.57,137) and (323,134.95) .. (323,132.41) -- cycle ; % for fading 
+ \draw   (323,132.41) .. controls (323,129.88) and (324.57,127.83) .. (326.5,127.83) .. controls (328.43,127.83) and (330,129.88) .. (330,132.41) .. controls (330,134.95) and (328.43,137) .. (326.5,137) .. controls (324.57,137) and (323,134.95) .. (323,132.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp813347818711609] 
+\path  [shading=_2l08x580o,_l55nl2qi6] (323,142.41) .. controls (323,139.88) and (324.57,137.83) .. (326.5,137.83) .. controls (328.43,137.83) and (330,139.88) .. (330,142.41) .. controls (330,144.95) and (328.43,147) .. (326.5,147) .. controls (324.57,147) and (323,144.95) .. (323,142.41) -- cycle ; % for fading 
+ \draw   (323,142.41) .. controls (323,139.88) and (324.57,137.83) .. (326.5,137.83) .. controls (328.43,137.83) and (330,139.88) .. (330,142.41) .. controls (330,144.95) and (328.43,147) .. (326.5,147) .. controls (324.57,147) and (323,144.95) .. (323,142.41) -- cycle ; % for border 
+
+%Straight Lines [id:da1897054048869029] 
+\draw    (150,148) -- (190,120) -- (250,80) -- (291,54.8) ;
+%Straight Lines [id:da6206488806598729] 
+\draw    (150,148) -- (291,160.81) ;
+%Shape: Can [id:dp49325852519369584] 
+\draw  [fill={rgb, 255:red, 224; green, 201; blue, 201 }  ,fill opacity=1 ] (320,186.5) -- (320,295.5) .. controls (320,297.99) and (313.28,300) .. (305,300) .. controls (296.72,300) and (290,297.99) .. (290,295.5) -- (290,186.5) .. controls (290,184.01) and (296.72,182) .. (305,182) .. controls (313.28,182) and (320,184.01) .. (320,186.5) .. controls (320,188.99) and (313.28,191) .. (305,191) .. controls (296.72,191) and (290,188.99) .. (290,186.5) ;
+%Shape: Ellipse [id:dp553067630121526] 
+\path  [shading=_h3uj6nky8,_y17qc1glz] (321,210.41) .. controls (321,207.88) and (322.57,205.83) .. (324.5,205.83) .. controls (326.43,205.83) and (328,207.88) .. (328,210.41) .. controls (328,212.95) and (326.43,215) .. (324.5,215) .. controls (322.57,215) and (321,212.95) .. (321,210.41) -- cycle ; % for fading 
+ \draw   (321,210.41) .. controls (321,207.88) and (322.57,205.83) .. (324.5,205.83) .. controls (326.43,205.83) and (328,207.88) .. (328,210.41) .. controls (328,212.95) and (326.43,215) .. (324.5,215) .. controls (322.57,215) and (321,212.95) .. (321,210.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp590688716163899] 
+\path  [shading=_2x43aixfw,_xo92zw4xj] (321,220.41) .. controls (321,217.88) and (322.57,215.83) .. (324.5,215.83) .. controls (326.43,215.83) and (328,217.88) .. (328,220.41) .. controls (328,222.95) and (326.43,225) .. (324.5,225) .. controls (322.57,225) and (321,222.95) .. (321,220.41) -- cycle ; % for fading 
+ \draw   (321,220.41) .. controls (321,217.88) and (322.57,215.83) .. (324.5,215.83) .. controls (326.43,215.83) and (328,217.88) .. (328,220.41) .. controls (328,222.95) and (326.43,225) .. (324.5,225) .. controls (322.57,225) and (321,222.95) .. (321,220.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp06732735533522871] 
+\path  [shading=_yoha1ihup,_653uzaewy] (321,230.41) .. controls (321,227.88) and (322.57,225.83) .. (324.5,225.83) .. controls (326.43,225.83) and (328,227.88) .. (328,230.41) .. controls (328,232.95) and (326.43,235) .. (324.5,235) .. controls (322.57,235) and (321,232.95) .. (321,230.41) -- cycle ; % for fading 
+ \draw   (321,230.41) .. controls (321,227.88) and (322.57,225.83) .. (324.5,225.83) .. controls (326.43,225.83) and (328,227.88) .. (328,230.41) .. controls (328,232.95) and (326.43,235) .. (324.5,235) .. controls (322.57,235) and (321,232.95) .. (321,230.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp009925903988912577] 
+\path  [shading=_43b1waxnf,_wft3ftdri] (321,252.41) .. controls (321,249.88) and (322.57,247.83) .. (324.5,247.83) .. controls (326.43,247.83) and (328,249.88) .. (328,252.41) .. controls (328,254.95) and (326.43,257) .. (324.5,257) .. controls (322.57,257) and (321,254.95) .. (321,252.41) -- cycle ; % for fading 
+ \draw   (321,252.41) .. controls (321,249.88) and (322.57,247.83) .. (324.5,247.83) .. controls (326.43,247.83) and (328,249.88) .. (328,252.41) .. controls (328,254.95) and (326.43,257) .. (324.5,257) .. controls (322.57,257) and (321,254.95) .. (321,252.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp922345518905791] 
+\path  [shading=_x3wkwbu45,_cvuesgzhc] (321,262.41) .. controls (321,259.88) and (322.57,257.83) .. (324.5,257.83) .. controls (326.43,257.83) and (328,259.88) .. (328,262.41) .. controls (328,264.95) and (326.43,267) .. (324.5,267) .. controls (322.57,267) and (321,264.95) .. (321,262.41) -- cycle ; % for fading 
+ \draw   (321,262.41) .. controls (321,259.88) and (322.57,257.83) .. (324.5,257.83) .. controls (326.43,257.83) and (328,259.88) .. (328,262.41) .. controls (328,264.95) and (326.43,267) .. (324.5,267) .. controls (322.57,267) and (321,264.95) .. (321,262.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp12408303531950349] 
+\path  [shading=_pgpoz4sjh,_5ohr592hj] (321,272.41) .. controls (321,269.88) and (322.57,267.83) .. (324.5,267.83) .. controls (326.43,267.83) and (328,269.88) .. (328,272.41) .. controls (328,274.95) and (326.43,277) .. (324.5,277) .. controls (322.57,277) and (321,274.95) .. (321,272.41) -- cycle ; % for fading 
+ \draw   (321,272.41) .. controls (321,269.88) and (322.57,267.83) .. (324.5,267.83) .. controls (326.43,267.83) and (328,269.88) .. (328,272.41) .. controls (328,274.95) and (326.43,277) .. (324.5,277) .. controls (322.57,277) and (321,274.95) .. (321,272.41) -- cycle ; % for border 
+
+%Straight Lines [id:da7307940911135995] 
+\draw    (148,278) -- (218,235) -- (290,186.5) ;
+%Straight Lines [id:da9990170936881857] 
+\draw    (148,278) -- (240,290) -- (290,295.5) ;
+%Shape: Ellipse [id:dp1531658822945221] 
+\draw  [fill={rgb, 255:red, 241; green, 36; blue, 36 }  ,fill opacity=1 ] (310,105.41) .. controls (310,102.88) and (311.57,100.83) .. (313.5,100.83) .. controls (315.43,100.83) and (317,102.88) .. (317,105.41) .. controls (317,107.95) and (315.43,110) .. (313.5,110) .. controls (311.57,110) and (310,107.95) .. (310,105.41) -- cycle ;
+%Shape: Ellipse [id:dp4861775507851165] 
+\draw  [fill={rgb, 255:red, 241; green, 36; blue, 36 }  ,fill opacity=1 ] (310,121.41) .. controls (310,118.88) and (311.57,116.83) .. (313.5,116.83) .. controls (315.43,116.83) and (317,118.88) .. (317,121.41) .. controls (317,123.95) and (315.43,126) .. (313.5,126) .. controls (311.57,126) and (310,123.95) .. (310,121.41) -- cycle ;
+%Shape: Ellipse [id:dp6911652655724894] 
+\draw  [fill={rgb, 255:red, 241; green, 36; blue, 36 }  ,fill opacity=1 ] (309,233.41) .. controls (309,230.88) and (310.57,228.83) .. (312.5,228.83) .. controls (314.43,228.83) and (316,230.88) .. (316,233.41) .. controls (316,235.95) and (314.43,238) .. (312.5,238) .. controls (310.57,238) and (309,235.95) .. (309,233.41) -- cycle ;
+%Shape: Ellipse [id:dp9753990857327175] 
+\draw  [fill={rgb, 255:red, 241; green, 36; blue, 36 }  ,fill opacity=1 ] (308,252.41) .. controls (308,249.88) and (309.57,247.83) .. (311.5,247.83) .. controls (313.43,247.83) and (315,249.88) .. (315,252.41) .. controls (315,254.95) and (313.43,257) .. (311.5,257) .. controls (309.57,257) and (308,254.95) .. (308,252.41) -- cycle ;
+%Shape: Ellipse [id:dp3120574582893112] 
+\path  [shading=_ar3wjudho,_4poe4l3nk] (330,111.41) .. controls (330,108.88) and (331.57,106.83) .. (333.5,106.83) .. controls (335.43,106.83) and (337,108.88) .. (337,111.41) .. controls (337,113.95) and (335.43,116) .. (333.5,116) .. controls (331.57,116) and (330,113.95) .. (330,111.41) -- cycle ; % for fading 
+ \draw   (330,111.41) .. controls (330,108.88) and (331.57,106.83) .. (333.5,106.83) .. controls (335.43,106.83) and (337,108.88) .. (337,111.41) .. controls (337,113.95) and (335.43,116) .. (333.5,116) .. controls (331.57,116) and (330,113.95) .. (330,111.41) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp5004972898540672] 
+\path  [shading=_fx4z79xei,_f0i6ajr5c] (331,241.41) .. controls (331,238.88) and (332.57,236.83) .. (334.5,236.83) .. controls (336.43,236.83) and (338,238.88) .. (338,241.41) .. controls (338,243.95) and (336.43,246) .. (334.5,246) .. controls (332.57,246) and (331,243.95) .. (331,241.41) -- cycle ; % for fading 
+ \draw   (331,241.41) .. controls (331,238.88) and (332.57,236.83) .. (334.5,236.83) .. controls (336.43,236.83) and (338,238.88) .. (338,241.41) .. controls (338,243.95) and (336.43,246) .. (334.5,246) .. controls (332.57,246) and (331,243.95) .. (331,241.41) -- cycle ; % for border 
+
+%Straight Lines [id:da21132017431667238] 
+\draw    (366,110) -- (346,110) ;
+\draw [shift={(369,110)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da11077643216127564] 
+\draw    (299,243) -- (322,243) ;
+\draw [shift={(296,243)}, rotate = 0] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (389,217) node [anchor=north west][inner sep=0.75pt]  [font=\large] [align=left] {Cátodo};
+% Text Node
+\draw (387,247) node [anchor=north west][inner sep=0.75pt]  [font=\large] [align=left] {Redução};
+% Text Node
+\draw (389,72) node [anchor=north west][inner sep=0.75pt]  [font=\large] [align=left] {Ânodo};
+% Text Node
+\draw (389,102) node [anchor=north west][inner sep=0.75pt]  [font=\large] [align=left] {Oxidação};
+
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+** Pillha de Daniel 
+
+
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[line join=round, line cap= round,scale=.75]
+  % CELLS AND ELECTRODES
+  \begin{scope}
+    \draw[thick,fill=gray!50] (0.5,1) rectangle (1,5);    % Zn electrode
+    \draw[thick,rounded corners] (0,4) |- (4,0) -- (4,4); % left cell
+    \clip[rounded corners]       (0,4) |- (4,0) -- (4,4) -- cycle;
+    \fill[gray,opacity=0.3]   (0,0)   rectangle (4,3);    % ZnSO4 solution
+  \end{scope}
+  \begin{scope}
+    \draw[thick,fill=orange!50] (8,1) rectangle (8.5,5);  % Cu electrode
+    \draw[thick,rounded corners] (5,4) |- (9,0) -- (9,4); % right cell
+    \clip[rounded corners]       (5,4) |- (9,0) -- (9,4) -- cycle;
+    \fill[blue, opacity=0.2]    (5,0) rectangle (9,3);    % CuSO4 solution
+  \end{scope}
+  % SALINE BRIDGE
+  \draw[thick] (3,1)   --++ (0,2.5) arc (180:0:1.5) --++ (0,-2.5);
+  \draw[thick] (3.5,1) --++ (0,2.5) arc (180:0:1)   --++ (0,-2.5);
+  % WIRE AND VOLTMETER
+  \draw[thick, rounded corners=0.5 cm] (0.75,5) |- (8.25,7) -- (8.25,5);
+  \begin{scope}[shift={(4.5,7)}]
+  \draw[thick,fill=white] (0,0) circle (0.5);
+    \foreach\a in{30,60,...,150}
+    {%
+      \draw[blue,thin] (\a:0.35) -- (\a:0.45);
+    }
+  \fill[blue] (0,0) circle (1pt);
+  \draw[blue,thick,-latex] (0,0) -- (60:0.4);
+  \end{scope}
+  % ELECTRONS
+  \begin{scope}[shift={(1.5,6.25)}]
+    \draw[red,thick,rounded corners=0.3 cm,->] (-0.5,-0.5) |- (0.5,0.5);
+  \end{scope}
+  % SIGNS
+  \draw[red,thick] (-0.5,5.5) circle (0.25);
+  \draw[red,thick] (9.5,5.5)  circle (0.25);
+  \draw[red,thick] (-0.7,5.5) -- (-0.3,5.5);
+  \draw[red,thick] (9.3,5.5)  -- (9.7,5.5);
+  \draw[red,thick] (9.5,5.3)  -- (9.5,5.7);
+  % LABELS
+  \node at (4.5,8)    {Voltimetro};
+  \node at (4.5,5.5)  {Ponte Salina  (\ch{KC$\ell$})};
+  \node at (-0.5,5)   {Ânodo};
+  \node at (-0.5,4.5) {(Oxidação)};
+  \node at (9.5,5)    {Cátodo};
+  \node at (9.5,4.5)  {(Redução)};
+  \node[red] at (1.5,6.25) {\ch{e^-}};
+  % CHEMISTRY
+  \node at (2,-0.5) {\ch{ZnSO4}};
+  \node at (7,-0.5) {\ch{CuSO4}};
+  \node at (0.75,2) {\ch{Zn}};
+  \node at (8.25,2) {\ch{Cu}};
+  \node at (0.85,2) [right] {\small\ch{-> Zn^2+}};
+  \node at (8.15,2) [left]  {\small\ch{Cu^2+ ->}};
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+** Potenciais de Oxirredução
+
+#+ATTR_LATEX: :options [logo=\bccrayon,noborder=true,marge=0]{Eletrodo Padrão de Hidrogênio}
+#+begin_bclogo
+Foi escolhido @@latex:\ch{H2_{\gas}}@@  como padrão e as medições são realizadas a \SI{25}{\degreeCelsius}, 1 atm de pressão e o eletrodo inerte de platina (Pt) imerso numa solução ácida de 1 \unit{\mol\per\litre}. Ao eletrodo padrão é atribuído potencial de oxidação e redução nulo. *E^o= O V*.
+#+end_bclogo
+
+
+#+ATTR_LATEX: :scale 0.8
+[[../Eletroquimica/EPH.png]] 
+* Eletrodos
+
+
+** Potenciais de Eletrodo e Sua Determinação
+
+
+* Baterias
