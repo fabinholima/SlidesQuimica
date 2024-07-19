@@ -47,3 +47,4 @@ concept guides. See 'git help <command>' or 'git help <concept>'
 to read about a specific subcommand or concept.
 See 'git help git' for an overview of the system.
 >>>>>>> 225e96b (Slides Quimica em Org Mode)
+Slides de Quimica em Orgmode e Latex
