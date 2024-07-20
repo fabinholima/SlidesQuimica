@@ -117,3 +117,15 @@
 #+LATEX_HEADER: \newcommand{\re}{\hspace{-1cm}}
 #+LATEX_HEADER: \newcommand{\af}{\hspace{2cm}}
 #+LATEX_HEADER: \graphicspath{{img}{QG/img}{FQ/img}}
+
+#+LATEX_HEADER: 	
+#+LATEX_HEADER: 	\NewTblrTheme{fancy}{
+#+LATEX_HEADER:		\SetTblrStyle{caption-tag}{font=\bfseries}
+#+LATEX_HEADER:		\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
+#+LATEX_HEADER:		\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
+#+LATEX_HEADER:		\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continued on the next page}}
+#+LATEX_HEADER:		\SetTblrTemplate{contfoot-text}{normal}
+#+LATEX_HEADER:	}
+	
+#+LATEX_HEADER:	\selectlanguage{portuguese}
+#+LATEX_HEADER:	%\UseTblrTemplate{caption-tag}{default}{\bfseries}
