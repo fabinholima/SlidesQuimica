@@ -1,141 +1,11 @@
-% Created 2024-07-20 Sat 18:37
+% Created 2024-07-21 Sun 18:58
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{capt-of}
-\usepackage{hyperref}
+                
+
+\input{packages2.tex}
 \date{}
 % \usetheme{minflat}
-\usepackage[portuguese, ]{babel}
-\usepackage{xcolor}
-\usepackage{colortbl}
-\usepackage[tikz]{bclogo}
-\usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-\usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
-\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
-\usepackage{tikzpeople}
-\usepackage{qrcode,hyperref}
-\usepackage{upgreek}
-%\usepackage[version=4]{mhchem}
-\usepackage{tabularray}
-\usepackage{chemfig,chemmacros,elements,chemformula}
-\chemsetup{modules={all}}
-\chemsetup[redox]{pos=top,roman=false}
-\chemsetup[redox]{pos=top}
-\chemsetup{redox/sep=.5em}
-\chemsetup[redox]{explicit-sign=true}
-\NewChemPhase\lqdd{\(\ell\)}
-\NewChemPhase\gr{grafite}
-\NewChemPhase\reac{reação}
-\NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
-\usepackage{siunitx}
-\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}%,angle increment=30}
-\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
-%%%% QRCODE
-\usepackage{pdfpages}
-\usepackage{mol2chemfig}
-\usepackage{subfig,caption}
-\usepackage{wrapfig}
-\usepackage{enumitem}
-\setitemize{label=\usebeamerfont*{itemize item}%
-\usebeamercolor[fg]{itemize item}
-\usebeamertemplate {itemize item}}
-\usepackage{array,longtable} % ajust colunm table
-\usepackage{cancel}
-\usepackage[controls]{animate}
-\renewcommand{\CancelColor}{\color{red}}
-\newcolumntype{K}{>{\centering\arraybackslash}m{6.5cm}}
-\newcolumntype{L}{>{\centering\arraybackslash}m{5cm}}
-\newcolumntype{B}{>{\centering\arraybackslash}m{2.5cm}}
-\newcolumntype{N}{>{\centering\arraybackslash}m{1.4cm}}
-% custom negrito table
-\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
-\newcolumntype{^}{>{\currentrowstyle}}
-\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
-#1\ignorespaces
-}
-\definecolor{col1}{HTML}{FF7878}
-\definecolor{col2}{HTML}{51B5F8}
-\definecolor{col3}{HTML}{68E1AA}
-\definecolor{col4}{HTML}{B869EA}
-\definecolor{col5}{HTML}{FF5500}
-\definecolor{col6}{HTML}{FFF8E7}
-\definecolor{col7}{HTML}{FF9966}
-\definecolor{col8}{HTML}{9400D3}
-\usepackage[export]{adjustbox}
-\usepackage[skins,most,many]{tcolorbox}
-\usepackage{endiagram}
-\tcbuselibrary{skins,raster,listings,breakable,vignette}
-\newcommand{\zx}[1]{\textcolor{blue!85!red}{\emph{#1}}}
-\newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
-colback=blue!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
-colback=green!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
-colback=yellow!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\newtcolorbox[auto counter]{boxex}[2][]{fontupper=\footnotesize,
-colback=white!40,colframe=black,fonttitle=\bfseries,sharp corners,
-title=Exemplo~\thetcbcounter~#1}
-\newcounter{mycounter}
-%%% Colobor
-%%% Example colorbox
-\tcbset{examplebox/.style={enhanced,colback=white,colframe=green!65!black,
-enlarge top by=10mm,
-overlay={%
-\path[fill=blue!65,line width=.4mm] (frame.north west)--++(17mm,0)coordinate(n2)--++(0,8mm)--++(-20mm,0) arc (-90:90:-4mm)--cycle;
-\node at ([shift={(5mm,4mm)}]frame.north west){\color{white}{\textbf{\sffamily Exemplo}}};
-\path[fill=green!65!blue] ([xshift=.4mm]n2)--++(0,8mm)--++(7mm,0)--++(0,-8mm)--cycle;
-\node at ([shift={(4mm,4mm)}]n2){\color{white}{\textbf{\sffamily \themycounter}}};
-\node at ([shift={(18mm,4mm)}]n2){\itshape\textbf{\sffamily Solu\c{c}\~ao}};
-}}}
-%% COnfig tikz molecules
-\usepackage{supertabular}
-\tikzset{
-bal/.style={
-circle, minimum size=2pt, inner sep=0pt,fill=orange,fill opacity=0.5
-},
-rect/.style={
-circle, minimum size=2pt, inner sep=.5pt,fill=red,fill opacity=0.5
-},
-bal2/.style={
-circle, minimum size=2pt, inner sep=0pt,fill=blue,fill opacity=0.5
-},
-bal3/.style={
-circle, minimum size=2pt, inner sep=0pt,fill=yellow,fill opacity=0.5
-}
-}
-\definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
-\newcommand{\re}{\hspace{-1cm}}
-\newcommand{\af}{\hspace{2cm}}
-\graphicspath{{img}{QG/img}{FQ/img}}
-
-\NewTblrTheme{fancy}{
-\SetTblrStyle{caption-tag}{font=\bfseries}
-\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
-\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
-\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continued on the next page}}
-\SetTblrTemplate{contfoot-text}{normal}
-}
-\selectlanguage{portuguese}
-%\UseTblrTemplate{caption-tag}{default}{\bfseries}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
@@ -160,12 +30,10 @@ circle, minimum size=2pt, inner sep=0pt,fill=yellow,fill opacity=0.5
 
 
 
-
-
 \section{Hidrocarbonetos Ramificados}
-\label{sec:orgfd05147}
+\label{sec:org20f64be}
 
-\begin{frame}[label={sec:org5928939}]{Hidrocarbonetos Ramificados}
+\begin{frame}[label={sec:org0299100}]{Hidrocarbonetos Ramificados}
 \begin{myex}{Ramificação}
 \begin{itemize}
 \item A expressão \alert{grupos substituintes orgânicos} ou, simplesmente \alert{grupos orgânicos} é usada para designar qualquer grupo de átomos que apareça com freqüência nas moléculas orgânicas.
@@ -414,9 +282,9 @@ A cadeia principal nem sempre está na horizontal
 
 
 \section{Nomeclatura}
-\label{sec:org6d61e33}
+\label{sec:org30d9885}
 
-\begin{frame}[label={sec:org9e64f4a}]{Nomenclatura}
+\begin{frame}[label={sec:org8a6affc}]{Nomenclatura}
 \begin{myrule}{Regras}
 
 \begin{itemize}
@@ -438,7 +306,7 @@ A cadeia principal nem sempre está na horizontal
 
 
 \section{Nomenclatura Exemplos}
-\label{sec:orgf9ead56}
+\label{sec:org9fcd756}
 
 \begin{frame}[allowframebreaks]{Nomenclatura Exemplos}
 %% 1
@@ -695,9 +563,9 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
 
 
 \section{Hidrocarbonetos cadeia mista}
-\label{sec:orgb590e13}
+\label{sec:org710f3bd}
 
-\begin{frame}[label={sec:org84a1115}]{Hidrocarbonetos cadeia mista}
+\begin{frame}[label={sec:orgfc7e749}]{Hidrocarbonetos cadeia mista}
 \begin{itemize}
 \item Quando um hidrocarboneto possui cadeia mista, a nomenclatura é semelhante as cadeias ramificadas abertas. Veja os exemplos.
 \end{itemize}
@@ -709,7 +577,7 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
  \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org26fe10d}]{Hidrocarbonetos cadeia mista}
+\begin{frame}[label={sec:orgeb8a570}]{Hidrocarbonetos cadeia mista}
 \begin{itemize}
 \item Quando há dois substituintes diferentes, eles devem ser citados em \alert{ordem alfabética. O número 1 é dado ao subtituinte citado primeiro} de acordo com a ordem alfabética.
 \end{itemize}
@@ -742,7 +610,7 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
 \schemestop
 \end{frame}
 
-\begin{frame}[label={sec:org8968963}]{}
+\begin{frame}[label={sec:orga42fba3}]{}
 \begin{itemize}
 \item Se houver mais de dois substituintes, eles serão citados em \alert{ordem alfabética. O número 1 deve ser dado ao substituinte que permitir que um segundo substituintes receba o menor número possível}
 \end{itemize}
@@ -774,7 +642,7 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
 }
 \end{frame}
 
-\begin{frame}[label={sec:org8bba77d}]{}
+\begin{frame}[label={sec:org8eecaab}]{}
 \begin{itemize}
 \item Quando uma molécula de benzeno que contém \alert{dois} grupos substituintes ligados ao anel, podemos usar o prefixo \emph{orto}, \emph{meta} e \emph{para}.
 \end{itemize}
@@ -791,7 +659,7 @@ Os prefixos \emph{orto}, \emph{meta} e \emph{para} podem ser \alert{utilizados a
 \end{frame}
 
 
-\begin{frame}[label={sec:orgbc633db}]{Cadeia Mista - Nomenclatura trivial}
+\begin{frame}[label={sec:orge6c4859}]{Cadeia Mista - Nomenclatura trivial}
 \begin{itemize}
 \item Alguns exemplos de nomes triviais de hidrocarbonetos aromáticos são: \emph{tolueno, orto-xileno, meta-xileno} e \emph{para-xileno}.
 \end{itemize}
@@ -804,7 +672,7 @@ Os prefixos \emph{orto}, \emph{meta} e \emph{para} podem ser \alert{utilizados a
 \end{frame}
 
 
-\begin{frame}[label={sec:org880b84d}]{Cadeis Mistas - Outros exemplos}
+\begin{frame}[label={sec:orga1a0605}]{Cadeis Mistas - Outros exemplos}
 \chemname{\chemfig{**6(---(-CH_3)-(-C_2H_5)--)}}{\emph{orto}-etil-metil-benzeno} \af  
 \chemname{\chemfig{**6(--(-CH_3)--(-C_2H_5)--)}}{\emph{meta}-etil-metil-benzeno} \af
 \chemname{\chemfig{**6(-(-CH_3)---(-C_2H_5)--)}}{\emph{para}-etil-metil-benzeno} \af
@@ -819,7 +687,7 @@ Os prefixos \emph{orto}, \emph{meta} e \emph{para} podem ser \alert{utilizados a
 
 
 
-\begin{frame}[label={sec:orgcb708db}]{Fim da Aula}
+\begin{frame}[label={sec:orgba0ca18}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
