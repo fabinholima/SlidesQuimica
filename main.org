@@ -9,7 +9,9 @@
 
 #+BEAMER_THEME: minflat
 
-#+LATEX_HEADER: \input{packages2.tex}
+#+LATEX_HEADER: % \input{packages2.tex}
+
+#+INCLUDE: "packages.org"
 
 #+LATEX_HEADER: \date{}
 #+LATEX_HEADER:% \usetheme{minflat}
