@@ -1,638 +1,220 @@
-% Created 2024-07-21 Sun 20:32
+% Created 2024-07-23 Tue 14:14
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
 
-% \input{packages2.tex}
-%%%% Config X sim for BEAMER
-\makeatletter
-\@ifclassloaded{beamer}{%
-%%% save beamer's `solution' environment as `beamersolution':
-\let\beamersolution\solution
-\let\endbeamersolution\endsolution
-%%% "delete" the `solution' environment:
-\let\solution\relax
-\let\endsolution\relax
-}{%
-}%
-\makeatother
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[portuguese, ]{babel}
-%%%% FONTS
-%%% XSIM CONFIG BEAMER
-\usepackage{xsim}
-\usepackage[most]{tcolorbox}
-\usepackage{amssymb}
-\usepackage{fontawesome}
-\newcounter{paragraph}
-%%% BOX EXERCISE BEAMER
-\DeclareExerciseEnvironmentTemplate{custom}{%
-\begin{tcolorbox}[boxrule = 0pt]
-\tcbox[on line,colback=teal,colframe=teal,coltext=white,size=small]{%
-\faBook\sffamily\bfseries\
-\XSIMmixedcase{\GetExerciseName}
-\GetExerciseProperty{counter}%
-}\quad
-}{\end{tcolorbox}}
-%% == CUSTOM BOX BEAMER
-\DeclareExerciseEnvironmentTemplate{custom2}{%
-\begin{tcolorbox}[boxrule = 0pt]
-\tcbox[on line,colback=violet,colframe=violet,coltext=white,size=small]{%
-\faToggleOn\sffamily\bfseries\
-\XSIMmixedcase{\GetExerciseName}
-\GetExerciseProperty{counter}%
-}\quad
-}{\end{tcolorbox}}
-\DeclareExerciseType{test}{
-exercise-env = question ,
-solution-env = answer ,
-exercise-template = custom ,
-solution-template = custom2 ,
-exercise-name = Exemplo. ,
-exercises-name = Exemplo ,
-solution-name = Solução ,
-solutions-name = Sol. ,
-exercise-heading = \textbf ,
-solution-heading = \textbf
-}
-\xsimsetup{
-exercise/within = section,
-exercise/the-counter =  \arabic{exercise},
-%%solution-name = solution,  % used with headings=true
-solution/print=false,
-%print-collection/print=both,
-}
-\usepackage{colortbl}
-\usepackage[tikz]{bclogo}
-\usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-\usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
-\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
-\usepackage{tikzpeople}
-\usepackage{qrcode,hyperref}
-\usepackage{upgreek}
-%\usepackage[version=4]{mhchem}
-\usepackage{tabularray}
-%%% CUSTOM TABLE
-\NewTblrTheme{fancy}{
-\SetTblrStyle{caption-tag}{font=\bfseries}
-\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
-\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
-\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
-\SetTblrTemplate{contfoot-text}{normal}
-}
-%% ==== CHEMMACROS E CHEMFIG CONFIG
-\usepackage{chemfig,chemmacros,elements,chemformula}
-\chemsetup{modules={all}}
-\chemsetup[redox]{pos=top,roman=false}
-\chemsetup[redox]{pos=top}
-\chemsetup{redox/sep=.5em}
-\chemsetup[redox]{explicit-sign=true} %%% reaction redox
-%% == CUSTOM PHASES IN CHEMMACROS
-\NewChemPhase\lqdd{\(\ell\)}
-\NewChemPhase\gr{grafite}
-\NewChemPhase\reac{reação}
-\NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
-\usepackage{siunitx}
-\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
-%% == NUMEROS PARA FORMULES
-\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
-%%% INCLUDE PAGES PDFs
-\usepackage{pdfpages}
-\usepackage{mol2chemfig}
-\usepackage{subfig,caption}
-\usepackage{wrapfig}
-\usepackage{enumitem}
-\setitemize{label=\usebeamerfont*{itemize item}%
-\usebeamercolor[fg]{itemize item}
-\usebeamertemplate {itemize item}}
-\usepackage{array} % ajust colunm table
-\usepackage{cancel}
-\usepackage[controls]{animate}
-\renewcommand{\CancelColor}{\color{red}}
-%%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX
-\newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
-colback=blue!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
-colback=green!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
-colback=yellow!5!white, colframe=blue!75!black,
-fonttitle=\bfseries\sffamily,
-colbacktitle=blue!85!red!60,enhanced,
-attach boxed title to top left={yshift=-3mm,xshift=5mm},
-title=#2,#1}
-\definecolor{col1}{HTML}{FF7878}
-\definecolor{col2}{HTML}{51B5F8}
-\definecolor{col3}{HTML}{68E1AA}
-\definecolor{col4}{HTML}{B869EA}
-\definecolor{col5}{HTML}{FF5500}
-\definecolor{col6}{HTML}{FFF8E7}
-\definecolor{col7}{HTML}{FF9966}
-\definecolor{col8}{HTML}{9400D3}
-\definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
-\newcommand{\re}{\hspace{-1cm}}
-\newcommand{\af}{\hspace{2cm}}
+\input{packages2.tex}
 \date{}
 % \usetheme{minflat}
+\DeclareExerciseCollection{Hidro}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{Hidrocarbonetos Ramificados}
+\title{Hidrocarbonetos Não Ramificados}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={Hidrocarbonetos Ramificados},
+ pdftitle={Hidrocarbonetos Não Ramificados},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
  pdflang={En Portuguese}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
-\begin{frame}{Sumário}
+\maketitle
+\begin{frame}{Outline}
 \tableofcontents
 \end{frame}
 
 
 
 
-\section{Alcanos}
-\label{sec:org25ac3b2}
-
-\begin{frame}[label={sec:org575c06d}]{Hidrocarbonetos não-ramificados}
-\begin{block}{Alcanos}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-%\setchemfig{angle increment=30}
- \centering
- \vspace{.5cm}
- \chemfig{H_3C-CH_2-CH_2-CH_3}
-\\  \vspace{.5cm} ou  \vspace{.5cm} \\
- \chemfig{-[1]-[-1]-[1]} \\  \vspace{.5cm}
- \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=.7]
-	\draw    (69.73,58.47) -- (70,81) ;
-	\draw    (70,81) -- (96.13,80.63) ;
-	\draw [shift={(98.13,80.6)}, rotate = 539.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-	\draw    (50.77,57.43) -- (50.59,83.04) -- (50.93,103.27) ;
-	\draw    (50.93,103.27) -- (83.33,103.27) ;
-	\draw [shift={(85.33,103.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	\draw    (25.73,56.47) -- (26.27,99) -- (26.53,129.47) ;
-	\draw    (26.53,129.47) -- (69.33,129.47) ;
-	\draw [shift={(71.33,129.47)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	
-	% Text Node
-	\draw (9.6,34.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small But \ an o}};
-	% Text Node
-	\draw (102.6,67.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small hidrocarboneto}};
-	% Text Node
-	\draw (90,95.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Ligação simples entre carbono}};
-	% Text Node
-	\draw (88.4,117.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small 4 carbonos}};
-	
-\end{tikzpicture}
-
-     \end{center}
-\end{column}
-\end{columns}
-%%%%%%%%%%%%%%%% Colunm 2
-\rule{14cm}{.3pt}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-%\setchemfig{angle increment=30}
- \centering
-\\ \vspace{.5cm} 
- \chemfig{H_3C-CH_2-CH_2-CH_2-CH_3}
-\\ \vspace{.5cm} ou \\ \vspace{.5cm}
- \chemfig{-[1]-[-1]-[1]-[-1]} \\
- 
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-.7,xscale=.7]
-	\draw    (69.73,58.47) -- (70,81) ;
-	\draw    (70,81) -- (96.13,80.63) ;
-	\draw [shift={(98.13,80.6)}, rotate = 539.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-	\draw    (50.77,57.43) -- (50.59,83.04) -- (50.93,103.27) ;
-	\draw    (50.93,103.27) -- (83.33,103.27) ;
-	\draw [shift={(85.33,103.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	\draw    (25.73,56.47) -- (26.27,99) -- (26.53,129.47) ;
-	\draw    (26.53,129.47) -- (69.33,129.47) ;
-	\draw [shift={(71.33,129.47)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	
-	% Text Node
-	\draw (9.6,34.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Pent \ an o}};
-	% Text Node
-	\draw (102.6,67.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small hidrocarboneto}};
-	% Text Node
-	\draw (90,95.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Ligação simples entre carbono}};
-	% Text Node
-	\draw (88.4,117.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small 5 carbonos}};
-	
-\end{tikzpicture}
-
-     \end{center}
-\end{column}
-\end{columns}
-\end{block}
+\section{Hidrocarbonetos}
+\label{sec:orgd259638}
+\begin{frame}[label={sec:orgb4105b0}]{Hidrocarbonetos}
+São compostos orgânicos formados exclusivamente por átomos de carbono e de hidrogênio.
+%\include{../img/diagrama}
 \end{frame}
 
 
 
-
-\section{Alcenos}
-\label{sec:orgfb91c98}
-
-\begin{frame}[label={sec:org9c5290c}]{Hidrocarbonetos não-ramificados}
-\begin{block}{Alcenos}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-%\setchemfig{angle increment=30}
- \centering
- \vspace{.5cm}
- \chemfig{H_2C=CH_2}
-\\  \vspace{.5cm}% ou  \vspace{.5cm} \\
-% \chemfig{-[1]-[-1]-[1]} \\  \vspace{.5cm}
- \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=.7]
-	\draw    (69.73,58.47) -- (70,81) ;
-	\draw    (70,81) -- (96.13,80.63) ;
-	\draw [shift={(98.13,80.6)}, rotate = 539.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-	\draw    (50.77,57.43) -- (50.59,83.04) -- (50.93,103.27) ;
-	\draw    (50.93,103.27) -- (83.33,103.27) ;
-	\draw [shift={(85.33,103.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	\draw    (25.73,56.47) -- (26.27,99) -- (26.53,129.47) ;
-	\draw    (26.53,129.47) -- (69.33,129.47) ;
-	\draw [shift={(71.33,129.47)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	
-	% Text Node
-	\draw (9.6,34.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small et \ en o}};
-	% Text Node
-	\draw (102.6,67.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small hidrocarboneto}};
-	% Text Node
-	\draw (90,95.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Ligação dupla entre carbono}};
-	% Text Node
-	\draw (88.4,117.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small 2 carbonos}};
-	
-\end{tikzpicture}
-
-     \end{center}
-\end{column}
-\end{columns}
-%%%%%%%%%%%%%%%% Colunm 2
-\rule{14cm}{.3pt}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-%\setchemfig{angle increment=30}
- \centering
- \vspace{.5cm} 
-\chemfig{H_2C=CH-CH_3}
-%\chemfig{H_3C-CH_2-CH_2-CH_2-CH_3}
- \vspace{.5cm} ou \\ \vspace{.5cm}
-\chemfig{CH_3-CH=CH_2}\\
-\alert{É a mesma molécula, porém escrita de modo diferentes}
-% \chemfig{-[1]-[-1]-[1]-[-1]} \\
- 
-\end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-.7,xscale=.7]
-	\draw    (69.73,58.47) -- (70,81) ;
-	\draw    (70,81) -- (96.13,80.63) ;
-	\draw [shift={(98.13,80.6)}, rotate = 539.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-	\draw    (50.77,57.43) -- (50.59,83.04) -- (50.93,103.27) ;
-	\draw    (50.93,103.27) -- (83.33,103.27) ;
-	\draw [shift={(85.33,103.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	\draw    (25.73,56.47) -- (26.27,99) -- (26.53,129.47) ;
-	\draw    (26.53,129.47) -- (69.33,129.47) ;
-	\draw [shift={(71.33,129.47)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	
-	% Text Node
-	\draw (9.6,34.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small prop \ en o}};
-	% Text Node
-	\draw (102.6,67.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small hidrocarboneto}};
-	% Text Node
-	\draw (90,95.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Ligação dupla entre carbono}};
-	% Text Node
-	\draw (88.4,117.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small 3 carbonos}};
-	
-\end{tikzpicture}
-
-     \end{center}
-\end{column}
-\end{columns}
-\end{block}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org32356b7}]{Hidrocarbonetos não-ramificados}
-\framesubtitle{Alcenos}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{Numeração correta}
-\vspace{.5cm}
-
-\chemfig{H_3\mcfabove{C}{\mcfatomno{4}}-\mcfabove{C}{\mcfatomno{3}}H_2-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{1}}H_2}
-
-
-\vspace{.5cm}
-
-Nome correto: \alert{but-1-eno} 
-
-\vspace{.5cm}
-
-Extremidade mais próxima da insaturação
-\end{block}
-\end{column}
-
-\begin{column}{0.45\columnwidth}
-\begin{block}{Numeração incorreta}
-\vspace{.5cm}
-
-\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H_2-\mcfabove{C}{\mcfatomno{3}}H=\mcfabove{C}{\mcfatomno{4}}H_2}
-
-\vspace{.5cm}
-
-Nome incorreto: \emph{but-3-eno}
-
-\vspace{.5cm}
-
-Extremidade mais próxima da insaturação
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org790b912}]{Hidrocarbonetos não-ramificados}
-\framesubtitle{Alcenos}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{Numeração correta}
-\vspace{.5cm}
-
-\chemfig{H_3\mcfabove{C}{\mcfatomno{4}}-\mcfabove{C}{\mcfatomno{3}}H_2-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{1}}H_2}
-
-
-\vspace{.5cm}
-
-Nome correto: \alert{but-1-eno} 
-
-\vspace{.5cm}
-
-Extremidade mais próxima da insaturação
-\end{block}
-\end{column}
-
-\begin{column}{0.45\columnwidth}
-\begin{block}{Numeração correta}
-\vspace{.5cm}
-
-\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{3}}H-\mcfabove{C}{\mcfatomno{4}}H_3}
-
-\vspace{.5cm}
-
-Nome correto: \alert{but-2-eno}
-
-\vspace{.5cm}
-
-Posição da dupla ligação difere entre as moléculas
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\section{Alcinos}
-\label{sec:org4349d46}
-
-\begin{frame}[label={sec:org22d9f66}]{Hidrocarbonetos não-ramificados}
-\begin{block}{Alcinos}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-%\setchemfig{angle increment=30}
- \centering
- \vspace{.5cm}
- \chemfig{HC~CH_2}
-\\  \vspace{.5cm}% ou  \vspace{.5cm} \\
-% \chemfig{-[1]-[-1]-[1]} \\  \vspace{.5cm}
- \end{column}
-\begin{column}{0.5\textwidth}  %%<--- here
-    \begin{center}
-   \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-0.7,xscale=.7]
-	\draw    (69.73,58.47) -- (70,81) ;
-	\draw    (70,81) -- (96.13,80.63) ;
-	\draw [shift={(98.13,80.6)}, rotate = 539.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-	\draw    (50.77,57.43) -- (50.59,83.04) -- (50.93,103.27) ;
-	\draw    (50.93,103.27) -- (83.33,103.27) ;
-	\draw [shift={(85.33,103.27)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	\draw    (25.73,56.47) -- (26.27,99) -- (26.53,129.47) ;
-	\draw    (26.53,129.47) -- (69.33,129.47) ;
-	\draw [shift={(71.33,129.47)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-2.3) .. controls (4.86,-0.97) and (2.31,-0.21) .. (0,0) .. controls (2.31,0.21) and (4.86,0.98) .. (7.65,2.3)   ;
-	
-	% Text Node
-	\draw (9.6,34.8) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small et\ \alert{in} o}};
-	% Text Node
-	\draw (102.6,67.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small hidrocarboneto}};
-	% Text Node
-	\draw (90,95.2) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small Ligação tripla entre carbono}};
-	% Text Node
-	\draw (88.4,117.6) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\small 2 carbonos}};
-	
-\end{tikzpicture}
-
-     \end{center}
-\end{column}
-\end{columns}
-
-\begin{bclogo}[logo=\bcattention, noborder=true, barre=none]{Atenção}
-Quando houver mais de uma possibilidade para a localização da insaturação, deve-se indicar sua posição de modo similar ao que foi feito no caso dos alcenos.
-
-\begin{center}
-\begin{tabular}{ll}
-\chemfig{HC~CH_2-CH_3} & \alert{but-1-ino}\\[0pt]
-\chemfig{H_3C-C~C-CH_3} & but-2-ino\\[0pt]
-\chemfig{H_3C-CH_2-C~CH} & \alert{but-1-ino}\\[0pt]
-\end{tabular}
-\end{center}
-
+\begin{frame}[label={sec:orgdbf5b60}]{Hidrocarbonetos}
 \begin{itemize}
-\item No caso da estrutura do \alert{but-1-ino} é a mesma molécula.
+\item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
-\end{bclogo}
-\end{block}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
+\caption{\label{fig:org3022ad4}Esquema de uma torre de fracionamento.}
+\end{figure}
 \end{frame}
 
-
-\section{Alcadienos}
-\label{sec:orge8b9af5}
-
-\begin{frame}[label={sec:orga74ac71}]{Dienos}
-\begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{Exemplo}
-
-\begin{columns}
-\begin{column}{0.4\textwidth}
-%\vspace{.3cm}
-\schemestart 
-\chemname{
-\chemfig{H_2C=C=CH-CH_3}}{\small posição das duplas}
-\chemmove{
-\node[text width=3cm,blue] at (2.0 ,0) (A) {buta-1,2-dieno};
-\draw[|->] (2.3,-.1)--(2.3,-0.8); % Line 1
-\node[text width=2.0cm,blue] at (2.8 ,-1.1) (A) {\scriptsize \emph{di} duas e \emph{en} (dupla ligação)};
-\draw[|->] (1.5,-.1)--(1.5,-0.5)--(-0.28,-.5); % seta dupla
-\draw[|->] (1.1, -0.1)--(1.1,-1.9); % seta do A
-\node[text width=3cm,blue] at (1.5 ,-2.2) {\scriptsize Note a presença do \emph{a}};
-}
-\schemestop
-
-\end{column}
-\begin{column}{0.5\textwidth}
-
-%\vspace{.3cm}
-\schemestart 
-\chemname{
-\chemfig{H_2C=C=CH-CH_2-CH_3}}{\small posição das duplas}
-\chemmove{
-\node[text width=3cm,blue] at (2.0 ,0) (A) {penta-1,2-dieno};
-\draw[|->] (2.4,-.1)--(2.4,-0.8); % Line 1
-\node[text width=2.0cm,blue] at (2.8 ,-1.1) (A) {\scriptsize \emph{di} duas e \emph{en} (dupla ligação)};
-\draw[|->] (1.7,-.1)--(1.7,-0.5)--(-0.28,-.5); % seta dupla
-\draw[|->] (1.2, -0.1)--(1.2,-1.9); % seta do A
-\node[text width=3cm,blue] at (1.5 ,-2.2) {\scriptsize Note a presença do \emph{a}};
-}
-\schemestop
-
-\end{column}
-\end{columns}
-
-\vspace{2cm}
-
-\schemestart 
-\chemname{
-\chemfig{H_2C=CH-CH=CH-CH=CH_2}}{\small posição das duplas}
-\chemmove{
-\node[text width=3cm,blue] at (2.0 ,0) (A) {hexa-1,3,5-trieno};
-\draw[|->] (2.4,-.1)--(2.4,-0.8); % Line 1
-\node[text width=2.0cm,blue] at (2.8 ,-1.1) (A) {\scriptsize \emph{tri} três e \emph{en} (tripla ligação)};
-\draw[|->] (1.7,-.1)--(1.7,-0.5)--(1.0,-.5); % seta dupla
-\draw[|->] (1.2, -0.1)--(1.2,-1.9); % seta do A
-\node[text width=3cm,blue] at (1.5 ,-2.2) {\scriptsize Note a presença do \emph{a}};
-}
-\schemestop
-\vspace{3cm}
-\end{bclogo}
-\end{frame}
-
-
-\section{Ciclanos}
-\label{sec:org991a330}
-
-\begin{frame}[label={sec:orgacf9d08}]{Ciclanos}
-\begin{myex}{Exemplos}
-\begin{center}
-\begin{tabular}{llll}
- \chemfig{H_2C-[,,2,1]CH_2-[:120,,1]\mcfabove{C}{\mcfright{H}{_2}}(-[:240]\phantom{C})}  & ou & \chemfig{--[:120](-[:240])} & \alert{ciclopropano}\\[0pt]
- &  & \\[0pt]
- \chemfig{H_2C-[,,2,1]CH_2-[:90,,1,1]CH_2-[:180,,1,2]H_2C(-[:270,,2]\phantom{C})}  & ou & \chemfig{--[:90]-[:180](-[:270])} & \alert{ciclobutano}\\[0pt]
- &  & \\[0pt]
- \chemfig{\mcfbelow{C}{\mcfright{H}{_2}}-[:36,,,1]CH_2-[:108,,1]\mcfabove{C}{\mcfright{H}{_2}}-[:180]\mcfabove{C}{\mcfright{H}{_2}}-[:252,,,2]H_2C(-[:324,,2]\phantom{C})} & ou & \chemfig{-[:36]-[:108]-[:180]-[:252](-[:324])} & \alert{ciclopentano}\\[0pt]
+\begin{frame}[label={sec:org8337f74}]{Frações Típicas do Petróleo}
+\begin{tabular}{|B|B|B|L|}
+\hline
+ \cellcolor{green!20} {\bfseries Fração}   &  \cellcolor{green!20} {\bfseries T. de Ebulição (°C)}   &  \cellcolor{green!20} {\bfseries Composição aproximada}  &  \cellcolor{green!20} {\bfseries Usos} \\[0pt]
+\hline
+Gás residual & - &  \ch{C1-C2} & gás combustível\\[0pt]
+\hline
+Gás liquefeito de petróleo - GLP & Até 40 &  \ch{C3-C4}  & gás combustível engarrafado, uso doméstico e indrustrial\\[0pt]
+\hline
+Gasolina & 40-175 & \ch{C5-C10} & combustível de automóveis, solvente\\[0pt]
+\hline
+Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível de aviões a jato\\[0pt]
+\hline
+Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\[0pt]
+\hline
+Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, matéria-prima para lubrificantes\\[0pt]
+\hline
+Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\[0pt]
+\hline
+Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes\\[0pt]
+\hline
 \end{tabular}
-\end{center}
-
-\end{myex}
 \end{frame}
 
 
-\section{Ciclenos}
-\label{sec:org2b3e4e9}
+\section{Classificação}
+\label{sec:org2158f47}
 
-\begin{frame}[label={sec:org7a11eca}]{Ciclenos}
-\begin{myex}{Exemplos}
-\begin{center}
-\begin{tabular}{llll}
- \chemfig{H_2C-[,,2,1]CH=^[:120,,1]\mcfabove{C}{H}(-[:240]\phantom{C})}  & ou & \chemfig{-=^[:120](-[:240])} & \alert{ciclopropeno}\\[0pt]
- &  & \\[0pt]
- \chemfig{H_2C-[,,2,1]CH=^[:90,,1,1]CH-[:180,,1,2]H_2C(-[:270,,2]\phantom{C})}  & ou & \chemfig{*4(-=--)} & \alert{ciclobuteno}\\[0pt]
- &  & \\[0pt]
- \chemfig{\mcfbelow{C}{H}=^[:36,,,1]CH-[:108,,1]\mcfabove{C}{\mcfright{H}{_2}}-[:180]\mcfabove{C}{\mcfright{H}{_2}}-[:252,,,2]H_2C(-[:324,,2]\phantom{C})}   & ou &  \chemfig{=^[:36]-[:108]-[:180]-[:252](-[:324])}  & \alert{ciclopenteno}\\[0pt]
+\begin{frame}[label={sec:org1d919c1}]{Grupos}
+\begin{itemize}
+\item Os nomes \emph{alcanos}, \emph{alcenos}, \emph{alcinos}, \emph{alcadienos} \emph{ciclanos}, \emph{ciclenos} e \emph{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
+\end{itemize}
+\include{img/hidro.tex}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Subdivisões dos hidrocarbonetos}
+\begin{table}[htbp]
+\caption{\label{tab:org87de515}Subdivisões importantes dos hidrocarbonetos}
+\begin{supertabular}{BBLB}
+\hline
+   \cellcolor{green!20} {\bfseries Subgrupo}  &  \cellcolor{green!20} {\bfseries Característica}  &  \cellcolor{green!20} {\bfseries Exemplos}  &  \cellcolor{green!20} {\bfseries Fórmula geral} \\[0pt]
+\hline
+Alcanos ou parafinas & Cadeia aberta Ligações simples & \chemfig{H_3C-CH_2-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-CH([:-90]-CH_3)-CH_3}\qquad & \(\rm C_nH_{2n+2}\)\\[0pt]
+\hline
+Alcenos, alquenos ou olefinas & Cadeia aberta com 1 ligação dupla & \chemfig{H_2C=CH-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)=CH-CH_3} & \(\rm C_nH_{2n}\)\\[0pt]
+\hline
+Alcinos ou alquinos & Cadeia aberta 1 ligação tripla & \chemfig{HC~C-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-C~C-CH_3} & \(\rm C_nH_{2n-2}\)\\[0pt]
+\hline
+Alcadienos ou dienos & Cadeia aberta 2 ligações duplas & \chemfig{H_2C=C=CH_2}\qquad \chemfig{H_2C=CH-CH=CH_2} & \(\rm C_nH_{2n-2}\)\\[0pt]
+\hline
+Ciclanos & Cadeia fechada Ligações simples & \chemfig{*5(-----)} \qquad \chemfig{*6(------)} & \(\rm C_nH_{2n}\)\\[0pt]
+\hline
+Ciclenos & Cadeia fechada uma ligação dupla & \chemfig{*4(---(-)=)} \qquad \chemfig{*6(-----=)} & \(\rm C_nH_{2n-2}\)\\[0pt]
+\hline
+Aromáticos & Contêm anel benzênico & \chemfig{**6(-----(-CH_3)-)} \qquad  \chemfig{*6(-=-(*6(-=-=---))=-=)} & \(\rm C_nH_{2n-6}\)\\[0pt]
+\hline
+\end{supertabular}
+\end{table}
+\end{frame}
+
+\section{Nomenclatura}
+\label{sec:org169cd51}
+\begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
+\begin{myrule}{Regra}
+\begin{itemize}
+\item A nomenclatura de compostos orgânicos segue as regras elaboradas pela IUPAC.
+
+\item De acordo com as regras da IUPAC, o nome de um composto orgânico é formado pela união de três fragmentos: \alert{prefixo + infixo + sufixo}.
+\end{itemize}
+
+\end{myrule}
+\end{frame}
+
+\begin{frame}[label={sec:orgaeee227}]{Nomenclatura dos compostos orgânicos}
+\begin{itemize}
+\item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
+\end{itemize}
+
+\begin{table}[htbp]
+\caption{\label{tab:org563de3b}Prefixo que indicam o número de carbonos}
+\begin{tabular}{BBBB}
+\hline
+ \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos}  &  \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos} \\[0pt]
+\hline
+met & 1 & undec & 11\\[0pt]
+et & 2 & dodec & 12\\[0pt]
+prop & 3 & tridec & 13\\[0pt]
+but & 4 & tretadec & 14\\[0pt]
+pent & 5 & pentadec & 15\\[0pt]
+hex & 6 & hexadec & 16\\[0pt]
+hept & 7 & hepdec & 17\\[0pt]
+oct & 8 & octadec & 18\\[0pt]
+non & 9 & nonadec & 19\\[0pt]
+dec & 10 & icosa & 20\\[0pt]
+\hline
 \end{tabular}
-\end{center}
+\end{table}
+\end{frame}
 
-\end{myex}
+\begin{frame}[label={sec:org011c4f3}]{Nomenclatura dos compostos orgânicos}
+\begin{itemize}
+\item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
+\end{itemize}
+
+\begin{table}[htbp]
+\caption{Infixos para a nomenclatura orgânica}
+\begin{tabular}{LL}
+\hline
+ \cellcolor{green!20} {\bfseries Infixo}  &  \cellcolor{green!20} {\bfseries Tipo de Ligação} \\[0pt]
+\hline
+an & simples\\[0pt]
+en & dupla\\[0pt]
+in & tripla\\[0pt]
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}[label={sec:org3890874}]{Nomenclatura dos compostos orgânicos}
+\begin{itemize}
+\item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
+\end{itemize}
+
+\begin{table}[htbp]
+\caption{Sufixo para a nomenclatura orgânica}
+\begin{tabular}{BL}
+\hline
+ \cellcolor{green!20} {\bfseries Sufixo}  &  \cellcolor{green!20} {\bfseries Classe funcional} \\[0pt]
+\hline
+o & hidrocarbonet \alert{o}\\[0pt]
+ol & álco \alert{ol}\\[0pt]
+al & \alert{al} deído\\[0pt]
+ona & cet \alert{ona}\\[0pt]
+óico & ácido carboxíl \alert{ico}\\[0pt]
+\hline
+\end{tabular}
+\end{table}
 \end{frame}
 
 
-\begin{frame}[label={sec:orgebd87c3}]{Outros casos}
-Em casos como os seguintes, é necessário localizar as duplas ligações.
-\alert{A numeração deve ser feita de modo que as insatuarações sejam representadas com os menores números possíveis}.
-
-
-
-\begin{center}
-	\chemfig{*6(-=-=--)} \af \af
-	\chemfig{*8(--=--=---)}
-	\vspace{1cm}
-
-	\chemfig{*6(-=-=-=)}
-	\chemmove{
-		% cycle hexan
-		\node[text width=1cm,blue] at (-2.8 ,3.18) {\scriptsize 1}; % C1
-		\node[text width=1cm,blue] at (-2.2 ,2.7) {\scriptsize 2}; % C1
-		\node[text width=1cm,blue] at (-2.2 ,2.2) {\scriptsize 3}; % C1
-		\node[text width=1cm,blue] at (-2.8 ,1.8) {\scriptsize 4}; % C1
-		\node[text width=1cm,blue] at (-3.4 ,2.2) {\scriptsize 5}; % C1
-		\node[text width=1cm,blue] at (-3.4 ,2.7) {\scriptsize 6}; % C1
- 	 	\node[text width=5cm,col8] at (-1.3 ,5,8) {ciclo-hexa-1,3-dieno}; % C1    		
-		% Octan
-		\node[text width=1cm,blue] at (2.1 ,3.25) {\scriptsize 1}; % C1
-    	\node[text width=1cm,blue] at (2.65 ,3.25) {\scriptsize 2}; % C1
-    	\node[text width=1cm,blue] at (3.15 ,2.8) {\scriptsize 3}; % C1
-    	\node[text width=1cm,blue] at (3.15 ,2.2) {\scriptsize 4}; % C1
-    	\node[text width=1cm,blue] at (2.65 ,1.65) {\scriptsize 5}; % C1
-		\node[text width=1cm,blue] at (2.15 ,1.65) {\scriptsize 6}; % C1
-    	\node[text width=1cm,blue] at (1.65 ,2.2) {\scriptsize 7}; % C1
-    	\node[text width=1cm,blue] at (1.65 ,2.8) {\scriptsize 8}; % C1
- 	 	\node[text width=5cm,col8] at (8.8 ,5,8) {ciclo-octa-1,4-dieno}; % C1    		
-    	% Benzen
-		\node[text width=1cm,blue] at (-.1 ,0.9) {\scriptsize 1}; % C1    		
-		\node[text width=1cm,blue] at (.45 ,0.55) {\scriptsize 2}; % C1    		
-		\node[text width=1cm,blue] at (.45 ,0.02) {\scriptsize 3}; % C1    	
-   		\node[text width=1cm,blue] at (-.1 ,-0.4) {\scriptsize 4}; % C1    	
-   		\node[text width=1cm,blue] at (-.67 ,0.02) {\scriptsize 5}; % C1    		
-   		\node[text width=1cm,blue] at (-.67 ,0.55) {\scriptsize 6}; % C1 
-   	 	\node[text width=5cm,col8] at (0.5 ,-.8) {ciclo-hexa-1,3,5-trieno}; % C1 
-   	 	 \node[text width=7.2 cm,black] at (0.2 ,-1.7) {\small (também denominado {\bfseries benzeno}, nome aceito pela IUPAC e muito mais utilizado que o apresentado aqui)}; % C1    		   					       		   					    
-	}
-\end{center}
+\begin{frame}[label={sec:orgfb52b40}]{Nomenclatura dos compostos orgânicos}
+\begin{table}[htbp]
+\caption{Infixos para a nomenclatura orgânica}
+\begin{tabular}{BBBB}
+\hline
+ \cellcolor{green!20} {\bfseries Infixo}  &  \cellcolor{green!20} {\bfseries Tipo de Ligação} \\[0pt]
+\hline
+an & simples\\[0pt]
+en & dupla\\[0pt]
+in & tripla\\[0pt]
+\hline
+\end{tabular}
+\end{table}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:org7de8d6f}]{Fim da Aula}
+
+\begin{frame}[label={sec:orgd2c4831}]{Fim da Aula}
 \begin{tikzpicture}
-\node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
 \begin{center}
 \begin{tabular}{ccc}
 Download Aula & & Lista de Exercícios \\
- \qrcode[height=2in]{https://mark.nl.tab.digital/s/yWAtd5C8mjKjdQa} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/2qnZtdzAjYynDWw} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N}\\
  \end{tabular}
  \end{center}
 \end{frame}

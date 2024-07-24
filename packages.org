@@ -72,7 +72,7 @@
 #+LATEX_HEADER:  exercise/the-counter =  \arabic{exercise}, 
 #+LATEX_HEADER: %%solution-name = solution,  % used with headings=true
 #+LATEX_HEADER: solution/print=false,
-#+LATEX_HEADER: %print-collection/print=both,
+#+LATEX_HEADER: print-collection/print=both,
 #+LATEX_HEADER: }
 
 
@@ -111,12 +111,12 @@
 #+LATEX_HEADER: \chemsetup{redox/sep=.5em}
 #+LATEX_HEADER: \chemsetup[redox]{explicit-sign=true} %%% reaction redox 
 #+LATEX_HEADER: %% == CUSTOM PHASES IN CHEMMACROS
-#+LATEX_HEADER:\NewChemPhase\lqdd{\(\ell\)}
-#+LATEX_HEADER:\NewChemPhase\gr{grafite}
-#+LATEX_HEADER:\NewChemPhase\reac{reação}
-#+LATEX_HEADER:\NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
-#+LATEX_HEADER:\usepackage{siunitx}
-#+LATEX_HEADER:\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+#+LATEX_HEADER: \NewChemPhase\lqdd{\(\ell\)}
+#+LATEX_HEADER: \NewChemPhase\gr{grafite}
+#+LATEX_HEADER: \NewChemPhase\reac{reação}
+#+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+#+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
 #+LATEX_HEADER: %% == NUMEROS PARA FORMULES
 #+LATEX_HEADER: \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
 #+LATEX_HEADER: %%% INCLUDE PAGES PDFs

@@ -86,7 +86,51 @@
 #+end_export
 
 
+** Exemplo
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
 
+
+
+#+ATTR_LATEX: :options [ID=2]
+#+begin_question
+*UEMA-2024* GLP (Gás Liquefeito de Petróleo), também conhecido popularmente como gás de cozinha, é um combustível fóssil não renovável que pode se esgotar de um dia para o outro, caso não seja utilizado com planejamento e sem excesso. Ele é composto, dentre outros gases, por propano (\ch{C3H8}), butano
+(\ch{C4H10}) e pequenas quantidades de propeno (\ch{C3H6}) e buteno (\ch{C4H8}). Esses compostos orgânicos são classificados como hidrocarbonetos que apresentam semelhanças e diferenças entre si.
+Com base no tipo de ligação entre carbonos e na classificação da cadeia carbônica dos compostos acima, pode-se afirmar que
+#+begin_choice
+\choice  os compostos insaturados são propano e butano.
+\choice os compostos insaturados são propeno e buteno.
+\choice os compostos insaturados são propeno e butano.
+\choice os compostos apresentam cadeias homocíclicas.
+\choice os compostos possuem cadeias heterocíclicas.
+#+end_choice
+#+end_question 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+*UEMA-2024* GLP (Gás Liquefeito de Petróleo), também conhecido popularmente como gás de cozinha, é um combustível fóssil não renovável que pode se esgotar de um dia para o outro, caso não seja utilizado com planejamento e sem excesso. Ele é composto, dentre outros gases, por propano (\ch{C3H8}), butano
+(\ch{C4H10}) e pequenas quantidades de propeno (\ch{C3H6}) e buteno (\ch{C4H8}). Esses compostos orgânicos são classificados como hidrocarbonetos que apresentam semelhanças e diferenças entre si.
+Com base no tipo de ligação entre carbonos e na classificação da cadeia carbônica dos compostos acima, pode-se afirmar que
+
+ #+begin_choice
+\choice  os compostos insaturados são propano e butano.
+*Insaturação ocorre quando há duplas nesse caso são alcanos, compostos saturados*
+\choice os compostos insaturados são propeno e buteno.
+*Possui duplas e triplas com a terminação en indica a insaturação*. 
+\choice os compostos insaturados são propeno e butano.
+*Butano é um composto saturado* 
+\choice os compostos apresentam cadeias homocíclicas.
+*Composto cíclico de cadeia fechada*
+\choice os compostos possuem cadeias heterocíclicas.
+*Composto cíclico de cadeia fechada*
+#+end_choice
+
+
+
+ *Resposta correta letra B*
+ 
+ #+end_answer
 
 * Alcenos 
 
@@ -268,7 +312,7 @@ Posição da dupla ligação difere entre as moléculas
 %\setchemfig{angle increment=30}
  \centering
  \vspace{.5cm}
- \chemfig{HC~CH_2}
+ \chemfig{HC~CH}
 \\  \vspace{.5cm}% ou  \vspace{.5cm} \\
 % \chemfig{-[1]-[-1]-[1]} \\  \vspace{.5cm}
  \end{column}
@@ -305,7 +349,7 @@ Posição da dupla ligação difere entre as moléculas
 #+BEGIN_bclogo
 Quando houver mais de uma possibilidade para a localização da insaturação, deve-se indicar sua posição de modo similar ao que foi feito no caso dos alcenos.
 
-| \chemfig{HC~CH_2-CH_3}   | *but-1-ino* |
+| \chemfig{HC~C-CH_3}   | *but-1-ino* |
 | \chemfig{H_3C-C~C-CH_3}  | but-2-ino |
 | \chemfig{H_3C-CH_2-C~CH} | *but-1-ino* |
 

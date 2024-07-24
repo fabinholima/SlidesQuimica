@@ -13,7 +13,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 %\usepackage[french]{babel}
-\usepackage[portuguese]{babel}
+%\usepackage[portuguese]{babel}
 
 %%%% FONTS
 
@@ -24,8 +24,9 @@
 \usepackage[most]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{fontawesome}
-\newcounter{paragraph}
+\usepackage{tasks}
 
+\newcounter{paragraph}
 
 
 \DeclareExerciseEnvironmentTemplate{custom}{%
@@ -55,7 +56,7 @@
 	solution-env = answer ,
 	exercise-template = custom ,
 	solution-template = custom2 ,
-	exercise-name	= Exemplo. ,
+	exercise-name	= Exemplo,
 	exercises-name = Exemplo ,
 	solution-name = Solução ,
 	solutions-name = Sol. ,
@@ -69,11 +70,10 @@
   exercise/the-counter =  \arabic{exercise}, 
 %%solution-name = solution,  % used with headings=true
 solution/print=false,
-%print-collection/print=both,
+print-collection/print=both,
 }
 
-
-
+\NewTasksEnvironment[label = (\emph{\alph*}), label-width = 12pt]{choice}[\choice]
 
 
 \usepackage{colortbl}

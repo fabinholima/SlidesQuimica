@@ -43,3 +43,6 @@
 \XSIM{bodypoints}{}
 \XSIM{userbonus-points}{}
 \XSIM{bodybonus-points}{}
+\XSIM{collection:Hidro}{}
+\setcounter{totalexerciseinHidro}{0}
+\setcounter{totaltestinHidro}{0}
