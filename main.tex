@@ -1,19 +1,158 @@
-% Created 2024-07-23 Tue 14:14
+% Created 2024-07-25 Thu 04:28
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
 
-\input{packages2.tex}
+% \input{packages2.tex}
+%%%% Config X sim for BEAMER
+\makeatletter
+\@ifclassloaded{beamer}{%
+%%% save beamer's `solution' environment as `beamersolution':
+\let\beamersolution\solution
+\let\endbeamersolution\endsolution
+%%% "delete" the `solution' environment:
+\let\solution\relax
+\let\endsolution\relax
+}{%
+}%
+\makeatother
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese, ]{babel}
+%%%% FONTS
+%%% XSIM CONFIG BEAMER
+\usepackage{xsim}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{tasks}
+\newcounter{paragraph}
+%%% BOX EXERCISE BEAMER
+\DeclareExerciseEnvironmentTemplate{custom}{%
+\begin{tcolorbox}[boxrule = 0pt]
+\tcbox[on line,colback=teal,colframe=teal,coltext=white,size=small]{%
+\faBook\sffamily\bfseries\
+\XSIMmixedcase{\GetExerciseName}
+\GetExerciseProperty{counter}%
+}\quad
+}{\end{tcolorbox}}
+%% == CUSTOM BOX BEAMER
+\DeclareExerciseEnvironmentTemplate{custom2}{%
+\begin{tcolorbox}[boxrule = 0pt]
+\tcbox[on line,colback=violet,colframe=violet,coltext=white,size=small]{%
+\faToggleOn\sffamily\bfseries\
+\XSIMmixedcase{\GetExerciseName}
+\GetExerciseProperty{counter}%
+}\quad
+}{\end{tcolorbox}}
+\DeclareExerciseType{test}{
+exercise-env = question ,
+solution-env = answer ,
+exercise-template = custom ,
+solution-template = custom2 ,
+exercise-name = Exemplo. ,
+exercises-name = Exemplo ,
+solution-name = Solução ,
+solutions-name = Sol. ,
+exercise-heading = \textbf ,
+solution-heading = \textbf
+}
+\xsimsetup{
+exercise/within = section,
+exercise/the-counter =  \arabic{exercise},
+%%solution-name = solution,  % used with headings=true
+solution/print=false,
+print-collection/print=both,
+}
+\NewTasksEnvironment[label = (\emph{\alph*}),
+label-width = 12pt]{choice}[\choice]
+\usepackage{colortbl}
+\usepackage[tikz]{bclogo}
+\usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
+\usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
+\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+\usepackage{tikzpeople}
+\usepackage{qrcode,hyperref}
+\usepackage{upgreek}
+%\usepackage[version=4]{mhchem}
+\usepackage{tabularray}
+%%% CUSTOM TABLE
+\NewTblrTheme{fancy}{
+\SetTblrStyle{caption-tag}{font=\bfseries}
+\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
+\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
+\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
+\SetTblrTemplate{contfoot-text}{normal}
+}
+%% ==== CHEMMACROS E CHEMFIG CONFIG
+\usepackage{chemfig,chemmacros,elements,chemformula}
+\chemsetup{modules={all}}
+\chemsetup[redox]{pos=top,roman=false}
+\chemsetup[redox]{pos=top}
+\chemsetup{redox/sep=.5em}
+\chemsetup[redox]{explicit-sign=true} %%% reaction redox
+%% == CUSTOM PHASES IN CHEMMACROS
+\NewChemPhase\lqdd{\(\ell\)}
+\NewChemPhase\gr{grafite}
+\NewChemPhase\reac{reação}
+\NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+\usepackage{siunitx}
+\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+%% == NUMEROS PARA FORMULES
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
+%%% INCLUDE PAGES PDFs
+\usepackage{pdfpages}
+\usepackage{mol2chemfig}
+\usepackage{subfig,caption}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate {itemize item}}
+\usepackage{array} % ajust colunm table
+\usepackage{cancel}
+\usepackage[controls]{animate}
+\renewcommand{\CancelColor}{\color{red}}
+%%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX
+\newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
+colback=blue!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
+colback=green!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
+colback=yellow!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\definecolor{col1}{HTML}{FF7878}
+\definecolor{col2}{HTML}{51B5F8}
+\definecolor{col3}{HTML}{68E1AA}
+\definecolor{col4}{HTML}{B869EA}
+\definecolor{col5}{HTML}{FF5500}
+\definecolor{col6}{HTML}{FFF8E7}
+\definecolor{col7}{HTML}{FF9966}
+\definecolor{col8}{HTML}{9400D3}
+\definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
+\newcommand{\re}{\hspace{-1cm}}
+\newcommand{\af}{\hspace{2cm}}
 \date{}
-% \usetheme{minflat}
+\usetheme{minflat}
 \DeclareExerciseCollection{Hidro}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{Hidrocarbonetos Não Ramificados}
+\title{Hidrocarbonetos}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={Hidrocarbonetos Não Ramificados},
+ pdftitle={Hidrocarbonetos},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
@@ -21,7 +160,7 @@
 \begin{document}
 
 \maketitle
-\begin{frame}{Outline}
+\begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
 
@@ -29,15 +168,15 @@
 
 
 \section{Hidrocarbonetos}
-\label{sec:orgd259638}
-\begin{frame}[label={sec:orgb4105b0}]{Hidrocarbonetos}
+\label{sec:org49dd7c3}
+\begin{frame}[label={sec:org88c360f}]{Hidrocarbonetos}
 São compostos orgânicos formados exclusivamente por átomos de carbono e de hidrogênio.
 %\include{../img/diagrama}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:orgdbf5b60}]{Hidrocarbonetos}
+\begin{frame}[label={sec:org8a2585a}]{Hidrocarbonetos}
 \begin{itemize}
 \item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
@@ -45,39 +184,45 @@ São compostos orgânicos formados exclusivamente por átomos de carbono e de hi
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
-\caption{\label{fig:org3022ad4}Esquema de uma torre de fracionamento.}
+\caption{\label{fig:org17f539a}Esquema de uma torre de fracionamento.}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org8337f74}]{Frações Típicas do Petróleo}
-\begin{tabular}{|B|B|B|L|}
-\hline
- \cellcolor{green!20} {\bfseries Fração}   &  \cellcolor{green!20} {\bfseries T. de Ebulição (°C)}   &  \cellcolor{green!20} {\bfseries Composição aproximada}  &  \cellcolor{green!20} {\bfseries Usos} \\[0pt]
-\hline
-Gás residual & - &  \ch{C1-C2} & gás combustível\\[0pt]
-\hline
-Gás liquefeito de petróleo - GLP & Até 40 &  \ch{C3-C4}  & gás combustível engarrafado, uso doméstico e indrustrial\\[0pt]
-\hline
-Gasolina & 40-175 & \ch{C5-C10} & combustível de automóveis, solvente\\[0pt]
-\hline
-Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível de aviões a jato\\[0pt]
-\hline
-Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\[0pt]
-\hline
-Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, matéria-prima para lubrificantes\\[0pt]
-\hline
-Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\[0pt]
-\hline
-Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes\\[0pt]
-\hline
-\end{tabular}
+\begin{frame}[label={sec:orgda17dfb}]{Frações Típicas do Petróleo}
+{\centering \small
+\begin{tblr}{
+		colspec = {rccc}, colsep = 2mm, hlines = {2pt, white},
+		row{odd} = {brown8}, row{even} = {gray8},
+		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		%row{2-Z} = {3em,font=\large},
+	}
+%	\hline
+	 Fração   &  {Temperatura \\ Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
+%	\hline
+	Gás residual & - &  \ch{C1-C2} & gás combustível\\
+	\hline
+	{Gás liquefeito \\ de petróleo - GLP} & Até 40 &  \ch{C3-C4}  & gás para uso doméstico e indrustrial\\
+	\hline
+	Gasolina & 40-175 & \ch{C5-C10} & automóveis, solvente\\
+	\hline
+	Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível aviões\\
+	\hline
+	Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\
+	\hline
+	Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, lubrificantes\\
+	\hline
+	Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\
+	\hline
+	Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
+	\hline
+\end{tblr}
+}
 \end{frame}
 
-
 \section{Classificação}
-\label{sec:org2158f47}
+\label{sec:org9f9a106}
 
-\begin{frame}[label={sec:org1d919c1}]{Grupos}
+\begin{frame}[label={sec:org5128b1e}]{Grupos}
 \begin{itemize}
 \item Os nomes \emph{alcanos}, \emph{alcenos}, \emph{alcinos}, \emph{alcadienos} \emph{ciclanos}, \emph{ciclenos} e \emph{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
 \end{itemize}
@@ -85,32 +230,41 @@ Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes\\[0pt]
 \end{frame}
 
 \begin{frame}[allowframebreaks]{Subdivisões dos hidrocarbonetos}
-\begin{table}[htbp]
-\caption{\label{tab:org87de515}Subdivisões importantes dos hidrocarbonetos}
-\begin{supertabular}{BBLB}
+	
+	\begin{longtblr}[
+%		theme = fancy,
+		caption = {Subdivisões importantes dos hidrocarbonetos},
+		entry = {Short Caption},
+		label = {tblr:test},
+		]{
+		colspec = {cccc}, colsep = 2mm, hlines = {2pt, white},
+		rowsep = 3.5pt, %% space line 
+		row{1} = {2em,purple7,fg=white,font=\bfseries\sffamily},
+		 }
 \hline
-   \cellcolor{green!20} {\bfseries Subgrupo}  &  \cellcolor{green!20} {\bfseries Característica}  &  \cellcolor{green!20} {\bfseries Exemplos}  &  \cellcolor{green!20} {\bfseries Fórmula geral} \\[0pt]
+Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 \hline
-Alcanos ou parafinas & Cadeia aberta Ligações simples & \chemfig{H_3C-CH_2-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-CH([:-90]-CH_3)-CH_3}\qquad & \(\rm C_nH_{2n+2}\)\\[0pt]
-\hline
-Alcenos, alquenos ou olefinas & Cadeia aberta com 1 ligação dupla & \chemfig{H_2C=CH-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)=CH-CH_3} & \(\rm C_nH_{2n}\)\\[0pt]
-\hline
-Alcinos ou alquinos & Cadeia aberta 1 ligação tripla & \chemfig{HC~C-CH_2-CH_3} \quad \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH_2-C~C-CH_3} & \(\rm C_nH_{2n-2}\)\\[0pt]
-\hline
-Alcadienos ou dienos & Cadeia aberta 2 ligações duplas & \chemfig{H_2C=C=CH_2}\qquad \chemfig{H_2C=CH-CH=CH_2} & \(\rm C_nH_{2n-2}\)\\[0pt]
-\hline
-Ciclanos & Cadeia fechada Ligações simples & \chemfig{*5(-----)} \qquad \chemfig{*6(------)} & \(\rm C_nH_{2n}\)\\[0pt]
-\hline
-Ciclenos & Cadeia fechada uma ligação dupla & \chemfig{*4(---(-)=)} \qquad \chemfig{*6(-----=)} & \(\rm C_nH_{2n-2}\)\\[0pt]
-\hline
-Aromáticos & Contêm anel benzênico & \chemfig{**6(-----(-CH_3)-)} \qquad  \chemfig{*6(-=-(*6(-=-=---))=-=)} & \(\rm C_nH_{2n-6}\)\\[0pt]
-\hline
-\end{supertabular}
-\end{table}
+{Alcanos\\ ou parafinas} & {Cadeia aberta \\ Ligações simples} & {\chemfig{H_3C-CH_2-CH_3} \\  \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH([:-90]-CH_3)-CH_3}} &  \(\mathrm{C_nH_{2n+2}}\) \\
+ \hline
+ {Alcenos,  \\ alquenos \\ ou olefinas} & {Cadeia aberta com \\ 1 ligação dupla} & {\chemfig{H_2C=CH-CH_2-CH_3} \\ \chemfig{H_3C-C([:90]-CH_3)=CH-CH_3}} & \(\mathrm{C_nH_{2n}}\)\\
+ \hline \pagebreak
+ {Alcinos \\ ou alquinos} & {Cadeia aberta \\ 1 ligação tripla} & {\chemfig{HC~C-CH_3} \\ \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-C~C-CH_3}} & \(\mathrm{ C_nH_{2n-2}}\)\\ 
+ \hline
+ {Alcadienos \\ ou dienos} & {Cadeia aberta \\ 2 ligações duplas} & {\chemfig{H_2C=C=CH_2} \\[1pt] \chemfig{H_2C=CH-CH=CH_2}} & \(\mathrm{C_nH_{2n-2}}\)\\
+ \hline \pagebreak
+ Ciclanos & {Cadeia fechada \\ Ligações simples} & {\chemfig{*6(------)}} & \(\mathrm{C_nH_{2n}}\)\\
+ \hline 
+ Ciclenos & { Cadeia fechada \\  uma ligação dupla} & {  \chemfig{*6(-----=)}} & \(\mathrm{C_nH_{2n-2}}\)\\
+ \hline \pagebreak
+ Aromáticos & Contêm anel benzênico & {\chemfig{**6(-----(-CH_3)-)} \\   \chemfig{*6(-=-(*6(-=-=---))=-=)}} & \(\mathrm{C_nH_{2n-6}}\)\\
+ \hline 
+\end{longtblr}
 \end{frame}
 
+
+
 \section{Nomenclatura}
-\label{sec:org169cd51}
+\label{sec:org83c7a24}
 \begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
 \begin{myrule}{Regra}
 \begin{itemize}
@@ -122,13 +276,13 @@ Aromáticos & Contêm anel benzênico & \chemfig{**6(-----(-CH_3)-)} \qquad  \ch
 \end{myrule}
 \end{frame}
 
-\begin{frame}[label={sec:orgaeee227}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org717ffc9}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 \end{itemize}
 
 \begin{table}[htbp]
-\caption{\label{tab:org563de3b}Prefixo que indicam o número de carbonos}
+\caption{\label{tab:org16be480}Prefixo que indicam o número de carbonos}
 \begin{tabular}{BBBB}
 \hline
  \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos}  &  \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos} \\[0pt]
@@ -148,7 +302,7 @@ dec & 10 & icosa & 20\\[0pt]
 \end{table}
 \end{frame}
 
-\begin{frame}[label={sec:org011c4f3}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org971974b}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
 \end{itemize}
@@ -167,7 +321,7 @@ in & tripla\\[0pt]
 \end{table}
 \end{frame}
 
-\begin{frame}[label={sec:org3890874}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org4fa3311}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
 \end{itemize}
@@ -189,7 +343,7 @@ ona & cet \alert{ona}\\[0pt]
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfb52b40}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org578a679}]{Nomenclatura dos compostos orgânicos}
 \begin{table}[htbp]
 \caption{Infixos para a nomenclatura orgânica}
 \begin{tabular}{BBBB}
@@ -207,7 +361,7 @@ in & tripla\\[0pt]
 
 
 
-\begin{frame}[label={sec:orgd2c4831}]{Fim da Aula}
+\begin{frame}[label={sec:org8e4dfaa}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}

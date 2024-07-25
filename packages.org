@@ -25,6 +25,7 @@
 #+LATEX_HEADER: \usepackage[most]{tcolorbox}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{fontawesome}
+#+LATEX_HEADER: \usepackage{tasks}
 #+LATEX_HEADER: \newcounter{paragraph}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
@@ -76,6 +77,8 @@
 #+LATEX_HEADER: }
 
 
+#+LATEX_HEADER: \NewTasksEnvironment[label = (\emph{\alph*}),
+#+LATEX_HEADER: label-width = 12pt]{choice}[\choice]
 
 
 

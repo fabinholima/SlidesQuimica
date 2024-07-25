@@ -1,4 +1,4 @@
-#+TITLE: Hidrocarbonetos Não Ramificados
+#+TITLE: Hidrocarbonetos
 #+AUTHOR: Fábio Lima
 #+DATE: 
 #+OPTIONS: H:2 toc:t num:t
@@ -9,14 +9,14 @@
 
 #+BEAMER_THEME: minflat
 
-#+LATEX_HEADER:  \input{packages2.tex}
+#+LATEX_HEADER: % \input{packages2.tex}
 
-#+begin_comment
+
 #+INCLUDE: "packages.org"
-#+end_comment
+
 
 #+LATEX_HEADER: \date{}
-#+LATEX_HEADER:% \usetheme{minflat}
+#+LATEX_HEADER: \usetheme{minflat}
 
 
 #+LATEX_HEADER: \DeclareExerciseCollection{Hidro}
