@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{}
-\XSIM{exercise-body}{}
+\XSIM{solution-body}{test-1=={(\alert {FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é: \par \begin {choice}(2) \choice metano. \choice etano. \choice eteno. \choice etino. \choice propino. \end {choice} \par Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é \mathrm {\ch {C_nH_{2n+2}}}. \par O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral \mathrm {\ch {C_nH_{2n}}}. \par Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é \mathrm {\ch {C_nH_{2n-2}}}. \par Portanto, o etino possui apenas dois átomos de carbono (\ch {C2H2}), sendo o alcino mais simples}}
+\XSIM{exercise-body}{test-1=={(\alert {FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é: \par \begin {choice}(2) \choice metano. \choice etano. \choice eteno. \choice etino. \choice propino. \end {choice}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{}
+\XSIM{order}{1}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{}
+\XSIM{used}{test-1=={true}}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{}
-\XSIM{total-number}{0}
+\XSIM{printed}{test-1=={true}}
+\XSIM{total-number}{1}
 \XSIM{exercise}{0}
-\XSIM{test}{0}
+\XSIM{test}{1}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{}
-\XSIM{collections}{}
-\XSIM{collection:all exercises}{}
+\XSIM{idtypes}{1=={test}}
+\XSIM{collections}{test-1=={all exercises}}
+\XSIM{collection:all exercises}{test-1}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{0}
-\XSIM{id}{}
-\XSIM{ID}{}
-\XSIM{counter}{}
-\XSIM{counter-value}{}
+\setcounter{totaltestinall exercises}{1}
+\XSIM{id}{test-1=={1}}
+\XSIM{ID}{test-1=={1}}
+\XSIM{counter}{test-1=={1}}
+\XSIM{counter-value}{test-1=={1}}
 \XSIM{solution}{}
-\XSIM{section-value}{}
-\XSIM{section}{}
-\XSIM{sectioning}{}
+\XSIM{section-value}{test-1=={4}}
+\XSIM{section}{test-1=={4}}
+\XSIM{sectioning}{test-1=={{0}{4}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{}
-\XSIM{page}{}
+\XSIM{page-value}{test-1=={19}}
+\XSIM{page}{test-1=={19}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

@@ -19,7 +19,7 @@
 
 #+begin_export latex
 {\centering \small
-\begin{tblr}{
+\begin{talltblr}{
 		colspec = {rccc}, colsep = 2mm, hlines = {2pt, white},
 		row{odd} = {brown8}, row{even} = {gray8},
 		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
@@ -44,7 +44,7 @@
 	\hline
 	Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
 	\hline
-\end{tblr}
+\end{talltblr}
 }
 
 #+end_export
@@ -113,67 +113,130 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
    
    - O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 
-   #+NAME: tabcarbo
-#+CAPTION: Prefixo que indicam o número de carbonos
-#+ATTR_LATEX: :center nil :environment tabular :align BBBB
-|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Prefixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Número de carbonos} @@ | @@latex: \cellcolor{green!20} {\bfseries Prefixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Número de carbonos} @@ |
-|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
-| met                                                  |                                                               1 | undec                                                |                                                              11 |
-| et                                                   |                                                               2 | dodec                                                |                                                              12 |
-| prop                                                 |                                                               3 | tridec                                               |                                                              13 |
-| but                                                  |                                                               4 | tretadec                                             |                                                              14 |
-| pent                                                 |                                                               5 | pentadec                                             |                                                              15 |
-| hex                                                  |                                                               6 | hexadec                                              |                                                              16 |
-| hept                                                 |                                                               7 | hepdec                                               |                                                              17 |
-| oct                                                  |                                                               8 | octadec                                              |                                                              18 |
-| non                                                  |                                                               9 | nonadec                                              |                                                              19 |
-| dec                                                  |                                                              10 | icosa                                                |                                                              20 |
-|------------------------------------------------------+-----------------------------------------------------------------+------------------------------------------------------+-----------------------------------------------------------------|
+   #+begin_export latex
 
+\begin{longtblr}[theme=fancy,
+    caption = {Grupos substituintes orgânicos formados por carbono e hidrogênio},]
+    {
+        colspec = {c c c c }, colsep = 2mm, hlines = {2pt, white},
+        %row{odd} = {azure8}, row{even} = {gray8},
+        row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+        }
+\hline
+Prefixo  &  Número de carbonos  &  Prefixo  & Número de carbonos \\[0pt]
+\hline
+met & 1 & undec & 11\\[0pt]
+et & 2 & dodec & 12\\[0pt]
+prop & 3 & tridec & 13\\[0pt]
+but & 4 & tretadec & 14\\[0pt]
+pent & 5 & pentadec & 15\\[0pt]
+hex & 6 & hexadec & 16\\[0pt]
+hept & 7 & hepdec & 17\\[0pt]
+oct & 8 & octadec & 18\\[0pt]
+non & 9 & nonadec & 19\\[0pt]
+dec & 10 & icosa & 20\\[0pt]
+\hline
+\end{longtblr}
+   #+end_export
+   
 ** Nomenclatura dos compostos orgânicos
 
 - O *infixo* indica o tipo de ligação química entre os átomos de carbono.
 
-#+CAPTION: Infixos para a nomenclatura orgânica
-#+ATTR_LATEX: :center nil :environment tabular :align LL
-|-----------------------------------------------------+--------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Infixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Tipo de Ligação} @@ |
-|-----------------------------------------------------+--------------------------------------------------------------|
-| an                                                  | simples                                                      |
-| en                                                  | dupla                                                        |
-| in                                                  | tripla                                                       |
-|-----------------------------------------------------+--------------------------------------------------------------|
+
+#+begin_export latex
+\begin{talltblr}[theme=fancy,
+caption = {Infixos para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Infixo  &  Tipo de Ligação \\
+\hline
+an & simples\\
+en & dupla\\
+in & tripla\\
+\hline
+\end{talltblr}
+
+#+end_export
+
+
 
 ** Nomenclatura dos compostos orgânicos
 
 - O *sufixo*, a parte final, indica a *classe funcional do composto*.
 
-#+CAPTION: Sufixo para a nomenclatura orgânica
-#+ATTR_LATEX: :center nil :environment tabular :align BL
-|-----------------------------------------------------+---------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Sufixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Classe funcional} @@ |
-|-----------------------------------------------------+---------------------------------------------------------------|
-| o                                                   | hidrocarbonet *o*                                               |
-| ol                                                  | álco *ol*                                                       |
-| al                                                  | *al* deído                                                      |
-| ona                                                 | cet *ona*                                                       |
-| óico                                                | ácido carboxíl *ico*                                          |
-|-----------------------------------------------------+---------------------------------------------------------------|
+#+begin_export latex
+\begin{talltblr}[theme=fancy,
+caption = {Sufixo para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Sufixo  &  Classe funcional \\
+\hline
+o & hidrocarbonet \alert{o}\\
+ol & álco \alert{ol}\\
+al & \alert{al} deído\\
+ona & cet \alert{ona}\\
+óico & ácido carboxíl \alert{ico}\\
+\hline
+\end{talltblr}
+
+#+end_export
 
 
-** Nomenclatura dos compostos orgânicos
-   
-#+CAPTION: Infixos para a nomenclatura orgânica
-#+ATTR_LATEX: :center nil :environment tabular :align BBBB
-|-----------------------------------------------------+--------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Infixo} @@ | @@latex: \cellcolor{green!20} {\bfseries Tipo de Ligação} @@ |
-|-----------------------------------------------------+--------------------------------------------------------------|
-| an                                                  | simples                                                      |
-| en                                                  | dupla                                                        |
-| in                                                  | tripla                                                       |
-|-----------------------------------------------------+--------------------------------------------------------------|
+* Exercícios
+** Exemplos 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
 
+#+begin_question
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (2)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+#+end_choice
+#+end_question
+\pagebreak
+\pause 
+#+begin_answer
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (2)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+#+end_choice
+
+Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é @@latex: \mathrm{\ch{C_nH_{2n+2}}}@@.
+
+O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral @@latex: \mathrm{\ch{C_nH_{2n}}}@@.
+
+Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é @@latex: \mathrm{\ch{C_nH_{2n-2}}}@@.
+
+Portanto, o etino possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
+#+end_answer
 
 
 

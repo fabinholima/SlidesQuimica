@@ -1,4 +1,4 @@
-% Created 2024-07-25 Thu 04:28
+% Created 2024-07-25 Thu 16:31
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
@@ -159,7 +159,10 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -168,15 +171,15 @@ title=#2,#1}
 
 
 \section{Hidrocarbonetos}
-\label{sec:org49dd7c3}
-\begin{frame}[label={sec:org88c360f}]{Hidrocarbonetos}
+\label{sec:org09df997}
+\begin{frame}[label={sec:orge8c56e7}]{Hidrocarbonetos}
 São compostos orgânicos formados exclusivamente por átomos de carbono e de hidrogênio.
 %\include{../img/diagrama}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:org8a2585a}]{Hidrocarbonetos}
+\begin{frame}[label={sec:org24db5ed}]{Hidrocarbonetos}
 \begin{itemize}
 \item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
@@ -184,11 +187,11 @@ São compostos orgânicos formados exclusivamente por átomos de carbono e de hi
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
-\caption{\label{fig:org17f539a}Esquema de uma torre de fracionamento.}
+\caption{\label{fig:org2463802}Esquema de uma torre de fracionamento.}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:orgda17dfb}]{Frações Típicas do Petróleo}
+\begin{frame}[label={sec:orga04b7f5}]{Frações Típicas do Petróleo}
 {\centering \small
 \begin{tblr}{
 		colspec = {rccc}, colsep = 2mm, hlines = {2pt, white},
@@ -220,9 +223,9 @@ São compostos orgânicos formados exclusivamente por átomos de carbono e de hi
 \end{frame}
 
 \section{Classificação}
-\label{sec:org9f9a106}
+\label{sec:org166e140}
 
-\begin{frame}[label={sec:org5128b1e}]{Grupos}
+\begin{frame}[label={sec:org06ac4af}]{Grupos}
 \begin{itemize}
 \item Os nomes \emph{alcanos}, \emph{alcenos}, \emph{alcinos}, \emph{alcadienos} \emph{ciclanos}, \emph{ciclenos} e \emph{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
 \end{itemize}
@@ -264,7 +267,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 
 
 \section{Nomenclatura}
-\label{sec:org83c7a24}
+\label{sec:org403fbad}
 \begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
 \begin{myrule}{Regra}
 \begin{itemize}
@@ -276,16 +279,21 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 \end{myrule}
 \end{frame}
 
-\begin{frame}[label={sec:org717ffc9}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org534694f}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 \end{itemize}
 
-\begin{table}[htbp]
-\caption{\label{tab:org16be480}Prefixo que indicam o número de carbonos}
-\begin{tabular}{BBBB}
+
+\begin{longtblr}[theme=fancy,
+    caption = {Grupos substituintes orgânicos formados por carbono e hidrogênio},]
+    {
+        colspec = {c c c c }, colsep = 2mm, hlines = {2pt, white},
+        %row{odd} = {azure8}, row{even} = {gray8},
+        row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+        }
 \hline
- \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos}  &  \cellcolor{green!20} {\bfseries Prefixo}  &  \cellcolor{green!20} {\bfseries Número de carbonos} \\[0pt]
+Prefixo  &  Número de carbonos  &  Prefixo  & Número de carbonos \\[0pt]
 \hline
 met & 1 & undec & 11\\[0pt]
 et & 2 & dodec & 12\\[0pt]
@@ -298,70 +306,105 @@ oct & 8 & octadec & 18\\[0pt]
 non & 9 & nonadec & 19\\[0pt]
 dec & 10 & icosa & 20\\[0pt]
 \hline
-\end{tabular}
-\end{table}
+\end{longtblr}
 \end{frame}
 
-\begin{frame}[label={sec:org971974b}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org05096ac}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
 \end{itemize}
 
-\begin{table}[htbp]
-\caption{Infixos para a nomenclatura orgânica}
-\begin{tabular}{LL}
+
+\begin{talltblr}[theme=fancy,
+caption = {Infixos para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Infixo  &  Tipo de Ligação \\
 \hline
- \cellcolor{green!20} {\bfseries Infixo}  &  \cellcolor{green!20} {\bfseries Tipo de Ligação} \\[0pt]
+an & simples\\
+en & dupla\\
+in & tripla\\
 \hline
-an & simples\\[0pt]
-en & dupla\\[0pt]
-in & tripla\\[0pt]
-\hline
-\end{tabular}
-\end{table}
+\end{talltblr}
 \end{frame}
 
-\begin{frame}[label={sec:org4fa3311}]{Nomenclatura dos compostos orgânicos}
+
+
+\begin{frame}[label={sec:org5254e7f}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
 \end{itemize}
 
-\begin{table}[htbp]
-\caption{Sufixo para a nomenclatura orgânica}
-\begin{tabular}{BL}
+\begin{talltblr}[theme=fancy,
+caption = {Sufixo para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Sufixo  &  Classe funcional \\
 \hline
- \cellcolor{green!20} {\bfseries Sufixo}  &  \cellcolor{green!20} {\bfseries Classe funcional} \\[0pt]
+o & hidrocarbonet \alert{o}\\
+ol & álco \alert{ol}\\
+al & \alert{al} deído\\
+ona & cet \alert{ona}\\
+óico & ácido carboxíl \alert{ico}\\
 \hline
-o & hidrocarbonet \alert{o}\\[0pt]
-ol & álco \alert{ol}\\[0pt]
-al & \alert{al} deído\\[0pt]
-ona & cet \alert{ona}\\[0pt]
-óico & ácido carboxíl \alert{ico}\\[0pt]
-\hline
-\end{tabular}
-\end{table}
+\end{talltblr}
 \end{frame}
 
 
-\begin{frame}[label={sec:org578a679}]{Nomenclatura dos compostos orgânicos}
-\begin{table}[htbp]
-\caption{Infixos para a nomenclatura orgânica}
-\begin{tabular}{BBBB}
-\hline
- \cellcolor{green!20} {\bfseries Infixo}  &  \cellcolor{green!20} {\bfseries Tipo de Ligação} \\[0pt]
-\hline
-an & simples\\[0pt]
-en & dupla\\[0pt]
-in & tripla\\[0pt]
-\hline
-\end{tabular}
-\end{table}
+\section{Exercícios}
+\label{sec:org012d88a}
+\begin{frame}[allowframebreaks]{Exemplos}
+\begin{question}
+(\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+\begin{choice}(2)
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+\end{choice}
+\end{question}
+\pagebreak
+\pause 
+\begin{answer}
+(\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+\begin{choice}(2)
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+\end{choice}
+
+Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é  \mathrm{\ch{C_nH_{2n+2}}}.
+
+O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral  \mathrm{\ch{C_nH_{2n}}}.
+
+Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é  \mathrm{\ch{C_nH_{2n-2}}}.
+
+Portanto, o etino possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
+\end{answer}
 \end{frame}
 
 
 
-
-\begin{frame}[label={sec:org8e4dfaa}]{Fim da Aula}
+\begin{frame}[label={sec:orgb358e63}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
