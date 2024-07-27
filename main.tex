@@ -1,4 +1,4 @@
-% Created 2024-07-25 Thu 16:31
+% Created 2024-07-26 Fri 04:28
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
@@ -18,7 +18,7 @@
 \makeatother
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[portuguese, ]{babel}
+%\usepackage[portuguese, ]{babel}
 %%%% FONTS
 %%% XSIM CONFIG BEAMER
 \usepackage{xsim}
@@ -69,7 +69,7 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{colortbl}
 \usepackage[tikz]{bclogo}
 \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-\usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
+\usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
 \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
 \usepackage{tikzpeople}
 \usepackage{qrcode,hyperref}
@@ -78,7 +78,7 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{tabularray}
 %%% CUSTOM TABLE
 \NewTblrTheme{fancy}{
-\SetTblrStyle{caption-tag}{font=\bfseries}
+\SetTblrStyle{caption-tag}{font=\bfseries,red2}
 \SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
 \DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
 \DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
@@ -144,7 +144,7 @@ title=#2,#1}
 \newcommand{\re}{\hspace{-1cm}}
 \newcommand{\af}{\hspace{2cm}}
 \date{}
-\usetheme{minflat}
+%\usetheme{minflat}
 \DeclareExerciseCollection{Hidro}
 \usetheme{minflat}
 \author{Fábio Lima}
@@ -159,10 +159,7 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
+\maketitle
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -171,15 +168,40 @@ title=#2,#1}
 
 
 \section{Hidrocarbonetos}
-\label{sec:org09df997}
-\begin{frame}[label={sec:orge8c56e7}]{Hidrocarbonetos}
-São compostos orgânicos formados exclusivamente por átomos de carbono e de hidrogênio.
-%\include{../img/diagrama}
+\label{sec:org6d24bc8}
+\begin{frame}[label={sec:orgb55b9a3}]{Hidrocarbonetos}
+\begin{tikzpicture}
+\begin{scope}[yshift=5cm,xshift=6.5cm]
+			\coordinate (dv) at (0,0);
+			\coordinate (base) at (35pt,0pt);
+			\coordinate (height) at (0pt,35pt);
+			\coordinate (diag) at ($(base)+(height)$);
+			\fill[rounded corners=2pt, yellow3] ($(dv)-.5*(diag)$) rectangle +(diag); 
+			\node[white] at (dv) {\sffamily\huge H};
+			\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Hidrogênio};
+			\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 1};
+		\end{scope}
+		\begin{scope}[yshift=5cm, xshift=0cm]
+		\node[draw=none] (0,10) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
+			};
+		\end{scope}
+		\begin{scope}[yshift=5cm,xshift=-7cm]
+		\coordinate (dv) at (0,0);
+		\coordinate (base) at (35pt,0pt);
+		\coordinate (height) at (0pt,35pt);
+		\coordinate (diag) at ($(base)+(height)$);
+		\fill[rounded corners=2pt, violet3] ($(dv)-.5*(diag)$) rectangle +(diag); 
+		\node[white] at (dv) {\sffamily\huge C};
+		\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Carbono};
+		\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 6};
+		\end{scope}
+		\end{tikzpicture}
+\include{QO/Hidrocarbonetos/diagrama}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:org24db5ed}]{Hidrocarbonetos}
+\begin{frame}[label={sec:org469369f}]{Hidrocarbonetos}
 \begin{itemize}
 \item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
@@ -187,47 +209,50 @@ São compostos orgânicos formados exclusivamente por átomos de carbono e de hi
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
-\caption{\label{fig:org2463802}Esquema de uma torre de fracionamento.}
+\caption{\label{fig:orgdaff712}Esquema de uma torre de fracionamento.}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:orga04b7f5}]{Frações Típicas do Petróleo}
-{\centering \small
-\begin{tblr}{
-		colspec = {rccc}, colsep = 2mm, hlines = {2pt, white},
-		row{odd} = {brown8}, row{even} = {gray8},
-		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		%row{2-Z} = {3em,font=\large},
-	}
-%	\hline
-	 Fração   &  {Temperatura \\ Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
-%	\hline
-	Gás residual & - &  \ch{C1-C2} & gás combustível\\
-	\hline
-	{Gás liquefeito \\ de petróleo - GLP} & Até 40 &  \ch{C3-C4}  & gás para uso doméstico e indrustrial\\
-	\hline
-	Gasolina & 40-175 & \ch{C5-C10} & automóveis, solvente\\
-	\hline
-	Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível aviões\\
-	\hline
-	Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\
-	\hline
-	Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, lubrificantes\\
-	\hline
-	Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\
-	\hline
-	Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
-	\hline
-\end{tblr}
-}
+\begin{frame}[label={sec:org8cdbb05}]{Frações Típicas do Petróleo}
+%		{\centering \small
+			\begin{talltblr}[
+				theme= fancy,
+				caption={Composição do Petróleo},
+				]{
+					colspec = {lccc}, colsep = 2mm, hlines = {2pt, white},
+					row{odd} = {brown8}, row{even} = {gray8},
+					row{1} = {2em,azure2,fg=white,font=\bfseries},
+					%row{2-Z} = {3em,font=\large},
+				}
+				%	\hline
+				Fração   &  {Temperatura de Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
+				%	\hline
+				Gás residual & - &  \ch{C1-C2} & gás combustível\\
+				\hline
+				{Gás liquefeito \\ de petróleo - GLP} & Até 40 &  \ch{C3-C4}  & gás para uso doméstico e indrustrial\\
+				\hline
+				Gasolina & 40-175 & \ch{C5-C10} & automóveis, solvente\\
+				\hline
+				Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível aviões\\
+				\hline
+				Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\
+				\hline
+				Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, lubrificantes\\
+				\hline
+				Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\
+				\hline
+				Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
+				\hline
+			\end{talltblr}
+%		}
 \end{frame}
 
 \section{Classificação}
-\label{sec:org166e140}
+\label{sec:org7c11bdb}
 
-\begin{frame}[label={sec:org06ac4af}]{Grupos}
+\begin{frame}[label={sec:orge82f39f}]{Grupos}
 \begin{itemize}
-\item Os nomes \emph{alcanos}, \emph{alcenos}, \emph{alcinos}, \emph{alcadienos} \emph{ciclanos}, \emph{ciclenos} e \emph{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
+\item Os nomes \alert{alcanos}, \alert{alcenos}, \alert{alcinos}, \alert{alcadienos}, \alert{ciclanos}, \alert{ciclenos} e \alert{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
 \end{itemize}
 \include{img/hidro.tex}
 \end{frame}
@@ -235,14 +260,14 @@ São compostos orgânicos formados exclusivamente por átomos de carbono e de hi
 \begin{frame}[allowframebreaks]{Subdivisões dos hidrocarbonetos}
 	
 	\begin{longtblr}[
-%		theme = fancy,
+		theme = fancy,
 		caption = {Subdivisões importantes dos hidrocarbonetos},
 		entry = {Short Caption},
 		label = {tblr:test},
 		]{
 		colspec = {cccc}, colsep = 2mm, hlines = {2pt, white},
 		rowsep = 3.5pt, %% space line 
-		row{1} = {2em,purple7,fg=white,font=\bfseries\sffamily},
+		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
 		 }
 \hline
 Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
@@ -267,7 +292,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 
 
 \section{Nomenclatura}
-\label{sec:org403fbad}
+\label{sec:orgff50c38}
 \begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
 \begin{myrule}{Regra}
 \begin{itemize}
@@ -279,7 +304,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 \end{myrule}
 \end{frame}
 
-\begin{frame}[label={sec:org534694f}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org2985bd8}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 \end{itemize}
@@ -309,7 +334,7 @@ dec & 10 & icosa & 20\\[0pt]
 \end{longtblr}
 \end{frame}
 
-\begin{frame}[label={sec:org05096ac}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:orge546c53}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
 \end{itemize}
@@ -337,7 +362,7 @@ in & tripla\\
 
 
 
-\begin{frame}[label={sec:org5254e7f}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:orga7e2930}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
 \end{itemize}
@@ -366,12 +391,12 @@ ona & cet \alert{ona}\\
 
 
 \section{Exercícios}
-\label{sec:org012d88a}
+\label{sec:org639d180}
 \begin{frame}[allowframebreaks]{Exemplos}
 \begin{question}
 (\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
 
-\begin{choice}(2)
+\begin{choice}(5)
 \choice metano.
 \choice etano.
 \choice eteno.
@@ -379,32 +404,31 @@ ona & cet \alert{ona}\\
 \choice propino.
 \end{choice}
 \end{question}
-\pagebreak
-\pause 
-\begin{answer}
+\only<1>
+\begin{answer}[print=true]
 (\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
 
-\begin{choice}(2)
+\begin{choice}(5)
 \choice metano.
 \choice etano.
 \choice eteno.
-\choice etino.
+\choice \alert{etino}.
 \choice propino.
 \end{choice}
 
-Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é  \mathrm{\ch{C_nH_{2n+2}}}.
+Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é  \ch{C_nH_{2n+2}}.
 
-O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral  \mathrm{\ch{C_nH_{2n}}}.
+O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral  \ch{C_nH_{2n}}.
 
-Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é  \mathrm{\ch{C_nH_{2n-2}}}.
+Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é  \ch{C_nH_{2n-2}}.
 
-Portanto, o etino possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
+Portanto, o \alert{etino} possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
 \end{answer}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:orgb358e63}]{Fim da Aula}
+\begin{frame}[label={sec:org1c4e359}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}

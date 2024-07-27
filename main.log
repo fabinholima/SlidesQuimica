@@ -1,9 +1,9 @@
-This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.6.7)  25 JUL 2024 16:58
+This is LuaHBTeX, Version 1.18.0 (TeX Live 2024)  (format=lualatex 2024.7.23)  26 JUL 2024 04:45
  restricted system commands enabled.
-**main
+**main.tex
 (./main.tex
-LaTeX2e <2024-06-01>
-L3 programming layer <2024-05-08>
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-05-27>
 Lua module: luaotfload 2024-02-14 3.28 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
@@ -399,7 +399,7 @@ Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2024-05-23 v7.01i Hypertext links for LaTeX
+Package: hyperref 2024-07-10 v7.01j Hypertext links for LaTeX
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -451,7 +451,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@pagecounter=\count307
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2024-05-23 v7.01i Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2024-07-10 v7.01j Hyperref: PDFDocEncoding definition (HO)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -459,7 +459,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \Hy@SavedSpaceFactor=\count308
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2024-05-23 v7.01i Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2024-07-10 v7.01j Hyperref: PDF Unicode definition (HO)
 )
 Package hyperref Info: Option `bookmarks' set `true' on input line 4040.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 4040.
@@ -505,7 +505,7 @@ Package hyperref Message: Stopped early.
 )
 Package hyperref Info: Driver (autodetected): hluatex.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/hluatex.def
-File: hluatex.def 2024-05-23 v7.01i Hyperref driver for luaTeX
+File: hluatex.def 2024-07-10 v7.01j Hyperref driver for luaTeX
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
@@ -747,149 +747,31 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
 (/usr/local/texlive/2024/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2024/06/02 v24.6 The Babel package
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/luababel.def
-\bbl@readstream=\read3
-\l@dumylang=\language2
-Package babel Info: Non-standard hyphenation setup on input line 118.
-\l@nohyphenation=\language3
-\l@vietnamese=\language4
-\l@hebrew=\language5
-\l@german-x-2024-02-28=\language6
-\l@ngerman-x-2024-02-28=\language7
-\l@afrikaans=\language8
-\l@ancientgreek=\language9
-\l@ibycus=\language10
-\l@arabic=\language11
-\l@armenian=\language12
-\l@basque=\language13
-\l@belarusian=\language14
-\l@bulgarian=\language15
-\l@catalan=\language16
-\l@pinyin=\language17
-\l@churchslavonic=\language18
-\l@coptic=\language19
-\l@croatian=\language20
-\l@czech=\language21
-\l@danish=\language22
-\l@dutch=\language23
-\l@ukenglish=\language24
-\l@usenglishmax=\language25
-\l@esperanto=\language26
-\l@estonian=\language27
-\l@ethiopic=\language28
-\l@farsi=\language29
-\l@finnish=\language30
-\l@schoolfinnish=\language31
-\l@french=\language32
-\l@friulan=\language33
-\l@galician=\language34
-\l@georgian=\language35
-\l@german=\language36
-\l@ngerman=\language37
-\l@swissgerman=\language38
-\l@greek=\language39
-\l@monogreek=\language40
-\l@hungarian=\language41
-\l@icelandic=\language42
-\l@assamese=\language43
-\l@bengali=\language44
-\l@gujarati=\language45
-\l@hindi=\language46
-\l@kannada=\language47
-\l@malayalam=\language48
-\l@marathi=\language49
-\l@oriya=\language50
-\l@pali=\language51
-\l@panjabi=\language52
-\l@tamil=\language53
-\l@telugu=\language54
-\l@indonesian=\language55
-\l@interlingua=\language56
-\l@irish=\language57
-\l@italian=\language58
-\l@kurmanji=\language59
-\l@classiclatin=\language60
-\l@latin=\language61
-\l@liturgicallatin=\language62
-\l@latvian=\language63
-\l@lithuanian=\language64
-\l@macedonian=\language65
-\l@mongolian=\language66
-\l@mongolianlmc=\language67
-\l@bokmal=\language68
-\l@nynorsk=\language69
-\l@occitan=\language70
-\l@piedmontese=\language71
-\l@polish=\language72
-\l@portuguese=\language73
-\l@romanian=\language74
-\l@romansh=\language75
-\l@russian=\language76
-\l@sanskrit=\language77
-\l@serbian=\language78
-\l@serbianc=\language79
-\l@slovak=\language80
-\l@slovenian=\language81
-\l@spanish=\language82
-\l@swedish=\language83
-\l@thai=\language84
-\l@turkish=\language85
-\l@turkmen=\language86
-\l@ukrainian=\language87
-\l@uppersorbian=\language88
-\l@welsh=\language89
-\babelcatcodetablenum=\catcodetable14
-\bbl@pattcodes=\catcodetable15
-)
-\babel@savecnt=\count341
-\U@D=\dimen294
-\l@unhyphenated=\language90
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/luababel.def
-\bbl@attr@locale=\attribute4
-)
-LaTeX Info: Redefining \textlatin on input line 3930.
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/babel-portuges/portuguese.ldf
-Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
-Package babel Info: Making " an active character on input line 143.
-
-(/usr/local/texlive/2024/texmf-dist/tex/generic/hyph-utf8/loadhyph/loadhyph-pt.
-tex UTF-8 Portuguese hyphenation patterns
-(/usr/local/texlive/2024/texmf-dist/tex/generic/hyph-utf8/patterns/tex/hyph-pt.
-tex))))
-(/usr/local/texlive/2024/texmf-dist/tex/generic/babel/locale/pt/babel-portugues
-e.tex
-Package babel Info: Importing font and identification data for portuguese
-(babel)             from babel-pt.ini. Reported on input line 11.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/xsim/xsim.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/xsim/xsim.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-05-08 L3 programming layer (loader) 
+Package: expl3 2024-05-27 L3 programming layer (loader) 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2024-05-08 L3 backend support: PDF output (LuaTeX)
-\l__color_backend_stack_int=\count342
+\l__color_backend_stack_int=\count341
 Inserting `l3color' in `luaotfload.parse_color'.
 \l__pdf_internal_box=\box77
 ))
 Package: l3keys2e 2024-05-08 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/xsim/xsimverb.sty
 Package: xsimverb 2022/02/12 v0.4 write environments verbatim to files
-\l__xsimverb_tmpa_int=\count343
-\l_xsim_line_gobble_int=\count344
+\l__xsimverb_tmpa_int=\count342
+\l_xsim_line_gobble_int=\count343
 )
 Package: xsim 2022/02/12 v0.21 eXercise Sheets IMproved
 Loading module `base' ...
-\l__xsim_tmpa_dim=\dimen295
-\l__xsim_tmpb_dim=\dimen296
-\l__xsim_tmpc_dim=\dimen297
-\l__xsim_tmpa_int=\count345
-\l__xsim_tmpb_int=\count346
-\l__xsim_tmpc_int=\count347
+\l__xsim_tmpa_dim=\dimen294
+\l__xsim_tmpb_dim=\dimen295
+\l__xsim_tmpc_dim=\dimen296
+\l__xsim_tmpa_int=\count344
+\l__xsim_tmpb_int=\count345
+\l__xsim_tmpc_int=\count346
 \l__xsim_tmpa_box=\box78
 \l__xsim_tmpb_box=\box79
 \l__xsim_tmpc_box=\box80
@@ -900,20 +782,20 @@ Loading module `templates' ...
 Loading module `tags' ...
 Loading module `goals' ...
 Loading module `exercises' ...
-\g_xsim_id_int=\count348
-\g_xsim_max_id_int=\count349
+\g_xsim_id_int=\count347
+\g_xsim_max_id_int=\count348
 Loading module `solutions' ...
-\l_xsim_printsolutions_section_int=\count350
-\l_xsim_printsolutions_chapter_int=\count351
+\l_xsim_printsolutions_section_int=\count349
+\l_xsim_printsolutions_chapter_int=\count350
 Loading module `collections' ...
 Loading module `blanks' ...
-\l__xsim_blank_dim=\dimen298
-\l__xsim_blank_line_increment_dim=\dimen299
-\l__xsim_blank_line_minimum_length_dim=\dimen300
+\l__xsim_blank_dim=\dimen297
+\l__xsim_blank_line_increment_dim=\dimen298
+\l__xsim_blank_line_minimum_length_dim=\dimen299
 \l__xsim_blank_box=\box81
 Loading module `grades' ...
 Loading module `random' ...
-\g__xsim_random_list_id_int=\count352
+\g__xsim_random_list_id_int=\count351
 Loading module `translations' ...
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/translations/translations.sty
@@ -922,19 +804,19 @@ Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
 )
 Loading module `interface' ...
 Loading module `definitions' ...
-\c@exercise=\count353
-\c@solution=\count354
+\c@exercise=\count352
+\c@solution=\count353
 
 
 LaTeX Warning: Command `\thesolution' already defined -- not changed on input l
 ine 5493.
 
-\c@numberofexercises=\count355
+\c@numberofexercises=\count354
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
-Package: array 2024/05/23 v2.6c Tabular extension package (FMi)
-\col@sep=\dimen301
+Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
+\col@sep=\dimen300
 \ar@mcellbox=\box82
-\extrarowheight=\dimen302
+\extrarowheight=\dimen301
 \NC@list=\toks49
 \extratabsurround=\skip66
 \backup@length=\skip67
@@ -942,27 +824,28 @@ Package: array 2024/05/23 v2.6c Tabular extension package (FMi)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen303
-\lightrulewidth=\dimen304
-\cmidrulewidth=\dimen305
-\belowrulesep=\dimen306
-\belowbottomsep=\dimen307
-\aboverulesep=\dimen308
-\abovetopsep=\dimen309
-\cmidrulesep=\dimen310
-\cmidrulekern=\dimen311
-\defaultaddspace=\dimen312
-\@cmidla=\count356
-\@cmidlb=\count357
-\@aboverulesep=\dimen313
-\@belowrulesep=\dimen314
-\@thisruleclass=\count358
-\@lastruleclass=\count359
-\@thisrulewidth=\dimen315
+\heavyrulewidth=\dimen302
+\lightrulewidth=\dimen303
+\cmidrulewidth=\dimen304
+\belowrulesep=\dimen305
+\belowbottomsep=\dimen306
+\aboverulesep=\dimen307
+\abovetopsep=\dimen308
+\cmidrulesep=\dimen309
+\cmidrulekern=\dimen310
+\defaultaddspace=\dimen311
+\@cmidla=\count355
+\@cmidlb=\count356
+\@aboverulesep=\dimen312
+\@belowrulesep=\dimen313
+\@thisruleclass=\count357
+\@lastruleclass=\count358
+\@thisrulewidth=\dimen314
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
-Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
+Package: tcolorbox 2024/07/10 version 6.3.0 text color boxes
 
+(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
@@ -978,54 +861,20 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen316
-\pgf@nodesepend=\dimen317
+\pgf@nodesepstart=\dimen315
+\pgf@nodesepend=\dimen316
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
 -1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks50
-\verbatim@line=\toks51
-\verbatim@in@stream=\read4
-)
-(/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
-\tcb@titlebox=\box85
-\tcb@upperbox=\box86
-\tcb@lowerbox=\box87
-\tcb@phantombox=\box88
-\c@tcbbreakpart=\count360
-\c@tcblayer=\count361
-\c@tcolorbox@number=\count362
-\l__tcobox_tmpa_box=\box89
-\l__tcobox_tmpa_dim=\dimen318
-\tcb@temp=\box90
-\tcb@temp=\box91
-\tcb@temp=\box92
-\tcb@temp=\box93
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
-Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
-\c@tcbrastercolumn=\count363
-\c@tcbrasterrow=\count364
-\c@tcbrasternum=\count365
-\c@tcbraster=\count366
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
-(/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen319
-\pgffor@skip=\dimen320
-\pgffor@stack=\toks52
-\pgffor@toks=\toks53
+\pgffor@iter=\dimen317
+\pgffor@skip=\dimen318
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
 e.tex
@@ -1034,39 +883,73 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count367
-\pgfplotmarksize=\dimen321
+\pgf@plot@mark@count=\count359
+\pgfplotmarksize=\dimen319
 )
-\tikz@lastx=\dimen322
-\tikz@lasty=\dimen323
-\tikz@lastxsaved=\dimen324
-\tikz@lastysaved=\dimen325
-\tikz@lastmovetox=\dimen326
-\tikz@lastmovetoy=\dimen327
-\tikzleveldistance=\dimen328
-\tikzsiblingdistance=\dimen329
-\tikz@figbox=\box94
-\tikz@figbox@bg=\box95
-\tikz@tempbox=\box96
-\tikz@tempbox@bg=\box97
-\tikztreelevel=\count368
-\tikznumberofchildren=\count369
-\tikznumberofcurrentchild=\count370
-\tikz@fig@count=\count371
+\tikz@lastx=\dimen320
+\tikz@lasty=\dimen321
+\tikz@lastxsaved=\dimen322
+\tikz@lastysaved=\dimen323
+\tikz@lastmovetox=\dimen324
+\tikz@lastmovetoy=\dimen325
+\tikzleveldistance=\dimen326
+\tikzsiblingdistance=\dimen327
+\tikz@figbox=\box85
+\tikz@figbox@bg=\box86
+\tikz@tempbox=\box87
+\tikz@tempbox@bg=\box88
+\tikztreelevel=\count360
+\tikznumberofchildren=\count361
+\tikznumberofcurrentchild=\count362
+\tikz@fig@count=\count363
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count372
-\pgfmatrixcurrentcolumn=\count373
-\pgf@matrix@numberofcolumns=\count374
+\pgfmatrixcurrentrow=\count364
+\pgfmatrixcurrentcolumn=\count365
+\pgf@matrix@numberofcolumns=\count366
 )
-\tikz@expandcount=\count375
+\tikz@expandcount=\count367
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks52
+\verbatim@line=\toks53
+\verbatim@in@stream=\read3
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box89
+\tcb@upperbox=\box90
+\tcb@lowerbox=\box91
+\tcb@phantombox=\box92
+\c@tcbbreakpart=\count368
+\c@tcblayer=\count369
+\c@tcolorbox@number=\count370
+\l__tcobox_tmpa_box=\box93
+\l__tcobox_tmpa_dim=\dimen328
+\tcb@temp=\box94
+\tcb@temp=\box95
+\tcb@temp=\box96
+\tcb@temp=\box97
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '6.3.0'
+\c@tcbrastercolumn=\count371
+\c@tcbrasterrow=\count372
+\c@tcbrasternum=\count373
+\c@tcbraster=\count374
+) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.3.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 
@@ -1079,10 +962,10 @@ File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 \l__tikzfill_img_box=\box98
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.3.0'
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.3.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfcol/pdfcol.sty
 Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 )
@@ -1095,42 +978,42 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
-Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbhooks.code.tex' version '6.3.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
-Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbtheorems.code.tex' version '6.3.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
-Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
-\tcbfitdim=\dimen330
-\tcb@lowerfitdim=\dimen331
-\tcb@upperfitdim=\dimen332
-\tcb@cur@hbadness=\count376
+Library (tcolorbox): 'tcbfitting.code.tex' version '6.3.0'
+\tcbfitdim=\dimen329
+\tcb@lowerfitdim=\dimen330
+\tcb@upperfitdim=\dimen331
+\tcb@cur@hbadness=\count375
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.te
 x
-Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.3.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
-Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcblistings.code.tex' version '6.3.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count377
+\lst@mode=\count376
 \lst@gtempboxa=\box102
 \lst@token=\toks54
-\lst@length=\count378
-\lst@currlwidth=\dimen333
-\lst@column=\count379
-\lst@pos=\count380
-\lst@lostspace=\dimen334
-\lst@width=\dimen335
-\lst@newlines=\count381
-\lst@lineno=\count382
-\lst@maxwidth=\dimen336
+\lst@length=\count377
+\lst@currlwidth=\dimen332
+\lst@column=\count378
+\lst@pos=\count379
+\lst@lostspace=\dimen333
+\lst@width=\dimen334
+\lst@newlines=\count380
+\lst@lineno=\count381
+\lst@maxwidth=\dimen335
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/05/25 1.10b (Carsten Heinz)
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/05/25 1.10b (Carsten Heinz)
-\c@lstnumber=\count383
-\lst@skipnumbers=\count384
+\c@lstnumber=\count382
+\lst@skipnumbers=\count383
 \lst@framebox=\box103
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
@@ -1140,21 +1023,21 @@ Package: listings 2024/05/25 1.10b (Carsten Heinz)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
 x
-Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.3.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.3.0'
 )
-\c@tcblisting=\count385
+\c@tcblisting=\count384
 ))
 Package tcolorbox Info: Library `listingsutf8' is compatible with pdftex only. 
 Library `listings` is loaded instead. on input line 29.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
-Library (tcolorbox): 'tcbexternal.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbexternal.code.tex' version '6.3.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
-Library (tcolorbox): 'tcbmagazine.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbmagazine.code.tex' version '6.3.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
-Library (tcolorbox): 'tcbvignette.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbvignette.code.tex' version '6.3.0'
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryfadings.code.tex
@@ -1165,7 +1048,7 @@ File: tikzlibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
-Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
+Library (tcolorbox): 'tcbposter.code.tex' version '6.3.0'
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 
@@ -1182,20 +1065,20 @@ Lua module: fontspec 2024/05/11 2.9e Font selection for XeLaTeX and LuaLaTeX
 (/usr/local/texlive/2024/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2024/05/11 v2.9e Font selection for XeLaTeX and LuaLaT
 eX
-\l__fontspec_script_int=\count386
-\l__fontspec_language_int=\count387
-\l__fontspec_strnum_int=\count388
-\l__fontspec_tmp_int=\count389
-\l__fontspec_tmpa_int=\count390
-\l__fontspec_tmpb_int=\count391
-\l__fontspec_tmpc_int=\count392
-\l__fontspec_em_int=\count393
-\l__fontspec_emdef_int=\count394
-\l__fontspec_strong_int=\count395
-\l__fontspec_strongdef_int=\count396
-\l__fontspec_tmpa_dim=\dimen337
-\l__fontspec_tmpb_dim=\dimen338
-\l__fontspec_tmpc_dim=\dimen339
+\l__fontspec_script_int=\count385
+\l__fontspec_language_int=\count386
+\l__fontspec_strnum_int=\count387
+\l__fontspec_tmp_int=\count388
+\l__fontspec_tmpa_int=\count389
+\l__fontspec_tmpb_int=\count390
+\l__fontspec_tmpc_int=\count391
+\l__fontspec_em_int=\count392
+\l__fontspec_emdef_int=\count393
+\l__fontspec_strong_int=\count394
+\l__fontspec_strongdef_int=\count395
+\l__fontspec_tmpa_dim=\dimen336
+\l__fontspec_tmpb_dim=\dimen337
+\l__fontspec_tmpc_dim=\dimen338
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -1247,33 +1130,33 @@ y
 Package: xtemplate 2024-05-08 L3 Experimental prototype document functions
 )
 Package: tasks 2022/01/08 v1.4a lists with columns filled horizontally
-\g__tasks_total_items_int=\count397
-\l__tasks_columns_int=\count398
-\g__tasks_rows_int=\count399
-\g__tasks_current_col_num_int=\count400
-\g__tasks_current_row_num_int=\count401
-\l__tasks_item_columns_int=\count402
-\g__tasks_env_int=\count403
-\l__tasks_start_int=\count404
-\l__tasks_item_indent_dim=\dimen340
-\l__tasks_item_default_indent_dim=\dimen341
-\l__tasks_item_width_dim=\dimen342
-\l__tasks_label_width_dim=\dimen343
-\l__tasks_label_default_width_dim=\dimen344
-\l__tasks_label_offset_dim=\dimen345
-\l__tasks_label_default_offset_dim=\dimen346
-\l__tasks_column_sep_dim=\dimen347
-\l__tasks_correction_dim=\dimen348
-\l__tasks_full_width_dim=\dimen349
+\g__tasks_total_items_int=\count396
+\l__tasks_columns_int=\count397
+\g__tasks_rows_int=\count398
+\g__tasks_current_col_num_int=\count399
+\g__tasks_current_row_num_int=\count400
+\l__tasks_item_columns_int=\count401
+\g__tasks_env_int=\count402
+\l__tasks_start_int=\count403
+\l__tasks_item_indent_dim=\dimen339
+\l__tasks_item_default_indent_dim=\dimen340
+\l__tasks_item_width_dim=\dimen341
+\l__tasks_label_width_dim=\dimen342
+\l__tasks_label_default_width_dim=\dimen343
+\l__tasks_label_offset_dim=\dimen344
+\l__tasks_label_default_offset_dim=\dimen345
+\l__tasks_column_sep_dim=\dimen346
+\l__tasks_correction_dim=\dimen347
+\l__tasks_full_width_dim=\dimen348
 \l__tasks_after_item_skip=\skip68
 \l__tasks_custom_after_item_skip=\skip69
 \l__tasks_before_list_skip=\skip70
 \l__tasks_after_list_skip=\skip71
 \l__tasks_item_coffin=\box104
 \l__tasks_label_coffin=\box105
-\c@task=\count405
-\l__tasks_tmpa_int=\count406
-\l__tasks_tmpb_int=\count407
+\c@task=\count404
+\l__tasks_tmpa_int=\count405
+\l__tasks_tmpb_int=\count406
 \l__tasks_tmpa_coffin=\box106
 \l__tasks_tmpa_box=\box107
 
@@ -1281,20 +1164,20 @@ LaTeX template Info: Declaring template type 'tasks' taking 3 argument(s) on
 (template)           line 450.
 
  (/usr/local/texlive/2024/texmf-dist/tex/latex/tasks/tasks.cfg))
-\c@paragraph=\count408
+\c@paragraph=\count407
 
 
 LaTeX Warning: Command `\theparagraph' already defined -- not changed on input 
 line 29.
 
-\c@question=\count409
-\c@answer=\count410
-\c@numberofquestions=\count411
+\c@question=\count408
+\c@answer=\count409
+\c@numberofquestions=\count410
 (/usr/local/texlive/2024/texmf-dist/tex/latex/colortbl/colortbl.sty
-Package: colortbl 2024/05/26 v1.0h Color table columns (DPC)
+Package: colortbl 2024/07/06 v1.0i Color table columns (DPC)
 \everycr=\toks55
 \minrowclearance=\skip72
-\rownum=\count412
+\rownum=\count411
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/bclogo/bclogo.sty
 Package: bclogo 2024/01/23 v3.15
@@ -1307,7 +1190,7 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks56
 \XKV@tempa@toks=\toks57
 )
-\XKV@depth=\count413
+\XKV@depth=\count412
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
@@ -1337,14 +1220,14 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count414
+\c@abspage=\count413
 Package zref Info: New property: abspage on input line 67.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip77
-\c@mdf@globalstyle@cnt=\count415
+\c@mdf@globalstyle@cnt=\count414
 \mdf@skipabove@length=\skip78
 \mdf@skipbelow@length=\skip79
 \mdf@leftmargin@length=\skip80
@@ -1420,16 +1303,16 @@ File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 \mdf@horizontalspaceofbox=\skip141
 \mdfsubtitleheight=\skip142
 \mdfsubsubtitleheight=\skip143
-\c@mdfcountframes=\count416
+\c@mdfcountframes=\count415
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- failed******
 
-\mdf@envdepth=\count417
-\c@mdf@env@i=\count418
-\c@mdf@env@ii=\count419
-\c@mdf@zref@counter=\count420
+\mdf@envdepth=\count416
+\c@mdf@env@i=\count417
+\c@mdf@env@ii=\count418
+\c@mdf@zref@counter=\count419
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
@@ -1442,14 +1325,14 @@ s/tikzlibrarydecorations.pathmorphing.code.tex
 s/tikzlibrarydecorations.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
 s.code.tex
-\pgfdecoratedcompleteddistance=\dimen350
-\pgfdecoratedremainingdistance=\dimen351
-\pgfdecoratedinputsegmentcompleteddistance=\dimen352
-\pgfdecoratedinputsegmentremainingdistance=\dimen353
-\pgf@decorate@distancetomove=\dimen354
-\pgf@decorate@repeatstate=\count421
-\pgfdecorationsegmentamplitude=\dimen355
-\pgfdecorationsegmentlength=\dimen356
+\pgfdecoratedcompleteddistance=\dimen349
+\pgfdecoratedremainingdistance=\dimen350
+\pgfdecoratedinputsegmentcompleteddistance=\dimen351
+\pgfdecoratedinputsegmentremainingdistance=\dimen352
+\pgf@decorate@distancetomove=\dimen353
+\pgf@decorate@repeatstate=\count420
+\pgfdecorationsegmentamplitude=\dimen354
+\pgfdecorationsegmentlength=\dimen355
 )
 \tikz@lib@dec@box=\box113
 )
@@ -1458,7 +1341,7 @@ brarydecorations.pathmorphing.code.tex))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 )
-\c@bclogocompteur=\count422
+\c@bclogocompteur=\count421
 \bcval@epBarre=\skip144
 \bcval@framesep=\skip145
 \bcval@tailleOndu=\skip146
@@ -1485,7 +1368,7 @@ code.tex  v1.02, 2012/12/09
 s/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-\pgfbs@fading@count=\count423
+\pgfbs@fading@count=\count422
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -1570,15 +1453,15 @@ File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen357
+\arrowsize=\dimen356
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen358
-\pgfarrowlength=\dimen359
-\pgfarrowwidth=\dimen360
-\pgfarrowlinewidth=\dimen361
+\pgfarrowinset=\dimen357
+\pgfarrowlength=\dimen358
+\pgfarrowwidth=\dimen359
+\pgfarrowlinewidth=\dimen360
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarydecorations.markings.code.tex
@@ -1597,22 +1480,22 @@ Package: tikzpeople 2017/04/22 v0.4 People shaped nodes for Tikz
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count424
-\calc@Bcount=\count425
-\calc@Adimen=\dimen362
-\calc@Bdimen=\dimen363
+\calc@Acount=\count423
+\calc@Bcount=\count424
+\calc@Adimen=\dimen361
+\calc@Bdimen=\dimen362
 \calc@Askip=\skip150
 \calc@Bskip=\skip151
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count426
+\calc@Ccount=\count425
 \calc@Cskip=\skip152
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryinterse
 ctions.code.tex
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
 e.tex)
-\pgf@intersect@solutions=\count427
+\pgf@intersect@solutions=\count426
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzpeople/tikzpeople.shape.alice
 .sty)
@@ -1673,31 +1556,31 @@ r.sty)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzpeople/tikzpeople.shape.surge
 on.sty)) (/usr/local/texlive/2024/texmf-dist/tex/latex/qrcode/qrcode.sty
 Package: qrcode 2015/01/08 v1.51 QR code generation
-\c@qr@i=\count428
-\c@qr@j=\count429
-\qr@a=\count430
-\qr@b=\count431
-\qr@c=\count432
-\qr@for@depth=\count433
-\qr@for@maxdepth=\count434
-\qr@for@start=\count435
-\qr@for@end=\count436
-\qr@for@step=\count437
+\c@qr@i=\count427
+\c@qr@j=\count428
+\qr@a=\count429
+\qr@b=\count430
+\qr@c=\count431
+\qr@for@depth=\count432
+\qr@for@maxdepth=\count433
+\qr@for@start=\count434
+\qr@for@end=\count435
+\qr@for@step=\count436
+\qr@newforcount=\count437
 \qr@newforcount=\count438
-\qr@newforcount=\count439
 \qr@desiredheight=\skip153
 \qr@modulesize=\skip154
 \qr@minipagewidth=\skip155
-\c@maski=\count440
-\c@maskj=\count441
-\c@totalones=\count442
-\c@penaltyi=\count443
-\c@penaltyii=\count444
-\c@penaltyiii=\count445
-\c@penaltyiv=\count446
-\c@qr@hexchars=\count447
-\qr@newforcount=\count448
-\c@qr@divisionsremaining=\count449
+\c@maski=\count439
+\c@maskj=\count440
+\c@totalones=\count441
+\c@penaltyi=\count442
+\c@penaltyii=\count443
+\c@penaltyiii=\count444
+\c@penaltyiv=\count445
+\c@qr@hexchars=\count446
+\qr@newforcount=\count447
+\c@qr@divisionsremaining=\count448
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/was/upgreek.sty
 Package: upgreek 2003/02/12 v2.0 (WaS)
@@ -1708,93 +1591,93 @@ LaTeX Font Info:    Overwriting symbol font `ugrf@m' in version `bold'
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tabularray/tabularray.sty
 Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
-\l__tblr_a_int=\count450
-\l__tblr_c_int=\count451
-\l__tblr_r_int=\count452
-\l__tblr_d_dim=\dimen364
-\l__tblr_h_dim=\dimen365
-\l__tblr_o_dim=\dimen366
-\l__tblr_p_dim=\dimen367
-\l__tblr_q_dim=\dimen368
-\l__tblr_r_dim=\dimen369
-\l__tblr_s_dim=\dimen370
-\l__tblr_t_dim=\dimen371
-\l__tblr_v_dim=\dimen372
-\l__tblr_w_dim=\dimen373
+\l__tblr_a_int=\count449
+\l__tblr_c_int=\count450
+\l__tblr_r_int=\count451
+\l__tblr_d_dim=\dimen363
+\l__tblr_h_dim=\dimen364
+\l__tblr_o_dim=\dimen365
+\l__tblr_p_dim=\dimen366
+\l__tblr_q_dim=\dimen367
+\l__tblr_r_dim=\dimen368
+\l__tblr_s_dim=\dimen369
+\l__tblr_t_dim=\dimen370
+\l__tblr_v_dim=\dimen371
+\l__tblr_w_dim=\dimen372
 \l__tblr_a_box=\box135
 \l__tblr_b_box=\box136
 \l__tblr_c_box=\box137
 \l__tblr_d_box=\box138
-\g__tblr_table_count_int=\count453
-\c@colnum=\count454
-\c@rowcount=\count455
-\c@colcount=\count456
-\abovesep=\dimen374
-\belowsep=\dimen375
-\leftsep=\dimen376
-\rightsep=\dimen377
-\g_tblr_level_int=\count457
-\g__tblr_data_row_key_count_int=\count458
-\g__tblr_data_column_key_count_int=\count459
-\g__tblr_data_cell_key_count_int=\count460
-\g__tblr_array_int=\count461
-\l__tblr_key_count_int=\count462
-\l__tblr_key_quotient_int=\count463
-\l__tblr_key_quotient_two_int=\count464
-\l__tblr_key_remainder_int=\count465
-\g__tblr_data_str_value_count_int=\count466
-\rulewidth=\dimen378
-\l__tblr_strut_dp_dim=\dimen379
-\l__tblr_strut_ht_dim=\dimen380
-\g__tblr_cell_wd_dim=\dimen381
-\g__tblr_cell_ht_dim=\dimen382
-\g__tblr_cell_head_dim=\dimen383
-\g__tblr_cell_foot_dim=\dimen384
-\l__column_target_dim=\dimen385
+\g__tblr_table_count_int=\count452
+\c@colnum=\count453
+\c@rowcount=\count454
+\c@colcount=\count455
+\abovesep=\dimen373
+\belowsep=\dimen374
+\leftsep=\dimen375
+\rightsep=\dimen376
+\g_tblr_level_int=\count456
+\g__tblr_data_row_key_count_int=\count457
+\g__tblr_data_column_key_count_int=\count458
+\g__tblr_data_cell_key_count_int=\count459
+\g__tblr_array_int=\count460
+\l__tblr_key_count_int=\count461
+\l__tblr_key_quotient_int=\count462
+\l__tblr_key_quotient_two_int=\count463
+\l__tblr_key_remainder_int=\count464
+\g__tblr_data_str_value_count_int=\count465
+\rulewidth=\dimen377
+\l__tblr_strut_dp_dim=\dimen378
+\l__tblr_strut_ht_dim=\dimen379
+\g__tblr_cell_wd_dim=\dimen380
+\g__tblr_cell_ht_dim=\dimen381
+\g__tblr_cell_head_dim=\dimen382
+\g__tblr_cell_foot_dim=\dimen383
+\l__column_target_dim=\dimen384
 \l__tblr_caption_box=\box139
 \l__tblr_caption_left_box=\box140
 \l__tblr_row_head_box=\box141
 \l__tblr_row_foot_box=\box142
-\l__tblr_row_head_foot_dim=\dimen386
-\tablewidth=\dimen387
+\l__tblr_row_head_foot_dim=\dimen385
+\tablewidth=\dimen386
 \l__tblr_table_firsthead_box=\box143
 \l__tblr_table_middlehead_box=\box144
 \l__tblr_table_lasthead_box=\box145
 \l__tblr_table_firstfoot_box=\box146
 \l__tblr_table_middlefoot_box=\box147
 \l__tblr_table_lastfoot_box=\box148
-\l__tblr_remain_height_dim=\dimen388
-\l__tblr_long_from_int=\count467
-\l__tblr_long_to_int=\count468
-\l__tblr_curr_i_int=\count469
-\l__tblr_prev_i_int=\count470
-\l__tblr_table_page_int=\count471
+\l__tblr_remain_height_dim=\dimen387
+\l__tblr_long_from_int=\count466
+\l__tblr_long_to_int=\count467
+\l__tblr_curr_i_int=\count468
+\l__tblr_prev_i_int=\count469
+\l__tblr_table_page_int=\count470
 \l__tblr_table_head_box=\box149
 \l__tblr_table_foot_box=\box150
-\l__tblr_table_head_foot_dim=\dimen389
-\l__tblr_table_head_body_foot_dim=\dimen390
+\l__tblr_table_head_foot_dim=\dimen388
+\l__tblr_table_head_body_foot_dim=\dimen389
 \l__tblr_table_box=\box151
 \l__tblr_table_hlines_box=\box152
 \l__tblr_hline_box=\box153
 \l__tblr_row_box=\box154
-\l__tblr_col_o_wd_dim=\dimen391
-\l__tblr_col_b_wd_dim=\dimen392
-\l__tblr_hline_leftskip_dim=\dimen393
-\l__tblr_hline_rightskip_dim=\dimen394
-\l__tblr_row_ht_dim=\dimen395
-\l__tblr_row_dp_dim=\dimen396
-\l__tblr_row_abovesep_dim=\dimen397
-\l__tblr_row_belowsep_dim=\dimen398
+\l__tblr_col_o_wd_dim=\dimen390
+\l__tblr_col_b_wd_dim=\dimen391
+\l__tblr_hline_leftskip_dim=\dimen392
+\l__tblr_hline_rightskip_dim=\dimen393
+\l__tblr_row_ht_dim=\dimen394
+\l__tblr_row_dp_dim=\dimen395
+\l__tblr_row_abovesep_dim=\dimen396
+\l__tblr_row_belowsep_dim=\dimen397
 \l__tblr_row_vlines_box=\box155
 \l__tblr_vline_box=\box156
 \l__tblr_cell_box=\box157
-\l__row_upper_dim=\dimen399
-\l__row_lower_dim=\dimen400
-\l__row_vpace_dim=\dimen401
-\l__tblr_vline_aboveskip_dim=\dimen402
-\l__tblr_vline_belowskip_dim=\dimen403
-\l__tblr_cell_wd_dim=\dimen404
-\l__tblr_cell_ht_dim=\dimen405
+\l__row_upper_dim=\dimen398
+\l__row_lower_dim=\dimen399
+\l__row_vpace_dim=\dimen400
+\l__tblr_vline_aboveskip_dim=\dimen401
+\l__tblr_vline_belowskip_dim=\dimen402
+\l__tblr_cell_wd_dim=\dimen403
+\l__tblr_cell_ht_dim=\dimen404
 \l__tblr_diag_box=\box158
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/chemfig/chemfig.sty
@@ -1802,16 +1685,16 @@ Package: tabularray 2024-02-16 v2024A Typeset tabulars and arrays with LaTeX3
 (/usr/local/texlive/2024/texmf-dist/tex/generic/simplekv/simplekv.tex
 Package: simplekv 2023/10/02 v0.2c Simple keyval package (CT)
 )
-\CF_cnt_atomgroup=\count472
-\CF_cnt_group=\count473
-\CF_cnt_atom=\count474
-\CF_cnt_cycle=\count475
-\CF_cnt_cyclebonds=\count476
-\CF_cnt_compound=\count477
-\CF_dim=\dimen406
-\CF_turnangle=\dimen407
-\CF_arrowsize=\dimen408
-\CF_zero=\dimen409
+\CF_cnt_atomgroup=\count471
+\CF_cnt_group=\count472
+\CF_cnt_atom=\count473
+\CF_cnt_cycle=\count474
+\CF_cnt_cyclebonds=\count475
+\CF_cnt_compound=\count476
+\CF_dim=\dimen405
+\CF_turnangle=\dimen406
+\CF_arrowsize=\dimen407
+\CF_zero=\dimen408
 \CF_box=\box159
 \CF_boxstuff=\box160
 \CF_testbox=\box161
@@ -1823,12 +1706,12 @@ Package: chemfig 2023/12/28 v1.66 Draw molecule with an easy syntax (CT)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/chemmacros/chemmacros.sty
 Package: chemmacros 2022/03/11 v6.2a comprehensive support for typesetting chem
 istry documents (CN & SK)
-\l__chemmacros_tmpa_dim=\dimen410
-\l__chemmacros_tmpb_dim=\dimen411
-\l__chemmacros_tmpc_dim=\dimen412
-\l__chemmacros_tmpa_int=\count478
-\l__chemmacros_tmpb_int=\count479
-\l__chemmacros_tmpc_int=\count480
+\l__chemmacros_tmpa_dim=\dimen409
+\l__chemmacros_tmpb_dim=\dimen410
+\l__chemmacros_tmpc_dim=\dimen411
+\l__chemmacros_tmpa_int=\count477
+\l__chemmacros_tmpb_int=\count478
+\l__chemmacros_tmpc_int=\count479
 \l__chemmacros_tmpa_box=\box163
 \l__chemmacros_tmpb_box=\box164
 \l__chemmacros_tmpc_box=\box165
@@ -1860,8 +1743,8 @@ Loading the chemmacros module `greek' ...
 (/usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty
 Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
  in chemistry (CN)
-\l__chemgreek_tmpa_int=\count481
-\g__chemgreek_tmpa_int=\count482
+\l__chemgreek_tmpa_int=\count480
+\g__chemgreek_tmpa_int=\count481
 )
 Loading the chemmacros module `formula' ...
 
@@ -1874,26 +1757,26 @@ Loading the chemmacros module `symbols' ...
 Loading the chemmacros module `symbols' ...
 Loading the chemmacros module `particles' ...
 Loading the chemmacros module `particles' ...
-\l__chemmacros_nucleophile_dim=\dimen413
+\l__chemmacros_nucleophile_dim=\dimen412
 Loading the chemmacros module `phases' ...
 Loading the chemmacros module `phases' ...
-\l__chemmacros_phases_space_dim=\dimen414
+\l__chemmacros_phases_space_dim=\dimen413
 Loading the chemmacros module `nomenclature' ...
 Loading the chemmacros module `nomenclature' ...
-\l__chemmacros_cip_kern_dim=\dimen415
-\l__chemmacros_iupac_hyphen_pre_dim=\dimen416
-\l__chemmacros_iupac_hyphen_post_dim=\dimen417
-\l__chemmacros_iupac_break_dim=\dimen418
+\l__chemmacros_cip_kern_dim=\dimen414
+\l__chemmacros_iupac_hyphen_pre_dim=\dimen415
+\l__chemmacros_iupac_hyphen_post_dim=\dimen416
+\l__chemmacros_iupac_break_dim=\dimen417
 \l__chemmacros_iupac_break_skip=\skip156
 Loading the chemmacros module `tikz' ...
 Loading the chemmacros module `tikz' ...
-\l__chemmacros_el_length_dim=\dimen419
+\l__chemmacros_el_length_dim=\dimen418
 Loading the chemmacros module `isotopes' ...
 Loading the chemmacros module `isotopes' ...
 (/usr/local/texlive/2024/texmf-dist/tex/latex/elements/elements.sty
 Package: elements 2022/01/29 v0.4 properties of chemical elements
-\c@@elements@orbital@type=\count483
-\c@@elements@shell@number=\count484
+\c@@elements@orbital@type=\count482
+\c@@elements@shell@number=\count483
 )
 Loading the chemmacros module `mechanisms' ...
 
@@ -1904,28 +1787,28 @@ Loading the chemmacros module `orbital' ...
 Loading the chemmacros module `orbital' ...
 Loading the chemmacros module `polymers' ...
 Loading the chemmacros module `polymers' ...
-\l__chemmacros_polymer_delimiter_height_dim=\dimen420
-\l__chemmacros_polymer_delimiter_depth_dim=\dimen421
+\l__chemmacros_polymer_delimiter_height_dim=\dimen419
+\l__chemmacros_polymer_delimiter_depth_dim=\dimen420
 Loading the chemmacros module `reactions' ...
 Loading the chemmacros module `reactions' ...
-\c@reaction=\count485
+\c@reaction=\count484
 (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2024/03/11 v1.30 mathematical typesetting tools
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 )
-\g_MT_multlinerow_int=\count486
-\l_MT_multwidth_dim=\dimen422
+\g_MT_multlinerow_int=\count485
+\l_MT_multwidth_dim=\dimen421
 \origjot=\skip157
-\l_MT_shortvdotswithinadjustabove_dim=\dimen423
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen424
-\l_MT_above_intertext_sep=\dimen425
-\l_MT_below_intertext_sep=\dimen426
-\l_MT_above_shortintertext_sep=\dimen427
-\l_MT_below_shortintertext_sep=\dimen428
+\l_MT_shortvdotswithinadjustabove_dim=\dimen422
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen423
+\l_MT_above_intertext_sep=\dimen424
+\l_MT_below_intertext_sep=\dimen425
+\l_MT_above_shortintertext_sep=\dimen426
+\l_MT_below_shortintertext_sep=\dimen427
 \xmathstrut@box=\box166
-\xmathstrut@dim=\dimen429
+\xmathstrut@dim=\dimen428
 )
 Loading the chemmacros module `redox' ...
 
@@ -1933,10 +1816,10 @@ Loading the chemmacros module `redox' ...
 (/usr/local/texlive/2024/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
-\l__chemmacros_ox_number_int=\count487
-\l__chemmacros_redox_sep_dim=\dimen430
-\l__chemmacros_redox_sep_default_dim=\dimen431
-\l__chemmacros_redox_dist_dim=\dimen432
+\l__chemmacros_ox_number_int=\count486
+\l__chemmacros_redox_sep_dim=\dimen429
+\l__chemmacros_redox_sep_default_dim=\dimen430
+\l__chemmacros_redox_dist_dim=\dimen431
 Loading the chemmacros module `xfrac' ...
 
 Loading the chemmacros module `xfrac' ...
@@ -1944,11 +1827,11 @@ Loading the chemmacros module `xfrac' ...
 Package: xfrac 2024-06-04 Split-level fractions
 \l__xfrac_slash_box=\box167
 \l__xfrac_tmp_box=\box168
-\l__xfrac_denominator_bot_sep_dim=\dimen433
-\l__xfrac_numerator_bot_sep_dim=\dimen434
-\l__xfrac_numerator_top_sep_dim=\dimen435
-\l__xfrac_slash_left_sep_dim=\dimen436
-\l__xfrac_slash_right_sep_dim=\dimen437
+\l__xfrac_denominator_bot_sep_dim=\dimen432
+\l__xfrac_numerator_bot_sep_dim=\dimen433
+\l__xfrac_numerator_top_sep_dim=\dimen434
+\l__xfrac_slash_left_sep_dim=\dimen435
+\l__xfrac_slash_right_sep_dim=\dimen436
 \l__xfrac_slash_left_muskip=\muskip19
 \l__xfrac_slash_right_muskip=\muskip20
 
@@ -1982,49 +1865,49 @@ Package: chemnum 2021/01/21 v1.3a a comprehensive approach for the numbering of
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psfrag/psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count488
-\pfg@scount=\count489
+\pfg@pcount=\count487
+\pfg@scount=\count488
 \pfg@temp=\write5
 )
-\l__chemnum_tmpa_int=\count490
-\l__chemnum_tmpb_int=\count491
-\l__chemnum_tmpc_int=\count492
-\c@cmpdmain=\count493
-\g__chemnum_main_int=\count494
-\l__chemnum_compound_replace_int=\count495
+\l__chemnum_tmpa_int=\count489
+\l__chemnum_tmpb_int=\count490
+\l__chemnum_tmpc_int=\count491
+\c@cmpdmain=\count492
+\g__chemnum_main_int=\count493
+\l__chemnum_compound_replace_int=\count494
 )
 Loading the chemmacros module `spectroscopy' ...
 
 Loading the chemmacros module `spectroscopy' ...
 (/usr/local/texlive/2024/texmf-dist/tex/latex/siunitx/siunitx.sty
-Package: siunitx 2024-05-06 v3.3.17 A comprehensive (SI) units package
-\l__siunitx_number_uncert_offset_int=\count496
-\l__siunitx_number_exponent_fixed_int=\count497
-\l__siunitx_number_min_decimal_int=\count498
-\l__siunitx_number_min_integer_int=\count499
-\l__siunitx_number_round_precision_int=\count500
-\l__siunitx_number_lower_threshold_int=\count501
-\l__siunitx_number_upper_threshold_int=\count502
-\l__siunitx_number_group_first_int=\count503
-\l__siunitx_number_group_size_int=\count504
-\l__siunitx_number_group_minimum_int=\count505
-\l__siunitx_angle_tmp_dim=\dimen438
+Package: siunitx 2024-06-24 v3.3.19 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count495
+\l__siunitx_number_exponent_fixed_int=\count496
+\l__siunitx_number_min_decimal_int=\count497
+\l__siunitx_number_min_integer_int=\count498
+\l__siunitx_number_round_precision_int=\count499
+\l__siunitx_number_lower_threshold_int=\count500
+\l__siunitx_number_upper_threshold_int=\count501
+\l__siunitx_number_group_first_int=\count502
+\l__siunitx_number_group_size_int=\count503
+\l__siunitx_number_group_minimum_int=\count504
+\l__siunitx_angle_tmp_dim=\dimen437
 \l__siunitx_angle_marker_box=\box169
 \l__siunitx_angle_unit_box=\box170
-\l__siunitx_compound_count_int=\count506
+\l__siunitx_compound_count_int=\count505
 \l__siunitx_table_tmp_box=\box171
-\l__siunitx_table_tmp_dim=\dimen439
-\l__siunitx_table_column_width_dim=\dimen440
+\l__siunitx_table_tmp_dim=\dimen438
+\l__siunitx_table_column_width_dim=\dimen439
 \l__siunitx_table_integer_box=\box172
 \l__siunitx_table_decimal_box=\box173
 \l__siunitx_table_uncert_box=\box174
 \l__siunitx_table_before_box=\box175
 \l__siunitx_table_after_box=\box176
-\l__siunitx_table_before_dim=\dimen441
-\l__siunitx_table_carry_dim=\dimen442
-\l__siunitx_unit_tmp_int=\count507
-\l__siunitx_unit_position_int=\count508
-\l__siunitx_unit_total_int=\count509
+\l__siunitx_table_before_dim=\dimen440
+\l__siunitx_table_carry_dim=\dimen441
+\l__siunitx_unit_tmp_int=\count506
+\l__siunitx_unit_position_int=\count507
+\l__siunitx_unit_total_int=\count508
 )
 \l__chemmacros_nmr_space_skip=\skip158
 Loading the chemmacros module `thermodynamics' ...
@@ -2045,47 +1928,47 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 )
 Package: chemformula 2022/01/23 v4.17 typeset chemical compounds and reactions 
 (CN)
-\l__chemformula_tmpa_dim=\dimen443
-\l__chemformula_tmpb_dim=\dimen444
-\l__chemformula_tmpc_dim=\dimen445
-\l__chemformula_tmpa_int=\count510
-\l__chemformula_tmpb_int=\count511
-\l__chemformula_tmpc_int=\count512
+\l__chemformula_tmpa_dim=\dimen442
+\l__chemformula_tmpb_dim=\dimen443
+\l__chemformula_tmpc_dim=\dimen444
+\l__chemformula_tmpa_int=\count509
+\l__chemformula_tmpb_int=\count510
+\l__chemformula_tmpc_int=\count511
 \l__chemformula_tmpa_box=\box177
 \l__chemformula_tmpb_box=\box178
-\l__chemformula_arrow_length_dim=\dimen446
-\l__chemformula_arrow_label_height_dim=\dimen447
-\l__chemformula_arrow_label_offset_dim=\dimen448
-\l__chemformula_arrow_minimum_length_dim=\dimen449
-\l__chemformula_arrow_shortage_dim=\dimen450
-\l__chemformula_arrow_offset_dim=\dimen451
-\l__chemformula_arrow_yshift_dim=\dimen452
-\l__chemformula_radical_radius_dim=\dimen453
-\l__chemformula_radical_hshift_dim=\dimen454
-\l__chemformula_radical_vshift_dim=\dimen455
-\l__chemformula_radical_space_dim=\dimen456
-\l__chemformula_arrow_head_dim=\dimen457
-\l__chemformula_name_dim=\dimen458
-\l__chemformula_adduct_space_dim=\dimen459
-\l__chemformula_charge_shift_dim=\dimen460
-\l__chemformula_subscript_shift_dim=\dimen461
-\l__chemformula_superscript_shift_dim=\dimen462
-\l__chemformula_subscript_dim=\dimen463
-\l__chemformula_superscript_dim=\dimen464
-\l__chemformula_bond_dim=\dimen465
-\l__chemformula_bond_space_dim=\dimen466
-\l__chemformula_elspec_pair_distance_dim=\dimen467
-\l__chemformula_elspec_pair_line_length_dim=\dimen468
-\l__chemformula_elspec_pair_width_dim=\dimen469
-\l__chemformula_kroegervink_positive_radius_dim=\dimen470
-\l__chemformula_kroegervink_positive_hshift_dim=\dimen471
-\l__chemformula_kroegervink_positive_vshift_dim=\dimen472
-\l__chemformula_kroegervink_positive_space_dim=\dimen473
+\l__chemformula_arrow_length_dim=\dimen445
+\l__chemformula_arrow_label_height_dim=\dimen446
+\l__chemformula_arrow_label_offset_dim=\dimen447
+\l__chemformula_arrow_minimum_length_dim=\dimen448
+\l__chemformula_arrow_shortage_dim=\dimen449
+\l__chemformula_arrow_offset_dim=\dimen450
+\l__chemformula_arrow_yshift_dim=\dimen451
+\l__chemformula_radical_radius_dim=\dimen452
+\l__chemformula_radical_hshift_dim=\dimen453
+\l__chemformula_radical_vshift_dim=\dimen454
+\l__chemformula_radical_space_dim=\dimen455
+\l__chemformula_arrow_head_dim=\dimen456
+\l__chemformula_name_dim=\dimen457
+\l__chemformula_adduct_space_dim=\dimen458
+\l__chemformula_charge_shift_dim=\dimen459
+\l__chemformula_subscript_shift_dim=\dimen460
+\l__chemformula_superscript_shift_dim=\dimen461
+\l__chemformula_subscript_dim=\dimen462
+\l__chemformula_superscript_dim=\dimen463
+\l__chemformula_bond_dim=\dimen464
+\l__chemformula_bond_space_dim=\dimen465
+\l__chemformula_elspec_pair_distance_dim=\dimen466
+\l__chemformula_elspec_pair_line_length_dim=\dimen467
+\l__chemformula_elspec_pair_width_dim=\dimen468
+\l__chemformula_kroegervink_positive_radius_dim=\dimen469
+\l__chemformula_kroegervink_positive_hshift_dim=\dimen470
+\l__chemformula_kroegervink_positive_vshift_dim=\dimen471
+\l__chemformula_kroegervink_positive_space_dim=\dimen472
 \l__chemformula_stoich_space_skip=\skip162
 \l__chemformula_math_space_skip=\skip163
 \l__chemformula_additions_symbol_space_skip=\skip164
-\l__chemformula_count_tokens_int=\count513
-\g__chemformula_lewis_int=\count514
+\l__chemformula_count_tokens_int=\count512
+\g__chemformula_lewis_int=\count513
 \l__chemformula_arrow_arg_i_box=\box179
 \l__chemformula_arrow_arg_ii_box=\box180
 \l__chemformula_superscript_box=\box181
@@ -2113,23 +1996,23 @@ Package: pdfpages 2024/05/29 v0.6a Insert pages of external PDF documents (AM)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen474
-\ESO@tempdimb=\dimen475
+\ESO@tempdima=\dimen473
+\ESO@tempdimb=\dimen474
 )
-\AM@pagewidth=\dimen476
-\AM@pageheight=\dimen477
-\AM@fboxrule=\dimen478
+\AM@pagewidth=\dimen475
+\AM@pageheight=\dimen476
+\AM@fboxrule=\dimen477
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/pdfpages/ppluatex.def
 File: ppluatex.def 2024/05/29 v0.6a Pdfpages driver for LuaTeX (AM)
 )
-\pdfpages@includegraphics@status=\count515
+\pdfpages@includegraphics@status=\count514
 \AM@pagebox=\box183
 \AM@global@opts=\toks59
-\AM@pagecnt=\count516
+\AM@pagecnt=\count515
 \AM@toc@title=\toks60
 \AM@lof@heading=\toks61
-\c@AM@survey=\count517
+\c@AM@survey=\count516
 \AM@templatesizebox=\box184
 )
 (./mol2chemfig.sty
@@ -2143,8 +2026,8 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 )
 (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.sty
 (/usr/local/texlive/2024/texmf-dist/tex/generic/xstring/xstring.tex
-\xs_counta=\count518
-\xs_countb=\count519
+\xs_counta=\count517
+\xs_countb=\count518
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
@@ -2160,44 +2043,44 @@ Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen479
-\captionmargin=\dimen480
-\caption@leftmargin=\dimen481
-\caption@rightmargin=\dimen482
-\caption@width=\dimen483
-\caption@indent=\dimen484
-\caption@parindent=\dimen485
-\caption@hangindent=\dimen486
+\caption@tempdima=\dimen478
+\captionmargin=\dimen479
+\caption@leftmargin=\dimen480
+\caption@rightmargin=\dimen481
+\caption@width=\dimen482
+\caption@indent=\dimen483
+\caption@parindent=\dimen484
+\caption@hangindent=\dimen485
 Package caption Info: beamer document class detected.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption-beamer.sto
 File: caption-beamer.sto 2022/01/06 v2.0c Adaption of the caption package to th
 e beamer document classes (AR)
 ))
-\c@caption@flags=\count520
-\c@continuedfloat=\count521
+\c@caption@flags=\count519
+\c@continuedfloat=\count520
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
 Package caption Info: listings package is loaded.
 )
-\c@KVtest=\count522
+\c@KVtest=\count521
 \sf@farskip=\skip170
-\sf@captopadj=\dimen487
+\sf@captopadj=\dimen486
 \sf@capskip=\skip171
 \sf@nearskip=\skip172
-\c@subfigure=\count523
-\c@subfigure@save=\count524
-\c@depth=\count525
-\c@subtable=\count526
-\c@subtable@save=\count527
+\c@subfigure=\count522
+\c@subfigure@save=\count523
+\c@depth=\count524
+\c@subtable=\count525
+\c@subtable@save=\count526
 \sf@top=\skip173
 \sf@bottom=\skip174
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen488
-\WF@size=\dimen489
-\c@WF@wrappedlines=\count528
+\wrapoverhang=\dimen487
+\WF@size=\dimen488
+\c@WF@wrappedlines=\count527
 \WF@box=\box185
 \WF@everypar=\toks62
 Package: wrapfig 2003/01/31  v 3.6
@@ -2205,11 +2088,11 @@ Package: wrapfig 2003/01/31  v 3.6
 (/usr/local/texlive/2024/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip175
-\enit@outerparindent=\dimen490
+\enit@outerparindent=\dimen489
 \enit@toks=\toks63
 \enit@inbox=\box186
-\enit@count@id=\count529
-\enitdp@description=\count530
+\enit@count@id=\count528
+\enitdp@description=\count529
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
@@ -2224,30 +2107,30 @@ Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2022/08/04 v0.55 driver independent access to low-level PDF fe
 atures
-\g_pbs_page_int=\count531
-\g_pbs_oc_int=\count532
+\g_pbs_page_int=\count530
+\g_pbs_oc_int=\count531
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2022/08/04 v0.22 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count533
+\g_ocgbase_nd_int=\count532
 )
 \@anim@box=\box187
 \@anim@measbox=\box188
-\@anim@tmpdima=\dimen491
-\@anim@tmpdimb=\dimen492
-\@anim@num=\count534
-\@anim@curframe=\count535
-\@anim@curframe@zb=\count536
-\@anim@resizeflags=\count537
-\@anim@skipfram=\count538
-\@anim@mulframecnt=\count539
-\@anim@@tmlnfile=\read5
-\@anim@tmpcnt=\count540
-\c@@anim@ltxcnt=\count541
-\@anim@curlayer=\count542
-\@anim@lineno=\count543
-\@anim@curfield=\count544
-\@anim@@resizeflags=\count545
+\@anim@tmpdima=\dimen490
+\@anim@tmpdimb=\dimen491
+\@anim@num=\count533
+\@anim@curframe=\count534
+\@anim@curframe@zb=\count535
+\@anim@resizeflags=\count536
+\@anim@skipfram=\count537
+\@anim@mulframecnt=\count538
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count539
+\c@@anim@ltxcnt=\count540
+\@anim@curlayer=\count541
+\@anim@lineno=\count542
+\@anim@curfield=\count543
+\@anim@@resizeflags=\count544
 )
 (./beamerthememinflat.sty
 Package: beamerthememinflat 2015/11/17 Minimal Flat Design Beamer Theme
@@ -2258,15 +2141,15 @@ Package: beamerfontthememinflat
 Package: microtype 2024/03/29 v3.1b Micro-typographical refinements (RS)
 \MT@toks=\toks64
 \MT@tempbox=\box189
-\MT@count=\count546
+\MT@count=\count545
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1061.
 LaTeX Info: Redefining \leftprotrusion on input line 1062.
 \MT@prot@toks=\toks65
 LaTeX Info: Redefining \rightprotrusion on input line 1081.
 LaTeX Info: Redefining \textls on input line 1392.
-\MT@outer@kern=\dimen493
+\MT@outer@kern=\dimen492
 LaTeX Info: Redefining \textmicrotypecontext on input line 2013.
-\MT@listname@count=\count547
+\MT@listname@count=\count546
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/microtype-luatex.def
 File: microtype-luatex.def 2024/03/29 v3.1b Definitions specific to luatex (RS)
@@ -2283,26 +2166,46 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2024/03/29 v3.1b microtype main configuration file (RS)
 ))
 (/usr/local/texlive/2024/texmf-dist/tex/latex/polyglossia/polyglossia.sty
-Package: polyglossia 2024/03/07 v2.1 Modern multilingual typesetting with XeLaT
+Package: polyglossia 2024/07/15 v2.2 Modern multilingual typesetting with XeLaT
 eX and LuaLaTeX
-
-(/usr/local/texlive/2024/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
-Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
-
-(/usr/local/texlive/2024/texmf-dist/tex/luatex/ctablestack/ctablestack.sty
-Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
-\@catcodetablestackcnt=\count548
-)
-\CatcodeTableOther=\catcodetable16
-\CatcodeTableExpl=\catcodetable17
-)
 Lua module: polyglossia 2013/05/11 1.3 Polyglossia
+\l_xpg_alias_keyvals_int=\count547
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/polyglossia/gloss-latex.ldf
 File: gloss-latex.ldf polyglossia: module for default language
 )
-Package polyglossia Info: Default language is latex.
-Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz.
+
+Package polyglossia Info: Setting LuaTeX font renderer to Harfbuzz
+
 )
+(/usr/local/texlive/2024/texmf-dist/tex/latex/polyglossia/gloss-portuguese.ldf
+File: gloss-portuguese.ldf polyglossia: module for Portuguese
+Module polyglossia Info: Language data for portuges
+(polyglossia)            hyphenation	hyph-pt.hyp.txt
+(polyglossia)            lefthyphenmin	2
+(polyglossia)            loader	loadhyph-pt.tex
+(polyglossia)            patterns	hyph-pt.pat.txt
+(polyglossia)            righthyphenmin	3
+(polyglossia)            synonyms	portuges on input line 15
+Module polyglossia Info: Language portuges was not yet loaded; created with id 2
+ on input line 15
+
+(/usr/local/texlive/2024/texmf-dist/tex/luatex/luavlna/luavlna.sty
+Package: luavlna 2024-05-02 luavlna
+
+(/usr/local/texlive/2024/texmf-dist/tex/luatex/luavlna/luavlna.tex
+Inserting `LuaVlna' in `pre_linebreak_filter'.
+Inserting `allow hyphen breaks' in `hyphenate'.))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/polyglossia/babelsh.def
+File: babelsh.def 2022/06/21 Babel common definitions for shorthands
+ Taken verbatim from babel files (2022/06/06 v3.76)
+)
+Package babel Info: Making " an active character on input line 66.
+)
+
+Package polyglossia Info: Default language is portuguese
+
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/unicode-math/unicode-math.sty
 Package: unicode-math 2023/08/13 v0.8r Unicode maths in XeLaTeX and LuaLaTeX
 
@@ -2323,9 +2226,9 @@ Package: lualatex-math 2022/01/01 v1.12 Patches for mathematics typesetting wit
 h LuaLaTeX
 Lua module: lualatex-math 2013/08/03 1.3 Patches for mathematics typesetting wit
 h LuaLaTeX)
-\g__um_fam_int=\count549
-\g__um_fonts_used_int=\count550
-\l__um_primecount_int=\count551
+\g__um_fam_int=\count548
+\g__um_fonts_used_int=\count549
+\l__um_primecount_int=\count550
 \g__um_primekern_muskip=\muskip21
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
@@ -2451,18 +2354,9 @@ LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
 ) (./beamercolorthememinflat.sty
 Package: beamercolorthememinflat 
 )
-(/usr/local/texlive/2024/texmf-dist/tex/latex/polyglossia/gloss-portuguese.ldf
-File: gloss-portuguese.ldf polyglossia: module for Portuguese
 
-(/usr/local/texlive/2024/texmf-dist/tex/luatex/luavlna/luavlna.sty
-Package: luavlna 2024-05-02 luavlna
+Package polyglossia Info: Default language is portuguese
 
-(/usr/local/texlive/2024/texmf-dist/tex/luatex/luavlna/luavlna.tex
-Inserting `LuaVlna' in `pre_linebreak_filter'.
-Inserting `allow hyphen breaks' in `hyphenate'.))
-Package polyglossia Info: Option: portuguese, variant=portuguese.
-)
-Package polyglossia Info: Default language is portuguese.
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarypatterns.meta.code.tex
@@ -2475,48 +2369,43 @@ Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
 Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
 
 (/usr/local/texlive/2024/texmf-dist/tex/generic/tracklang/tracklang.tex))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-portuges/datetime2-port
-uges.ldf
-File: datetime2-portuges.ldf 2018/08/21 v1.1
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-portuges/datetime2-port
-uges-utf8.ldf
-File: datetime2-portuges-utf8.ldf 2018/08/21 v1.1
-))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-english/datetime2-en-GB
-.ldf
-File: datetime2-en-GB.ldf 2019/10/21 v1.05 (NLCT)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-english/datetime2-engli
+sh.ldf
+File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-english/datetime2-engli
 sh-base.ldf
 File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
-)))
-(/usr/local/texlive/2024/texmf-dist/tex/latex/totcount/totcount.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/datetime2-english/datetime2-en-GB
+.ldf
+File: datetime2-en-GB.ldf 2019/10/21 v1.05 (NLCT)
+)) (/usr/local/texlive/2024/texmf-dist/tex/latex/totcount/totcount.sty
 Package: totcount 2011/01/25 v1.2 package for gettingthe total value of LaTeX c
 ounters
 )
-\c@section@totc=\count552
-\c@sectionsCounter=\count553
-\pbar@tmpcnta=\count554
-\pbar@tmpcntb=\count555
-\pbar@pbht=\dimen494
-\pbar@pbwd=\dimen495
-\pbar@tmpdim=\dimen496
+\c@section@totc=\count551
+\c@sectionsCounter=\count552
+\pbar@tmpcnta=\count553
+\pbar@tmpcntb=\count554
+\pbar@pbht=\dimen493
+\pbar@pbwd=\dimen494
+\pbar@tmpdim=\dimen495
 )
-\g_xsim_collection_exercise_in_all exercises_int=\count556
-\c@totalexerciseinall exercises=\count557
-\g_xsim_collection_test_in_all exercises_int=\count558
-\c@totaltestinall exercises=\count559
-\g_xsim_collection_exercise_in_Hidro_int=\count560
-\c@totalexerciseinHidro=\count561
-\g_xsim_collection_test_in_Hidro_int=\count562
-\c@totaltestinHidro=\count563
+\g_xsim_collection_exercise_in_all exercises_int=\count555
+\c@totalexerciseinall exercises=\count556
+\g_xsim_collection_test_in_all exercises_int=\count557
+\c@totaltestinall exercises=\count558
+\g_xsim_collection_exercise_in_Hidro_int=\count559
+\c@totalexerciseinHidro=\count560
+\g_xsim_collection_test_in_Hidro_int=\count561
+\c@totaltestinHidro=\count562
 
 Package chemmacros Info: Using float defining method `traditional'.
 
-\c@scheme=\count564
+\c@scheme=\count563
 
-(./main.aux (./img/hidro.aux)
+(./main.aux (./QO/Hidrocarbonetos/diagrama.aux) (./img/hidro.aux)
 
 LaTeX Warning: Label `tblr:tall' multiply defined.
 
@@ -2527,7 +2416,7 @@ LaTeX Warning: Label `tblr:tall' multiply defined.
 <Reading QR code for "https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N" at level 4
 -Q from aux file.>
 (./main.xsim)
-\c@schroedinger=\count565
+\c@schroedinger=\count564
 )
 \openout1 = main.aux
 
@@ -2588,16 +2477,16 @@ LaTeX Font Info:    ... okay on input line 160.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count566
-\scratchdimen=\dimen497
+\scratchcounter=\count565
+\scratchdimen=\dimen496
 \scratchbox=\box190
-\nofMPsegments=\count567
-\nofMParguments=\count568
+\nofMPsegments=\count566
+\nofMParguments=\count567
 \everyMPshowfont=\toks66
-\MPscratchCnt=\count569
-\MPscratchDim=\dimen498
-\MPnumerator=\count570
-\makeMPintoPDFobject=\count571
+\MPscratchCnt=\count568
+\MPscratchDim=\dimen497
+\MPnumerator=\count569
+\makeMPintoPDFobject=\count570
 \everyMPtoPDFconversion=\toks67
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -2639,17 +2528,11 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \rmfamily on input line 160.
-LaTeX Info: Redefining \sffamily on input line 160.
-LaTeX Info: Redefining \ttfamily on input line 160.
-
-set lang portuguese, 73
 \l__xsim_aux_file_iow=\write7
 
 \openout7 = main.xsim
-Package translations Info: no dictionary file `translations-basic-dictionary-po
-rtuges.trsl' found. on input line 160.
-\c@lstlisting=\count572
+\c@lstlisting=\count571
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/ninecolors/ninecolors.sty
 Package: ninecolors 2022-02-13 v2022D Select colors with proper color contrast
 )
@@ -2689,11 +2572,10 @@ LaTeX Info: Redefining \showhyphens on input line 160.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `MuseoSans-300' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
 (Font)                  OT1/cmr/m/n --> TU/lmr/m/n on input line 160.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
@@ -2829,7 +2711,8 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 t line 160.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 160
 .
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -2880,8 +2763,6 @@ Package unicode-math Warning: I'm going to overwrite the following commands
 (unicode-math)                colon-like commands, using them will lead to
 (unicode-math)                inconsistencies.
 
-set lang czech, 21
-set lang slovak, 80
 
 Package chemmacros Warning: You haven't loaded any package for upright Greek
 (chemmacros)                letters or no unique choice was possible. Either
@@ -2891,48 +2772,32 @@ Package chemmacros Warning: You haven't loaded any package for upright Greek
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/elements/elements_names_portuges.
 def)
-LaTeX Info: Redefining \rmfamily on input line 160.
-LaTeX Info: Redefining \sffamily on input line 160.
-LaTeX Info: Redefining \ttfamily on input line 160.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `MuseoSans-300' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-
-set lang portuguese, 73
+set lang portuguese, 2
 (./main.nav)
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
 (Font)              scaled to size 3.75pt on input line 160.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 164.
+(Font)              scaled to size 5.25pt on input line 162.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
-(Font)              scaled to size 10.79999pt on input line 164.
+(Font)              scaled to size 10.79999pt on input line 162.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/b/n' will be
-(Font)              scaled to size 10.79999pt on input line 164.
+(Font)              scaled to size 10.79999pt on input line 162.
 
-Overfull \vbox (13.67188pt too high) detected at line 164
+Overfull \vbox (34.29688pt too high) detected at line 162
  []
 
 
 
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
-(Font)              scaled to size 3.0pt on input line 164.
+(Font)              scaled to size 3.0pt on input line 162.
 [1
 Non-PDF special ignored!
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main
 .toc
-LaTeX Info: Redefining \rmfamily on input line 1.
-LaTeX Info: Redefining \sffamily on input line 1.
-LaTeX Info: Redefining \ttfamily on input line 1.
-
-set lang portuguese, 73
-LaTeX Info: Redefining \rmfamily on input line 2.
-LaTeX Info: Redefining \sffamily on input line 2.
-LaTeX Info: Redefining \ttfamily on input line 2.
-set lang portuguese, 73
+set lang portuguese, 2
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
-(Font)              scaled to size 6.75pt on input line 3.
+(Font)              scaled to size 6.75pt on input line 2.
 )
 
 [2
@@ -2942,17 +2807,42 @@ LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
 [3
 
 ]
+LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
+(Font)              scaled to size 15.555pt on input line 200.
+
+Overfull \hbox (20.77359pt too wide) in paragraph at lines 200--200
+[][]  
+ []
+
+
+\openout2 = QO/Hidrocarbonetos/diagrama.aux
+(./QO/Hidrocarbonetos/diagrama.tex
+LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 108.
+
+Overfull \hbox (11.13564pt too wide) in paragraph at lines 142--143
+[][]  
+ []
+
+)
+Overfull \vbox (52.22989pt too high) detected at line 200
+ []
+
+
 
 [4
 
+
+
+
 ]
-<QO/Hidrocarbonetos/torre.jpg, id=109, 978.65625pt x 1027.84pt>
+<QO/Hidrocarbonetos/torre.jpg, id=110, 978.65625pt x 1027.84pt>
 File: QO/Hidrocarbonetos/torre.jpg Graphic file (type jpg)
 <use QO/Hidrocarbonetos/torre.jpg>
-Package luatex.def Info: QO/Hidrocarbonetos/torre.jpg  used on input line 192.
+Package luatex.def Info: QO/Hidrocarbonetos/torre.jpg  used on input line 214.
 (luatex.def)             Requested size: 159.333pt x 167.32785pt.
 
-Overfull \vbox (14.39178pt too high) detected at line 192
+Overfull \vbox (14.39178pt too high) detected at line 214
  []
 
 
@@ -2960,6 +2850,17 @@ Overfull \vbox (14.39178pt too high) detected at line 192
 [5
 
 <./QO/Hidrocarbonetos/torre.jpg>]
+> Step: init table outer spec.
+> Step: parse table options.
+> Step: split table.
+> Step: init table inner spec.
+> Step: parse table inner spec.
+> Step: execute table commands.
+> Step: calculate cell and line sizes.
+LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/b/n' will be
+(Font)              scaled to size 7.5pt on input line 248.
+> Step: build the whole table.
+
 
 [6
 
@@ -2968,19 +2869,8 @@ Overfull \vbox (14.39178pt too high) detected at line 192
 [7
 
 ]
-
-LaTeX Font Warning: Font shape `TU/MuseoSans-300(0)/m/it' undefined
-(Font)              using `TU/MuseoSans-300(0)/m/n' instead on input line 233.
-
-LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/it' will be
-(Font)              scaled to size 7.5pt on input line 233.
-
 \openout2 = img/hidro.aux
-(./img/hidro.tex)
-Overfull \vbox (10.86722pt too high) detected at line 233
- []
-
-
+ (./img/hidro.tex)
 
 [8
 
@@ -2995,15 +2885,20 @@ Overfull \vbox (10.86722pt too high) detected at line 233
 > Step: parse table inner spec.
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
-LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/b/n' will be
-(Font)              scaled to size 7.5pt on input line 265.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
-(Font)              scaled to size 7.5pt on input line 265.
+(Font)              scaled to size 7.5pt on input line 290.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 265.
+(Font)              scaled to size 5.25pt on input line 290.
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
-(Font)              scaled to size 3.75pt on input line 265.
+(Font)              scaled to size 3.75pt on input line 290.
 > Step: build the whole table.
+
+
+LaTeX Font Warning: Font shape `TU/MuseoSans-300(0)/m/it' undefined
+(Font)              using `TU/MuseoSans-300(0)/m/n' instead on input line 290.
+
+LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/it' will be
+(Font)              scaled to size 5.25pt on input line 290.
 
 
 [9
@@ -3025,7 +2920,7 @@ LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
 
 ]
 LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
-(Font)              scaled to size 10.79999pt on input line 269.
+(Font)              scaled to size 10.79999pt on input line 294.
 
 
 [13
@@ -3043,10 +2938,8 @@ LaTeX Font Info:    Font shape `TU/MuseoSans-300(1)/m/n' will be
 > Step: execute table commands.
 > Step: calculate cell and line sizes.
 > Step: build the whole table.
-LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/it' will be
-(Font)              scaled to size 5.25pt on input line 310.
 
-Overfull \vbox (39.01395pt too high) detected at line 310
+Overfull \vbox (39.01395pt too high) detected at line 335
  []
 
 
@@ -3090,6 +2983,9 @@ warning  (pdf backend): ignoring duplicate destination with the name 'tblr:tall'
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
+LaTeX Font Info:    Font shape `TU/MuseoSans-300(0)/m/it' will be
+(Font)              scaled to size 7.5pt on input line 427.
+
 
 [19
 
@@ -3117,7 +3013,7 @@ on 0-M.>
 <Copying the QR code for "https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N" in ver
 sion 4-Q as previously calculated.>
 
-Overfull \vbox (10.46013pt too high) detected at line 417
+Overfull \vbox (10.46013pt too high) detected at line 441
  []
 
 
@@ -3231,7 +3127,7 @@ Missing character: There is no ; (U+003B) in font nullfont!
 \tf@snm=\write10
 
 \openout10 = main.snm
- (./main.aux (./img/hidro.aux)
+ (./main.aux (./QO/Hidrocarbonetos/diagrama.aux) (./img/hidro.aux)
 <Reading QR code for "https://mark.nl.tab.digital/s/2qnZtdzAjYynDWw" at level 4
 -Q from aux file.>
 
@@ -3239,8 +3135,8 @@ Missing character: There is no ; (U+003B) in font nullfont!
 -Q from aux file.>
 (./main.xsim))
  ***********
-LaTeX2e <2024-06-01>
-L3 programming layer <2024-05-08>
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-05-27>
  ***********
 
 
@@ -3254,24 +3150,24 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 75324 strings out of 475931
- 305241,3417909 words of node,token memory allocated
- 74254 words of node memory still in use:
-   2482 hlist, 14 vlist, 2223 rule, 7 disc, 71 local_par, 6 math, 680 glue, 13 k
-ern, 89 penalty, 1 margin_kern, 165 glyph, 5554 attribute, 123 glue_spec, 5554 a
+ 74263 strings out of 475915
+ 305239,3417909 words of node,token memory allocated
+ 74442 words of node memory still in use:
+   2481 hlist, 14 vlist, 2223 rule, 7 disc, 71 local_par, 6 math, 677 glue, 13 k
+ern, 89 penalty, 1 margin_kern, 186 glyph, 5573 attribute, 122 glue_spec, 5573 a
 ttribute_list, 10 write, 618 pdf_literal, 2 pdf_start_link, 2 pdf_end_link, 2 pd
 f_dest, 2 pdf_action, 38 pdf_colorstack nodes
-   avail lists: 1:16,2:6325,3:4825,4:522,5:239,6:179,7:9385,8:24,9:11734,10:20,1
-1:259,12:9
- 95902 multiletter control sequences out of 65536+600000
- 97 fonts using 17876615 bytes
- 128i,17n,148p,1181b,1567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+   avail lists: 1:28,2:6309,3:4877,4:677,5:285,6:179,7:8711,8:24,9:11734,10:20,1
+1:247,12:9
+ 94889 multiletter control sequences out of 65536+600000
+ 99 fonts using 18137111 bytes
+ 128i,17n,148p,1185b,1490s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </home/fabio/.local/share/fonts/fontawesome.ttf></usr/local/texlive/2024/texmf-d
 ist/fonts/opentype/public/lm-math/latinmodern-math.otf></home/fabio/.local/share
 /fonts/MuseoSans-300.otf></usr/local/texlive/2024/texmf-dist/fonts/opentype/publ
 ic/lm-math/latinmodern-math.otf></home/fabio/.local/share/fonts/MuseoSans-300.ot
 f></home/fabio/.local/share/fonts/MuseoSans_500.otf>
-Output written on main.pdf (21 pages, 121725 bytes).
+Output written on main.pdf (21 pages, 128988 bytes).
 
 PDF statistics: 326 PDF objects out of 1000 (max. 8388607)
  243 compressed objects within 3 object streams

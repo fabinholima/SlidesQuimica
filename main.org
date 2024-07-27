@@ -16,7 +16,7 @@
 
 
 #+LATEX_HEADER: \date{}
-#+LATEX_HEADER: \usetheme{minflat}
+#+LATEX_HEADER: %\usetheme{minflat}
 
 
 #+LATEX_HEADER: \DeclareExerciseCollection{Hidro}

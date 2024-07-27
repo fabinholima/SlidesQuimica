@@ -16,7 +16,7 @@
 #+LATEX_HEADER: \usepackage[utf8]{inputenc}
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 
-#+LATEX_HEADER: \usepackage[portuguese]{babel}
+#+LATEX_HEADER: %\usepackage[portuguese]{babel}
 
 #+LATEX_HEADER: %%%% FONTS
 
@@ -85,7 +85,7 @@
 #+LATEX_HEADER: \usepackage{colortbl}
 #+LATEX_HEADER: \usepackage[tikz]{bclogo}
 #+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-#+LATEX_HEADER: \usetikzlibrary{arrows,calc,arrows.meta,decorations.markings,shapes.symbols}
+#+LATEX_HEADER: \usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
 #+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
 #+LATEX_HEADER: \usepackage{tikzpeople}
 #+LATEX_HEADER: \usepackage{qrcode,hyperref}
@@ -95,7 +95,7 @@
 
 #+LATEX_HEADER: %%% CUSTOM TABLE 
 #+LATEX_HEADER:\NewTblrTheme{fancy}{
-#+LATEX_HEADER:\SetTblrStyle{caption-tag}{font=\bfseries}
+#+LATEX_HEADER:\SetTblrStyle{caption-tag}{font=\bfseries,red2}
 #+LATEX_HEADER:\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
 #+LATEX_HEADER:\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
 #+LATEX_HEADER:\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
