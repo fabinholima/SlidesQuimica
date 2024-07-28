@@ -1,5 +1,0 @@
-\selectlanguage *[]{portuguese}
-\beamer@sectionintoc {1}{Hidrocarbonetos}{3}{0}{1}
-\beamer@sectionintoc {2}{Classificação}{7}{0}{2}
-\beamer@sectionintoc {3}{Nomenclatura}{13}{0}{3}
-\beamer@sectionintoc {4}{Exercícios}{18}{0}{4}
