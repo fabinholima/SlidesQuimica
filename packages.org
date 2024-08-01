@@ -27,6 +27,7 @@
 #+LATEX_HEADER: \usepackage{fontawesome}
 #+LATEX_HEADER: \usepackage{tasks}
 #+LATEX_HEADER: \newcounter{paragraph}
+#+LATEX_HEADER: \usepackage{annotate-equations}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
 

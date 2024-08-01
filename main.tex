@@ -1,4 +1,4 @@
-% Created 2024-07-28 Sun 07:09
+% Created 2024-07-28 Sun 19:41
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
@@ -159,7 +159,10 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -168,40 +171,63 @@ title=#2,#1}
 
 
 \section{Hidrocarbonetos}
-\label{sec:org8cfe2cc}
-\begin{frame}[label={sec:org08eae73}]{Hidrocarbonetos}
+\label{sec:orgef15bbe}
+\begin{frame}[label={sec:orge0d104f}]{Hidrocarbonetos}
+
 \begin{tikzpicture}
-\begin{scope}[yshift=5cm,xshift=6.5cm]
-			\coordinate (dv) at (0,0);
-			\coordinate (base) at (35pt,0pt);
-			\coordinate (height) at (0pt,35pt);
-			\coordinate (diag) at ($(base)+(height)$);
-			\fill[rounded corners=2pt, yellow3] ($(dv)-.5*(diag)$) rectangle +(diag); 
-			\node[white] at (dv) {\sffamily\huge H};
-			\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Hidrogênio};
-			\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 1};
-		\end{scope}
-		\begin{scope}[yshift=5cm, xshift=0cm]
-		\node[draw=none] (0,10) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
+%\tikzstyle{every node}=[fill=red!30,rounded corners]
+%\tikzstyle{edge from parent}=[red,thick,draw]
+[main/.style={fill=red!30,rounded corners,font={\bfseries\small}},
+main1/.style={fill=green!30,rounded corners,font={\bfseries\small}, align=center, minimum size=10mm, text width=15mm},
+main2/.style={fill=violet!30,rounded corners,font={\bfseries\small}, align=center},
+%edge from parent ./style={red,-o,thick,draw},
+level distance=2cm,
+level 1/.style={sibling distance=4.cm},
+level 2/.style={sibling distance=2.5cm,level distance=1.5cm},
+level 3/.style={sibling distance=4.5cm,level distance=1.5cm,font={\bfseries\tiny}}, edge from parent fork down,
+grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}},
+ first/.style={level distance=4ex},
+ second/.style={level distance=8ex},
+ third/.style={level distance=12ex},
+ four/.style={level distance=16ex},
+ ]
+\node [main]{Hidrocarbonetos}
+    child {node[main1] {Cadeia Aberta} 
+    	child [grand,first]{node [main2]{Alcanos}}
+    	child [grand,second] {node [main2]{Alcenos}}
+    	child [grand,third]{node [main2]{Alcinos}}
+    	child [grand,four] {node [main2]{Alcadienos}}
+    }
+    child {node[main1] {Cadeia Aromática}	
+    	child {node[main2] {Aromáticos}}
+    }
+   %%%%%
+    child {node[main1]{Cadeia Fechada}
+      child {node[main2] {Ciclanos}}
+      child {node[main2] {Ciclenos}}
+    };
+\end{tikzpicture}
+\begin{tikzpicture}
+		\begin{scope}[yshift=5cm, xshift=-2cm]
+		\node[draw=none,text width=10cm, minimum size=10mm, font=\small] (-5,5) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
 			};
 		\end{scope}
-		\begin{scope}[yshift=5cm,xshift=-7cm]
+		\begin{scope}[yshift=5cm,xshift=-8cm]
 		\coordinate (dv) at (0,0);
-		\coordinate (base) at (35pt,0pt);
-		\coordinate (height) at (0pt,35pt);
+		\coordinate (base) at (25pt,0pt);
+		\coordinate (height) at (0pt,25pt);
 		\coordinate (diag) at ($(base)+(height)$);
-		\fill[rounded corners=2pt, violet3] ($(dv)-.5*(diag)$) rectangle +(diag); 
+		\fill[rounded corners=2pt, violet] ($(dv)-.5*(diag)$) rectangle +(diag); 
 		\node[white] at (dv) {\sffamily\huge C};
 		\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Carbono};
 		\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 6};
 		\end{scope}
 		\end{tikzpicture}
-\include{QO/Hidrocarbonetos/diagrama}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:org649e204}]{Hidrocarbonetos}
+\begin{frame}[label={sec:org03905ab}]{Hidrocarbonetos}
 \begin{itemize}
 \item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
@@ -209,11 +235,11 @@ title=#2,#1}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
-\caption{\label{fig:orgf2d9565}Esquema de uma torre de fracionamento.}
+\caption{\label{fig:org6c15b30}Esquema de uma torre de fracionamento.}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org8b7a4e9}]{Frações Típicas do Petróleo}
+\begin{frame}[label={sec:org18bcf8c}]{Frações Típicas do Petróleo}
 %		{\centering \small
 			\begin{talltblr}[
 				theme= fancy,
@@ -248,9 +274,9 @@ title=#2,#1}
 \end{frame}
 
 \section{Classificação}
-\label{sec:org2f33f5f}
+\label{sec:orgd3b4016}
 
-\begin{frame}[label={sec:org7d2eaf2}]{Grupos}
+\begin{frame}[label={sec:orge7843ab}]{Grupos}
 \begin{itemize}
 \item Os nomes \alert{alcanos}, \alert{alcenos}, \alert{alcinos}, \alert{alcadienos}, \alert{ciclanos}, \alert{ciclenos} e \alert{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
 \end{itemize}
@@ -292,7 +318,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 
 
 \section{Nomenclatura}
-\label{sec:org9122c2c}
+\label{sec:orgfc8b658}
 \begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
 \begin{myrule}{Regra}
 \begin{itemize}
@@ -304,7 +330,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 \end{myrule}
 \end{frame}
 
-\begin{frame}[label={sec:orgeb0563a}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org4f350b2}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 \end{itemize}
@@ -334,7 +360,7 @@ dec & 10 & icosa & 20\\[0pt]
 \end{longtblr}
 \end{frame}
 
-\begin{frame}[label={sec:org009e952}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org0668742}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
 \end{itemize}
@@ -362,7 +388,7 @@ in & tripla\\
 
 
 
-\begin{frame}[label={sec:org78477cb}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org394c198}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
 \end{itemize}
@@ -391,7 +417,7 @@ ona & cet \alert{ona}\\
 
 
 \section{Exercícios}
-\label{sec:orgac1d608}
+\label{sec:org1f10221}
 \begin{frame}[allowframebreaks]{Exemplos}
 \begin{question}
 (\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
@@ -428,7 +454,7 @@ Portanto, o \alert{etino} possui apenas dois átomos de carbono (\ch{C2H2}), sen
 
 
 
-\begin{frame}[label={sec:org33a548a}]{Fim da Aula}
+\begin{frame}[label={sec:org3cd09fc}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}

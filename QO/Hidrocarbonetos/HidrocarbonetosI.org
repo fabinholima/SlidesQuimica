@@ -2,33 +2,56 @@
 ** Hidrocarbonetos
   
 #+begin_export latex
+
 \begin{tikzpicture}
-\begin{scope}[yshift=5cm,xshift=6.5cm]
-			\coordinate (dv) at (0,0);
-			\coordinate (base) at (35pt,0pt);
-			\coordinate (height) at (0pt,35pt);
-			\coordinate (diag) at ($(base)+(height)$);
-			\fill[rounded corners=2pt, yellow3] ($(dv)-.5*(diag)$) rectangle +(diag); 
-			\node[white] at (dv) {\sffamily\huge H};
-			\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Hidrogênio};
-			\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 1};
-		\end{scope}
-		\begin{scope}[yshift=5cm, xshift=0cm]
-		\node[draw=none] (0,10) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
+%\tikzstyle{every node}=[fill=red!30,rounded corners]
+%\tikzstyle{edge from parent}=[red,thick,draw]
+[main/.style={fill=red!30,rounded corners,font={\bfseries\small}},
+main1/.style={fill=green!30,rounded corners,font={\bfseries\small}, align=center, minimum size=10mm, text width=15mm},
+main2/.style={fill=violet!30,rounded corners,font={\bfseries\small}, align=center},
+%edge from parent ./style={red,-o,thick,draw},
+level distance=2cm,
+level 1/.style={sibling distance=4.cm},
+level 2/.style={sibling distance=2.5cm,level distance=1.5cm},
+level 3/.style={sibling distance=4.5cm,level distance=1.5cm,font={\bfseries\tiny}}, edge from parent fork down,
+grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}},
+ first/.style={level distance=4ex},
+ second/.style={level distance=8ex},
+ third/.style={level distance=12ex},
+ four/.style={level distance=16ex},
+ ]
+\node [main]{Hidrocarbonetos}
+    child {node[main1] {Cadeia Aberta} 
+    	child [grand,first]{node [main2]{Alcanos}}
+    	child [grand,second] {node [main2]{Alcenos}}
+    	child [grand,third]{node [main2]{Alcinos}}
+    	child [grand,four] {node [main2]{Alcadienos}}
+    }
+    child {node[main1] {Cadeia Aromática}	
+    	child {node[main2] {Aromáticos}}
+    }
+   %%%%%
+    child {node[main1]{Cadeia Fechada}
+      child {node[main2] {Ciclanos}}
+      child {node[main2] {Ciclenos}}
+    };
+\end{tikzpicture}
+\begin{tikzpicture}
+		\begin{scope}[yshift=5cm, xshift=-2cm]
+		\node[draw=none,text width=10cm, minimum size=10mm, font=\small] (-5,5) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
 			};
 		\end{scope}
-		\begin{scope}[yshift=5cm,xshift=-7cm]
+		\begin{scope}[yshift=5cm,xshift=-8cm]
 		\coordinate (dv) at (0,0);
-		\coordinate (base) at (35pt,0pt);
-		\coordinate (height) at (0pt,35pt);
+		\coordinate (base) at (25pt,0pt);
+		\coordinate (height) at (0pt,25pt);
 		\coordinate (diag) at ($(base)+(height)$);
-		\fill[rounded corners=2pt, violet3] ($(dv)-.5*(diag)$) rectangle +(diag); 
+		\fill[rounded corners=2pt, violet] ($(dv)-.5*(diag)$) rectangle +(diag); 
 		\node[white] at (dv) {\sffamily\huge C};
 		\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Carbono};
 		\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 6};
 		\end{scope}
 		\end{tikzpicture}
-\include{QO/Hidrocarbonetos/diagrama}
 #+end_export
 
 
@@ -83,8 +106,51 @@
 ** Grupos 
 - Os nomes *alcanos*, *alcenos*, *alcinos*, *alcadienos*, *ciclanos*, *ciclenos* e *aromáticos* designam grupos aos quais os hidrocarbonetos pertencem
 #+begin_export latex
-\include{img/hidro.tex}
+\begin{tikzpicture}
+\tikzset{grow'=right,level distance=32mm}
+\tikzset{edge from parent/.style={draw,edge from parent fork right,red},-o,thick}
+\tikzset{level 1/.style={sibling distance=4.5cm}}
+\tikzset{level 2/.style={sibling distance=1.0cm,level distance=2.5cm},}
+\tikzset{main/.style={draw,rounded corners,font={\bfseries\small}, align=center, text width=17mm}}
+\tikzset{main1/.style={font={\bfseries\small}, align=center}}
+\tikzset{every tikzmarknode/.append style={inner sep=3pt,rounded
+corners}}
+%\begin{scope}[frontier/.style={distance from root=5mm}]
+\node[main] {Cadeia}
+	child {node[main] {Alifática (aberta)}
+		child {node[main1] {Alc\tikzmarknode[fill=red!30]{Red1}{an}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=green!30]{Green1}{en}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=blue!30]{Blue1}{in}o}}
+		child {node[main1]{Alca\tikzmarknode[fill=yellow!30]{Yellow1}{dien}o}}
+		}
+	child {node [main] {Cíclica (fechada)}	
+		child [main1]{node {Cicl\tikzmarknode[fill=Teal!50]{Teal1}{an}o}}
+		child [main1]{node {Cicl\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid1}{en}o}}
+};
+%\end{scope}
+%%%%% LINHAS 
+\node[main1] at (9.5,3.8){\tikzmarknode[fill=red!30]{Red2}{an} indica apenas uma ligação simples};
+\node[main1] at (9.5,2.8){\tikzmarknode[fill=green!30]{Green2}{en} indica apenas uma ligação dupla};
+\node[main1] at (9.5,1.8){\tikzmarknode[fill=blue!30]{Blue2}{in} indica apenas uma ligação tripla};
+\node[main1] at (9.2,0.8){\tikzmarknode[fill=yellow!30]{Yellow2}{dien} indica duas ligações duplas};
+\node[main1] at (9.5,-1.7){\tikzmarknode[fill=Teal!50]{Teal2}{an} indica uma  ligação simples};
+\node[main1] at (9.3,-2.7){\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid2}{en} indica uma ligação dupla};
+%%%%% SETA DE LIGACAO
+
+ %\draw[->,black] (DarkOrange.south) to[out=-90,in=120,looseness=0.4] (DarkOrange.north);
+%\draw[->,black,very thin, dashed, out=280, in=80, looseness=2.5]  (4.3,-2.)  to (6.3,-2.7);
+
+\end{tikzpicture}
+\annotatetwo[->]{below}{Red1}{Red2}{}
+\annotatetwo[->]{below}{Green1}{Green2}{}
+\annotatetwo[->]{below}{Blue1}{Blue2}{}
+\annotatetwo[->]{below}{Yellow1}{Yellow2}{}
+\annotatetwo[->,yshift=0.8em]{above}{Teal1}{Teal2}{}
+\annotatetwo[->]{below}{DarkOrchid1}{DarkOrchid2}{}
+
 #+end_export
+
+
 
 ** Subdivisões dos hidrocarbonetos
 :PROPERTIES:
