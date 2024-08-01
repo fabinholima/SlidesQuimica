@@ -104,12 +104,14 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 * Classificação
 
 ** Grupos 
-- Os nomes *alcanos*, *alcenos*, *alcinos*, *alcadienos*, *ciclanos*, *ciclenos* e *aromáticos* designam grupos aos quais os hidrocarbonetos pertencem
+- Os nomes *alcanos*, *alcenos*, *alcinos*, *alcadienos*, *ciclanos*, *ciclenos* e *aromáticos* designam grupos aos quais os hidrocarbonetos pertencem.
+  
 #+begin_export latex
+\vspace{0.1cm}
 \begin{tikzpicture}
 \tikzset{grow'=right,level distance=32mm}
 \tikzset{edge from parent/.style={draw,edge from parent fork right,red},-o,thick}
-\tikzset{level 1/.style={sibling distance=4.5cm}}
+\tikzset{level 1/.style={sibling distance=3.2cm}}
 \tikzset{level 2/.style={sibling distance=1.0cm,level distance=2.5cm},}
 \tikzset{main/.style={draw,rounded corners,font={\bfseries\small}, align=center, text width=17mm}}
 \tikzset{main1/.style={font={\bfseries\small}, align=center}}
@@ -129,24 +131,22 @@ corners}}
 };
 %\end{scope}
 %%%%% LINHAS 
-\node[main1] at (9.5,3.8){\tikzmarknode[fill=red!30]{Red2}{an} indica apenas uma ligação simples};
-\node[main1] at (9.5,2.8){\tikzmarknode[fill=green!30]{Green2}{en} indica apenas uma ligação dupla};
-\node[main1] at (9.5,1.8){\tikzmarknode[fill=blue!30]{Blue2}{in} indica apenas uma ligação tripla};
-\node[main1] at (9.2,0.8){\tikzmarknode[fill=yellow!30]{Yellow2}{dien} indica duas ligações duplas};
-\node[main1] at (9.5,-1.7){\tikzmarknode[fill=Teal!50]{Teal2}{an} indica uma  ligação simples};
-\node[main1] at (9.3,-2.7){\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid2}{en} indica uma ligação dupla};
+\node[main1] at (9.5,3.1){\tikzmarknode[fill=red!30]{Red2}{an} indica apenas uma ligação simples};
+\node[main1] at (9.5,2.1){\tikzmarknode[fill=green!30]{Green2}{en} indica apenas uma ligação dupla};
+\node[main1] at (9.5,1.1){\tikzmarknode[fill=blue!30]{Blue2}{in} indica apenas uma ligação tripla};
+\node[main1] at (9.2,0.1){\tikzmarknode[fill=yellow!30]{Yellow2}{dien} indica duas ligações duplas};
+\node[main1] at (9.5,-1.1){\tikzmarknode[fill=Teal!50]{Teal2}{an} indica uma  ligação simples};
+\node[main1] at (9.3,-2.1){\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid2}{en} indica uma ligação dupla};
 %%%%% SETA DE LIGACAO
-
- %\draw[->,black] (DarkOrange.south) to[out=-90,in=120,looseness=0.4] (DarkOrange.north);
-%\draw[->,black,very thin, dashed, out=280, in=80, looseness=2.5]  (4.3,-2.)  to (6.3,-2.7);
 
 \end{tikzpicture}
 \annotatetwo[->]{below}{Red1}{Red2}{}
 \annotatetwo[->]{below}{Green1}{Green2}{}
 \annotatetwo[->]{below}{Blue1}{Blue2}{}
 \annotatetwo[->]{below}{Yellow1}{Yellow2}{}
-\annotatetwo[->,yshift=0.8em]{above}{Teal1}{Teal2}{}
+\annotatetwo[->]{below}{Teal1}{Teal2}{}
 \annotatetwo[->]{below}{DarkOrchid1}{DarkOrchid2}{}
+
 
 #+end_export
 

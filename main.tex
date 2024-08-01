@@ -1,4 +1,4 @@
-% Created 2024-07-28 Sun 19:41
+% Created 2024-08-01 Thu 15:16
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
@@ -27,6 +27,8 @@
 \usepackage{fontawesome}
 \usepackage{tasks}
 \newcounter{paragraph}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{annotate-equations}
 %%% BOX EXERCISE BEAMER
 \DeclareExerciseEnvironmentTemplate{custom}{%
 \begin{tcolorbox}[boxrule = 0pt]
@@ -159,10 +161,7 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
+\maketitle
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -171,8 +170,8 @@ title=#2,#1}
 
 
 \section{Hidrocarbonetos}
-\label{sec:orgef15bbe}
-\begin{frame}[label={sec:orge0d104f}]{Hidrocarbonetos}
+\label{sec:org001990b}
+\begin{frame}[label={sec:orga7a5ded}]{Hidrocarbonetos}
 
 \begin{tikzpicture}
 %\tikzstyle{every node}=[fill=red!30,rounded corners]
@@ -227,7 +226,7 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 
 
 
-\begin{frame}[label={sec:org03905ab}]{Hidrocarbonetos}
+\begin{frame}[label={sec:org42c9a8f}]{Hidrocarbonetos}
 \begin{itemize}
 \item Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
 \end{itemize}
@@ -235,11 +234,11 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=0.4\textwidth]{QO/Hidrocarbonetos/torre.jpg}
-\caption{\label{fig:org6c15b30}Esquema de uma torre de fracionamento.}
+\caption{\label{fig:org80a15d9}Esquema de uma torre de fracionamento.}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org18bcf8c}]{Frações Típicas do Petróleo}
+\begin{frame}[label={sec:org38af3a7}]{Frações Típicas do Petróleo}
 %		{\centering \small
 			\begin{talltblr}[
 				theme= fancy,
@@ -274,14 +273,55 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 \end{frame}
 
 \section{Classificação}
-\label{sec:orgd3b4016}
+\label{sec:orgb72d7ff}
 
-\begin{frame}[label={sec:orge7843ab}]{Grupos}
+\begin{frame}[label={sec:orge34f607}]{Grupos}
 \begin{itemize}
-\item Os nomes \alert{alcanos}, \alert{alcenos}, \alert{alcinos}, \alert{alcadienos}, \alert{ciclanos}, \alert{ciclenos} e \alert{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem
+\item Os nomes \alert{alcanos}, \alert{alcenos}, \alert{alcinos}, \alert{alcadienos}, \alert{ciclanos}, \alert{ciclenos} e \alert{aromáticos} designam grupos aos quais os hidrocarbonetos pertencem.
 \end{itemize}
-\include{img/hidro.tex}
+
+\vspace{0.1cm}
+\begin{tikzpicture}
+\tikzset{grow'=right,level distance=32mm}
+\tikzset{edge from parent/.style={draw,edge from parent fork right,red},-o,thick}
+\tikzset{level 1/.style={sibling distance=3.2cm}}
+\tikzset{level 2/.style={sibling distance=1.0cm,level distance=2.5cm},}
+\tikzset{main/.style={draw,rounded corners,font={\bfseries\small}, align=center, text width=17mm}}
+\tikzset{main1/.style={font={\bfseries\small}, align=center}}
+\tikzset{every tikzmarknode/.append style={inner sep=3pt,rounded
+corners}}
+%\begin{scope}[frontier/.style={distance from root=5mm}]
+\node[main] {Cadeia}
+	child {node[main] {Alifática (aberta)}
+		child {node[main1] {Alc\tikzmarknode[fill=red!30]{Red1}{an}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=green!30]{Green1}{en}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=blue!30]{Blue1}{in}o}}
+		child {node[main1]{Alca\tikzmarknode[fill=yellow!30]{Yellow1}{dien}o}}
+		}
+	child {node [main] {Cíclica (fechada)}	
+		child [main1]{node {Cicl\tikzmarknode[fill=Teal!50]{Teal1}{an}o}}
+		child [main1]{node {Cicl\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid1}{en}o}}
+};
+%\end{scope}
+%%%%% LINHAS 
+\node[main1] at (9.5,3.1){\tikzmarknode[fill=red!30]{Red2}{an} indica apenas uma ligação simples};
+\node[main1] at (9.5,2.1){\tikzmarknode[fill=green!30]{Green2}{en} indica apenas uma ligação dupla};
+\node[main1] at (9.5,1.1){\tikzmarknode[fill=blue!30]{Blue2}{in} indica apenas uma ligação tripla};
+\node[main1] at (9.2,0.1){\tikzmarknode[fill=yellow!30]{Yellow2}{dien} indica duas ligações duplas};
+\node[main1] at (9.5,-1.1){\tikzmarknode[fill=Teal!50]{Teal2}{an} indica uma  ligação simples};
+\node[main1] at (9.3,-2.1){\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid2}{en} indica uma ligação dupla};
+%%%%% SETA DE LIGACAO
+
+\end{tikzpicture}
+\annotatetwo[->]{below}{Red1}{Red2}{}
+\annotatetwo[->]{below}{Green1}{Green2}{}
+\annotatetwo[->]{below}{Blue1}{Blue2}{}
+\annotatetwo[->]{below}{Yellow1}{Yellow2}{}
+\annotatetwo[->]{below}{Teal1}{Teal2}{}
+\annotatetwo[->]{below}{DarkOrchid1}{DarkOrchid2}{}
 \end{frame}
+
+
 
 \begin{frame}[allowframebreaks]{Subdivisões dos hidrocarbonetos}
 	
@@ -318,7 +358,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 
 
 \section{Nomenclatura}
-\label{sec:orgfc8b658}
+\label{sec:org0f3f6c3}
 \begin{frame}[allowframebreaks]{Nomenclatura dos compostos orgânicos}
 \begin{myrule}{Regra}
 \begin{itemize}
@@ -330,7 +370,7 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 \end{myrule}
 \end{frame}
 
-\begin{frame}[label={sec:org4f350b2}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org4435ed1}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 \end{itemize}
@@ -360,7 +400,7 @@ dec & 10 & icosa & 20\\[0pt]
 \end{longtblr}
 \end{frame}
 
-\begin{frame}[label={sec:org0668742}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:orge2e3e67}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{infixo} indica o tipo de ligação química entre os átomos de carbono.
 \end{itemize}
@@ -388,7 +428,7 @@ in & tripla\\
 
 
 
-\begin{frame}[label={sec:org394c198}]{Nomenclatura dos compostos orgânicos}
+\begin{frame}[label={sec:org4cb5a80}]{Nomenclatura dos compostos orgânicos}
 \begin{itemize}
 \item O \alert{sufixo}, a parte final, indica a \alert{classe funcional do composto}.
 \end{itemize}
@@ -417,7 +457,7 @@ ona & cet \alert{ona}\\
 
 
 \section{Exercícios}
-\label{sec:org1f10221}
+\label{sec:org6944560}
 \begin{frame}[allowframebreaks]{Exemplos}
 \begin{question}
 (\alert{FATEC}) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
@@ -454,7 +494,7 @@ Portanto, o \alert{etino} possui apenas dois átomos de carbono (\ch{C2H2}), sen
 
 
 
-\begin{frame}[label={sec:org3cd09fc}]{Fim da Aula}
+\begin{frame}[label={sec:org89b7b70}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
