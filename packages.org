@@ -172,6 +172,12 @@
 #+LATEX_HEADER: \definecolor{col7}{HTML}{FF9966}
 #+LATEX_HEADER: \definecolor{col8}{HTML}{9400D3}
 
+#+LATEX_HEADER: %% CONFIG COLOR CARBONO
+
+#+LATEX_HEADER: \tikzstyle{bal}=[inner sep=0.3pt,fill=orange,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{rect}=[inner sep=0.3pt,fill=red,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{bal2}=[inner sep=0.3pt,fill=blue,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{bal3}=[inner sep=0.3pt,fill=yellow,fill opacity=0.5,circle,minimum size=0.2cm]
 
 
 #+LATEX_HEADER: \definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}

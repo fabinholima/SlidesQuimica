@@ -190,6 +190,51 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
 
 
 
+* Exercício
+** Exemplos 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+#+begin_question
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (5)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+#+end_choice
+#+end_question
+\only<1>
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (5)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice *etino*.
+\choice propino.
+#+end_choice
+
+Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é @@latex: \ch{C_nH_{2n+2}}@@.
+
+O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral @@latex: \ch{C_nH_{2n}}@@.
+
+Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é @@latex: \ch{C_nH_{2n-2}}@@.
+
+Portanto, o *etino* possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
+#+end_answer
+
+
+
+
+
 * Nomenclatura
 ** Nomenclatura dos compostos orgânicos
 :PROPERTIES:
@@ -290,48 +335,6 @@ ona & cet \alert{ona}\\
 \end{talltblr}
 
 #+end_export
-
-
-* Exercícios
-** Exemplos 
-:PROPERTIES:
-:BEAMER_opt: allowframebreaks
-:END:
-
-#+begin_question
-(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
-
-#+ATTR_LATEX: :options (5)
-#+begin_choice
-\choice metano.
-\choice etano.
-\choice eteno.
-\choice etino.
-\choice propino.
-#+end_choice
-#+end_question
-\only<1>
-#+ATTR_LATEX: :options [print=true]
-#+begin_answer
-(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
-
-#+ATTR_LATEX: :options (5)
-#+begin_choice
-\choice metano.
-\choice etano.
-\choice eteno.
-\choice *etino*.
-\choice propino.
-#+end_choice
-
-Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é @@latex: \ch{C_nH_{2n+2}}@@.
-
-O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral @@latex: \ch{C_nH_{2n}}@@.
-
-Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é @@latex: \ch{C_nH_{2n-2}}@@.
-
-Portanto, o *etino* possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
-#+end_answer
 
 
 

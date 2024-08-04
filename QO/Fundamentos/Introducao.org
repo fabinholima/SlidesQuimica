@@ -42,30 +42,34 @@
    #+end_export
    
    #+latex: \end{myrule}
-
+   
 
 ** Ligações Múltiplas
 
 
-#+ATTR_LATEX: :environment tabular :align |p{5cm}|c|c|
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
-| @@latex: \cellcolor{red!15}@@Tipo de Ligação                                  | Exemplo                                          | Estrutura de Lewis                                        |
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-| @@latex:\cellcolor{col6}@@ Ligação *dupla* entre dois átomos de carbono         | \chemfig{C([:210]-)([:150]-)=C([:30]-)([:330]-)} | \chlewis{0:120.240.}{C}  \chlewis{180:60.290.}{C}        |
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-| @@latex:\cellcolor{col6}@@ Ligação *dupla* entre um átomo de oxigênio e carbono | \chemfig{C([:210]-)([:150]-)=O}                  | \chlewis{0:120.240.}{C} \chlewis{180:90:0:}{O}            |
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-| @@latex:\cellcolor{col6}@@ Ligação *tripla* entre dois átomos de carbono        | \chemfig{-C~C-}                                  | \chlewis{0:50.180.}{C} \chlewis{180:130.0.}{C}            |
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
-| @@latex:\cellcolor{col6}@@                                                    |                                                  |                                                           |
-| @@latex:\cellcolor{col6}@@ Ligação *tripla* entre um carbono e nitrogênio       | \chemfig{-C~N }                                  | \chlewis{0:50.180.}{C} \chlewis{180:130.0:}{N}            |
-|-------------------------------------------------------------------------------+--------------------------------------------------+-----------------------------------------------------------|
+   #+begin_export latex
+
+   \begin{talltblr}[
+		theme= fancy,
+		caption={Composição do Petróleo},
+		]{
+		colspec = {Xcc}, colsep = 2mm, hlines = {2pt, white},
+		%row{odd} = {brown8}, row{even} = {gray8},
+		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		\hline
+		Tipo de Ligação & Exemplo & Estrutura de Lewis\\[0pt]
+		\hline
+		Ligação \alert{dupla} entre dois átomos de carbono & \chemfig{C([:210]-)([:150]-)=C([:30]-)([:330]-)} & \chlewis{0:120.240.}{C}  \chlewis{180:60.290.}{C}\\
+		\hline
+		Ligação \alert{dupla} entre um átomo de oxigênio e carbono & \chemfig{C([:210]-)([:150]-)=O} & \chlewis{0:120.240.}{C} \chlewis{180:90:0:}{O}\\
+		\hline
+		 Ligação \alert{tripla} entre dois átomos de carbono & \chemfig{-C~C-} & \chlewis{0:50.180.}{C} \chlewis{180:130.0.}{C}\\
+		\hline
+		Ligação \alert{tripla} entre um carbono e nitrogênio & \chemfig{-C~N } & \chlewis{0:50.180.}{C} \chlewis{180:130.0:}{N}\\[0pt]
+		\hline
+	\end{talltblr}
+   #+end_export
 
 
 ** Postulados de Kekulé
@@ -78,7 +82,7 @@
    #+NAME:cloroform
 #+CAPTION: Clorofórmio
 #+attr_latex:  :width 0.45\textwidth
-[[../img/cloroformio.png]]
+[[../Fundamentos/cloroformio.png]]
 
 #+LATEX: \end{myrule}
 
@@ -91,16 +95,16 @@
    - O carbono possui a capacidade *ÚNICA* de formas cadeias.
 
    #+begin_export latex
-\begin{table}[h]
-\centering
-\begin{tabular}{cc}
+
+
+\begin{tblr}{cc}
 \chemfig{H-C([:90]-H)([:-90]-H)-C([:-90]-H)=C([:-90]-H)-C([:90]-H)([:-90]-H)-H}& 
 \chemfig{C*6((-H)=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)} \\
 \chemfig{H-[:210]C(-[:120]H)-[:300]C(-[:20]C(-[:320]H)(-[:20]H)-[:80]H)(-[:300]H)-[:210]C(-[:300]H)(-[:210]H)-[:120]C(-[:30]\phantom{C})(-[:210]H)-[:120]H} & 
 %\qquad \qquad \chemfig{>[:330](-[:330]-[:30]-[:330])(<:[:60])-[:210](-[:270])-[:150](-[:90])-[:210]-[:150]}
 \chemfig{H-[:276]C(-[:12]H)-[:180]C(-[:84]H)(-[:168]H)-[:252]C(-[:156]H)(-[:240]H)-[:324]C(-[:228]H)(-[:312]H)-[:36]C(-[:108]\phantom{C})(-[:24]H)-[:300]H}\\
-\end{tabular}
-\end{table}
+\end{tblr}
+
 #+end_export
 
    #+latex: \end{myrule}
@@ -235,47 +239,69 @@
 :BEAMER_opt: allowframebreaks
 :END:
 
-#+ATTR_LATEX: :environment tabular :align |c|c|
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia aberta Normal}  @@                                                                                                                                            | @@latex: \cellcolor{green!20} {\bfseries Cadeia Aberta Ramificada} @@                                                                                                                                                                                                                                |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Carbonos, primários, secundários                                                                                                                                                                              | Ao menos um carbono terciário ou quartenário                                                                                                                                                                                                                                                        |
-|                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                      |
-| @@latex: \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}@@ | @@latex: \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-C(!\nobond\chemabove[1ex]{}{\color{blue}\hspace{.2cm}\vspace{.7cm}4})([:0]-)([:180]-)-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}@@ |
-|                                                                                                                                                                                                               |                                                                                                                                                                                                                                                                                                      |
-| Carbono 1: primário                                                                                                                                                                                           |                                                                                                                                                                                                                                                                                                      |
-| Carbono 2: secundário                                                                                                                                                                                         | Carbono 2: terciário                                                                                                                                                                                                                                                                                 |
-| Carbono 3: primário                                                                                                                                                                                           | Carbonos 1, 3 e 4: primários                                                                                                                                                                                                                                                                         |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#+begin_export latex
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+
+	Cadeia aberta Normal   &  Cadeia Aberta Ramificada \\
+%
+		Carbonos, primários, secundários & Ao menos um carbono terciário ou quartenário\\
+	\chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-} &  \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-C(!\nobond\chemabove[1ex]{}{\color{blue}\hspace{.2cm}\vspace{.7cm}4})([:0]-)([:180]-)-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}\\
+		Carbono 1: primário & \\
+		Carbono 2: secundário & Carbono 2: terciário\\
+		Carbono 3: primário & Carbonos 1, 3 e 4: primários\\
+		\hline
+	\end{tblr}
+#+end_export
 
 
-#+ATTR_LATEX: :environment tabular :align |c|c|
-|--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia aberta homogênea}  @@                                              | @@latex: \cellcolor{green!20} {\bfseries Cadeia aberta heterogênea} @@                                                        |
-|--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------|
-| Apresentam somentes átomos de carbono                                                                              | Ao menos um átomo heteroátomos                                                                                                |
-|                                                                                                                    |                                                                                                                               |
-| @@latex: \chemfig{-C([:-90]-)([:90]-)-C([:90]-)=C([:90]-)([:-90]-)-}@@                                             | @@latex: \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-{\color{blue}O}-C([:90]-)([:-90]-)-} @@                              |
-|                                                                                                                    |                                                                                                                               |
-| @@latex: \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-} @@ | @@latex: \chemfig{-C([:90]-)([:-90]-)-C([:-90]-C([:180]-)([:0]-)-)={\color{blue}N}-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} @@ |
-|                                                                                                                    |                                                                                                                               |
-| Este /oxigênio/ não é heteroátomo                                                                                  |                                                                                                                               |
-|--------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------|
+
+#+begin_export latex
+
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {cc}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+  Cadeia aberta homogênea   &  Cadeia aberta heterogênea \\
+Apresentam somentes átomos de carbono & Ao menos um átomo heteroátomos\\
+ \chemfig{-C([:-90]-)([:90]-)-C([:90]-)=C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-{\color{blue}O}-C([:90]-)([:-90]-)-} \\
+ \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C([:-90]-C([:180]-)([:0]-)-)={\color{blue}N}-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
+Este \emph{oxigênio} não é heteroátomo & \\
+\hline
+\end{tblr}
+
+#+end_export
 
 
-#+ATTR_LATEX: :environment tabular :align |K|K|
-|--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia aberta saturada}  @@                                               | @@latex: \cellcolor{green!20} {\bfseries Cadeia aberta insaturada} @@                                                           |
-|--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------|
-| Apresentam somentes átomos de carbono apresentam ligações simples                                                  | Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação                                                 |
-|                                                                                                                    |                                                                                                                                 |
-| @@latex: \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-}@@                                    | @@latex: \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} @@                                    |
-|                                                                                                                    |                                                                                                                                 |
-| @@latex: \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-} @@ | @@latex: \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} @@ |
-|                                                                                                                    |                                                                                                                                 |
-| O átomo de carbono que apresenta ligação simple é chamado de /carbono saturado/.                                     | A átomo que apresenta ligação dupla ou tripla é chamado de /carbono insaturado./                                                  |
-|                                                                                                                    |                                                                                                                                 |
-|--------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------|
+
+#+begin_export latex
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+Cadeia aberta saturada   &  Cadeia aberta insaturada \\
+Apresentam somentes átomos de carbono apresentam ligações simples & Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação\\
+ \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} \\
+ \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
+O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono saturado}. & A átomo que apresenta ligação dupla ou tripla é chamado de \emph{carbono insaturado.}\\
+\hline
+\end{tblr}
+#+end_export
+
 
 * Cadeias Fechadas
 
@@ -285,52 +311,158 @@
 :END:
 
 
-
-   #+ATTR_LATEX: :environment tabular :align |p{6cm}|p{7cm}|
-|------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia fechada aromática}  @@                                           | @@latex: \cellcolor{green!20} {\bfseries Cadeia fechada alicíclica} @@                                                                                                                                                                                                |
-|------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação                        | Cadeia cíclica que não constitui anel benzênico                                                                                                                                                                                                                            |
-| @@latex: \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} \quad ou  \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}  @@ | @@latex: \chemfig{-[:320]C(-[:220])-[:60]C(-[:120])-[,,,,drn]C(-[:60])-[:300]C(-[:320])(-[:40])-[:240]C(-[:300])-[:180,,,,drn]C(-[:120]\phantom{C})-[:240]} \qquad \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} @@ |
-|                                                                                                                  |                                                                                                                                                                                                                                                                             |
-| Esses clicos recebem o nome de /benzeno/                                                                           |                                                                                                                                                                                                                                                                             |
-|------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-
-
-
-   #+ATTR_LATEX: :environment tabular :align |p{6cm}|p{8cm}|
-|----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia aromática mononuclear}  @@ | @@latex: \cellcolor{green!20} {\bfseries Cadeia aromática polinuclear} @@                                                                                                                                                                                                     |
-|----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cadeia aromática com apenas um núcleo benzênico                            | Cadeia aromática com dois ou mais núcleos benzênicos                                                                                                                                                                                                                          |
-| @@latex: \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}  @@                  | @@latex: \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \quad \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}@@  |
-|                                                                            |                                                                                                                                                                                                                                                                               |
-| Esses clicos recebem o nome de /benzeno/                                     |                                                                                                                                                                                                                                                                               |
-|----------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+#+begin_export latex
+	{\small
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+ Cadeia fechada aromática   &  Cadeia fechada alicíclica \\
+Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação & Cadeia cíclica que não constitui anel benzênico\\
+ \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} & \chemfig{C*6((-)=C(-)-C(-)-C(-)-C(-)=C(-)-)} \\ 
+ \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}   &    \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
+Esses ciclos recebem o nome de \emph{benzeno} & \\
+\hline
+\end{tblr}
+}
+#+end_export
 
 
+#+begin_export latex
+
+	{ \setchemfig{atom style={scale=0.5}}
+	\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		Cadeia aromática mononuclear   &  Cadeia aromática polinuclear \\
+		%\hline 
+		Cadeia aromática com apenas um núcleo benzênico & Cadeia aromática com dois ou mais núcleos benzênicos\\ 
+		\chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}   &  \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \\ & \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}\\
+		%Esses clicos recebem o nome de \emph{benzeno} & \\[0pt]
+		\hline
+	\end{tblr}
+}
+#+end_export
+
+
+#+begin_export latex
+
+	\begin{tblr}
+		[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {Xm{8cm}}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		Cadeia alicíclica homocíclica   &  Cadeia alicíclica heterocíclica \\
+		\hline
+		Cadeia cíclica alicíclica formada apenas por átomos de carbono & Cadeia cíclica alicíclica que apresenta heteroátomo\\[0pt]
+		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}   &   \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
+		& \\
+		\hline
+	\end{tblr}
+#+end_export
  
-   #+ATTR_LATEX: :environment tabular :align |p{6cm}|p{8cm}|
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia alicíclica homocíclica}  @@                                                                                                                                                              | @@latex: \cellcolor{green!20} {\bfseries Cadeia alicíclica heterocíclica} @@                                                                                                                                                       |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cadeia cíclica alicíclica formada apenas por átomos de carbono                                                                                                                                                                           | Cadeia cíclica alicíclica que apresenta heteroátomo                                                                                                                                                                                |
-| @@latex:  \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}  @@ | @@latex:  \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} @@ |
-|                                                                                                                                                                                                                                          |                                                                                                                                                                                                                                    |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+#+begin_export latex
+ \setchemfig{atom style={scale=0.7}}
+	\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+%		\hline
+		Cadeia alicíclica saturada & Cadeia alicíclica insaturada\\
+		%%% 
+		Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas\\
+		\chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})}  & 
+		\chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
+		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} &  \chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} \\
+		\hline
+	\end{tblr}
+#+end_export
 
 
-   #+ATTR_LATEX: :environment tabular :align |p{6cm}|p{8cm}|
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| @@latex: \cellcolor{green!20} {\bfseries Cadeia alicíclica saturada}  @@                                                                                                                                                                              | @@latex: \cellcolor{green!20} {\bfseries Cadeia alicíclica insaturada} @@                                                                                                                                                                                                           |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cadeia cíclica alicíclica formada apenas por ligações simples                                                                                                                                                                                         | Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas                                                                                                                                                                                                             |
-| @@latex: \chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})} \quad \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} @@ | @@latex: \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \quad \chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} @@ |
-|                                                                                                                                                                                                                                                       |                                                                                                                                                                                                                                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+* Exercícios
+
+** Exercícios
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
 
 
+#+begin_question
+*(MACKENZIE-SP)* O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é :
 
+#+begin_export latex
+\chemfig{Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90]%
+(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)%
+-[:90]=^[:150](-[:210])}
+#+end_export
+
+
+#+attr_latex: :options (2)
+#+begin_choice
+\choice três carbonos terciários.
+\choice somente carbonos secundários.
+\choice um carbono quaternário.
+\choice somente carbonos primários.
+\choice somente um carbono terciário
+#+end_choice
+#+end_question
+\pagebreak
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+\small
+Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas:
+
+a) três carbonos terciários:
+
+
+#+begin_export latex
+\begin{tikzpicture}
+			
+		
+	\node[] at (0,0){	\chemfig{Cl-[:30]C=^[:330]\mcfbelow{C}{H}-[:30,,,1]CH=^[:90,,1]C(%
+			-[:150]\mcfabove{C}{H}=^[:210,,,2]HC-[:270,,2]\phantom{C})%
+			-[:30]\mcfbelow{C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C%
+			=^[:270,,,2]HC-[:330,,2]\mcfbelow{C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH%
+			=^[:150,,1]\mcfabove{C}{H}(-[:210]\phantom{C})}
+		};
+	\draw[red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm);
+	\end{tikzpicture}	
+#+end_export
+
+Apresenta *3 carbono terciários*
+
+Está correto, apresenta três C terciários.
+
+b) somente carbonos secundários: não, já vimos que existem C terciários na molécula.
+
+c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos.
+
+d) somente carbonos primários: não, justificativa vide alternativa A.
+
+e) somente um carbono terciário: não, são três.
+
+Alternativa correta: *A*.
+
+
+#+end_answer
 
 
 ** Fim da Aula
