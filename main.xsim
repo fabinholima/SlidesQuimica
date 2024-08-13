@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{test-1=={\small Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas: \par a) três carbonos terciários: \par \par \begin {tikzpicture} \par \par \node [] at (0,0){ \chemfig {Cl-[:30]C=^[:330]\mcfbelow {C}{H}-[:30,,,1]CH=^[:90,,1]C(-[:150]\mcfabove {C}{H}=^[:210,,,2]HC-[:270,,2]\phantom {C})-[:30]\mcfbelow {C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C=^[:270,,,2]HC-[:330,,2]\mcfbelow {C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH=^[:150,,1]\mcfabove {C}{H}(-[:210]\phantom {C})} }; \draw [red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm); \end {tikzpicture} \par Apresenta \alert {3 carbono terciários} \par Está correto, apresenta três C terciários. \par b) somente carbonos secundários: não, já vimos que existem C terciários na molécula. \par c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos. \par d) somente carbonos primários: não, justificativa vide alternativa A. \par e) somente um carbono terciário: não, são três. \par Alternativa correta: \alert {A}.}}
-\XSIM{exercise-body}{test-1=={\alert {(MACKENZIE-SP)} O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é : \par \chemfig {Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90](-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)-[:90]=^[:150](-[:210])} \par \par \begin {choice}(2) \choice três carbonos terciários. \choice somente carbonos secundários. \choice um carbono quaternário. \choice somente carbonos primários. \choice somente um carbono terciário \end {choice}}}
+\XSIM{solution-body}{}
+\XSIM{exercise-body}{}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{1}
+\XSIM{order}{}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{test-1=={true}}
+\XSIM{used}{}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{test-1=={true}}
-\XSIM{total-number}{1}
+\XSIM{printed}{}
+\XSIM{total-number}{0}
 \XSIM{exercise}{0}
-\XSIM{test}{1}
+\XSIM{test}{0}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{1=={test}}
-\XSIM{collections}{test-1=={all exercises}}
-\XSIM{collection:all exercises}{test-1}
+\XSIM{idtypes}{}
+\XSIM{collections}{}
+\XSIM{collection:all exercises}{}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{1}
-\XSIM{id}{test-1=={1}}
-\XSIM{ID}{test-1=={1}}
-\XSIM{counter}{test-1=={1}}
-\XSIM{counter-value}{test-1=={1}}
+\setcounter{totaltestinall exercises}{0}
+\XSIM{id}{}
+\XSIM{ID}{}
+\XSIM{counter}{}
+\XSIM{counter-value}{}
 \XSIM{solution}{}
-\XSIM{section-value}{test-1=={6}}
-\XSIM{section}{test-1=={6}}
-\XSIM{sectioning}{test-1=={{0}{6}{0}{0}{0}}}
+\XSIM{section-value}{}
+\XSIM{section}{}
+\XSIM{sectioning}{}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{test-1=={25}}
-\XSIM{page}{test-1=={25}}
+\XSIM{page-value}{}
+\XSIM{page}{}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

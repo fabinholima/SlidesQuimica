@@ -61,7 +61,7 @@
 #+LATEX_HEADER:  solution-env = answer ,
 #+LATEX_HEADER:  exercise-template = custom ,
 #+LATEX_HEADER:  solution-template = custom2 ,
-#+LATEX_HEADER:  exercise-name = Exemplo. ,
+#+LATEX_HEADER:  exercise-name = Exemplo ,
 #+LATEX_HEADER:  exercises-name = Exemplo ,
 #+LATEX_HEADER:  solution-name = Solução ,
 #+LATEX_HEADER:  solutions-name = Sol. ,
@@ -74,7 +74,7 @@
 #+LATEX_HEADER:  exercise/within = section,
 #+LATEX_HEADER:  exercise/the-counter =  \arabic{exercise}, 
 #+LATEX_HEADER: %%solution-name = solution,  % used with headings=true
-#+LATEX_HEADER: solution/print=false,
+#+LATEX_HEADER: solution/print=true,
 #+LATEX_HEADER: print-collection/print=both,
 #+LATEX_HEADER: }
 

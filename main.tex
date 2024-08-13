@@ -1,4 +1,4 @@
-% Created 2024-08-04 Sun 17:41
+% Created 2024-08-09 Fri 10:39
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
                 
@@ -52,7 +52,7 @@ exercise-env = question ,
 solution-env = answer ,
 exercise-template = custom ,
 solution-template = custom2 ,
-exercise-name = Exemplo. ,
+exercise-name = Exemplo ,
 exercises-name = Exemplo ,
 solution-name = Solução ,
 solutions-name = Sol. ,
@@ -63,7 +63,7 @@ solution-heading = \textbf
 exercise/within = section,
 exercise/the-counter =  \arabic{exercise},
 %%solution-name = solution,  % used with headings=true
-solution/print=false,
+solution/print=true,
 print-collection/print=both,
 }
 \NewTasksEnvironment[label = (\emph{\alph*}),
@@ -156,17 +156,20 @@ title=#2,#1}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{Hidrocarbonetos}
+\title{Hidrocarbonetos II}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={Hidrocarbonetos},
+ pdftitle={Hidrocarbonetos II},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -174,458 +177,671 @@ title=#2,#1}
 
 
 
-\section{Introdução}
-\label{sec:org3ab3dc5}
+\section{Hidrocarbonetos Ramificados}
+\label{sec:org7a86015}
 
-\begin{frame}[label={sec:org93852bd}]{Breve Histórico}
-\begin{mybox}{Precusores}
-
-
+\begin{frame}[label={sec:orgea5b104}]{Hidrocarbonetos Ramificados}
+\begin{myex}{Ramificação}
 \begin{itemize}
-\item 1807 - Jöns J. Berzelius – Teoria da Força Vital.
-\item 1828 – primeiro composto orgânico sintetizado em laboratório – Uréia
-\end{itemize}
-\begin{center}
-\schemestart
-\chemname{\chemfig{NH_4CNO}}{Cianato \\ de amônio}
-\arrow{->[\(\Delta\)][]}
-\chemname{\chemfig{O=C([:30]-NH_2)([:330]-NH_2)}}{Ureia}
-\schemestop
-\end{center}
-
-\begin{itemize}
-\item Tudo que tem “vida” possui compostos orgânicos,mas nem todos compostos orgânicos possuem vida.
-\item 1851 à 1861 – Friederich A. Kekulé
-\begin{itemize}
-\item Formulou três postulados que vigoram até hoje.
-\end{itemize}
-\end{itemize}
-\end{mybox}
-\end{frame}
-
-
-\begin{frame}[label={sec:org3446d40}]{Postulados de Kekulé}
-\begin{myrule}{Postulado 1}
-
-\begin{itemize}
-\item Os átomos de carbono são tetravalentes.
-\end{itemize}
-\begin{center}
-\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
-\end{center}
-
-\begin{itemize}
-\item Ligações Covalentes
+\item A expressão \alert{grupos substituintes orgânicos} ou, simplesmente \alert{grupos orgânicos} é usada para designar qualquer grupo de átomos que apareça com freqüência nas moléculas orgânicas.
 \end{itemize}
 
 \begin{center}
-\chemfig{H-C~C-C([:90]-H)([:-90]-H)-H}
-\end{center}
-
-\end{myrule}
-\end{frame}
-
-
-\begin{frame}[label={sec:orgc4f55f0}]{Ligações Múltiplas}
-
-\begin{talltblr}[
-	 theme= fancy,
-	 caption={Composição do Petróleo},
-	 ]{
-	 colspec = {Xcc}, colsep = 2mm, hlines = {2pt, white},
-	 %row{odd} = {brown8}, row{even} = {gray8},
-	 row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-	 }
-	 \hline
-	 Tipo de Ligação & Exemplo & Estrutura de Lewis\\[0pt]
-	 \hline
-	 Ligação \alert{dupla} entre dois átomos de carbono & \chemfig{C([:210]-)([:150]-)=C([:30]-)([:330]-)} & \chlewis{0:120.240.}{C}  \chlewis{180:60.290.}{C}\\
-	 \hline
-	 Ligação \alert{dupla} entre um átomo de oxigênio e carbono & \chemfig{C([:210]-)([:150]-)=O} & \chlewis{0:120.240.}{C} \chlewis{180:90:0:}{O}\\
-	 \hline
-	  Ligação \alert{tripla} entre dois átomos de carbono & \chemfig{-C~C-} & \chlewis{0:50.180.}{C} \chlewis{180:130.0.}{C}\\
-	 \hline
-	 Ligação \alert{tripla} entre um carbono e nitrogênio & \chemfig{-C~N } & \chlewis{0:50.180.}{C} \chlewis{180:130.0:}{N}\\[0pt]
-	 \hline
- \end{talltblr}
-\end{frame}
-
-
-\begin{frame}[label={sec:org0492536}]{Postulados de Kekulé}
-\begin{myrule}{Postulado 2}
-
-
-\begin{itemize}
-\item As quatro valências do carbono são equivalentes.
-\end{itemize}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.45\textwidth]{QO/Fundamentos/cloroformio.png}
-\caption{\label{fig:org3d0a65c}Clorofórmio}
-\end{figure}
-
-\end{myrule}
-\end{frame}
-
-
-\begin{frame}[label={sec:org5a39d70}]{Postulados de Kekulé}
-\begin{myrule}{3º Postulado}
-
-\begin{itemize}
-\item O carbono possui a capacidade \alert{ÚNICA} de formas cadeias.
-\end{itemize}
-
-
-
-\begin{tblr}{cc}
-\chemfig{H-C([:90]-H)([:-90]-H)-C([:-90]-H)=C([:-90]-H)-C([:90]-H)([:-90]-H)-H}& 
-\chemfig{C*6((-H)=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)} \\
-\chemfig{H-[:210]C(-[:120]H)-[:300]C(-[:20]C(-[:320]H)(-[:20]H)-[:80]H)(-[:300]H)-[:210]C(-[:300]H)(-[:210]H)-[:120]C(-[:30]\phantom{C})(-[:210]H)-[:120]H} & 
-%\qquad \qquad \chemfig{>[:330](-[:330]-[:30]-[:330])(<:[:60])-[:210](-[:270])-[:150](-[:90])-[:210]-[:150]}
-\chemfig{H-[:276]C(-[:12]H)-[:180]C(-[:84]H)(-[:168]H)-[:252]C(-[:156]H)(-[:240]H)-[:324]C(-[:228]H)(-[:312]H)-[:36]C(-[:108]\phantom{C})(-[:24]H)-[:300]H}\\
-\end{tblr}
-
-\end{myrule}
-\end{frame}
-
-
-\section{Carbonos}
-\label{sec:orgcf90f7e}
-
-\begin{frame}[label={sec:org3ee99aa}]{Classificação dos carbonos}
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-\cellcolor{green!20} {\bfseries Carbono}  & \cellcolor{green!20} {\bfseries Definição} \\[0pt]
-\hline
-Primário & ligado diretamente, \alert{no máximo}, a \alert{1} outro carbono\\[0pt]
-\hline
-Secundário & ligado diretamente a \alert{2} outros carbonos\\[0pt]
-\hline
-Terciário & ligado diretamente  a \alert{3} outros carbonos\\[0pt]
-\hline
-Quartenário & ligado diretamente a \alert{4} outros carbonos\\[0pt]
-\hline
+\begin{tabular}{lll}
+\chemfig{-CH_3} &  & \chemfig{-CH_2-CH_3}\\[0pt]
+ &  & \\[0pt]
+\quad metil &  & \qquad    etil\\[0pt]
 \end{tabular}
 \end{center}
 
 
-
-\begin{columns}
-\begin{column}{0.7\textwidth}
-\chemfig[scale=2.5]{H_3@{A}C-@{L}C([:-90]-@{B}CH_3)=@{F}CH-@{G}C~@{H}C-@{N}C([:90]-@{D}CH_3)([:-90]-@{K}CH_2(-[:270,,1,1]@{M}CH-[:300,,1,1]@{J}CH_2-[:180,,1,2]H_2@{I}C(-[:60,,2]\phantom{C})))-@{E}CH_3}
-\chemmove{
-\node[bal,fit=(A)]{};
-\node[bal,fit=(B)]{};
-\node[bal,fit=(D)]{};
-\node[bal,fit=(E)]{};
-\node[rect,fit=(F)]{};
-\node[rect,fit=(G)]{};
-\node[rect,fit=(H)]{};
-\node[rect,fit=(I)]{};
-\node[rect,fit=(J)]{};
-\node[rect,fit=(K)]{};
-\node[bal2,fit=(L)]{};
-\node[bal2,fit=(M)]{};
-\node[bal3,fit=(N)]{};
-}
-\end{column}
-\begin{column}{0.3\textwidth}  %%<--- here
-      carbonos \chemfig{@{A}C} = primários\\
-      carbonos \chemfig{@{B}C} = secundários\\
-      carbonos \chemfig{@{D}C} = terciários\\
-      carbonos \chemfig{@{E}C} = quartenários
-     \chemmove{
-      \node[bal,fit=(A)]{};
-      \node[rect,fit=(B)]{};
-      \node[bal2,fit=(D)]{};
-      \node[bal3,fit=(E)]{};
-      }
-\end{column}
-\end{columns}
+\end{myex}
 \end{frame}
 
 
-\section{Cadeias}
-\label{sec:org056cea9}
-
-\begin{frame}[label={sec:org3426f02}]{Cadeias Carbônicas}
-\begin{myrule}{Heteroátomo}
-
-\begin{itemize}
-\item Estrutura formada por todos os átomos de carbono e os heteroátomos.
-\item Heteroátomo é um átomo diferente do carbono e do hidrogênio  posicionado
-entre  dois  carbonos  na cadeia.
-\end{itemize}
-
-\chemname{\chemfig{CH_3-CH_2-{\color{red}O}-CH_2-CH_3}}{Oxigênio é heteroátomo}
-
-\vspace{.5cm}\chemname{\chemfig{CH_3-CH_2-CH_2-CH_2-{\color{red}O}H}}{Oxigênio NÃO é heteroátomo}
-
-\end{myrule}
+\begin{frame}[allowframebreaks]{Grupos substituintes}
+\begin{longtblr}[theme=fancy,
+    caption = {Grupos substituintes orgânicos formados por carbono e hidrogênio},
+    %note{a} = {It is the first footnote.},
+    ]{
+        colspec = {c c c c }, colsep = 2mm, hlines = {2pt, white},
+        %row{odd} = {azure8}, row{even} = {gray8},
+        row{1,3,5,7,10,13,16} = {1.5em,azure3,fg=white,font=\bfseries\sffamily},
+        %row{12} = {bg=gray8, font=\bfseries},
+        %rowsep=.2cm,        
+    }
+ \hline
+     % Radical & Estrutura & Radical & Estrutura   \\
+    \SetCell[c=4]{m,8cm} 1 carbono && \\ 
+    & metil &  & \chemfig{-CH_3}  \\ \hline
+    \SetCell[c=4]{m,8cm} 2 carbonos && \\   
+    & etil & \chemfig{-CH_2-CH_3} \\  \hline 
+    \SetCell[c=4]{m,8cm} 3 carbonos &&  \\ 
+    propril &  \chemfig{-CH_2-CH_2-CH_3}  & isopropil &  \chemfig{-CH([:-90]-CH_3)-CH_3}  \\ \hline 
+    \pagebreak
+     \SetCell[c=4]{m,8cm} 4 carbonos && \\ %\hline
+     %\pagebreak 
+    butil &  \chemfig{-CH_2|{(CH_2)_2}CH_3}  & isobutil &  \chemfig{-CH_2-CH([:-90]-CH_3)-CH_3} \\ \hline 
+    \emph{s}-butil (\emph{sec}-butil) &  \chemfig{-CH([:-90]-CH_3)-CH_2CH_3} & \emph{t}-butil (\emph{terc}-butil) & \chemfig{-C([:90]-CH_3)([:-90]-CH_3)-CH_3}
+      \\ \hline 
+     \pagebreak
+    \SetCell[c=4]{m,8cm} 5 carbonos &&& \\
+     pentil &  \chemfig{-CH_2|{(CH_2)_3}CH_3} & isopentil &  \chemfig{-CH_2-CH_2-CH([:-90]-CH_3)-CH_3} \\  \hline
+     neopentil & \chemfig{-CH_2-C([:-90]-CH_3)([:90]-CH_3)-CH_3}  & \emph{t}-pentil (\emph{terc}-pentil) & \chemfig{-C([:90]-CH_3)([:-90]-CH_3)-CH_2-CH_3}\\  \hline 
+      \pagebreak
+     \SetCell[c=4,]{m,8cm}Outros grupos & && \\
+      vinil ou etenil & \chemfig{-CH=CH_2}   & isopropenil & \chemfig{-C([:-90]-CH_3)=CH_2}\\ \hline
+      propenil & \chemfig{-CH=CH-CH_3}  & ali ou propen-2-il & \chemfig{-CH_2-CH=CH_2}\\ \hline 
+      \pagebreak
+   \SetCell[c=4,]{m,10cm} Aromáticos &&& \\
+    fenil & \chemfig{-(*6(-=-=-=))}  & naft-1-il & \chemfig{*6(-=(*6(-=-=(-)--))-=-=)}\\ \hline
+    benzil & \chemfig{-CH_2-(*6(-=-=-=))} & naft-2-il & \chemfig{*6(-=(*6(-=-(-)=--))-=-=)}\\
+      \hline 
+\end{longtblr}
 \end{frame}
 
-
-
-
-\begin{frame}[allowframebreaks]{Classificação das Cadeias Carbônicas}
-\begin{myrule}{Cadeia aberta}
-
+\begin{frame}[allowframebreaks]{Hidrocarbonetos Ramificados - Cadeia Principal}
+\begin{mybox}{Definição}
 \begin{itemize}
-\item \emph{Cadeia aberta ou aciclíca:} Os átomos de carbono se ligam entre si de modo a terem os extremos livres
+\item Cadeia principal é a maior seqüência de carbonosque contenha as ligações duplas
+e triplas (se houver). Em caso de duas sequencias igualmente longas, é a mais
+ramificada. Os carbonos que não fazem parte da cadeia principal pertencem às ramificações.
 \end{itemize}
 
-\begin{center}
+\end{mybox}
+
+
+
+%%% 1 exemplo
+
+\begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{1\textsuperscript{0} Exemplo}
+ A cadeia principal é a maior sequencia de carbonos
+
+\vspace{.5cm}
 \schemestart
-\chemfig{-@{b}{C}([:90]-)([:-90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-@{a}{C}([:90]-)([:-90]-)-}
+\chemfig{H_3C-CH_2-CH([:-90]-CH_3)-CH_2-CH_2-CH_3}
+\arrow(.mid east--.mid west){->}[,1,thick]
+\chemfig{@{A}C-C-C([:-90]-@{C}C)-C-C-C{}@{B}}
+\chemmove{
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(C)]{}; 
+  \node[text width=3cm,blue] at (-1,.5) {Cadeia Principal};
+  \node[text width=3cm,red] at (-2,-1.2) {Ramificação};
+  }  
+\schemestop
+\end{bclogo}
+
+%%% 2 exemplo
+
+\begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{2\textsuperscript{0} Exemplo}
+A cadeia principal nem sempre está na horizontal 
+
+\vspace{.5cm}
+\schemestart
+\chemfig{H_3C-CH([:-90]-CH_2-CH_3)-CH([:-90]-CH_3)-CH([:90]-CH_2-CH_2([:0]-CH_3))-CH_2-CH_3}
+\arrow(.mid east--.mid west){->}[,1,thick]
+\chemfig{@{J}C-@{A}C([:-90]-C-C@{B})-C([:-90]-@{X}C)-@{Z}C([:90]-C-@{E}C([:0]-C@{H}))-@{Q}C-C@{R}}
+\chemmove{
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (Z)]{};
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(Z) (E)]{};
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(E) (H)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(X)]{}; 
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(J)]{}; 
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(Q) (R)]{}; 
+  \node[text width=3cm,blue] at (0.1,1) {Cadeia Principal};
+  \node[text width=3cm,red] at (-1,-1.2) {Ramificação};
+  }  
 \schemestop 
-\chemmove{\draw[<-,red,shorten <=3.5pt] (b) (-0.5,-0.2)--++(1,-0.4) node[below] {extremo livre} ;
-\draw[->,red,shorten <=3.5pt] (a) (-4.7,-.9)--++(1.5,0.7) node[anchor=35,inner sep=23] {extremo livre} ;
+
+
+\end{bclogo}
+
+%%% 3 exemplo
+
+ \begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{3\textsuperscript{0} Exemplo}
+  No caso de duas ou mais sequências igualmente longas, a cadeia principal é a mais ramificada
+
+  \vspace{.3cm}
+  \schemestart
+  \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH([:-90]-CH([:0]-CH_3)-CH_3)-CH_2-CH_3}
+  \hspace{2cm}
+  \chemfig{@{A}C-C([:90]-@{G}C)([:-90]-@{H}C)-@{B}C@{X}([:-90]-C([:0]-@{F}C)-@{Z}C)-@{Q}C-C@{R}}
+  \chemmove{
+  %\node[text width=3cm,blue] at (2.0 ,0) (A) {buta-1,2-dieno};
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+  \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(X) (Z)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(Q) (R)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(F)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(G)]{};
+  \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(H)]{};
+  \node[text width=3cm,blue] at (-.5,0.5) {\scriptsize cadeia principal};
+  \node[text width=3cm,red] at (1.8,-.1) {\scriptsize 4  Ramificações};
+  }
+  \schemestop
+  
+  \vspace{.3cm}
+  
+   \schemestart
+   \chemfig{@{A}C-C([:90]-@{F}C)([:-90]-@{G}C)-C([:-90]-@{X}C([:0]-C@{W})-C@{Y})-C-@{B}C}
+   \chemmove{
+   \node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(A) (B)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(X) (Y)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(X) (W)]{}; 
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(F)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(G)]{};
+   \node[text width=3.5cm,black] at (0,.5) {\scriptsize Não é cadeia principal};
+   \node[text width=3cm,red] at (-1,-2) {\scriptsize 3 Ramificações};
+    }
+   \schemestop
+   %%%
+   \hspace{3.5cm}
+   \schemestart
+   \chemfig{@{D}C-@{A}C([:90]-@{E}C)([:-90]-C@{B})-@{J}C([:-90]-C([:0]-@{F}C)-C@{M})-C-C@{K}}
+   \chemmove{
+   \node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(J) (K)]{};
+   \node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(J) (M)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(F)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(A) (B)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(A) (D)]{};
+   \node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(A) (E)]{};
+   \node[text width=4.5cm,black] at (2.5,0) {\scriptsize Não é a cadeia principal};
+   \node[text width=3cm,red] at (-3,-0.5) {\scriptsize 2 Ramificações};  
+   }
+   \schemestop 
+ 
+\end{bclogo}
+
+%%% 4 exemplo
+ 
+
+\begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{4\textsuperscript{0} Exemplo}
+\begin{itemize}
+\item Podem existir duas ou mais cadeias equivalentes, neste caso:
+\end{itemize}
+\vspace{.3cm}
+\schemestart
+\chemfig{H_3C-CH([:-90]-CH_3)-CH_2-CH_3}
+\arrow(nph.mid east--.south west){->}[45]
+\chemfig{@{A}C-C([:-90]-@{W}C)-C-C@{B}}
+\chemmove{
+\node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(W)]{}; 
+\node[text width=3cm,blue] at (-.5,.5) {\small cadeia principal};
+\node[text width=3cm,red] at (0.3,-.7) {\small ramificação};
 }
+\arrow(@nph.mid east--.north west){->}[-45]
+\chemfig{@{Z}C-@{D}C([:-90]-C@{F})-C-C@{E}}
+\chemmove{
+\node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(D) (E)]{};
+\node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(D) (F)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(Z)]{};
+\node[text width=3cm,blue] at (-.5,.5) {\small cadeia principal};
+\node[text width=3cm,red] at (-2,-.5) {\small ramificação};
+%  
+}
+\schemestop
+\end{bclogo}
+
+
+
+%%% 5 exemplo
+
+\begin{bclogo}[logo=\bcinfo, noborder=true, barre=none]{5\textsuperscript{0} Exemplo}
+
+\schemestart
+\chemfig{H_2C=CH-CH([:-90]-CH_2-CH_2-CH_3)-CH([:-90]-CH_3)-CH_2-CH_3}
+\arrow(.mid east--.mid west){->}[,1,thick]
+\chemfig{@{A}C=C-C([:-90]-@{G}C-C-C@{H})-C([:-90]-@{F}C)-C-C@{B}}
+\chemmove{
+\node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(F)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(G) (H)]{};
+\node[text width=3.0cm,blue] at (-1.0,0.5) {cadeia principal};      
+}
+\schemestop 
+
+\vspace{1.2cm}
+
+\schemestart
+\chemfig{C=C-@{B}C([:-90]-C-C-C@{E})-C([:-90]-C)-C-C@{A}}
+\chemmove{
+\node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(A) (B)]{};
+\node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(B) (E)]{};
+\node[text width=5.0cm,black] at (-2,-2.5) {\scriptsize Não é a cadeia principal pois, apesar de ser a mais longa não contém a \emph{dupla}};
+}
+\schemestop 
+\hspace{3.5cm}
+\schemestart
+\chemfig{@{A}C=C-@{B}C([:-90]-C-C-C@{E})-@{G}C([:-90]-C@{H})-C-C@{J}}
+\chemmove{
+\node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(A) (B)]{};
+\node[inner sep=2pt,fill=black,fill opacity=0.2,fit=(B) (E)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(G) (H)]{};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(G) (J)]{};      
+\node[text width=5.0cm,black] at (-5,-.5) {\scriptsize Não é a cadeia principal pois, apesar de incluir a \emph{dupla} e ter o mesmo comprimento da cadeia principal, é menos ramificada};
+\node[text width=3.0cm,red] at (0.5,-.5) {1 ramificação};
+}
+\schemestop 
+
+\end{bclogo}
+\end{frame}
+
+
+\section{Nomeclatura}
+\label{sec:org9dfaf0d}
+
+\begin{frame}[label={sec:org823e319}]{Nomenclatura}
+\begin{myrule}{Regras}
+
+\begin{itemize}
+\item Localize a cadeia principal.
+
+\item Numere os carbonos da cadeia principal. Para decidir por qual extremidade deve começar a numeração, baseia-se nos seguintes critérios:
+
+\item Se a cadeia for \alert{insaturada}, comece pela extremidade que apresente \alert{insaturação} mais próxima a ela.
+
+\item Se a cadeia for \alert{saturada}, comece pela extremidade que tenha uma \alert{ramificação} mais próxima a ela.
+
+\item Escreva o número de localização da ramificação e, a seguir, separando com um hífen, o nome do grupo orgânico que corresponde à ramificação.
+
+\item Finalmente, escreva o nome do hidrocarboneto correspondente à cadeia principal, separando-o do nome da ramificação por um hífen
+\end{itemize}
+
+\end{myrule}
+\end{frame}
+
+
+\section{Nomenclatura Exemplos}
+\label{sec:org80551ef}
+
+\begin{frame}[allowframebreaks]{Nomenclatura Exemplos}
+%% 1
+\begin{myrule}{Exemplo 1}
 \vspace{1cm}
-%
-\end{center}
+\schemestart
+\chemname{\chemfig{H_3\mcfabove{C}{\mcfatomno{5}}-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{3}}H_2-\mcfabove{C}{\mcfatomno{2}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{1}}H_3}}{\alert{ 2-metil-pentano}}
+\chemmove{
+\node[text width=6cm,black] at (4,-1) {4-metil-pentano está incorreto};  
+\node[ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {Extremidade mais próxima da ramificação};
+    }
+\schemestop
+\end{myrule}
 
+%%% 2
+\begin{myrule}{Exemplo 2}
+\vspace{1cm}
+\schemestart
+\chemname{
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H_2-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_2-\mcfabove{C}{\mcfatomno{6}}H_3}}{\alert{3-metil-hexano}}
+\chemmove{
+\node[text width=6cm,black] at (4,-1) {4-metil-hexano está incorreto};  
+\node[ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {Extremidade mais próxima da ramificação};
+    }
+\schemestop
+\end{myrule}
+
+%% 3
+\begin{myrule}{Exemplo 3}
+\vspace{1cm}
+\schemestart
+\chemname{
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H_2-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_3}}{\alert{3-metil-pentano}}
+\chemmove{
+%\node[text width=6cm,black] at (4,-1) {4-metil-hexano está incorreto};  
+\node[ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {A numeração pode ser em qualquer sentido};
+    }
+\schemestop
+\end{myrule}
+%% 4
+\begin{myrule}{Exemplo 4}
+Se houver mais de um substituinte, deve-se numerar a cadeia principal começando pela extremidade da qual haja uma ramificação mais próxima.
+
+\vspace{1.5cm}
+\schemestart
+\chemname{
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_3}}{\alert{2,3-dimetil-pentano}}
+\chemmove{
+\node[text width=5cm,ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {Segue e menor numeração para o radicais usar vírgula para ponto e hífen para os nomes};
+    }
+\schemestop
+\end{myrule}
+
+%%% 5
+\begin{myrule}{Exemplo 5}
+\vspace{1cm}
+\schemestart
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{\hspace{.2cm}2}}([:-90]-CH_3)([:90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H_2-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_3}
+\chemmove{
+ \node[text width=3cm,black] at (3.4 ,0) (A) {\alert{2,2-dimetil-pentano}};
+ \draw[|->] (2.1,-.1)--(2.1,-0.8); % Line 1
+\node[text width=6cm,black] at (4,-1.3) {Note a repetição da númeração \\  use \emph{di} para indicar dois radicais idênticos}; 
+    }
+\schemestop
+\vspace{1cm}
+\end{myrule}
+
+%%% 6
+\begin{myrule}{Exemplo 6}
+\vspace{1cm}
+\schemestart
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{\hspace{.2cm}2}}([:-90]-CH_3)([:90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_3}
+\chemmove{
+ \node[text width=7cm,black] at (4.4 ,0) (A) {\alert{2,2,3-dimetil-pentano}};
+ \node[text width=7cm,black] at (4.4 ,-1) (A) {(3,3,4-trimetil-pentano está incorreto)};
+}
+\schemestop
+\end{myrule}
+%%%%% 7 
+\begin{myrule}{Exemplo 7}
+\vspace{1cm}
+\schemestart
+\chemfig{(!\nobond\chemabove[1.2ex]{}{1}{})(!\nobond\chemabove[3.9ex]{}{4}{})CH_3-(!\nobond\chemabove[1.2ex]{}{2}{})(!\nobond\chemabove[3.9ex]{}{3}{})CH([:-90]-CH_3)-(!\nobond\chemabove[1.2ex]{}{3}{})(!\nobond\chemabove[3.9ex]{}{2}{})CH([:-90]-CH_3)-(!\nobond\chemabove[1.2ex]{}{4}{})(!\nobond\chemabove[3.9ex]{}{1}{})CH_3}
+\chemmove{
+\node[text width=3cm,black] at (-1 ,-1.5) (A) {\alert{2,3-dimetil-butano}};
+\node[text width=5cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {Ambas as numerações são equivalentes};
+    }
+\schemestop
+\vspace{1.4cm}
+\end{myrule}
+
+%%%% 8 
+
+\begin{myrule}{Exemplo 8}
+
+\vspace{1cm}
+\schemestart
+\chemfig{H_3C-CH([:-90]-CH_2-CH_3)-CH_2-CH([:90]-CH_2-CH_2-CH_3)-CH_2-CH_3}
+\chemmove{
+%% Enumerate cadeia
+\node[text width=1cm,blue] at (-4.7 ,-1.4) (A) {\scriptsize 1}; % C1
+\node[text width=1cm,blue] at (-4.7 ,-.6) (A) {\scriptsize 2}; % C2
+\node[text width=1cm,blue] at (-4.3 ,0.4) (A) {\scriptsize 3}; % C3
+\node[text width=1cm,blue] at (-3.3 ,0.4) (A) {\scriptsize 4}; % C4
+\node[text width=1cm,blue] at (-2.5 ,0.3) (A) {\scriptsize 5}; % C5
+\node[text width=1cm,blue] at (-2.5 ,0.9) (A) {\scriptsize 6}; % C6
+\node[text width=1cm,blue] at (-2.5 ,1.5) (A) {\scriptsize 7}; % C7
+\node[text width=1cm,blue] at (-2.5 ,2.3) (A) {\scriptsize 8}; % C8
+%%% Fim numera cadeia
+\node[text width=9cm,black] at (5.6 ,1) (A) {\alert{5-{\bfseries{\color{black}{e}}}til-3-{\bfseries{\color{black}{m}}}etil-octano}};
+%% Seta Nome
+\draw[<-] (1.5, 0.8)--(1.5,0)--(4,0); % seta do e
+\draw[<-] (2.4, 0.8)--(2.4,0); % seta do m
+\node[text width=3cm,black] at (5.8 ,-0) {ordem alfabética: ``e'' vem antes de ``m''};
+\node[text width=3cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-4.5,-1)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]0,-3) {\small Extremidade que tem a ramificação mais próxima};
+    }
+\schemestop
+\end{myrule}
+
+%%%% 9
+\begin{myrule}{Exemplo 9}
+\vspace{1cm}
+\schemestart
+\chemfig{H_3C-CH([:-90]-CH_2-CH_3)-CH([:90]-CH_3)-C([:-90]-CH([:0]-CH_3)-CH_3)([:90]-CH_2-CH_2-CH_3)-CH_2-CH_3}
+\chemmove{
+%% Enumerate cadeia
+\node[text width=1cm,blue] at (-4.5 ,-1.4) (A) {\scriptsize 1}; % C1
+\node[text width=1cm,blue] at (-4.5 ,-.6) (A) {\scriptsize 2}; % C2
+\node[text width=1cm,blue] at (-4.3 ,0.4) (A) {\scriptsize 3}; % C3
+\node[text width=1cm,blue] at (-3.3 ,0.4) (A) {\scriptsize 4}; % C4
+\node[text width=1cm,blue] at (-2.5 ,0.3) (A) {\scriptsize 5}; % C5
+\node[text width=1cm,blue] at (-2.5 ,0.9) (A) {\scriptsize 6}; % C6
+\node[text width=1cm,blue] at (-2.5 ,1.5) (A) {\scriptsize 7}; % C7
+\node[text width=1cm,blue] at (-2.5 ,2.3) (A) {\scriptsize 8}; % C8
+%%% Fim numera cadeia
+\node[text width=9cm,black] at (5.6 ,1) (A) {\alert{5-{\bfseries{\color{black}{e}}}til-5-{\bfseries{\color{black}{i}}}spopropil-3,4-di{\bfseries{\color{black}{m}}}etil-octano}};
+%% Seta Nome
+\draw[<-] (1.5, 0.8)--(1.5,0)--(6,0)--(6,-0.5); % seta do e
+\draw[<-] (2.3, 0.8)--(2.3,0); % seta do i
+\draw[<-] (4.8, 0.8)--(4.8,0); % seta do m
+\node[text width=4cm,black] at (5.2 ,-.9) {ordem alfabética: ``e'' vem antes de ``i'' que vem antes de ``m''};
+    }
+\schemestop
 \end{myrule}
 
 
-\begin{myrule}{Cadeia Fechada}
 
+\begin{myrule}{Exemplo 10}
+\vspace{.5cm}
+ \schemestart
+ \chemfig{@{A}H_3\mcfabove{C}{\mcfatomno{4}}-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{1}}H_2@{B}{}}
+ \chemmove{
+ \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+ \node[text width=4cm,red] at (7.7 ,0) {3-metil-but-1-eno};
+ \draw[<-] (5.8, -.2)--(5.8, -1);
+ \node[text width=.5cm,black] at (5.3 ,-1.3) {localiza};
+ \node[text width=3cm,black] at (5.8 ,-1.7) {a ramificação};
+ \draw[<-] (7.6, -.2)--(7.6, -1);
+ \node[text width=.5cm,black] at (7.4 ,-1.3) {localiza};
+ \node[text width=3cm,black] at (8.8 ,-1.7) {a insaturação};
+ \node[text width=4cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-.8,-.05)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]0,-3) {\small Extremidade mais próxima da insaturação};
+}
+\schemestop
+\vspace{2cm}
+%
+\end{myrule}
+%%%% Ex. 11
+\begin{myrule}{Exemplo 11}
+ \vspace{.5cm}
+ \schemestart
+ \chemfig{@{A}\mcfabove{C}{\mcfatomno{5}}H_3-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{1}}H_2@{B}{}}
+ \chemmove{
+ \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+ \node[text width=4cm,red] at (5.7 ,0) {3-metil-pent-1-eno};
+ \draw[<-] (3.8, -.2)--(3.8, -1);
+ \node[text width=.5cm,black] at (3.5 ,-1.3) {localiza};
+ \node[text width=3cm,black] at (4.1 ,-1.7) {a ramificação};
+ \draw[<-] (5.7, -.2)--(5.7, -1);
+ \node[text width=.5cm,black] at (5.5 ,-1.3) {localiza};
+ \node[text width=3cm,black] at (6.5 ,-1.7) {a insaturação};
+ \node[text width=2cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-.8,-.05)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]0,-3) {\small Extremidade mais próxima da insaturação};
+}
+\schemestop
+\vspace{3cm}
+\end{myrule}
+
+
+%%% Ex 12
+
+\begin{myrule}{Exemplo 12}
+ \vspace{.5cm}
+ \schemestart
+ \chemfig{@{A}\mcfabove{C}{\mcfatomno{5}}H_3-\mcfabove{C}{\mcfatomno{4}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{2}}H=\mcfabove{C}{\mcfatomno{1}}H_2@{B}{}}
+ \chemmove{
+ \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+ \node[text width=4cm,red] at (3.7 ,0) {3,4-dimetil-pent-1-eno};
+ %\draw[<-] (3.8, -.2)--(3.8, -1);
+ %\node[text width=.5cm,black] at (3.5 ,-1.3) {localiza};
+ %\node[text width=3cm,black] at (4.1 ,-1.7) {a ramificação};
+ %\draw[<-] (5.7, -.2)--(5.7, -1);
+ %\node[text width=.5cm,black] at (5.5 ,-1.3) {localiza};
+ %\node[text width=3cm,black] at (6.5 ,-1.7) {a insaturação};
+ \node[text width=2cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-.8,-.05)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]0,-3) {\small Extremidade mais próxima da insaturação};
+}
+\schemestop
+\vspace{2cm}
+\end{myrule}
+
+
+%%% Ex 13
+
+\begin{myrule}{Exemplo 13}
+ \vspace{.5cm}
+ \schemestart
+ \hspace{4cm}\chemfig{@{A}H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}~\mcfabove{C}{\mcfatomno{3}}-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{6}}H_3@{B}}
+ \chemmove{
+ \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+ \node[text width=8cm,red] at (5,0){5-metil-hex-2-ino};
+ \node[text width=2cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-4,-.05)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]-8,-1.5) {\small Extremidade mais próxima da insaturação};
+}
+\schemestop
+\vspace{.5cm}
+\end{myrule}
+
+\begin{myrule}{Exemplo 14}
+ \vspace{.5cm}
+ \schemestart
+ \hspace{4cm}\chemfig{@{A}H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}~\mcfabove{C}{\mcfatomno{3}}-\mcfabove{C}{\mcfatomno{4}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{5}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{6}}H_3@{B}}
+ \chemmove{
+ \node[inner sep=2pt,fill=blue,fill opacity=0.2,fit=(A) (B)]{};
+ \node[text width=8cm,red] at (5,0){4,5-dimetil-hex-2-ino};
+ \node[text width=2cm, ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-4,-.05)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]-8,-1.5) {\small Extremidade mais próxima da insaturação};
+}
+\schemestop
+\vspace{.5cm}
+\end{myrule}
+
+
+ \begin{myrule}{Exemplo 15}
+ \vspace{.5cm}
+ \schemestart
+ \chemfig{H_3C-C([:90]=CH_2)-CH([:-90]-CH_2-CH_3)-CH_3}
+ \chemmove{
+ \node[text width=1cm,blue] at (-2.1 ,.8) {\scriptsize 1}; % C1
+ \node[text width=1cm,blue] at (-2.1 ,.2) {\scriptsize 2}; % C2
+ \node[text width=1cm,blue] at (-1.2 ,.3) {\scriptsize 3}; % C3
+ \node[text width=1cm,blue] at (-1.4 ,-.6) {\scriptsize 4}; % C4
+ \node[text width=1cm,blue] at (-1.4 ,-1.3) {\scriptsize 5}; % C5
+ \node[text width=8cm,red] at (5,0){2,3-dimetil-pent-1-eno};
+}
+ \schemestop
+ \end{myrule}
+\end{frame}
+
+
+\section{Hidrocarbonetos cadeia mista}
+\label{sec:orged81de4}
+
+\begin{frame}[label={sec:org01be5aa}]{Hidrocarbonetos cadeia mista}
 \begin{itemize}
-\item \emph{Cadeia fechada ou ciclíca:} Os átomos de carbono se ligam entre si de modo a formarem um ciclo.
+\item Quando um hidrocarboneto possui cadeia mista, a nomenclatura é semelhante as cadeias ramificadas abertas. Veja os exemplos.
 \end{itemize}
 
 \begin{center}
-\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]}
-\end{center}
+\chemname{\chemfig{*5(--(-CH_3)---)}}{metil-ciclo-pentano}\af
+\chemname{\chemfig{**6(----(-CH_3)--)}}{metil-benzeno} \af 
+\chemname{\chemfig{**6(--(!\nobond\chembelow[0.5ex]{}{3}{})(-CH_3)-(!\nobond\chemabove[1.4ex]{2}{})-(!\nobond\chemabove[0.2ex]{}{\quad 1})(-CH_3)--)}}{1-3-dimetil-benzeno}
+ \end{center}
+\end{frame}
 
-\end{myrule}
+\begin{frame}[label={sec:org4962994}]{Hidrocarbonetos cadeia mista}
+\begin{itemize}
+\item Quando há dois substituintes diferentes, eles devem ser citados em \alert{ordem alfabética. O número 1 é dado ao subtituinte citado primeiro} de acordo com a ordem alfabética.
+\end{itemize}
 
 
-\begin{myrule}{Cadeia Mista}
+\schemestart
+\chemfig{**6(---(-CH_3)-(-CH_2([:0]-CH_3))--)} \af 
+\chemfig{*5(--(-CH_2-CH_3)--(-H_3C)-)} \af
+\chemfig{CH_2([:90]-(*6(---(-CH_3)---)))-CH_2-CH_3}
+\chemmove{
+	\node[text width=1cm,blue] at (-12.8 ,.8) {\scriptsize 1}; % C1	
+	\node[text width=1cm,blue] at (-12.3, .38) {\scriptsize 2}; % C1
+	\node[text width=5cm,black] at (-11.5 ,-1) {1-\alert{e}til-2-\alert{m}etil-benzeno}; % C1	
+	\node[text width=1cm,blue] at (-8.2 ,.27) {\scriptsize 1}; % C1		
+	\node[text width=1cm,blue] at (-7.57 ,.72) {\scriptsize 2}; % C1
+	\node[text width=1cm,blue] at (-7.25 ,.01) {\scriptsize 3}; % C1
+	\node[text width=5cm,black] at (-7.3 ,-1) {1-\alert{e}til-3-\alert{m}etil-ciclo-pentano}; % C1
+	\node[text width=1cm,blue] at (-2.35 ,1.8) {\scriptsize 1}; % C1
+	\node[text width=1cm,blue] at (-1.9 ,1.56) {\scriptsize 2}; % C1
+	\node[text width=1cm,blue] at (-1.9 ,1.0) {\scriptsize 3};
+	\node[text width=1cm,blue] at (-2.35 ,0.59) {\scriptsize 4};
+	\node[text width=5cm,black] at (-1.7 ,-1) {1-\alert{m}etil-4-\alert{p}ropil-ciclo-hexano}; % C1
+	\draw[->] (-13.6,-2.)--(-13.6,-1.1);
+	\draw[->] (-12.6,-2.)--(-12.6,-1.1);
+  \node[text width=6cm,col8] at (-11.6 ,-2.5) {ordem alfabética: ``e'' antes de ``m''};
+  	\draw[->] (-3.8,-2.)--(-3.8,-1.1);
+  	\draw[->] (-2.7,-2.)--(-2.7,-1.1);
+  \node[text width=6cm,col8] at (-1.7 ,-2.5) {ordem alfabética: ``m'' antes de ``p''};
+}
+\schemestop
+\end{frame}
+
+\begin{frame}[label={sec:orge1be8f2}]{}
+\begin{itemize}
+\item Se houver mais de dois substituintes, eles serão citados em \alert{ordem alfabética. O número 1 deve ser dado ao substituinte que permitir que um segundo substituintes receba o menor número possível}
+\end{itemize}
+
+\hspace{.5cm}\chemname{\chemfig{CH_3-[:273,,1]-[:327]-[:255]-[:183]-[:111](-[:39])(-[:223,,,2]H_3C)-[:155,,,2]H_3C}}{1,1,2-trimetil-ciclo-pentano}\af 
+\chemname{\chemfig{*6((-CH_2([:180]-H_3C))--(-CH_3)-(-([:0]CH_2-CH_2-CH_3))---)}}{4-etil-2-metil-1-propil-ciclo-hexano}\\
+\vspace{.2cm}
+\chemname{\chemfig{**6(-(-CH_3)--(-CH_3)-(-CH_3)--)}}{1,2,4-trimetil-benzeno} \af \af 
+\chemname{\chemfig{**6(-(-C_2H_5)--(-C_2H_5)-(-CH_3)--)}}{2,4-dietil-1-metil-benzeno}
+\chemmove{
+	\node[text width=1cm,blue] at (-6.3 ,3.2) {\scriptsize 1}; % C1	
+	\node[text width=1cm,blue] at (-5.8 ,3.5) {\scriptsize 2}; % C1	
+	%%%
+	\node[text width=1cm,blue] at (-0.28 ,4.65) {\scriptsize 1}; % C1
+	\node[text width=1cm,blue] at (-0.11 ,3.9) {\scriptsize 2}; % C1
+	\node[text width=1cm,blue] at (-0.68 ,3.36) {\scriptsize 3}; % C1
+	\node[text width=1cm,blue] at (-1.3 ,3.9) {\scriptsize 4}; % C1
+	%%%%
+	\node[text width=1cm,blue] at (-7.3 ,0.98) {\scriptsize 1}; % C1
+	\node[text width=1cm,blue] at (-6.98 ,0.66) {\scriptsize 2}; % C1
+	\node[text width=1cm,blue] at (-6.8 ,0.1) {\scriptsize 3}; % C1
+	\node[text width=1cm,blue] at (-7.3 ,-0.4) {\scriptsize 4}; % C1
+	%%%
+	\node[text width=1cm,blue] at (-1.2 ,0.98) {\scriptsize 1}; % C1
+	\node[text width=1cm,blue] at (-0.91 ,0.66) {\scriptsize 2}; % C1
+	\node[text width=1cm,blue] at (-0.78 ,0.1) {\scriptsize 3}; % C1
+	\node[text width=1cm,blue] at (-1.2 ,-0.4) {\scriptsize 4}; % C1
+	\node[text width=4cm,ellipse callout,rounded corners,fill=col7,callout absolute pointer={(-0,0.8)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,-1) {\small No exemplo ao lado -\ch{C2H5} é uma maneira de representar o grupo etil $\rm -CH_2-CH_3$};
+}
+\end{frame}
+
+\begin{frame}[label={sec:orgf60e435}]{}
+\begin{itemize}
+\item Quando uma molécula de benzeno que contém \alert{dois} grupos substituintes ligados ao anel, podemos usar o prefixo \emph{orto}, \emph{meta} e \emph{para}.
+\end{itemize}
+
+\begin{bclogo}[logo=\bcattention, noborder=true, barre=none]{Atenção}
+Os prefixos \emph{orto}, \emph{meta} e \emph{para} podem ser \alert{utilizados apenas quando um anel benzênico possuir dois grupos ligados a ele ligados:}\\[0pt]
+
+\(\bullet\) \emph{orto} \alert{indica 1, 2}; \quad \(\bullet\) meta \alert{indica 1, 3}; \quad \(\bullet\) \emph{para} \alert{indica 1, 4}
+\end{bclogo}
+
+\chemname{\chemfig{**6(---(-CH_3)-(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{orto:}indica posição 1,2}} \af  
+\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{meta:}indica posição 1,3}} \af
+\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{para:}indica posição 1,4}} 
+\end{frame}
+
+
+\begin{frame}[label={sec:orgd5c1ab4}]{Cadeia Mista - Nomenclatura trivial}
+\begin{itemize}
+\item Alguns exemplos de nomes triviais de hidrocarbonetos aromáticos são: \emph{tolueno, orto-xileno, meta-xileno} e \emph{para-xileno}.
+\end{itemize}
+
+
+\chemname{\chemfig{**6(---(-CH_3)---)}}{tolueno} \af  
+\chemname{\chemfig{**6(---(-CH_3)-(-CH_3)--)}}{\emph{orto}-xileno} \af  
+\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\emph{meta}-xileno} \af
+\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\emph{para}-xileno} 
+\end{frame}
+
+
+\begin{frame}[label={sec:org5747c9f}]{Cadeis Mistas - Outros exemplos}
+\chemname{\chemfig{**6(---(-CH_3)-(-C_2H_5)--)}}{\emph{orto}-etil-metil-benzeno} \af  
+\chemname{\chemfig{**6(--(-CH_3)--(-C_2H_5)--)}}{\emph{meta}-etil-metil-benzeno} \af
+\chemname{\chemfig{**6(-(-CH_3)---(-C_2H_5)--)}}{\emph{para}-etil-metil-benzeno} \af
+\chemname{\chemfig{**6(-(-C_2H_5)--(-C_2H_5)-(-CH_3)--)}}{2,4-dietil-1-metil-benzeno} 
 
 \begin{itemize}
-\item Os atomos se ligam formando um ciclo e tem as extremidades livres.
+\item Os prefixos \emph{\alert{orto}}, \emph{\alert{meta}} e \emph{\alert{para}} vêm do grego e podem ser traduzidos, respectivamente, por \emph{''diretamente''}, \emph{``depois de''} e \emph{``mais longe de''}
 \end{itemize}
-\begin{center}
-\chemfig{-[:90]C(-[:180])-C(-[:90]C(-)(-[:90])-[:180]C(-[:90])(-[:180])-[:270]\phantom{C})(-[:270])-C(-[:270])(-[:90,,,1])-C(-[:90])(-[:270])-C(-[:90])(-)-[:270]}
-\end{center}
-
-\end{myrule}
 \end{frame}
 
 
-\section{Cadeias Abertas}
-\label{sec:org9c0e8bd}
-
-\begin{frame}[allowframebreaks]{Cadeias Abertas}
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-
-	Cadeia aberta Normal   &  Cadeia Aberta Ramificada \\
-%
-		Carbonos, primários, secundários & Ao menos um carbono terciário ou quartenário\\
-	\chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-} &  \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-C(!\nobond\chemabove[1ex]{}{\color{blue}\hspace{.2cm}\vspace{.7cm}4})([:0]-)([:180]-)-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}\\
-		Carbono 1: primário & \\
-		Carbono 2: secundário & Carbono 2: terciário\\
-		Carbono 3: primário & Carbonos 1, 3 e 4: primários\\
-		\hline
-	\end{tblr}
 
 
 
-
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {cc}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-  Cadeia aberta homogênea   &  Cadeia aberta heterogênea \\
-Apresentam somentes átomos de carbono & Ao menos um átomo heteroátomos\\
- \chemfig{-C([:-90]-)([:90]-)-C([:90]-)=C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-{\color{blue}O}-C([:90]-)([:-90]-)-} \\
- \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C([:-90]-C([:180]-)([:0]-)-)={\color{blue}N}-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
-Este \emph{oxigênio} não é heteroátomo & \\
-\hline
-\end{tblr}
-
-
-
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-Cadeia aberta saturada   &  Cadeia aberta insaturada \\
-Apresentam somentes átomos de carbono apresentam ligações simples & Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação\\
- \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} \\
- \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
-O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono saturado}. & A átomo que apresenta ligação dupla ou tripla é chamado de \emph{carbono insaturado.}\\
-\hline
-\end{tblr}
-\end{frame}
-
-
-\section{Cadeias Fechadas}
-\label{sec:orge167809}
-
-\begin{frame}[allowframebreaks]{Cadeias Fechadas}
-	{\small
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
- Cadeia fechada aromática   &  Cadeia fechada alicíclica \\
-Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação & Cadeia cíclica que não constitui anel benzênico\\
- \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} & \chemfig{C*6((-)=C(-)-C(-)-C(-)-C(-)=C(-)-)} \\ 
- \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}   &    \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
-Esses ciclos recebem o nome de \emph{benzeno} & \\
-\hline
-\end{tblr}
-}
-
-
-
-	{ \setchemfig{atom style={scale=0.5}}
-	\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-		Cadeia aromática mononuclear   &  Cadeia aromática polinuclear \\
-		%\hline 
-		Cadeia aromática com apenas um núcleo benzênico & Cadeia aromática com dois ou mais núcleos benzênicos\\ 
-		\chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}   &  \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \\ & \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}\\
-		%Esses clicos recebem o nome de \emph{benzeno} & \\[0pt]
-		\hline
-	\end{tblr}
-}
-
-
-
-\begin{tblr}
-	[
-	theme= fancy,
-	caption={Classificação das Cadeias Fechadas},
-	]{
-		colspec = {Xm{8cm}}, colsep = 2mm, hlines = {2pt, white},
-		%row{odd} = {brown8}, row{even} = {gray8},
-		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-	}
-	Cadeia alicíclica homocíclica   &  Cadeia alicíclica heterocíclica \\
-	\hline
-	Cadeia cíclica alicíclica formada apenas por átomos de carbono & Cadeia cíclica alicíclica que apresenta heteroátomo\\[0pt]
-	\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}   &   \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
-	& \\
-	\hline
-\end{tblr}
-
-
- \setchemfig{atom style={scale=0.7}}
-	\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-%		\hline
-		Cadeia alicíclica saturada & Cadeia alicíclica insaturada\\
-		%%% 
-		Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas\\
-		\chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})}  & 
-		\chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
-		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} &  \chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} \\
-		\hline
-	\end{tblr}
-\end{frame}
-
-
-\section{Exercícios}
-\label{sec:orgdbb1c80}
-
-\begin{frame}[allowframebreaks]{Exercícios}
-\begin{question}
-\alert{(MACKENZIE-SP)} O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é :
-
-\chemfig{Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90]%
-(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)%
--[:90]=^[:150](-[:210])}
-
-
-\begin{choice}(2)
-\choice três carbonos terciários.
-\choice somente carbonos secundários.
-\choice um carbono quaternário.
-\choice somente carbonos primários.
-\choice somente um carbono terciário
-\end{choice}
-\end{question}
-\pagebreak
-\begin{answer}[print=true]
-\small
-Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas:
-
-a) três carbonos terciários:
-
-
-\begin{tikzpicture}
-			
-		
-	\node[] at (0,0){	\chemfig{Cl-[:30]C=^[:330]\mcfbelow{C}{H}-[:30,,,1]CH=^[:90,,1]C(%
-			-[:150]\mcfabove{C}{H}=^[:210,,,2]HC-[:270,,2]\phantom{C})%
-			-[:30]\mcfbelow{C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C%
-			=^[:270,,,2]HC-[:330,,2]\mcfbelow{C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH%
-			=^[:150,,1]\mcfabove{C}{H}(-[:210]\phantom{C})}
-		};
-	\draw[red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm);
-	\end{tikzpicture}	
-
-Apresenta \alert{3 carbono terciários}
-
-Está correto, apresenta três C terciários.
-
-b) somente carbonos secundários: não, já vimos que existem C terciários na molécula.
-
-c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos.
-
-d) somente carbonos primários: não, justificativa vide alternativa A.
-
-e) somente um carbono terciário: não, são três.
-
-Alternativa correta: \alert{A}.
-\end{answer}
-\end{frame}
-
-
-\begin{frame}[label={sec:org1516736}]{Fim da Aula}
+\begin{frame}[label={sec:org2da3ba0}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
 \begin{center}
 \begin{tabular}{ccc}
 Download Aula & & Lista de Exercícios \\
- \qrcode[height=2in]{https://mark.nl.tab.digital/s/8HyAjqSA4qCsy9n} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6YXizxPQkdFRi8J}\\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/yWAtd5C8mjKjdQa} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
  \end{tabular}
  \end{center}
 \end{frame}
