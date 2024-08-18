@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #+TITLE: Reações Orgânicas
+=======
+#+TITLE: Hidrocarbonetos II
+>>>>>>> 70b4604d1ddd4c836d65e7dc46d492538c5e0f9e
 #+AUTHOR: Fábio Lima
 #+DATE: 
 #+OPTIONS: H:2 toc:t num:t
@@ -30,7 +34,11 @@
 
 
 
+<<<<<<< HEAD
 #+INCLUDE: "QO/ReacoesOrganicas/ReacoesOrganicasI.org"
+=======
+#+INCLUDE: "QO/Hidrocarbonetos/HidrocarbonetosIII.org"
+>>>>>>> 70b4604d1ddd4c836d65e7dc46d492538c5e0f9e
 
 #+begin_comment
 https://www.ufsm.br/app/uploads/sites/413/2018/12/quimica_ii.pdf
