@@ -355,7 +355,7 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
 \schemestart
 \chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{\hspace{.2cm}2}}([:-90]-CH_3)([:90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{4}}H_2-\mcfabove{C}{\mcfatomno{5}}H_3}
 \chemmove{
- \node[text width=7cm,black] at (4.4 ,0) (A) {\alert{2,2,3-dimetil-pentano}};
+ \node[text width=7cm,black] at (4.4 ,0) (A) {\alert{2,2,3-trimetil-pentano}};
  \node[text width=7cm,black] at (4.4 ,-1) (A) {(3,3,4-trimetil-pentano está incorreto)};
 }
 \schemestop

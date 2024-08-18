@@ -1,6 +1,6 @@
-% Created 2024-08-04 Sun 17:41
+% Created 2024-08-17 Sat 19:43
 % Intended LaTeX compiler: lualatex
-\documentclass[presentation,professionalfonts,smaller,aspectratio=169]{beamer}
+\documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
 
 % \input{packages2.tex}
@@ -52,7 +52,7 @@ exercise-env = question ,
 solution-env = answer ,
 exercise-template = custom ,
 solution-template = custom2 ,
-exercise-name = Exemplo. ,
+exercise-name = Exemplo ,
 exercises-name = Exemplo ,
 solution-name = Solução ,
 solutions-name = Sol. ,
@@ -63,11 +63,12 @@ solution-heading = \textbf
 exercise/within = section,
 exercise/the-counter =  \arabic{exercise},
 %%solution-name = solution,  % used with headings=true
-solution/print=false,
+solution/print=true,
 print-collection/print=both,
 }
 \NewTasksEnvironment[label = (\emph{\alph*}),
 label-width = 12pt]{choice}[\choice]
+\usepackage{empheq} %%% Brackers
 \usepackage{colortbl}
 \usepackage[tikz]{bclogo}
 \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
@@ -156,477 +157,309 @@ title=#2,#1}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{Hidrocarbonetos}
+\title{Reações Orgânicas}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={Hidrocarbonetos},
+ pdftitle={Reações Orgânicas},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
 
 
-
-
-\section{Introdução}
-\label{sec:org3ab3dc5}
-
-\begin{frame}[label={sec:org93852bd}]{Breve Histórico}
-\begin{mybox}{Precusores}
-
-
+\section{Reações Orgânicas}
+\label{sec:org900f9ed}
+\begin{frame}[label={sec:org502dc3f}]{Reações Orgânicas}
+Reações orgânicas são formas de transformação de moléculas orgânicas em outras moléculas orgânicas. São tipos de reações orgânicas:
 \begin{itemize}
-\item 1807 - Jöns J. Berzelius – Teoria da Força Vital.
-\item 1828 – primeiro composto orgânico sintetizado em laboratório – Uréia
+\item Reações de adição
+\item Substituição
+\item Oxidação
+\item Redução
+\item Eliminação.
 \end{itemize}
-\begin{center}
-\schemestart
-\chemname{\chemfig{NH_4CNO}}{Cianato \\ de amônio}
-\arrow{->[\(\Delta\)][]}
-\chemname{\chemfig{O=C([:30]-NH_2)([:330]-NH_2)}}{Ureia}
+\end{frame}
+
+\section{Alcanos}
+\label{sec:org3b1a34e}
+
+\begin{frame}[label={sec:org9525017}]{Alcanos}
+\begin{itemize}
+\item Carbono e hidrogênio têm eletronegatividades bem semelhantes, logo, a ligação C - H é basicamente apolar.
+\item Conseqüentemente, compostos contendo ligações C - C e C - H são estáveis e apresentam uma tendência muito baixa para reagir com outras substâncias.
+\item A adição de grupos funcionais (por exemplo, C-O-H) introduz reatividade às moléculas orgânicas.
+\item Suas reações envolvem a formação de radicais, formados em altas temperaturas ou na presença de radiação UV.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org3d4e81e}]{Formação de Radicais}
+\alert{Radicais:} espécies químicas que apresentam um elétron desemparelhado.
+
+\begin{reaction}
+	R3C-X -> R3 "\chlewis{0.}{C}"  +  "\chlewis{180.}{X}"
+\end{reaction}
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Estabilidade do Radicais Alquila}
+\begin{center}	
+\chemfig{R-\charge{0=\.}{C}([:90]-R)([:-90]-R)} \qquad > \qquad \chemfig{R-\charge{0=\.}{C}([:90]-H)([:-90]-R)} \qquad > \qquad \chemfig{H-\charge{0=\.}{C}([:90]-H)([:-90]-H)}
+\end{center}
+\end{bclogo}
+\end{frame}
+
+\begin{frame}[label={sec:org0eb0b66}]{Halogenação}
+\begin{itemize}
+\item Sob condições adequadas sofrem reação de substituição com halogênios.
+\item A substituição de um \alert{H} por um halogênio é denominada \alert{halogenação}.
+\end{itemize}
+
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Cloração do Metano}
+\begin{reaction*}
+CH4 + C$\ell$2(excesso) ->[$\Delta$ ou][h$\nu$] CH3C$\ell$ + CH2C$\ell$2 + CHC$\ell$3 + CC$\ell$4 + HC$\ell$
+\end{reaction*}	 
+\end{bclogo}
+\end{frame}
+
+
+\begin{frame}[label={sec:org7813eb5}]{}
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de cloração do Metano}
+
+  \begin{empheq}[left=\text{Inicia\c{c}\~{a}o}\quad\; \empheqlbrace]{flalign} 
+	\ch{C$\ell$2 -> 2 "\chlewis{0.}{C$\ell$}"} & \qquad \qquad \qquad \quad \quad   \enthalpy{-242.7}
+	\end{empheq}
+	
+	%%%% Reac2
+ \begin{empheq}[left=\text{Propaga\c{c}\~{a}o}\; \empheqlbrace]{flalign}
+	\ch{"\chlewis{0.}{C$\ell$}" + CH4 -> "\chlewis{180.}{C}" H3 + HC$\ell$} & \quad \qquad \enthalpy{-3.4}\\
+	\ch{"\chlewis{180.}{C}" H3{} + {} C$\ell$2 -> CH3C$\ell$ + "\chlewis{180.}{C}" $\ell$} & \quad \qquad	\enthalpy{-106.7}
+\end{empheq}
+
+%%% R3
+
+ \begin{empheq}[left=\text{T\'ermino}\;\quad \empheqlbrace]{flalign}
+\ch{"\chlewis{0.}{C$\ell$}" {} + {}  "\chlewis{0.}{C$\ell$}" {} -> C$\ell$2} & \qquad \qquad \enthalpy{-242.7} \\ 
+\ch{"\chlewis{0.}{C$\ell$}" {} + {}  "\chlewis{180.}{C}" H3{}  -> CH3C$\ell$} & \qquad \qquad \enthalpy{-349.4}\\
+\ch{"\chlewis{180.}{C}" H3{} + "\chlewis{180.}{C}" H3{} -> CH3CH3} & \qquad \qquad \enthalpy{-368.2}
+\end{empheq}
+\end{bclogo}
+\end{frame}
+\begin{frame}[label={sec:org4532204}]{}
+\begin{itemize}
+\item Todos os outros alcanos reagem com os \alert{halogênios} da mesma maneira que o metano.
+\item Quanto maior o número de carbonos, maior será o número de possíveis compostos mono e polialogenados formados.
+\end{itemize}
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de cloração do metilpropano}
+\schemestart[,1.0]
+\chemfig{CH_3-C([:90]-CH_3)([:-90]-H)-CH_3}
+\arrow(.mid east--.mid west)
+\chemname{\chemfig{CH_3-C([:90]-CH_3)([:-90]-H)-CH_3}}{> 99\%} \quad +  \quad \chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_2-Br}}{Traços}
 \schemestop
-\end{center}
-
-\begin{itemize}
-\item Tudo que tem “vida” possui compostos orgânicos,mas nem todos compostos orgânicos possuem vida.
-\item 1851 à 1861 – Friederich A. Kekulé
-\begin{itemize}
-\item Formulou três postulados que vigoram até hoje.
-\end{itemize}
-\end{itemize}
-\end{mybox}
-\end{frame}
-
-
-\begin{frame}[label={sec:org3446d40}]{Postulados de Kekulé}
-\begin{myrule}{Postulado 1}
-
-\begin{itemize}
-\item Os átomos de carbono são tetravalentes.
-\end{itemize}
-\begin{center}
-\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
-\end{center}
-
-\begin{itemize}
-\item Ligações Covalentes
-\end{itemize}
-
-\begin{center}
-\chemfig{H-C~C-C([:90]-H)([:-90]-H)-H}
-\end{center}
-
-\end{myrule}
-\end{frame}
-
-
-\begin{frame}[label={sec:orgc4f55f0}]{Ligações Múltiplas}
-
-\begin{talltblr}[
-	 theme= fancy,
-	 caption={Composição do Petróleo},
-	 ]{
-	 colspec = {Xcc}, colsep = 2mm, hlines = {2pt, white},
-	 %row{odd} = {brown8}, row{even} = {gray8},
-	 row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-	 }
-	 \hline
-	 Tipo de Ligação & Exemplo & Estrutura de Lewis\\[0pt]
-	 \hline
-	 Ligação \alert{dupla} entre dois átomos de carbono & \chemfig{C([:210]-)([:150]-)=C([:30]-)([:330]-)} & \chlewis{0:120.240.}{C}  \chlewis{180:60.290.}{C}\\
-	 \hline
-	 Ligação \alert{dupla} entre um átomo de oxigênio e carbono & \chemfig{C([:210]-)([:150]-)=O} & \chlewis{0:120.240.}{C} \chlewis{180:90:0:}{O}\\
-	 \hline
-	  Ligação \alert{tripla} entre dois átomos de carbono & \chemfig{-C~C-} & \chlewis{0:50.180.}{C} \chlewis{180:130.0.}{C}\\
-	 \hline
-	 Ligação \alert{tripla} entre um carbono e nitrogênio & \chemfig{-C~N } & \chlewis{0:50.180.}{C} \chlewis{180:130.0:}{N}\\[0pt]
-	 \hline
- \end{talltblr}
-\end{frame}
-
-
-\begin{frame}[label={sec:org0492536}]{Postulados de Kekulé}
-\begin{myrule}{Postulado 2}
-
-
-\begin{itemize}
-\item As quatro valências do carbono são equivalentes.
-\end{itemize}
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.45\textwidth]{QO/Fundamentos/cloroformio.png}
-\caption{\label{fig:org3d0a65c}Clorofórmio}
-\end{figure}
-
-\end{myrule}
-\end{frame}
-
-
-\begin{frame}[label={sec:org5a39d70}]{Postulados de Kekulé}
-\begin{myrule}{3º Postulado}
-
-\begin{itemize}
-\item O carbono possui a capacidade \alert{ÚNICA} de formas cadeias.
-\end{itemize}
-
-
-
-\begin{tblr}{cc}
-\chemfig{H-C([:90]-H)([:-90]-H)-C([:-90]-H)=C([:-90]-H)-C([:90]-H)([:-90]-H)-H}& 
-\chemfig{C*6((-H)=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)} \\
-\chemfig{H-[:210]C(-[:120]H)-[:300]C(-[:20]C(-[:320]H)(-[:20]H)-[:80]H)(-[:300]H)-[:210]C(-[:300]H)(-[:210]H)-[:120]C(-[:30]\phantom{C})(-[:210]H)-[:120]H} & 
-%\qquad \qquad \chemfig{>[:330](-[:330]-[:30]-[:330])(<:[:60])-[:210](-[:270])-[:150](-[:90])-[:210]-[:150]}
-\chemfig{H-[:276]C(-[:12]H)-[:180]C(-[:84]H)(-[:168]H)-[:252]C(-[:156]H)(-[:240]H)-[:324]C(-[:228]H)(-[:312]H)-[:36]C(-[:108]\phantom{C})(-[:24]H)-[:300]H}\\
-\end{tblr}
-
-\end{myrule}
-\end{frame}
-
-
-\section{Carbonos}
-\label{sec:orgcf90f7e}
-
-\begin{frame}[label={sec:org3ee99aa}]{Classificação dos carbonos}
-\begin{center}
-\begin{tabular}{|c|c|}
-\hline
-\cellcolor{green!20} {\bfseries Carbono}  & \cellcolor{green!20} {\bfseries Definição} \\[0pt]
-\hline
-Primário & ligado diretamente, \alert{no máximo}, a \alert{1} outro carbono\\[0pt]
-\hline
-Secundário & ligado diretamente a \alert{2} outros carbonos\\[0pt]
-\hline
-Terciário & ligado diretamente  a \alert{3} outros carbonos\\[0pt]
-\hline
-Quartenário & ligado diretamente a \alert{4} outros carbonos\\[0pt]
-\hline
-\end{tabular}
-\end{center}
-
-
-
-\begin{columns}
-\begin{column}{0.7\textwidth}
-\chemfig[scale=2.5]{H_3@{A}C-@{L}C([:-90]-@{B}CH_3)=@{F}CH-@{G}C~@{H}C-@{N}C([:90]-@{D}CH_3)([:-90]-@{K}CH_2(-[:270,,1,1]@{M}CH-[:300,,1,1]@{J}CH_2-[:180,,1,2]H_2@{I}C(-[:60,,2]\phantom{C})))-@{E}CH_3}
-\chemmove{
-\node[bal,fit=(A)]{};
-\node[bal,fit=(B)]{};
-\node[bal,fit=(D)]{};
-\node[bal,fit=(E)]{};
-\node[rect,fit=(F)]{};
-\node[rect,fit=(G)]{};
-\node[rect,fit=(H)]{};
-\node[rect,fit=(I)]{};
-\node[rect,fit=(J)]{};
-\node[rect,fit=(K)]{};
-\node[bal2,fit=(L)]{};
-\node[bal2,fit=(M)]{};
-\node[bal3,fit=(N)]{};
-}
-\end{column}
-\begin{column}{0.3\textwidth}  %%<--- here
-      carbonos \chemfig{@{A}C} = primários\\
-      carbonos \chemfig{@{B}C} = secundários\\
-      carbonos \chemfig{@{D}C} = terciários\\
-      carbonos \chemfig{@{E}C} = quartenários
-     \chemmove{
-      \node[bal,fit=(A)]{};
-      \node[rect,fit=(B)]{};
-      \node[bal2,fit=(D)]{};
-      \node[bal3,fit=(E)]{};
-      }
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\section{Cadeias}
-\label{sec:org056cea9}
-
-\begin{frame}[label={sec:org3426f02}]{Cadeias Carbônicas}
-\begin{myrule}{Heteroátomo}
-
-\begin{itemize}
-\item Estrutura formada por todos os átomos de carbono e os heteroátomos.
-\item Heteroátomo é um átomo diferente do carbono e do hidrogênio  posicionado
-entre  dois  carbonos  na cadeia.
-\end{itemize}
-
-\chemname{\chemfig{CH_3-CH_2-{\color{red}O}-CH_2-CH_3}}{Oxigênio é heteroátomo}
-
-\vspace{.5cm}\chemname{\chemfig{CH_3-CH_2-CH_2-CH_2-{\color{red}O}H}}{Oxigênio NÃO é heteroátomo}
-
-\end{myrule}
+\end{bclogo}
 \end{frame}
 
 
 
+\begin{frame}[label={sec:org4b2ed5f}]{Oxidação}
+Os \alert{alcanos} e outros \alert{hidrocarbonetos} queimam na presença \ch{O2}, sendo tal reação de oxidação denominada
+\alert{combustão}.
 
-\begin{frame}[allowframebreaks]{Classificação das Cadeias Carbônicas}
-\begin{myrule}{Cadeia aberta}
 
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de combustão dos alcanos}
+
+
+\begin{align*}
+\ch{C_nH_{2n+2}} \quad + \quad  \frac{3n+1}{2}\ch{O2 -> n CO2}\quad +\quad (n+1)\ch{H2O} & \qquad \quad \enthalpy*[unit=\kilo\joule\per\gram]{\approx 55} \approx 55 \unit{\kilo\joule\per\gram}\\ & \hspace{1cm} \mathrm{de~hidrocarboneto} \\ \\
+\ch{CH4\gas{} \quad{} + \quad{} 2 O2\gas{} -> CO2\gas{} \qquad{} + \quad{} 2 H2O\lqd{}} & \quad \quad \enthalpy{-891.2}\\ \\
+	\ch{2 C4H10\gas{} \quad{} + \qquad{} 13 O2\gas{} -> 8 CO2\gas{} \quad{} + \quad{} 2 H2O\lqd{}} & \quad \quad \enthalpy{-2878.6}    
+\end{align*}
+\end{bclogo}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgea7d672}]{Reação de pirólise}
 \begin{itemize}
-\item \emph{Cadeia aberta ou aciclíca:} Os átomos de carbono se ligam entre si de modo a terem os extremos livres
+\item \alert{Pirólise} é um tipo de reação de decomposição ou análise, em que uma substância é decomposta em outras, pela ação do calor do fogo.
 \end{itemize}
 
-\begin{center}
-\schemestart
-\chemfig{-@{b}{C}([:90]-)([:-90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-@{a}{C}([:90]-)([:-90]-)-}
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de Pirólise}
+
+
+
+\begin{figure}
+\setchemfig{atom sep=1.6em}
+\tiny{	
+%\setchemfig{scheme debug=true}
+\schemestart[,1.0]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H} 
+\arrow{->[*{0}Aquecimento]}[-90]%(@c1--)[-90]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-\charge{0=\.}{C}@{db,1.3}([:90]-H)([:-90]-H)} \qquad  + \qquad 
+\chemfig{\charge{180=\.}{C}([:90]-H)([:-90]-@{atoo,1.5}H)-[@{a2}]C([:90]-H)(-[@{a1}:-90]H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
+\arrow(@c2--)[-90]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H} \quad + \quad \chemfig{H-C([:90]-H)=C([:90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
 \schemestop 
-\chemmove{\draw[<-,red,shorten <=3.5pt] (b) (-0.5,-0.2)--++(1,-0.4) node[below] {extremo livre} ;
-\draw[->,red,shorten <=3.5pt] (a) (-4.7,-.9)--++(1.5,0.7) node[anchor=35,inner sep=23] {extremo livre} ;
+\chemmove{
+\draw[shorten <=2pt, shorten >=2pt](db) ..controls +(down:10mm) and +(150:8mm)..(atoo);
+\draw[shorten <=2pt, shorten >=2pt](a1) ..controls +(135:1mm) and +(250:5mm)..(a2);
+}}
+\caption{Esquema de pirólise do hexadecano, com formação do octano e oct-1-eno.}
+\end{figure}
+\end{bclogo}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgc2b530b}]{Reação de isomerização}
+\begin{bclogo}[couleur=blue!40 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Isomerização dos alcanos}
+
+
+\setchemfig{atom sep=1.8em}
+\begin{figure}
+\small{
+\centering
+\schemestart
+\subscheme{%
+\chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_3}}{Isobutano}
+\arrow{<<->[\ch{A$\ell$C$\ell$3}][\SI{27}{\degreeCelsius}]}[180,1.2] 
+\chemfig{H_3C-CH_2-CH_2-CH_3}
 }
-\vspace{1cm}
-%
-\end{center}
+\schemestop
+\vspace{0.5cm}
+\schemestart
+\chemfig{CH_3-{(}CH_2{)}_5-CH_3}
+\arrow{->} \chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_2-CH_2-CH_2-CH_3}}{2-metileptano}
+\schemestop
+}
+\caption{Exemplos de reações de isomerização no alcanos}
+\end{figure}
+\end{bclogo}
+\end{frame}
 
-\end{myrule}
 
+\section{Alcenos}
+\label{sec:org546413b}
 
-\begin{myrule}{Cadeia Fechada}
-
+\begin{frame}[label={sec:orgc09caa0}]{Reação de adição}
 \begin{itemize}
-\item \emph{Cadeia fechada ou ciclíca:} Os átomos de carbono se ligam entre si de modo a formarem um ciclo.
+\item Os alcenos participam de reações de adição, nas quais os fragmentos da quebra de pequenas moléculas, tais como, \ch{H2}, \ch{C$\ell$2}, \ch{HC$\ell$} e \ch{H2O}, se adicionam aos carbonos que estabeleciam ligação dupla e que após a reação, passam a estabelecer ligação simples.
 \end{itemize}
 
+
+
+\begin{bclogo}[couleur=blue!40 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Isomerização dos alcanos}
 \begin{center}
-\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]}
-\end{center}
-
-\end{myrule}
-
-
-\begin{myrule}{Cadeia Mista}
-
-\begin{itemize}
-\item Os atomos se ligam formando um ciclo e tem as extremidades livres.
-\end{itemize}
-\begin{center}
-\chemfig{-[:90]C(-[:180])-C(-[:90]C(-)(-[:90])-[:180]C(-[:90])(-[:180])-[:270]\phantom{C})(-[:270])-C(-[:270])(-[:90,,,1])-C(-[:90])(-[:270])-C(-[:90])(-)-[:270]}
-\end{center}
-
-\end{myrule}
-\end{frame}
-
-
-\section{Cadeias Abertas}
-\label{sec:org9c0e8bd}
-
-\begin{frame}[allowframebreaks]{Cadeias Abertas}
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-
-	Cadeia aberta Normal   &  Cadeia Aberta Ramificada \\
-%
-		Carbonos, primários, secundários & Ao menos um carbono terciário ou quartenário\\
-	\chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-} &  \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-C(!\nobond\chemabove[1ex]{}{\color{blue}\hspace{.2cm}\vspace{.7cm}4})([:0]-)([:180]-)-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}\\
-		Carbono 1: primário & \\
-		Carbono 2: secundário & Carbono 2: terciário\\
-		Carbono 3: primário & Carbonos 1, 3 e 4: primários\\
-		\hline
-	\end{tblr}
-
-
-
-
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {cc}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-  Cadeia aberta homogênea   &  Cadeia aberta heterogênea \\
-Apresentam somentes átomos de carbono & Ao menos um átomo heteroátomos\\
- \chemfig{-C([:-90]-)([:90]-)-C([:90]-)=C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-{\color{blue}O}-C([:90]-)([:-90]-)-} \\
- \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C([:-90]-C([:180]-)([:0]-)-)={\color{blue}N}-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
-Este \emph{oxigênio} não é heteroátomo & \\
-\hline
-\end{tblr}
-
-
-
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-Cadeia aberta saturada   &  Cadeia aberta insaturada \\
-Apresentam somentes átomos de carbono apresentam ligações simples & Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação\\
- \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} \\
- \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
-O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono saturado}. & A átomo que apresenta ligação dupla ou tripla é chamado de \emph{carbono insaturado.}\\
-\hline
-\end{tblr}
-\end{frame}
-
-
-\section{Cadeias Fechadas}
-\label{sec:orge167809}
-
-\begin{frame}[allowframebreaks]{Cadeias Fechadas}
-	{\small
-\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
- Cadeia fechada aromática   &  Cadeia fechada alicíclica \\
-Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação & Cadeia cíclica que não constitui anel benzênico\\
- \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} & \chemfig{C*6((-)=C(-)-C(-)-C(-)-C(-)=C(-)-)} \\ 
- \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}   &    \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
-Esses ciclos recebem o nome de \emph{benzeno} & \\
-\hline
-\end{tblr}
-}
-
-
-
-	{ \setchemfig{atom style={scale=0.5}}
-	\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-		Cadeia aromática mononuclear   &  Cadeia aromática polinuclear \\
-		%\hline 
-		Cadeia aromática com apenas um núcleo benzênico & Cadeia aromática com dois ou mais núcleos benzênicos\\ 
-		\chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}   &  \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \\ & \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}\\
-		%Esses clicos recebem o nome de \emph{benzeno} & \\[0pt]
-		\hline
-	\end{tblr}
-}
-
-
-
-\begin{tblr}
-	[
-	theme= fancy,
-	caption={Classificação das Cadeias Fechadas},
-	]{
-		colspec = {Xm{8cm}}, colsep = 2mm, hlines = {2pt, white},
-		%row{odd} = {brown8}, row{even} = {gray8},
-		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-	}
-	Cadeia alicíclica homocíclica   &  Cadeia alicíclica heterocíclica \\
-	\hline
-	Cadeia cíclica alicíclica formada apenas por átomos de carbono & Cadeia cíclica alicíclica que apresenta heteroátomo\\[0pt]
-	\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}   &   \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \quad \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
-	& \\
-	\hline
-\end{tblr}
-
-
- \setchemfig{atom style={scale=0.7}}
-	\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
-%		\hline
-		Cadeia alicíclica saturada & Cadeia alicíclica insaturada\\
-		%%% 
-		Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas\\
-		\chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})}  & 
-		\chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} \\
-		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} &  \chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} \\
-		\hline
-	\end{tblr}
-\end{frame}
-
-
-\section{Exercícios}
-\label{sec:orgdbb1c80}
-
-\begin{frame}[allowframebreaks]{Exercícios}
-\begin{question}
-\alert{(MACKENZIE-SP)} O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é :
-
-\chemfig{Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90]%
-(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)%
--[:90]=^[:150](-[:210])}
-
-
-\begin{choice}(2)
-\choice três carbonos terciários.
-\choice somente carbonos secundários.
-\choice um carbono quaternário.
-\choice somente carbonos primários.
-\choice somente um carbono terciário
-\end{choice}
-\end{question}
-\pagebreak
-\begin{answer}[print=true]
-\small
-Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas:
-
-a) três carbonos terciários:
-
-
 \begin{tikzpicture}
-			
-		
-	\node[] at (0,0){	\chemfig{Cl-[:30]C=^[:330]\mcfbelow{C}{H}-[:30,,,1]CH=^[:90,,1]C(%
-			-[:150]\mcfabove{C}{H}=^[:210,,,2]HC-[:270,,2]\phantom{C})%
-			-[:30]\mcfbelow{C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C%
-			=^[:270,,,2]HC-[:330,,2]\mcfbelow{C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH%
-			=^[:150,,1]\mcfabove{C}{H}(-[:210]\phantom{C})}
-		};
-	\draw[red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm);
-	\end{tikzpicture}	
-
-Apresenta \alert{3 carbono terciários}
-
-Está correto, apresenta três C terciários.
-
-b) somente carbonos secundários: não, já vimos que existem C terciários na molécula.
-
-c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos.
-
-d) somente carbonos primários: não, justificativa vide alternativa A.
-
-e) somente um carbono terciário: não, são três.
-
-Alternativa correta: \alert{A}.
-\end{answer}
-\end{frame}
-
-
-\begin{frame}[label={sec:org1516736}]{Fim da Aula}
-\begin{tikzpicture}
-\node[graduate,sword, devil, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+	\node[draw=none] at (0,0) {\chemfig{-[:300](-[:240])=(-[:300])-[:60]}};
+	\node[draw=none] at (1.5,0) {+};
+	\node[draw=none] at (2.5,0) {A-B};
+	\draw[->] (3.5,0)--(4.3,0);
+	\node[draw=none] at (6,0) {\chemfig{-(-[:90])(-[:270]A)-(-[:270]B)(-[:90])-}};
 \end{tikzpicture}
-\begin{center}
-\begin{tabular}{ccc}
-Download Aula & & Lista de Exercícios \\
- \qrcode[height=2in]{https://mark.nl.tab.digital/s/8HyAjqSA4qCsy9n} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6YXizxPQkdFRi8J}\\
- \end{tabular}
- \end{center}
+\end{center}
+
+Onde \alert{AB} =  \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH 
+\end{bclogo}
 \end{frame}
+
+
+\begin{frame}[label={sec:org4985709}]{}
+\vspace{-.5cm}
+\begin{itemize}
+\item O termo \alert{carbocátion} foi sugerido por George A. Olah para designar qualquer espécie catiônica do carbono. Os carbocátions têm deficiência de elétrons, com apenas 6 elétrons na camada de valência e, por causa disto, são ácidos de Lewis.
+\end{itemize}
+
+\begin{bclogo}[couleur=blue!40 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Formação do carbocátions}
+\begin{center}
+\schemestart	
+	\chemname{\chemfig{R_2-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-R_1)([:-90]-R_3)}}{Terciário} \qquad > \qquad \chemname{\chemfig{R_2-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-R_1)([:-90]-H)}}{Secundário} \qquad > \qquad \chemname{\chemfig{R_1-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-H)([:-90]-H)}}{Primário}\qquad > \qquad \chemname{\chemfig{H-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-H)([:-90]-H)}}{Metil}
+	\schemestop
+	\chemmove{
+	\node[single arrow, draw=black, fill=red8!30, 
+	minimum width = 10pt, single arrow head extend=3pt,
+	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem decrescente de estabilidade dos carbocátions}; % length of arrow
+	}
+	\end{center}
+\end{bclogo}
+\end{frame}
+
+\begin{frame}[label={sec:orgcf241db}]{Adição de hidrogênio ou higrodenação catalítica}
+\begin{itemize}
+\item Consiste na reação do alceno com gás \ch{H2}, que é catalisada por níquel (\alert{Ni}), platina (\alert{Pt}) ou paládio (\alert{Pd}).
+\item Atuação do catalisador na hidrogenação: adsorve tanto as moléculas de \ch{H2} como do alceno, provocando o enfraquecimento das ligações, tornando a reação mais fácil.
+\end{itemize}
+
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de hidrogenação}
+
+\begin{tikzpicture}[thick,scale=0.8, every node/.style={scale=0.8}]
+
+%\draw[help lines] (0,0) grid (2,2);
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+\node (wall1) [ground, minimum width=2cm] {};
+\draw (wall1.north west) -- (wall1.north east);
+\node[above=0.5cm of wall1]{\ch{H2}};
+\node[below=0.3cm of wall1,text width=2cm]{Superfície do catalisador};
+\node (seta1) [right=0.5cm of wall1]{\ch{<=>}};
+%%% ============= Wall 2
+\node (wall2) [right=0.5cm of seta1,ground, minimum width=2cm] {};
+\draw (wall2.north west) -- (wall2.north east);
+\node (seta2) [right=0.5cm of wall2]{\ch{<=>}};
+\node(H1)[] at (3.7,0.85){H};
+\node(H2)[] at (4.6,0.85) {H};
+\draw(wall2)--(H1);
+\draw(wall2)--(H2);
+%%%% ================== WALL 3 
+\node (wall3) [right=0.5cm of seta2,ground, minimum width=2cm] {};
+\draw (wall3.north west) -- (wall3.north east);
+\node (seta3) [right=0.5cm of wall3]{\ch{->}};
+\node(H3)[] at (8.1,0.85){H};
+\node(H4)[] at (8.6,0.85){H};
+\node(et)[] at (9.3,1.7) {\chemfig[atom style={scale=.7}]{H-[:110]C(-[:55]H)=[:180]C(-[:120]H)-[:240]H}};
+\draw(8.1,0)--(H3);
+\draw(8.6,0)--(H4);
+\draw[dashed] (9.3,0)--(9.3,1.7);
+ 
+ 
+ %%%%% ================ WALL 4
+\node (wall4) [right=0.5cm of seta3,ground, minimum width=2cm] {};
+\draw (wall4.north west) -- (wall4.north east);
+\node(etano)[above=.5cm of wall4] {\chemfig[atom style={scale=.7}]{H-[:110]C(-[:55]H)(-[:357.5]H)-[:180]C(-[:120]H)(-[:240]H)-[:180]H}};
+\end{tikzpicture}
+\end{bclogo}
+\end{frame}
+
+
+\begin{frame}[label={sec:org99a8d53}]{Adição de halogênios}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orga995f57}]{Adição de haletos de hidrogênio (HX)}
+\end{frame}
+
+
+\begin{frame}[label={sec:org5e4e540}]{Adição de água}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgef9c638}]{Regra de Markovnikov}
+\end{frame}
+
+
+\section{Alcinos}
+\label{sec:org7417e5f}
 \end{document}

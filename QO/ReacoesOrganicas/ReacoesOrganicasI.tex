@@ -1,0 +1,242 @@
+% Created 2024-08-17 Sat 03:43
+% Intended LaTeX compiler: lualatex
+\documentclass{beamer}
+\usetheme{default}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
+ pdflang={English}}
+\begin{document}
+
+\begin{frame}{Sumário}
+\tableofcontents
+\end{frame}
+
+\begin{frame}[label={sec:orgb84b63b}]{Reações Orgânicas}
+\begin{block}{Reações Orgânicas}
+Reações orgânicas são formas de transformação de moléculas orgânicas em outras moléculas orgânicas. São tipos de reações orgânicas:
+\begin{itemize}
+\item Reações de adição
+\item Substituição
+\item Oxidação
+\item Redução
+\item Eliminação.
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[label={sec:org5997c1c}]{Alcanos}
+\begin{block}{Alcanos}
+\begin{itemize}
+\item Carbono e hidrogênio têm eletronegatividades bem semelhantes, logo, a ligação C - H é basicamente apolar.
+\item Conseqüentemente, compostos contendo ligações C - C e C - H são estáveis e apresentam uma tendência muito baixa para reagir com outras substâncias.
+\item A adição de grupos funcionais (por exemplo, C-O-H) introduz reatividade às moléculas orgânicas.
+\item Suas reações envolvem a formação de radicais, formados em altas temperaturas ou na presença de radiação UV.
+\end{itemize}
+\end{block}
+
+\begin{block}{Formação de Radicais}
+\alert{Radicais:} espécies químicas que apresentam um elétron desemparelhado.
+
+\begin{reaction}
+	R3C-X -> R3 "\chlewis{0.}{C}"  +  "\chlewis{180.}{X}"
+\end{reaction}
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Estabilidade do Radicais Alquila}
+\begin{center}	
+\chemfig{R-\charge{0=\.}{C}([:90]-R)([:-90]-R)} \qquad > \qquad \chemfig{R-\charge{0=\.}{C}([:90]-H)([:-90]-R)} \qquad > \qquad \chemfig{H-\charge{0=\.}{C}([:90]-H)([:-90]-H)}
+\end{center}
+\end{bclogo}
+\end{block}
+
+\begin{block}{Halogenação}
+\begin{itemize}
+\item Sob condições adequadas sofrem reação de substituição com halogênios.
+\item A substituição de um \alert{H} por um halogênio é denominada \alert{halogenação}.
+\end{itemize}
+
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Cloração do Metano}
+\begin{reaction*}
+CH4 + C$\ell$2(excesso) ->[$\Delta$ ou][h$\nu$] CH3C$\ell$ + CH2C$\ell$2 + CHC$\ell$3 + CC$\ell$4 + HC$\ell$
+\end{reaction*}	 
+\end{bclogo}
+\end{block}
+
+
+\begin{block}{}
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de cloração do Metano}
+
+  \begin{empheq}[left=\text{Inicia\c{c}\~{a}o}\quad\; \empheqlbrace]{flalign} 
+	\ch{C$\ell$2 -> 2 "\chlewis{0.}{C$\ell$}"} & \qquad \qquad \qquad \quad \quad   \enthalpy{-242.7}
+	\end{empheq}
+	
+	%%%% Reac2
+ \begin{empheq}[left=\text{Propaga\c{c}\~{a}o}\; \empheqlbrace]{flalign}
+	\ch{"\chlewis{0.}{C$\ell$}" + CH4 -> "\chlewis{180.}{C}" H3 + HC$\ell$} & \quad \qquad \enthalpy{-3.4}\\
+	\ch{"\chlewis{180.}{C}" H3{} + {} C$\ell$2 -> CH3C$\ell$ + "\chlewis{180.}{C}" $\ell$} & \quad \qquad	\enthalpy{-106.7}
+\end{empheq}
+
+%%% R3
+
+ \begin{empheq}[left=\text{T\'ermino}\;\quad \empheqlbrace]{flalign}
+\ch{"\chlewis{0.}{C$\ell$}" {} + {}  "\chlewis{0.}{C$\ell$}" {} -> C$\ell$2} & \qquad \qquad \enthalpy{-242.7} \\ 
+\ch{"\chlewis{0.}{C$\ell$}" {} + {}  "\chlewis{180.}{C}" H3{}  -> CH3C$\ell$} & \qquad \qquad \enthalpy{-349.4}\\
+\ch{"\chlewis{180.}{C}" H3{} + "\chlewis{180.}{C}" H3{} -> CH3CH3} & \qquad \qquad \enthalpy{-368.2}
+\end{empheq}
+\end{bclogo}
+\end{block}
+\begin{block}{}
+\begin{itemize}
+\item Todos os outros alcanos reagem com os \alert{halogênios} da mesma maneira que o metano.
+\item Quanto maior o número de carbonos, maior será o número de possíveis compostos mono e polialogenados formados.
+\end{itemize}
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de cloração do metilpropano}
+\schemestart[,1.0]
+\chemfig{CH_3-C([:90]-CH_3)([:-90]-H)-CH_3}
+\arrow(.mid east--.mid west)
+\chemname{\chemfig{CH_3-C([:90]-CH_3)([:-90]-H)-CH_3}}{> 99\%} \quad +  \quad \chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_2-Br}}{Traços}
+\schemestop
+\end{bclogo}
+\end{block}
+
+
+
+\begin{block}{Oxidação}
+Os \alert{alcanos} e outros \alert{hidrocarbonetos} queimam na presença \ch{O2}, sendo tal reação de oxidação denominada
+\alert{combustão}.
+
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Mecanismo de combustão dos alcanos}
+
+
+\begin{align*}
+\ch{C_nH_{2n+2}} \quad + \quad  \frac{3n+1}{2}\ch{O2 -> n CO2}\quad +\quad (n+1)\ch{H2O} & \qquad \quad \enthalpy*[unit=\kilo\joule\per\gram]{\approx 55} \approx 55 \unit{\kilo\joule\per\gram}\\ & \hspace{1cm} \mathrm{de~hidrocarboneto} \\ \\
+\ch{CH4\gas{} \quad{} + \quad{} 2 O2\gas{} -> CO2\gas{} \qquad{} + \quad{} 2 H2O\lqd{}} & \quad \quad \enthalpy{-891.2}\\ \\
+	\ch{2 C4H10\gas{} \quad{} + \qquad{} 13 O2\gas{} -> 8 CO2\gas{} \quad{} + \quad{} 2 H2O\lqd{}} & \quad \quad \enthalpy{-2878.6}    
+\end{align*}
+\end{bclogo}
+\end{block}
+
+
+\begin{block}{Reação de pirólise}
+\begin{itemize}
+\item \alert{Pirólise} é um tipo de reação de decomposição ou análise, em que uma substância é decomposta em outras, pela ação do calor do fogo.
+\end{itemize}
+
+
+
+
+\begin{figure}
+\setchemfig{atom sep=1.6em}
+\tiny{	
+%\setchemfig{scheme debug=true}
+\schemestart[,1.0]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H} 
+\arrow{->[*{0}Aquecimento]}[-90]%(@c1--)[-90]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-\charge{0=\.}{C}@{db,1.3}([:90]-H)([:-90]-H)} \qquad  + \qquad 
+\chemfig{\charge{180=\.}{C}([:90]-H)([:-90]-@{atoo,1.5}H)-[@{a2}]C([:90]-H)(-[@{a1}:-90]H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
+\arrow(@c2--)[-90]
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H} \quad + \quad \chemfig{H-C([:90]-H)=C([:90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
+\schemestop 
+\chemmove{
+\draw[shorten <=2pt, shorten >=2pt](db) ..controls +(down:10mm) and +(150:8mm)..(atoo);
+\draw[shorten <=2pt, shorten >=2pt](a1) ..controls +(135:1mm) and +(250:5mm)..(a2);
+}}
+\caption{Esquema de pirólise do hexadecano, com formação do octano e oct-1-eno.}
+\end{figure}
+\end{block}
+
+\begin{block}{Reação de isomerização}
+\begin{bclogo}[couleur=yellow!40 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Isomerização dos alcanos}
+
+
+\setchemfig{atom sep=1.8em}
+\begin{figure}
+\small{
+\centering
+\schemestart
+\subscheme{%
+\chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_3}}{Isobutano}
+\arrow{<<->[\ch{A$\ell$C$\ell$3}][\SI{27}{\degreeCelsius}]}[180,1.2] 
+\chemfig{H_3C-CH_2-CH_2-CH_3}
+}
+\schemestop
+\vspace{0.5cm}
+\schemestart
+\chemfig{CH_3-{(}CH_2{)}_5-CH_3}
+\arrow{->} \chemname{\chemfig{CH_3-CH([:90]-CH_3)-CH_2-CH_2-CH_2-CH_3}}{2-metileptano}
+\schemestop
+}
+\caption{Exemplos de reações de isomerização no alcanos}
+\end{figure}
+\end{bclogo}
+\end{block}
+\end{frame}
+\begin{frame}[label={sec:orga5b7f18}]{Alcenos}
+\begin{block}{Reação de adição}
+\begin{itemize}
+\item Os alcenos participam de reações de adição, nas quais os fragmentos da quebra de pequenas moléculas, tais como, H2, Cl2, HCl e H2O, se adicionam aos carbonos que estabeleciam ligação dupla e que após a reação, passam a estabelecer ligação simples.
+\end{itemize}
+
+\begin{center}
+\schemestart
+\chemfig{-[:300](-[:240])=(-[:300])-[:60]} \quad + \quad  \chemfig{A-B} \arrow \chemfig{-(-[:90])(-[:270]A)-(-[:270]B)(-[:90])-}
+\schemestop
+\end{center}
+
+Onde \alert{AB} =  \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH 
+\end{block}
+\begin{block}{A}
+\begin{itemize}
+\item O termo \alert{carbocátion} foi sugerido por George A. Olah para designar qualquer espécie catiônica do carbono. Os carbocátions têm deficiência de elétrons, com apenas 6 elétrons na camada de valência e, por causa disto, são ácidos de Lewis.
+\end{itemize}
+
+\begin{bclogo}[couleur=yellow!40 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Isomerização dos alcanos}
+\begin{center}
+		\schemestart	
+	\chemname{\chemfig{R_2-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-R_1)([:-90]-R_3)}}{Terciário} \qquad > \qquad \chemname{\chemfig{R_2-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-R_1)([:-90]-H)}}{Secundário} \qquad > \qquad \chemname{\chemfig{R_1-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-H)([:-90]-H)}}{Primário}\qquad > \qquad \chemname{\chemfig{H-\charge{[extra sep=0pt]45 [anchor=180+\chargeangle]=$\scriptstyle\oplus$}{C}([:90]-H)([:-90]-H)}}{Metil}
+	\schemestop
+	\chemmove{
+	\node[single arrow, draw=black, fill=red8!30, 
+	minimum width = 10pt, single arrow head extend=3pt,
+	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem decrescente de estabilidade dos carbocátions}; % length of arrow
+	}
+	\end{center}
+\end{bclogo}
+\end{block}
+
+\begin{block}{Adição de hidrogênio ou higrodenação catalítica}
+\end{block}
+
+
+\begin{block}{Adição de halogênios}
+\end{block}
+
+
+
+\begin{block}{Adição de haletos de hidrogênio (HX)}
+\end{block}
+
+
+\begin{block}{Adição de água}
+\end{block}
+
+
+\begin{block}{Regra de Markovnikov}
+\end{block}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgc989127}]{Alcinos}
+\end{frame}
+\end{document}
