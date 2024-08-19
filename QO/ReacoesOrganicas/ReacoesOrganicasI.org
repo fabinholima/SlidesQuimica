@@ -285,18 +285,103 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 #+end_export
 #+end_bclogo
 
+** 
+
+
+- Uma aplicação industrial da hidrogenação catalítica é na fabricação de margarinas a partir de óleos vegetais.
+- Óleos Vegetais: misturas de ésteres do glicerol com ácidos graxos. Tais ésteres são denominados *triacilglicerídeos*.
+
+  
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Exemplo de triacilglicerídeo}
+#+begin_bclogo
+#+begin_export latex
+\definesubmol{r1}{{[}CH_2{]}_7CH=CHCH_2CH=CHCH_2CH=CHCH_2CH_3}
+\definesubmol{r2}{{[}CH_2{]}_7CH=CHCH_2CH=CH{[}CH_2{]}_4CH_3}
+\definesubmol{r3}{{[}CH_2{]}_7CH=CH{[}CH_2{]}_7CH_3}
+\chemfig[atom sep=2em]{H-C(-[2,2]C(-[4]H_2)-O-C(=[2]O)-!{r1})(-[6,2]C(-[4]H_2)-O-C(=[2]O)-!{r3})-O-C(=[2]O)-!{r2}}
+
+#+end_export
+#+end_bclogo
+
+
+** 
+
+- Com a hidrogenação parcial das ligações duplas dos triacilglicerídeos, o óleo vegetal é convertido em um material de consistência pastosa denominado *margarina*.
+
+  #+ATTR_LATEX: :scale 0.05
+  [[../ReacoesOrganicas/trigli3D.png]] \par
+  [[../ReacoesOrganicas/triglimono.png]]
+  
+
 
 ** Adição de halogênios
 
+  
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Adição de halogênios}
+#+begin_bclogo
 
+#+begin_export latex
+\schemestart
+%\chemfig{@{a4}H_2C=C@{a3}H_2}
+\chemfig{@{a4}C(-[3]H)(-[5]H)=@{a3}C(-[1]H)-[7]H}
+\qquad + \qquad 
+\chemfig{@{a2}C{\ell}-@{a1}C{\ell}} 
+\arrow 
+\chemfig{H-C([:90]-C{\ell})([:-90]-H)-C([:90]-C{\ell})([:-90]-H)-H}
+\chemmove[-stealth,shorten <=3pt,dash pattern= on 1pt off 1pt,thin]{
+\draw[shorten >=2pt](a1) ..controls +(300:7mm) and +(10:5mm)..(a3);
+\draw[shorten >=2pt](a2) ..controls +(110:15mm) and +(90:7mm)..(a4);
+}
+\schemestop
+#+end_export
+
+#+end_bclogo
 
 ** Adição de haletos de hidrogênio (HX)
+
+
+  
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Adição de haletos}
+#+begin_bclogo
+
+
+#+begin_export latex
+\schemestart
+\chemfig{@{a4}C(-[3]H)(-[5]H)=@{a3}C(-[1]H)-[7]H}
+\qquad + \qquad 
+\chemfig{@{a2}H-@{a1}C{\ell}} 
+\arrow 
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-C{\ell})([:-90]-H)-H}
+\chemmove[-stealth,shorten <=3pt,dash pattern= on 1pt off 1pt,thin]{
+\draw[shorten >=2pt](a1) ..controls +(300:7mm) and +(10:5mm)..(a3);
+\draw[shorten >=2pt](a2) ..controls +(110:15mm) and +(90:7mm)..(a4);
+}
+\schemestop
+
+#+end_export
+
+#+end_bclogo 
 
 
 ** Adição de água
 
 
+
+  
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Adição de água}
+#+begin_bclogo
+
+
+#+end_bclogo 
+
+
+
 ** Regra de Markovnikov
 
 
+
+
 * Alcinos 
+
+
+
