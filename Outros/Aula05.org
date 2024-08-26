@@ -1,0 +1,708 @@
+
+** Definição
+
+Estuda os fatores moleculares relacionados ao modo de ação dos fármacos,
+incluindo a compreensão da relação entre a estrutura química e a atividade(SAR), 
+além das propriedades(SPR) que governam sua absorção, distribuição, metabolismo, eliminação (ADME)
+e toxiciddade.
+
+
+* Origem 
+
+** Primeiros Princípios
+   :PROPERTIES:
+   :BEAMER_OPT: fragile
+   :END:
+   #+begin_export latex
+   \begin{mybox}{Origem}
+%\small
+   Origem de farmácos se dever ao uso de plantas medicinais Mesopotâmia
+   e datam de 2.600 a.C., incluindo óleo de cedro ({\itshape Cedrus sp.}),
+   alcaçuz ({\itshape Glycyrrhiza glabra}), mirra ({\itshape Commiphora sp.}),
+   papoula ({\itshape Papaver  somniferum}),
+\end{mybox}
+   #+end_export
+
+   #+begin_export latex
+\begin{figure}
+\centering
+\subfloat[Cedro]{\label{fig:org-gull}
+%\begin{center}
+\includegraphics[width=0.25\textwidth]{./img/cedrus.jpeg}
+%\end{center}
+}\subfloat[Alcaçuz]{\label{fig:org-tiger}
+\includegraphics[width=0.18\textwidth]{./img/alcacuz.jpg}
+}\subfloat[Mirra]{\label{fig:org-mouse}
+\includegraphics[width=0.18\textwidth]{./img/mirra.jpg}
+}\subfloat[Papoula]{\label{fig:org-papo}
+\includegraphics[width=0.2\textwidth]{./img/papoula.jpg}
+}%\caption{Multiple pictures}\label{fig:org-animals}
+\end{figure}
+
+   #+end_export
+
+* Alcalóides
+
+** Introdução
+
+   #+begin_export latex
+   \begin{mybox}{Aspectos}  
+   #+end_export
+   - Alcaloides constituem vasto grupo de metabólitos com grande diversidade estrutural.
+   - Representam cerca de 20% das substâncias naturais descritas.
+   - Ao longo do tempo, vem causando grande impacto na economia,medicina e emoutross etores sociais e políticos.
+   - Desde os primórdios da civilização, as espécies vegetais contendo alcaloides foram usadas como medicamento, veneno e em “poções mágicas”.
+   #+begin_export latex
+   \end{mybox}
+   #+end_export
+     
+
+** Breve Histórico 
+
+   - Na Grécia antiga, Sócrates foi executado ao ingerir chá de /Cicuta/.
+
+*** Estrutura                                                        :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+   
+   #+begin_export latex
+   \begin{figure}
+   \chemfig{
+           % 9
+    -[:150]% 8
+    -[:210]% 5
+    >[:150]% 2
+    -[:210]\mcfbelow{N}{H}% 1
+    -[:150]% 7
+     -[:90]% 6
+     -[:30]% 4
+    -[:330]% 3
+              (
+        -[:270]% -> 2
+              )
+}
+\caption{Coniina}
+\label{coine}
+\end{figure}
+   #+end_export
+   
+
+
+
+
+*** Planta                                                           :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+   
+   #+NAME: fig;cicuta
+   #+CAPTION: /Conium maculatum/ https://www.inaturalist.org/photos/25664658
+   [[./img/cicuta.jpg]]
+   
+   
+**  Atropina
+   #+begin_export latex
+   \begin{mybox}{Curiosidade}
+   Durante o Império Romano,a esposa do imperador Augusto,
+   Lívia, assassinava inimigos políticos do marido,
+   durante os banquetes,adicionando a {\itshape Beladona} aos alimentos.
+   \end{mybox}
+   #+end_export
+*** Col left                                                          :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+   #+begin_export latex
+   \begin{figure}
+   \chemfig[atom style={scale=1}]{
+                    O% 2
+              =[:40]% 13
+                       (
+                 -[:340]% 14
+                           (
+                      -[:40]% 16
+                 -[:340,,,1]OH% 3
+                           )
+                 -[:280]% 15
+                =_[:340]% 17
+                 -[:280]% 19
+                =_[:220]% 21
+                 -[:160]% 20
+                =_[:100]% 18
+                  -[:40]% -> 15
+                       )
+             -[:100]O% 1
+             -[:160]% 11
+             -[:214]% 9
+    >:[:144.7,1.497]% 5
+      -[:76.2,2.006]N% 4
+                       (
+                  -[:60]% 12
+                       )
+     -[:233.1,1.228]% 6
+                       (
+         -[:351.3,2.057]% 10
+                 -[:286]% -> 11
+                       )
+       <[:200,1.489]% 8
+             -[:285]% 7
+                       (
+            -[:20,1.489]% -> 5
+                       )
+}
+\caption{Atropina}
+   \end{figure}
+   #+end_export
+
+*** Col right                                                         :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+#+NAME: atripine
+#+CAPTION: /Atropa belladona L./
+[[./img/bella.jpg]]
+
+* Primeira Molécula
+
+** Moléculas Pioneiras
+   
+ #+begin_export latex
+\begin{mybox}{Definição}
+A morfina é derivada do ópio  uma substância natural, extraída do látex contido nas cápsulas da papoula.
+
+
+\begin{figure}
+%\tiny
+\chemfig[atom style={scale=1},cram width=3pt]{
+	HO % 2 
+	>:[:30,1.051,2]% 14
+	-[:90]% 8
+	<:[:122.3,1.249]O% 1
+	-[:54.8,1.157]% 16
+	-[:330]% 10
+	-[:270]% 5
+	(
+	-[:210]% -> 8
+	)
+	-[:330]% 6
+	(
+	-[:270]% 15
+	=_[:210]% 17
+	-[:150]% -> 14
+	)
+	-[:30]% 7
+	(
+	-[:330]N% 4
+	(
+	-[:312.9,1.051]% 18
+	)
+	>[:115.9,1.371]% 12
+	-[:180,1.422,,,,line width=2.4pt]% 9 Line Solid
+	>[:231.8,0.934]% -> 5
+	)
+	-[:90]% 11
+	-[:150]% 13
+	(
+	=_[:210]% -> 10
+	)
+	-[:90]% 19
+	=^[:150]% 21
+	-[:210]% 20
+	(
+	=^[:270]% -> 16
+	)
+	-[:150,1.051,,2]HO% 3
+}
+\caption{Estrutura do morfina}
+\end{figure}
+\end{mybox}
+#+end_export
+
+
+   
+** Primeiros Estudos
+
+   #+begin_export latex
+   \begin{mybox}{Origem da Heroína}
+   \begin{itemize}
+   \scriptsize
+  \item Sintetizada pelo químico inglês Charles Romley Alder Wright, em 1874, a partir da morfina.
+  \item Em 21 de agosto de 1897, foi introduzida no mercado de medicamentos pelo químico Felix Hoffmann, da Bayer.
+  \end{itemize}
+
+
+\begin{figure}
+\chemfig[atom style={scale=.85},cram=2pt]{
+                    O% 4
+       =[:150,1.052]% 24
+                       (
+           -[:210,1.052]% 25
+                       )
+        -[:90,1.052]O% 2
+       >:[:30,1.051]% 16
+              -[:90]% 10
+    <:[:122.3,1.249]O% 1
+      -[:54.8,1.157]% 18
+             -[:330]% 12
+             -[:270]% 7
+                       (
+                 -[:210]% -> 10
+                       )
+             -[:330]% 8
+                       (
+                <:[:270]% 17
+                =_[:210]% 19
+                 -[:150]% -> 16
+                       )
+              -[:30]% 9
+                       (
+                 -[:330]N% 6
+                           (
+             -[:312.9,1.051]% 20
+                           )
+         -[:115.9,1.371]% 14
+           -[:180,1.422,,,,line width=2.pt]% 11
+         >[:231.8,0.934]% -> 7
+                       )
+              <[:90]% 13
+             -[:150]% 15
+                       (
+                =_[:210]% -> 12
+                       )
+              -[:90]% 21
+            =^[:150]% 23
+             -[:210]% 22
+                       (
+                =^[:270]% -> 18
+                       )
+       -[:150,1.051]O% 3
+        -[:90,1.052]% 26
+                       (
+           -[:150,1.052]% 27
+                       )
+        =[:30,1.052]O% 5
+}
+\end{figure}
+
+   \end{mybox}
+
+   #+end_export
+   
+
+** Cocaína
+
+   #+begin_export latex
+      \begin{mybox}{Origem}
+
+
+{%\scriptsize
+\small
+   A cocaína, um alcaloide da planta de coca ({\itshape Erythroxylon coca}),
+   isolada em 1859 pelo químico alemão Albert Niemann, foi comercializada como medicamento nos Estados Unidos em 1882.
+   A substância era usada, principalmente, para dores de dentes de crianças e para o tratamento da gota —
+   doença que causa fortes dores nas articulações e pode causar artrite aguda.}
+
+
+   \begin{figure}
+   \centering
+   \subfloat[Estrutura da cocaína]{\chemfig[atom style={scale=1}]{
+                   O% 3
+            =[:152]% 14
+                      (
+                -[:212]O% 2
+            -[:272,,,1]CH_3% 16
+                      )
+             >[:92]% 8
+     -[:35.3,1.497]% 6
+    -[:103.8,2.006]N% 5
+                      (
+            -[:120,,,2]H_3C% 13
+                      )
+    -[:306.9,1.228]% 7
+                      (
+          -[:340,1.489]% 10
+                -[:255]% 9
+         >:[:160,1.489]% -> 6
+                      )
+    <[:188.7,2.057]% 11
+            -[:254]% 12
+                      (
+                -[:326]% -> 8
+                      )
+            <[:200]O% 1
+            -[:140]% 15
+                      (
+                 =[:80]O% 4
+                      )
+            -[:200]% 17
+           =^[:140]% 18
+            -[:200]% 20
+           =^[:260]% 22
+            -[:320]% 21
+            =^[:20]% 19
+                      (
+                 -[:80]% -> 17
+                      )
+}}
+\qquad \subfloat[Erythroxylon Coca]{\includegraphics[scale=.31]{coca.png}}
+%\caption{Three simple graphs}
+\end{figure}
+   \end{mybox}
+
+   #+end_export
+   
+   
+** Cafeína
+   - Entre 1817-1820 Pelletier & Caventou isolaram a cafeína.
+     
+*** Col left                                                          :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+   #+begin_export latex
+   \begin{mybox}{Coffee Please !!!}
+   \begin{figure}
+\chemfig{
+                   O% 1
+            =[:270]% 9
+            -[:210]N% 5
+                      (
+            -[:150,,,2]H_3C% 14
+                      )
+            -[:270]% 10
+                      (
+                =[:210]O% 2
+                      )
+            -[:330]N% 3
+                      (
+            -[:270,,,1]CH_3% 12
+                      )
+             -[:30]% 8
+    -[:342.2,0.994]N% 6
+      =^[:54,0.994]% 11
+      -[:126,0.994]N% 4
+                      (
+           -[:71.9,,,1]CH_3% 13
+                      )
+    -[:197.9,0.994]% 7
+                      (
+               =^[:270]% -> 8
+                      )
+                      (
+                -[:150]% -> 9
+                      )
+}
+\caption{Cafeína}
+   \end{figure}
+ \end{mybox}
+   #+end_export   
+*** Col right                                                         :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+#+NAME:cafeine
+#+CAPTION: /Coffea arabica L./
+[[./img/arabica.jpg]]
+
+
+** Emetina
+
+   #+begin_export latex
+   \begin{mybox}{Uso}
+   ​A Ipeca é um pequeno arbusto de apenas 30 cm de altura, que pode ser usada como planta medicinal para induzir o vômito, cessar a diarreia e para soltar as secreções do sistema respiratório.
+   \end{mybox}
+   #+end_export
+
+*** Col left                                                          :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.55
+   :END:
+
+
+   #+begin_export latex
+%   \vspace{-.8cm}
+\begin{figure}
+  \hspace{-.5cm} \chemfig[atom style={scale=.85}]{
+                    CH_3% 20
+         -[:90.2,,1]% 14
+           >:[:30.2]% 8
+        -[:90,1.042]% 7
+                       (
+          -[:29.6,1.042]% 10
+         -[:329.1,1.042]% 9
+                 -[:270]N% 5
+                           (
+                     -[:330]% 13
+                      -[:30]% 17
+                      -[:90]% 18
+                     -[:150]% 15
+                               (
+                 =_[:90.9,1.042]% 21
+                  -[:30.4,1.042]% 26
+                                   (
+                      =_[:330,1.042]% 27
+                                       (
+                         -[:269.6,1.042]% 23
+                        =_[:209.1,1.042]% -> 18
+                                       )
+                            -[:29.8]O% 2
+                       -[:329.8,,,1]CH_3% 33
+                                   )
+                        -[:90.2]O% 1
+                    -[:30.2,,,1]CH_3% 32
+                               )
+                     >[:210]% -> 9
+                           )
+         -[:210.9,1.042]% 11
+         -[:150.4,1.042]% -> 8
+                       )
+           <[:149.8]% 12
+           >:[:89.8]% 16
+     -[:30,1.042,,1]NH% 6
+    -[:90.4,1.042,1]% 22
+     -[:150.9,1.042]% 25
+     -[:211.3,1.042]% 24
+           -[:270.4]% 19
+                       (
+         -[:329.6,1.042]% -> 16
+                       )
+          =_[:210.4]% 28
+           -[:150.4]% 30
+                       (
+               -[:210.4]O% 3
+           -[:150.4,,,2]H_3C% 34
+                       )
+           =_[:90.4]% 31
+                       (
+                -[:30.4]% 29
+              =_[:330.4]% -> 24
+                       )
+           -[:150.4]O% 4
+        -[:90.4,,,1]CH_3% 35
+}
+\caption{Emetina}
+\end{figure}
+#+end_export
+
+
+*** Col right                                                         :BMCOL:
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+#+NAME: ipeca
+#+CAPTION: /Cephaelis ipecacuanha/
+#+attr_latex:  :width 0.75\textwidth
+[[./img/ipeca.jpg]]
+
+
+
+** LSD
+   #+LATEX: \begin{mybox}{LSD}
+
+    - LSD é a sigla de *Lysergsäurediethylamid*, palavra alemã para a dietilamida do ácido lisérgico, que é uma das mais potentes substâncias alucinógenas conhecidas.
+     É uma droga cristalina, que ocorre naturalmente como resultado das reações metabólicas do fungo /Claviceps purpurea/. 
+
+
+    #+begin_export latex
+    \vspace{-.5cm}
+    \begin{figure}
+     \chemfig{[:150]?*6(=*6(--*6(-N(-CH_3)--(<(=[::+60]O)-[::-60]N(-[::+60]-[::-60])-[::-60]-[::+60])-=)([::-120]<H)---)-*6(-=-=-(-[::-30,1.155]\chembelow{N}{H}?)=))}
+     \caption{Estrutura do LSD}
+     \end{figure}
+    #+end_export
+
+
+ #+LATEX: \end{mybox}
+
+
+
+** /Cannabis Sativa/
+   :PROPERTIES:
+   :BEAMER_OPT: fragile
+   :END:
+
+
+
+***   
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+- O THC foi isolado pela primeira vez em 1964 por Raphael Mechoulam, Yechiel Gaoni e Habib Edery, ao extraí-lo a partir do haxixe com éter de petróleo, seguido de repetidas cromatografias.
+   
+- O THC (tetra-hidrocarbinol), composto da família dos fenóis, é o principal componente da planta da maconha, sendo responsável por seus efeitos alucinógenos.
+     
+- THC é a sigla dada para a principal substância psicoativa encontrada na planta /Cannabis sativa/
+
+   
+
+*** 
+   :PROPERTIES:
+   :BEAMER_col: 0.45
+   :END:
+
+#+begin_export latex
+\begin{figure}
+\includegraphics[scale=.5]{img/THC.jpg}
+%\chemfig{OH-[:270,,1]-[:209.6,0.996]-[:150.2,0.988](<:[:32.5,0.964]H)-[:209.3,1.003](-[:150]-[:90,0.991]-[:29.7,1.008](-[:90,,,1]CH_3)=_[:330]-[:270])(<[:213.7,1.191]H)-[:270,1.009](-[:270.8,1.224,,1]CH_3)(-[:204.4,1.255,,2]H_3C)-[:330.3,1.008]O-[:30.3,0.992](=_[:90,1.009])-[:330]=^[:30](-[:90,1.009]=^[:150.4,0.996])-[:330]-[:30]-[:330.2,0.988]-[:29.3,1.004]-[:330.2,0.988,,1]CH_3}
+\caption{Estrutura do THC}
+\end{figure}
+#+end_export
+   
+#+ATTR_LATEX: :options scale=0.09
+[[./img/maconha.jpg]]
+
+
+** Derivados da /Cannabis/ 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.45
+:BEAMER_env: block
+:END:
+
+#+begin_export latex
+\begin{figure}
+%\chemfig{HO-[:30,,2]=_[:89.8,0.994](-[:150](<:[:270]H)-[:180](<:[:240.2,0.994](=[:171.2,0.796])-[:290.6,0.59,,1]CH_3)-[:120]-[:60]-(-[:60.2,0.994,,1]CH_3)=_[:300]-[:240])-[:30,0.993](-[:90,,,1]OH)=_[:330.2,0.994]-[:270](=_[:210,0.993]-[:150])-[:330.2,0.994]-[:30]-[:330]-[:30]-[:330,,,1]CH_3}
+\includegraphics[scale=.08]{img/CBD.png}
+\caption{Estrutura do  canabidiol (CBD)}
+\end{figure}
+\begin{figure}
+%\chemfig{OH-[:270,0.995,1]-[:210.1]-[:150.3,0.996]=_[:210.1](-[:149.9]=_[:90,1.003]-[:30.1](-[:89.5,0.995,,1]CH_3)=_[:329.9]-[:270,1.003])-[:270.5,1.003](-[:269.5,0.995,,1]CH_3)(-[:149.7,1.012,,2]H_3C)-[:330.1,0.988]O-[:29.7,0.996](=_[:90,1.012])-[:330.3,0.996]=^[:30.1](-[:90,1.003]=^[:149.9])-[:330.6,1.003]-[:30.1]-[:330.1,0.988]-[:30.1]-[:330.3,0.996,,1]CH_3}
+\includegraphics[scale=.08]{img/CBN.png}
+\caption{Canabinol (CBN)}
+\end{figure}
+#+end_export
+
+
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.55
+:BEAMER_env: block
+:END:
+
+#+LATEX: \begin{myex}{Canabidiol}
+
+- Epilepsia: ::   diminui as crises convulsivas.
+- Estresse pós-traumático: :: 
+- Insônia: ::  o óleo de canabidiol 25 mg
+- Inflamação: :: 
+#+LATEX: \end{myex}
+
+#+LATEX: \begin{myex}{Canabinol}
+- Glaucoma: :: reduz a pressão intraocular 
+- Inflamação: :: mecanismo de ação diferia dos anti-inflamatórios não esteroides
+- Apetite: :: Redutor de apetite 
+- ELA: :: esclerose lateral amiotrófica reduz o avanço da doença.
+
+#+LATEX: \end{myex}
+
+
+** Derivados da /Cannabis/ II
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.45
+:BEAMER_env: block
+:END:
+
+
+#+begin_export latex
+\begin{figure}
+\includegraphics[scale=0.2]{img/THCV.png}
+\caption{Estrutura do THCV}
+\end{figure}
+#+end_export
+
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.55
+:BEAMER_env: block
+:END:
+
+
+#+LATEX: \begin{myex}{O THCV ou tetrahidrocanabivarin}
+
+- Inibidor de apetite: ::  diminui o apetite. 
+- Tratamento de diabete: :: THCV reduz açucar do sangue
+- Reduzir ataques de pânico: :: pode ajudar a controlar os ataques de ansiedade (transtorno de estresse pós-traumático) sem prejudicar o estado emocional;
+- Tratamento de Alzheimer: :: controle dos tremores, perda de coordenação motora e lesões cerebrais associadas à doença;
+- Crescimento ósseo: :: por promover o crescimento de novas células ósseas,  osteoporose 
+#+LATEX: \end{myex}
+
+
+
+
+
+
+** Drogas Sintéticas
+
+
+** Sintéticas
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.45
+:BEAMER_env: block
+:END:
+
+
+- anfetaminas
+- LSD
+- GHB
+-  ecstasy
+-  anabolizantes
+- ice
+- quetamina
+- inalantes
+- efedrina
+- poppers.
+
+
+***                                          
+:PROPERTIES:
+:BEAMER_col: 0.55
+:BEAMER_env: block
+:END:
+
+
+- crack
+- cocaína
+- cristais de haxixe
+- heroína
+- maconha (modificada)
+- morfina
+- codeína
+
+
+
+
+
+
+** K9
+
+*** Efeito Zumbi
+- ansiedade
+- agitação
+- náuseas
+- vômitos
+- hipertensão arterial
+- convulsões
+- alucinações
+- pânico
+- incapacidade de comunicação
+-  paranoia
+- agir com violência
+
+

@@ -1,0 +1,620 @@
+* Introdução
+
+** Breve Histórico
+
+   #+latex: \begin{mybox}{Precusores}
+
+
+   - 1807 - Jöns J. Berzelius – Teoria da Força Vital.
+   - 1828 – primeiro composto orgânico sintetizado em laboratório – Uréia
+   #+begin_export latex
+   \begin{center}
+   \schemestart
+   \chemname{\chemfig{NH_4CNO}}{Cianato \\ de amônio}
+   \arrow{->[\(\Delta\)][]}
+   \chemname{\chemfig{O=C([:30]-NH_2)([:330]-NH_2)}}{Ureia}
+   \schemestop
+   \end{center}
+   #+end_export
+
+   - Tudo que tem “vida” possui compostos orgânicos,mas nem todos compostos orgânicos possuem vida.
+   - 1851 à 1861 – Friederich A. Kekulé
+     - Formulou três postulados que vigoram até hoje.
+   #+latex: \end{mybox}
+
+
+** Postulados de Kekulé
+   #+latex: \begin{myrule}{Postulado 1}
+
+   - Os átomos de carbono são tetravalentes.
+   #+begin_export latex
+   \begin{center}
+   \chemfig{H-C([:90]-H)([:-90]-H)-C([:90]-H)([:-90]-H)-H}
+   \end{center}
+   #+end_export     
+
+   - Ligações Covalentes
+
+   #+begin_export latex
+   \begin{center}
+   \chemfig{H-C~C-C([:90]-H)([:-90]-H)-H}
+   \end{center}
+   #+end_export
+   
+   #+latex: \end{myrule}
+   
+
+** Ligações Múltiplas
+
+
+   #+begin_export latex
+
+   \begin{talltblr}[
+		theme= fancy,
+		caption={Composição do Petróleo},
+		]{
+		colspec = {Xcc}, colsep = 2mm, hlines = {2pt, white},
+		%row{odd} = {brown8}, row{even} = {gray8},
+		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		\hline
+		Tipo de Ligação & Exemplo & Estrutura de Lewis\\[0pt]
+		\hline
+		Ligação \alert{dupla} entre dois átomos de carbono & \chemfig{C([:210]-)([:150]-)=C([:30]-)([:330]-)} & \chlewis{0:120.240.}{C}  \chlewis{180:60.290.}{C}\\
+		\hline
+		Ligação \alert{dupla} entre um átomo de oxigênio e carbono & \chemfig{C([:210]-)([:150]-)=O} & \chlewis{0:120.240.}{C} \chlewis{180:90:0:}{O}\\
+		\hline
+		 Ligação \alert{tripla} entre dois átomos de carbono & \chemfig{-C~C-} & \chlewis{0:50.180.}{C} \chlewis{180:130.0.}{C}\\
+		\hline
+		Ligação \alert{tripla} entre um carbono e nitrogênio & \chemfig{-C~N } & \chlewis{0:50.180.}{C} \chlewis{180:130.0:}{N}\\[0pt]
+		\hline
+	\end{talltblr}
+   #+end_export
+
+
+** Postulados de Kekulé
+
+#+LATEX: \begin{myrule}{Postulado 2}
+
+
+   - As quatro valências do carbono são equivalentes.
+
+   #+NAME:cloroform
+#+CAPTION: Clorofórmio
+#+attr_latex:  :width 0.45\textwidth
+[[../Fundamentos/cloroformio.png]]
+
+#+LATEX: \end{myrule}
+
+
+** Postulados de Kekulé
+
+
+   #+latex:  \begin{myrule}{3º Postulado}
+   
+   - O carbono possui a capacidade *ÚNICA* de formas cadeias.
+
+   #+begin_export latex
+
+
+\begin{tblr}{cc}
+\chemfig{H-C([:90]-H)([:-90]-H)-C([:-90]-H)=C([:-90]-H)-C([:90]-H)([:-90]-H)-H}& 
+\chemfig{C*6((-H)=C(-H)-C(-H)=C(-H)-C(-H)=C(-H)-)} \\
+\chemfig{H-[:210]C(-[:120]H)-[:300]C(-[:20]C(-[:320]H)(-[:20]H)-[:80]H)(-[:300]H)-[:210]C(-[:300]H)(-[:210]H)-[:120]C(-[:30]\phantom{C})(-[:210]H)-[:120]H} & 
+%\qquad \qquad \chemfig{>[:330](-[:330]-[:30]-[:330])(<:[:60])-[:210](-[:270])-[:150](-[:90])-[:210]-[:150]}
+\chemfig{H-[:276]C(-[:12]H)-[:180]C(-[:84]H)(-[:168]H)-[:252]C(-[:156]H)(-[:240]H)-[:324]C(-[:228]H)(-[:312]H)-[:36]C(-[:108]\phantom{C})(-[:24]H)-[:300]H}\\
+\end{tblr}
+
+#+end_export
+
+   #+latex: \end{myrule}
+
+
+* Carbonos
+
+** Classificação dos carbonos
+
+
+#+ATTR_LATEX: :environment tabular :align |c|c|
+|-----------------------------------------------------+-------------------------------------------------------|
+| @@latex:\cellcolor{green!20} {\bfseries Carbono} @@ | @@latex:\cellcolor{green!20} {\bfseries Definição} @@ |
+|-----------------------------------------------------+-------------------------------------------------------|
+| Primário                                            | ligado diretamente, *no máximo*, a *1* outro carbono  |
+|-----------------------------------------------------+-------------------------------------------------------|
+| Secundário                                          | ligado diretamente a *2* outros carbonos              |
+|-----------------------------------------------------+-------------------------------------------------------|
+| Terciário                                           | ligado diretamente  a *3* outros carbonos             |
+|-----------------------------------------------------+-------------------------------------------------------|
+| Quartenário                                         | ligado diretamente a *4* outros carbonos              |
+|-----------------------------------------------------+-------------------------------------------------------|
+
+
+
+#+BEGIN_EXPORT latex 
+\begin{columns}
+\begin{column}{0.7\textwidth}
+\chemfig[scale=2.5]{H_3@{A}C-@{L}C([:-90]-@{B}CH_3)=@{F}CH-@{G}C~@{H}C-@{N}C([:90]-@{D}CH_3)([:-90]-@{K}CH_2(-[:270,,1,1]@{M}CH-[:300,,1,1]@{J}CH_2-[:180,,1,2]H_2@{I}C(-[:60,,2]\phantom{C})))-@{E}CH_3}
+\chemmove{
+\node[bal,fit=(A)]{};
+\node[bal,fit=(B)]{};
+\node[bal,fit=(D)]{};
+\node[bal,fit=(E)]{};
+\node[rect,fit=(F)]{};
+\node[rect,fit=(G)]{};
+\node[rect,fit=(H)]{};
+\node[rect,fit=(I)]{};
+\node[rect,fit=(J)]{};
+\node[rect,fit=(K)]{};
+\node[bal2,fit=(L)]{};
+\node[bal2,fit=(M)]{};
+\node[bal3,fit=(N)]{};
+}
+\end{column}
+\begin{column}{0.3\textwidth}  %%<--- here
+      carbonos \chemfig{@{A}C} = primários\\
+      carbonos \chemfig{@{B}C} = secundários\\
+      carbonos \chemfig{@{D}C} = terciários\\
+      carbonos \chemfig{@{E}C} = quartenários
+     \chemmove{
+      \node[bal,fit=(A)]{};
+      \node[rect,fit=(B)]{};
+      \node[bal2,fit=(D)]{};
+      \node[bal3,fit=(E)]{};
+      }
+\end{column}
+\end{columns}
+
+#+END_EXPORT
+
+  
+* Cadeias
+  
+** Cadeias Carbônicas
+
+   #+latex: \begin{myrule}{Heteroátomo}
+   
+   - Estrutura formada por todos os átomos de carbono e os heteroátomos.
+   - Heteroátomo é um átomo diferente do carbono e do hidrogênio  posicionado
+     entre  dois  carbonos  na cadeia.
+     
+   #+latex: \chemname{\chemfig{CH_3-CH_2-{\color{red}O}-CH_2-CH_3}}{Oxigênio é heteroátomo}
+   
+   #+latex: \vspace{.5cm}\chemname{\chemfig{CH_3-CH_2-CH_2-CH_2-{\color{red}O}H}}{Oxigênio NÃO é heteroátomo}
+   
+   #+latex: \end{myrule}
+
+
+
+
+** Classificação das Cadeias Carbônicas
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+  
+   #+latex:  \begin{myrule}{Cadeia aberta}
+
+  - /Cadeia aberta ou aciclíca:/ Os átomos de carbono se ligam entre si de modo a terem os extremos livres
+
+  #+begin_export latex
+\begin{center}
+\schemestart
+\chemfig{-@{b}{C}([:90]-)([:-90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-@{a}{C}([:90]-)([:-90]-)-}
+\schemestop 
+\chemmove{\draw[<-,red,shorten <=3.5pt] (b) (-0.5,-0.2)--++(1,-0.4) node[below] {extremo livre} ;
+\draw[->,red,shorten <=3.5pt] (a) (-4.7,-.9)--++(1.5,0.7) node[anchor=35,inner sep=23] {extremo livre} ;
+}
+\vspace{1cm}
+%
+\end{center}
+#+end_export
+   
+  #+latex: \end{myrule}
+
+  
+  #+latex: \begin{myrule}{Cadeia Fechada}
+
+  - /Cadeia fechada ou ciclíca:/ Os átomos de carbono se ligam entre si de modo a formarem um ciclo.
+
+  #+begin_center
+   #+latex: \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]}
+  #+end_center
+  
+  #+latex: \end{myrule}
+
+  
+  #+latex:  \begin{myrule}{Cadeia Mista}
+
+  - Os atomos se ligam formando um ciclo e tem as extremidades livres.
+  #+begin_center
+  #+latex: \chemfig{-[:90]C(-[:180])-C(-[:90]C(-)(-[:90])-[:180]C(-[:90])(-[:180])-[:270]\phantom{C})(-[:270])-C(-[:270])(-[:90,,,1])-C(-[:90])(-[:270])-C(-[:90])(-)-[:270]}
+  #+end_center
+
+  #+latex: \end{myrule}
+
+
+* Cadeias Abertas
+
+** Cadeias Abertas
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+#+begin_export latex
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+
+	Cadeia aberta Normal   &  Cadeia Aberta Ramificada \\
+%
+		Carbonos, primários, secundários & Ao menos um carbono terciário ou quartenário\\
+	\chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-} &  \chemfig{-(!\nobond\chemabove[1ex]{}{\color{blue}1})C([:-90]-)([:90]-)-(!\nobond\chemabove[1ex]{}{\color{blue}2})C([:-90]-C(!\nobond\chemabove[1ex]{}{\color{blue}\hspace{.2cm}\vspace{.7cm}4})([:0]-)([:180]-)-)([:90]-)-C(!\nobond\chemabove[1ex]{}{\color{blue}3})([:90]-)([:-90]-)-}\\
+		Carbono 1: primário & \\
+		Carbono 2: secundário & Carbono 2: terciário\\
+		Carbono 3: primário & Carbonos 1, 3 e 4: primários\\
+		\hline
+	\end{tblr}
+#+end_export
+
+
+
+#+begin_export latex
+
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {cc}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+  Cadeia aberta homogênea   &  Cadeia aberta heterogênea \\
+Apresentam somentes átomos de carbono & Ao menos um átomo heteroátomos\\
+ \chemfig{-C([:-90]-)([:90]-)-C([:90]-)=C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-{\color{blue}O}-C([:90]-)([:-90]-)-} \\
+ \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C([:-90]-C([:180]-)([:0]-)-)={\color{blue}N}-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
+Este \emph{oxigênio} não é heteroátomo & \\
+\hline
+\end{tblr}
+
+#+end_export
+
+
+
+#+begin_export latex
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+Cadeia aberta saturada   &  Cadeia aberta insaturada \\
+Apresentam somentes átomos de carbono apresentam ligações simples & Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação\\
+ \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} \\
+ \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
+O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono saturado}. & A átomo que apresenta ligação dupla ou tripla é chamado de \emph{carbono insaturado.}\\
+\hline
+\end{tblr}
+#+end_export
+
+
+* Cadeias Fechadas
+
+** Cadeias Fechadas
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+#+begin_export latex
+	{\small
+\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+ Cadeia fechada aromática   &  Cadeia fechada alicíclica \\
+Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação & Cadeia cíclica que não constitui anel benzênico\\
+ \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} & \chemfig{C*6((-)=C(-)-C(-)-C(-)-C(-)=C(-)-)} \\ 
+ \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}   &    \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
+Esses ciclos recebem o nome de \emph{benzeno} & \\
+\hline
+\end{tblr}
+}
+#+end_export
+
+
+#+begin_export latex
+
+	{ \setchemfig{atom style={scale=0.5}}
+	\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		Cadeia aromática mononuclear   &  Cadeia aromática polinuclear \\
+		%\hline 
+		Cadeia aromática com apenas um núcleo benzênico & Cadeia aromática com dois ou mais núcleos benzênicos\\ 
+		\chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}   &  \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \\ & \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}\\
+		%Esses clicos recebem o nome de \emph{benzeno} & \\[0pt]
+		\hline
+	\end{tblr}
+}
+#+end_export
+
+
+#+begin_export latex
+
+	\begin{tblr}
+		[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {Xm{8cm}}, colsep = 2mm, hlines = {2pt, white},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+		Cadeia alicíclica homocíclica   &  Cadeia alicíclica heterocíclica \\
+		\hline
+		Cadeia cíclica alicíclica formada apenas por átomos de carbono & Cadeia cíclica alicíclica que apresenta heteroátomo\\
+		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} & \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}\\ \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} & \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}\\
+		& \\
+		\hline
+	\end{tblr}
+#+end_export
+ 
+
+#+begin_export latex
+%\pagebreak 
+ %\setchemfig{atom style={scale=0.7}}
+	\begin{tblr}[
+		theme= fancy,
+		caption={Classificação das Cadeias Fechadas},
+		]{
+			colspec = {cX}, colsep = 2mm, hlines = {2pt, white},
+			rowspec={QQ},
+			%row{odd} = {brown8}, row{even} = {gray8},
+			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		}
+%		\hline
+Cadeia alicíclica saturada & Cadeia alicíclica insaturada\\
+Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas\\
+\chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})} &  \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} %\chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} \\ 		\hline
+	\end{tblr}
+#+end_export
+
+
+* Exercícios
+
+** Exemplo 1
+
+#+begin_question
+(*UFAM-PSC*) O pau-rosa, típico da região amazônica, é uma rica fonte natural do óleo essencial conhecido por linalol, o qual também pode ser isolado do óleo de alfazema. Esse óleo apresenta a seguinte fórmula estrutural:
+
+#+begin_export latex
+\chemfig{H_3C-C([:-90]-CH_3)=CH-CH_2-CH_2-C([:-90]-CH_3)([:90]-OH)-CH=CH2}
+#+end_export
+Sua cadeia carbônica deve ser classificada como:
+
+#+ATTR_LATEX: :options (2)
+#+begin_choice
+\choice acíclica, ramificada, saturada e heterogênea.
+\choice acíclica, normal, insaturada e homogênea.
+\choice alicíclica, ramificada, insaturada e homogênea.
+\choice acíclica, ramificada, insaturada e homogênea.
+\choice alicíclica, normal, saturada e heterogênea.
+#+end_choice
+#+end_question
+
+** 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+Alternativa *d*.
+
+    - É acíclica, ou seja, possui cadeia aberta, com extremidades livres, sem nenhum ciclo;
+    - Possui duas ramificações, os grupos metil;
+    - É insaturada, pois possui duas ligações duplas entre carbonos;
+    - É homogênea porque não possui nenhum heteroátomo entre os átomos de carbono.
+
+
+#+end_answer
+
+** Exemplo 2
+
+
+#+begin_question
+*(MACKENZIE-SP)* O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é :
+
+#+begin_export latex
+\chemfig{Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90]%
+(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)%
+-[:90]=^[:150](-[:210])}
+#+end_export
+
+
+#+attr_latex: :options (2)
+#+begin_choice
+\choice três carbonos terciários.
+\choice somente carbonos secundários.
+\choice um carbono quaternário.
+\choice somente carbonos primários.
+\choice somente um carbono terciário
+#+end_choice
+#+end_question
+
+** 
+
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+\small
+Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas:
+
+a) três carbonos terciários:
+
+
+#+begin_export latex
+\begin{tikzpicture}
+			
+		
+	\node[] at (0,0){	\chemfig{Cl-[:30]C=^[:330]\mcfbelow{C}{H}-[:30,,,1]CH=^[:90,,1]C(%
+			-[:150]\mcfabove{C}{H}=^[:210,,,2]HC-[:270,,2]\phantom{C})%
+			-[:30]\mcfbelow{C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C%
+			=^[:270,,,2]HC-[:330,,2]\mcfbelow{C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH%
+			=^[:150,,1]\mcfabove{C}{H}(-[:210]\phantom{C})}
+		};
+	\draw[red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm);
+	\end{tikzpicture}	
+#+end_export
+
+Apresenta *3 carbono terciários*
+
+Está correto, apresenta três C terciários.
+
+b) somente carbonos secundários: não, já vimos que existem C terciários na molécula.
+
+c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos.
+
+d) somente carbonos primários: não, justificativa vide alternativa A.
+
+e) somente um carbono terciário: não, são três.
+
+Alternativa correta: *A*.
+
+
+#+end_answer
+
+** Exemplo 3
+
+
+#+begin_question
+(*PUC-RS*) O ácido etilenodiaminotetracético, conhecido como *EDTA*, utilizado como antioxidante em margarinas, de fórmula
+
+#+begin_export latex
+\chemfig{O=[:150]C(-[:210,,,2]HO)-[:90,,,2]H_2C-[:30,,2]N(-[:90,,,1]CH_2%
+-[:150,,1]C(-[:90,,,1]OH)=[:210]O)-[:330]\mcfbelow{C}{\mcfright{H}{_2}}%
+-[:30]\mcfabove{C}{\mcfright{H}{_2}}-[:330]N(-[:270,,,2]H_2C-[:330,,2]C(%
+-[:270,,,1]OH)=[:30]O)-[:30,,,1]CH_2-[:90,,1]C(=[:150]O)-[:30,,,1]OH}
+#+end_export
+
+Apresenta cadeia carbônica
+
+#+ATTR_LATEX: :options (2)
+#+begin_choice
+\choice acíclica, insaturada, homogênea.
+\choice acíclica, saturada, heterogênea.
+\choice acíclica, saturada, homogênea.
+\choice cíclica, saturada, heterogênea.
+\choice cíclica, insaturada, homogênea.
+#+end_choice
+
+
+#+end_question 
+
+** 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+
+#+begin_export latex
+\chemfig{O=[:150]C(-[:210,,,2]HO)-[:90,,,2]H_2C-[:30,,2]N(-[:90,,,1]CH_2%
+-[:150,,1]C(-[:90,,,1]OH)=[:210]O)-[:330]\mcfbelow{C}{\mcfright{H}{_2}}%
+-[:30]\mcfabove{C}{\mcfright{H}{_2}}-[:330]N(-[:270,,,2]H_2C-[:330,,2]C(%
+-[:270,,,1]OH)=[:30]O)-[:30,,,1]CH_2-[:90,,1]C(=[:150]O)-[:30,,,1]OH}
+#+end_export
+
+
+
+*acíclica, saturada, heterogênea.*
+
+
+ALTERNATIVA *B*
+#+end_answer
+
+** Exemplo 4 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+#+begin_question
+A teobromina é um alcaloide presente no cacau e, consequentemente, no chocolate, sobretudo no chocolate amargo e meio amargo. 
+
+#+begin_export latex
+\chemfig{-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom{N})-[:30](%
+=[:330]O)-[:90,,,1]NH-[:150,,1](=[:90]O)-[:210]N(-[:270])-[:150]}
+#+end_export
+
+
+Essa molécula:
+#+ATTR_LATEX: :options [label=\Roman*]
+1. contém em sua estrutura quatro ligações $\pi$;
+2. possui cadeia carbônica saturada;
+3. apresenta todos os carbonos dos anéis com hibridização sp^2 ;
+4. não possui carbono terciário.
+
+Estão corretas apenas  
+
+#+ATTR_LATEX: :option (3)
+#+begin_choice
+\choice 1, 3 e 4.
+\choice 1, 2 e 3.
+\choice 2, 3 e 4.
+\choice 1 e 2.
+\choice 3 e 4.​
+#+end_choice 
+#+end_question
+
+** 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+
+
+#+begin_export latex
+\chemfig{-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom{N})-[:30](%
+=[:330]O)-[:90,,,1]NH-[:150,,1](=[:90]O)-[:210]N(-[:270])-[:150]}
+#+end_export
+
+
+- Correta: ::   As ligações p correspondem às ligações duplas nessa molécula;
+- Incorreta: :: As cadeias saturadas são aquelas que apresenta apenas ligações simples. Como essa cadeia apresenta diversas ligações duplas, ela é insaturada;
+- Correta: ::  A hibridização sp^2 é comum em moléculas orgânicas, como é o caso da teobromina;
+- Correta: :: nenhum átomo de carbono na molécula de teobromina está ligado a três outros átomos de carbono.
+
+ALTERNATIVA *A*
+
+#+end_answer
+
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Introducao.pdf} & & \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Lista_IntroducaoQuimicaOrganica.pdf}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+   

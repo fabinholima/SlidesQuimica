@@ -1,0 +1,8 @@
+* Modelo de Borh
+
+** Modelo de Bohr
+
+#+begin_myrule 
+Niels Henrick David Bohr: físico dinamarquês cujos trabalhos contribuíram decisivamente para a
+compreensão da estrutura atômica e evolução da física quântica. Nobel de Física em 1922
+#+end_myrule 

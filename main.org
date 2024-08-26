@@ -1,0 +1,32 @@
+#+TITLE: Funções Orgânicas Oxigenadas
+
+#+AUTHOR: Fábio Lima
+#+DATE: 
+#+OPTIONS: H:2 toc:t num:t
+#+STARTUP:beamer
+#+LATEX_CLASS:beamer 
+#+LANGUAGE: en portuguese
+#+LATEX_CLASS_OPTIONS: [presentation,professionalfonts,aspectratio=169]
+
+#+BEAMER_THEME: minflat
+
+#+LATEX_HEADER: % \input{packages2.tex}
+
+
+#+INCLUDE: "packages.org"
+
+
+#+LATEX_HEADER: \date{}
+#+LATEX_HEADER: %\usetheme{minflat}
+
+
+#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+
+
+#+LATEX_COMPILER: lualatex 
+
+
+
+
+#+INCLUDE: "QO/FuncoesOxigenadas/FuncoesOxigenadas.org"
+

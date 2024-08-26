@@ -1,0 +1,540 @@
+% Created 2024-08-26 Mon 12:20
+% Intended LaTeX compiler: lualatex
+\documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
+                
+
+% \input{packages2.tex}
+%%%% Config X sim for BEAMER
+\makeatletter
+\@ifclassloaded{beamer}{%
+%%% save beamer's `solution' environment as `beamersolution':
+\let\beamersolution\solution
+\let\endbeamersolution\endsolution
+%%% "delete" the `solution' environment:
+\let\solution\relax
+\let\endsolution\relax
+}{%
+}%
+\makeatother
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[portuguese, ]{babel}
+%%%% FONTS
+%%% XSIM CONFIG BEAMER
+\usepackage{xsim}
+\usepackage[most]{tcolorbox}
+\usepackage{amssymb}
+\usepackage{fontawesome}
+\usepackage{tasks}
+\newcounter{paragraph}
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{annotate-equations}
+%%% BOX EXERCISE BEAMER
+\DeclareExerciseEnvironmentTemplate{custom}{%
+\begin{tcolorbox}[boxrule = 0pt]
+\tcbox[on line,colback=teal,colframe=teal,coltext=white,size=small]{%
+\faBook\sffamily\bfseries\
+\XSIMmixedcase{\GetExerciseName}
+\GetExerciseProperty{counter}%
+}\quad
+}{\end{tcolorbox}}
+%% == CUSTOM BOX BEAMER
+\DeclareExerciseEnvironmentTemplate{custom2}{%
+\begin{tcolorbox}[boxrule = 0pt]
+\tcbox[on line,colback=violet,colframe=violet,coltext=white,size=small]{%
+\faToggleOn\sffamily\bfseries\
+\XSIMmixedcase{\GetExerciseName}
+\GetExerciseProperty{counter}%
+}\quad
+}{\end{tcolorbox}}
+\DeclareExerciseType{test}{
+exercise-env = question ,
+solution-env = answer ,
+exercise-template = custom ,
+solution-template = custom2 ,
+exercise-name = Exemplo ,
+exercises-name = Exemplo ,
+solution-name = Solução ,
+solutions-name = Sol. ,
+exercise-heading = \textbf ,
+solution-heading = \textbf
+}
+\xsimsetup{
+exercise/within = section,
+exercise/the-counter =  \arabic{exercise},
+%%solution-name = solution,  % used with headings=true
+solution/print=true,
+print-collection/print=both,
+}
+\NewTasksEnvironment[label = (\emph{\alph*}),
+label-width = 12pt]{choice}[\choice]
+\usepackage{empheq} %%% Brackers
+\usepackage{colortbl}
+\usepackage[tikz]{bclogo}
+\usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
+\usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
+\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+\usepackage{tikzpeople}
+\usepackage{qrcode,hyperref}
+\usepackage{upgreek}
+%\usepackage[version=4]{mhchem}
+\usepackage{tabularray}
+%%% CUSTOM TABLE
+\NewTblrTheme{fancy}{
+\SetTblrStyle{caption-tag}{font=\bfseries,red2}
+\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
+\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
+\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
+\SetTblrTemplate{contfoot-text}{normal}
+}
+%% ==== CHEMMACROS E CHEMFIG CONFIG
+\usepackage{chemfig,chemmacros,elements,chemformula}
+\chemsetup{modules={all}}
+\chemsetup[redox]{pos=top,roman=false}
+\chemsetup[redox]{pos=top}
+\chemsetup{redox/sep=.5em}
+\chemsetup[redox]{explicit-sign=true} %%% reaction redox
+%% == CUSTOM PHASES IN CHEMMACROS
+\NewChemPhase\lqdd{\(\ell\)}
+\NewChemPhase\gr{grafite}
+\NewChemPhase\reac{reação}
+\NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+\usepackage{siunitx}
+\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+%% == NUMEROS PARA FORMULES
+\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
+%%% INCLUDE PAGES PDFs
+\usepackage{pdfpages}
+\usepackage{mol2chemfig}
+\usepackage{subfig,caption}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\setitemize{label=\usebeamerfont*{itemize item}%
+\usebeamercolor[fg]{itemize item}
+\usebeamertemplate {itemize item}}
+\usepackage{array} % ajust colunm table
+\usepackage{cancel}
+\usepackage[controls]{animate}
+\renewcommand{\CancelColor}{\color{red}}
+%%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX
+\newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
+colback=blue!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
+colback=green!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
+colback=yellow!5!white, colframe=blue!75!black,
+fonttitle=\bfseries\sffamily,
+colbacktitle=blue!85!red!60,enhanced,
+attach boxed title to top left={yshift=-3mm,xshift=5mm},
+title=#2,#1}
+\definecolor{col1}{HTML}{FF7878}
+\definecolor{col2}{HTML}{51B5F8}
+\definecolor{col3}{HTML}{68E1AA}
+\definecolor{col4}{HTML}{B869EA}
+\definecolor{col5}{HTML}{FF5500}
+\definecolor{col6}{HTML}{FFF8E7}
+\definecolor{col7}{HTML}{FF9966}
+\definecolor{col8}{HTML}{9400D3}
+%% CONFIG COLOR CARBONO
+\tikzstyle{bal}=[inner sep=0.3pt,fill=orange,fill opacity=0.5,circle,minimum size=0.2cm]
+\tikzstyle{rect}=[inner sep=0.3pt,fill=red,fill opacity=0.5,circle,minimum size=0.2cm]
+\tikzstyle{bal2}=[inner sep=0.3pt,fill=blue,fill opacity=0.5,circle,minimum size=0.2cm]
+\tikzstyle{bal3}=[inner sep=0.3pt,fill=yellow,fill opacity=0.5,circle,minimum size=0.2cm]
+\definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
+\newcommand{\re}{\hspace{-1cm}}
+\newcommand{\af}{\hspace{2cm}}
+\date{}
+%\usetheme{minflat}
+\usetheme{minflat}
+\author{Fábio Lima}
+\date{}
+\title{Funções Orgânicas Oxigenadas}
+\hypersetup{
+ pdfauthor={Fábio Lima},
+ pdftitle={Funções Orgânicas Oxigenadas},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
+ pdflang={En Portuguese}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Sumário}
+\tableofcontents
+\end{frame}
+
+
+
+
+
+\section{Funções Oxigenadas}
+\label{sec:org74cd2bd}
+\begin{frame}[label={sec:orgc944da7}]{Definição}
+\begin{center}
+\scalebox{.65}{
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+	level 1/.append style={level distance=5cm,sibling angle=35},
+	level 2/.append style={level distance=2.8cm,sibling angle=90},]
+
+	\node {Funções \\ Oxigendas}
+	child {node [concept color = blue!40] {Álcoois}
+	%	child {node [concept color = teal!30] {\chemfig{R-OH} \\ }}
+	}
+	child [concept color = blue!30] {node {Áldeído}
+		%	child [concept color = teal!30, xshift=.5cm, yshift=1cm, text width=2.1cm,] {node {\chemfig{R-[:30](=[:90]O)-[:330]H}}}
+	}
+	child {node [concept color = blue!30] {Cetonas}
+		%child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]R}  }}
+	}
+	child [concept color = blue!30] {node {Enol}
+%		child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](-[:90]OH)=[:330]R}  }}
+	}
+	child [concept color = blue!30] {node {Éster}
+	%			child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.3cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-R}}}
+	}
+	child [concept color = blue!30] {node {Éter}
+		%		child [concept color = teal!30,xshift=.5cm, yshift=1cm, text width=2.5cm] {node {\chemfig{R-O-R}}}
+	}
+	child [concept color = blue!30] {node {Ácido \\ Carboxílico}
+			%	child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]OH}}}
+	}
+	child [concept color = blue!30] {node {Fenóis}
+				%child [concept color = teal!30, xshift=.5cm, yshift=.5cm, text width=2.2cm] {node {\chemfig{**6(----(-OH)--)}  }}		
+	}
+	child [concept color = blue!30] {node {Sais \\ Orgânicos}
+				%child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-Metal}}}
+	}
+	child [concept color = blue!30] {node {Anidridos}
+				%child [concept color = teal!30, xshift=1.5cm, yshift=.3cm, text width=4.2cm] {node {\chemfig{R-[:150](=[:90]O)-[:210]O-[:150](-[:210]R)=[:90]O}}}
+};
+	
+\end{tikzpicture}
+}
+\end{center}
+\end{frame}
+
+
+
+
+\section{Álcool}
+\label{sec:org49376fa}
+\begin{frame}[label={sec:orge7bff21}]{Álcool}
+\begin{mybox}{Álcool}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C saturado (\(sp^3\)).
+
+
+  \begin{center}
+% \chemfig{-C([:-90]-)([:90]-)-{\color{red}OH}}
+\chemfig{-C([:90]-)([:-90]-)-[@{b1,0}]{\color{red}O}@{H}{\color{red}H}}
+%\chemfig{C(-[2]H)(-[4]H)(-[6]H)-C(-[2]H)(-[6]H)-[@{b1,0}]O@{H}H}
+\chemmove{
+	\draw[-,magenta]
+	(b1) -- ++(0,.45) -| (H.east)
+	(b1) -- ++(0,-.45) -| (H.east) ;
+}
+Grupo Funcional
+ \end{center}
+
+\end{mybox}
+\end{frame}
+
+
+\begin{frame}[label={sec:org8f99605}]{Classificação do álcoois I}
+   \begin{myrule}{Critérios}
+\begin{itemize}
+\item  Posição do radical
+%\item Quantidade de radicais oxidrilas
+\end{itemize}
+   \end{myrule}
+
+
+\begin{myex}{Exemplo}
+\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-H)-OH}}{Carbono Primário} \af 
+\qquad \chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-OH)([:-90]-H)-CH_3}}{Carbono Secundário} \af
+\qquad \chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-CH_3)([:-90]-OH)-CH_3}}{Carbono Terciário}
+\end{myex}
+\end{frame}
+
+\begin{frame}[label={sec:org27d8014}]{Classificação do álcoois II}
+\begin{myrule}{Número de oxidrilas}
+
+\begin{itemize}
+\item Monoálcoois ou monóis: apresentam uma oxidrila
+\item Diálcoois ou dióis: apresentam duas oxidrilas
+\item Triálcoois ou trióis: apresentam três oxidrilas
+\end{itemize}
+
+\end{myrule}
+
+\begin{myex}{Exemplo}
+\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-H)-{\color{red}OH}}}{Monol} \af
+\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-{\color{red}OH})-{\color{red}OH}}}{Diol} \af
+\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-{\color{red}OH})([:-90]-{\color{red}OH})-{\color{red}OH}}}{Triol}
+\end{myex}
+\end{frame}
+
+\begin{frame}[label={sec:org19ad0ce}]{Nomenclatura do álcoois}
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Ellipse [id:dp5361300348946546] 
+\draw  [fill={rgb, 255:red, 79; green, 209; blue, 180 }  ,fill opacity=1 ] (39,183.5) .. controls (39,147.88) and (65.32,119) .. (97.78,119) .. controls (130.25,119) and (156.56,147.88) .. (156.56,183.5) .. controls (156.56,219.12) and (130.25,248) .. (97.78,248) .. controls (65.32,248) and (39,219.12) .. (39,183.5) -- cycle ;
+%Shape: Ellipse [id:dp6942133129332804] 
+\draw  [fill={rgb, 255:red, 147; green, 243; blue, 125 }  ,fill opacity=1 ] (200.14,183.5) .. controls (200.14,147.88) and (226.45,119) .. (258.92,119) .. controls (291.38,119) and (317.7,147.88) .. (317.7,183.5) .. controls (317.7,219.12) and (291.38,248) .. (258.92,248) .. controls (226.45,248) and (200.14,219.12) .. (200.14,183.5) -- cycle ;
+%Shape: Ellipse [id:dp9270081825456703] 
+\draw  [fill={rgb, 255:red, 159; green, 192; blue, 246 }  ,fill opacity=1 ] (356.44,183.5) .. controls (356.44,147.88) and (382.75,119) .. (415.22,119) .. controls (447.68,119) and (474,147.88) .. (474,183.5) .. controls (474,219.12) and (447.68,248) .. (415.22,248) .. controls (382.75,248) and (356.44,219.12) .. (356.44,183.5) -- cycle ;
+
+% Text Node
+\draw (56.5,150.34) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{58.332644pt}\setlength\topsep{0pt}
+\begin{center}
+Quantidade \\de\\Carbonos
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (167.94,166.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {+};
+% Text Node
+\draw (330.2,167.39) node [anchor=north west][inner sep=0.75pt]   [align=left] {+};
+% Text Node
+\draw (233.28,152.97) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{39.043356pt}\setlength\topsep{0pt}
+\begin{center}
+Tipo \\de\\Ligação
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (364.96,165.29) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{71.93244pt}\setlength\topsep{0pt}
+\begin{center}
+Grupo fucional \\ \alert{ol}
+\end{center}
+
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+   \begin{myex}{Regra}
+   \chemname{
+   \chemfig{H_3{\color{red}C}-OH}}{{\color{red}Met}anol}\hspace{1cm}
+   \chemname{
+   \vspace{.3cm}
+\chemfig{
+           \mcfleft{\mcfatomno{4}}{C}H_3% 4
+     -[:0]\mcfabove{C}{\mcfatomno{3}}H_2% 3
+    -[:0]\mcfabove{C}{\mcfatomno{2}}H_2% 2
+     -[:0]\mcfabove{C}{\mcfatomno{1}}H_2% 1
+    -[:0]OH}% 
+}
+{Butan-1-ol}
+   \end{myex}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Outros Exemplos}
+\begin{myrule}{}
+
+\begin{itemize}
+\item Escolher a cadeia com o maior número de carbonos.
+\item Enumerar o mais prćximo da hidroxila.
+\item Separar os radicais, usar di, tri, tetra \ldots{} quando os radicais forem iguais.
+\item Seguir ordem alfabética para os radicais.
+\end{itemize}
+
+
+\begin{center}
+\chemname{
+\chemfig{H_3C-\mcfabove{C}{\mcfatomno{4}}H([:-90]-(!\nobond{\hspace{-.45cm}5})CH_2-(!\nobond{\hspace{-.45cm}6})CH_3)-\mcfbelow{C}{\mcfatomno{3}}H([:90]-CH_3)-\mcfabove{C}{\mcfatomno{2}}H([:-90]-OH)-\mcfabove{C}{\mcfatomno{1}}H_3}
+}{3,4-dimetilexan-2-ol}
+\end{center}
+
+
+
+\chemfig{CH_3-CH([:-90]-CH_3)-CH_2-OH} \af
+\chemfig{CH_3-CH([:-90]-CH_3)-CH_2-CH([:-90]-OH)-CH_3}\af
+
+\end{myrule}
+\end{frame}
+
+
+
+
+
+\section{Enol}
+\label{sec:org38ce8eb}
+\begin{frame}[label={sec:orgfb11b23}]{Enóis}
+\begin{mybox}{Enol}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
+
+
+  \begin{center}
+\chemfig{-@{OH1}C([:90]-)([:-90]-)=C([:90]-)([:-90]-)-O@{OH2}H}
+\chemmove{
+	\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(OH1) (OH2)]{};
+    }
+    \end{center}
+
+\end{mybox}
+   \begin{myex}{Exemplo}
+ \begin{center}  
+ %  \chemname{
+%   \chemfig{H_3{\color{red}C}-OH}}{{\color{red}Met}anol}\hspace{1cm}
+   \chemname{
+   \vspace{.3cm}
+\chemfig{
+           \mcfleft{\mcfatomno{4}}{C}H_3% 4
+     -[:0]\mcfabove{C}{\mcfatomno{3}}H_2% 3
+    -[:0]\mcfabove{C}{\mcfatomno{2}}H% 2
+     =[:0]\mcfabove{C}{\mcfatomno{1}}H% 1
+    -[:0]OH}% 
+}
+{But-1-en-1-ol}
+\end{center}\
+%
+\end{myex}
+\end{frame}
+
+
+
+\section{Fenol}
+\label{sec:orgcde1ebc}
+\begin{frame}[label={sec:org1103fa0}]{Fenóis}
+\begin{mybox}{Fenol}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao carbono do anel aromático.
+
+
+
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{*6(-=-=-(-OH)=-)}} \af
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}} \af
+\end{tikzpicture}
+\end{mybox}
+\end{frame}
+
+\begin{frame}[label={sec:orgd19c453}]{Tipos de fénois}
+\begin{myex}{Fénois}
+\centering
+\chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi \\ Benzeno} \af 
+\chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \af 
+\chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
+\end{myex}
+\end{frame}
+
+\begin{frame}[label={sec:org4984863}]{Nomenclatura dos Fénois}
+\begin{itemize}
+\item Na nomenclatura dos fénois a cadeia principal é o benzeno e a hidroxila torna-se radical chamado \alert{hidróxi}.
+\item O \alert{hidróxi} é o radical principal para iniciar a contar a posição em caso de radicais presentes no anel benzênico.
+\end{itemize}
+\chemname{\chemfig{**6(----(-OH)--)}}{hidróxi benzeno} \af
+\chemname{\chemfig{**6(---(-CH_3)-(-OH)--)}}{1-hidróxi-2-metil-benzeno} \af
+\chemname{\chemfig{**6(--(-C_2H_5)--(-OH)--)}}{1-hidróxi-3-etil-benzeno} \af
+\chemname{\chemfig{**6(---(-OH)-(-OH)--)}}{1,2-dihidroxi-benzeno} 
+\end{frame}
+
+
+\section{Aldeídos}
+\label{sec:org035de22}
+\begin{frame}[label={sec:orgb40a1d4}]{Aldeídos}
+\begin{mybox}{Aldeído}
+Os aldeídos apresentam o grupo carbonila na extremidade da cadeia.   
+
+
+   \begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-[:30]-[:330]-[:30](-[:330,,,1]H)=[:90]O}} \hspace{.3 cm}
+%\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\begin{frame}[label={sec:org6207dd3}]{Nomenclatura dos Aldeídos}
+
+\chemfig{H-[:150]\mcfatomno{1}(%
+=[:90]O)-[:210]\mcfatomno{2}-[:150]\mcfatomno{3}}
+\end{frame}
+
+\section{Cetonas}
+\label{sec:org7796527}
+
+\begin{frame}[label={sec:org1b55ff4}]{Cetonas}
+\begin{mybox}{Cetonas}
+As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{C-C([:90]=O)-C}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\section{Ácido Carboxílicos}
+\label{sec:orgd9ee0aa}
+\begin{frame}[label={sec:org7dbfcdc}]{Ácidos Carboxílicos}
+\begin{mybox}{Ácidos Carboxílicos}
+Os ácidos carboxílicos são compostos caracterizados pela
+presença do grupo \alert{carboxila}, formado pela união dos grupos carbonila e hidroxila.
+
+
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-C([:30]=O)([:330]-OH)}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\section{Ésteres}
+\label{sec:org212d1d1}
+\begin{mybox}{Ésteres}
+Os ésteres orgânicos são caracterizados pelo grupo funcional:
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-O-R'}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+Simplificadamente podemos considerar queos ésteres
+se originam a partir da substituição do hidrogênio do grupo OH de um
+ácido carboxílico por um radical orgânico (R).
+\end{mybox}
+
+
+\section{Éteres}
+\label{sec:org4eef757}
+
+\begin{frame}[label={sec:orged12840}]{Éteres}
+\begin{mybox}{Éteres}
+Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos.
+Seu grupo funcional é representado por:
+
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-O-R'}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+
+\end{mybox}
+\end{frame}
+
+
+
+
+
+\section{Anidridos}
+\label{sec:org4b453ef}
+
+\begin{frame}[label={sec:org19021f9}]{Anidridos}
+\end{frame}
+\end{document}
