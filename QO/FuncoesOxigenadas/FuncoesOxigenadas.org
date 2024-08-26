@@ -55,7 +55,8 @@
 
 
   #+begin_export latex
-  \begin{center}
+  \begin{center}es
+  
 % \chemfig{-C([:-90]-)([:90]-)-{\color{red}OH}}
 \chemfig{-C([:90]-)([:-90]-)-[@{b1,0}]{\color{red}O}@{H}{\color{red}H}}
 %\chemfig{C(-[2]H)(-[4]H)(-[6]H)-C(-[2]H)(-[6]H)-[@{b1,0}]O@{H}H}
