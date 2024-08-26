@@ -632,8 +632,8 @@ Os prefixos /orto/, /meta/ e /para/ podem ser *utilizados apenas quando um anel 
 
 #+begin_export latex
 \chemname{\chemfig{**6(---(-CH_3)-(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{orto:}indica posição 1,2}} \af  
-\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{meta:}indica posição 1,3}} \af
-\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{para:}indica posição 1,4}} 
+\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\emph{meta}-dimetil-benzeno \\ {\color{col8} \emph{meta:}indica posição 1,3}} \af
+\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\emph{para}-dimetil-benzeno \\ {\color{col8} \emph{para:}indica posição 1,4}} 
 #+end_export
 
 

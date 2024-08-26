@@ -1,7 +1,6 @@
 * Funções Oxigenadas
 ** Definição
 
-
 #+begin_export latex
 \begin{center}
 \scalebox{.65}{
