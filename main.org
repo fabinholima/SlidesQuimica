@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 #+TITLE: Funções Orgânicas Oxigenadas
+=======
+
+#+TITLE: Reações Orgânicas
+>>>>>>> 1df46d3841a36f92c98a000dffaf8dc8133c8af8
 
 #+AUTHOR: Fábio Lima
 #+DATE: 

@@ -370,6 +370,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
   
 #+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Adição de água}
 #+begin_bclogo
+<<<<<<< HEAD
 #+begin_export latex
 
 \schemestart
@@ -384,6 +385,9 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 }
 \schemestop
 #+end_export
+=======
+
+>>>>>>> 1df46d3841a36f92c98a000dffaf8dc8133c8af8
 
 #+end_bclogo 
 
@@ -470,8 +474,11 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 
 
 
+
+
 * Alcinos 
 
+<<<<<<< HEAD
 ** Reações de Adição
 
 - A ligação tripla dos alcinos comporta-se como a dupla dos alcenos, porém pode sofrer uma ou duas adições, dependendo da quantidade do outro reagente.
@@ -851,5 +858,7 @@ Haletos de acila \arrow
 
 #+end_export
 
+=======
+>>>>>>> 1df46d3841a36f92c98a000dffaf8dc8133c8af8
 
 
