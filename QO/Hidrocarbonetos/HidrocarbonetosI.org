@@ -1,0 +1,359 @@
+* Hidrocarbonetos
+** Hidrocarbonetos
+  
+#+begin_export latex
+
+\begin{tikzpicture}
+%\tikzstyle{every node}=[fill=red!30,rounded corners]
+%\tikzstyle{edge from parent}=[red,thick,draw]
+[main/.style={fill=red!30,rounded corners,font={\bfseries\small}},
+main1/.style={fill=green!30,rounded corners,font={\bfseries\small}, align=center, minimum size=10mm, text width=15mm},
+main2/.style={fill=violet!30,rounded corners,font={\bfseries\small}, align=center},
+%edge from parent ./style={red,-o,thick,draw},
+level distance=2cm,
+level 1/.style={sibling distance=4.cm},
+level 2/.style={sibling distance=2.5cm,level distance=1.5cm},
+level 3/.style={sibling distance=4.5cm,level distance=1.5cm,font={\bfseries\tiny}}, edge from parent fork down,
+grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)}},
+ first/.style={level distance=4ex},
+ second/.style={level distance=8ex},
+ third/.style={level distance=12ex},
+ four/.style={level distance=16ex},
+ ]
+\node [main]{Hidrocarbonetos}
+    child {node[main1] {Cadeia Aberta} 
+    	child [grand,first]{node [main2]{Alcanos}}
+    	child [grand,second] {node [main2]{Alcenos}}
+    	child [grand,third]{node [main2]{Alcinos}}
+    	child [grand,four] {node [main2]{Alcadienos}}
+    }
+    child {node[main1] {Cadeia Aromática}	
+    	child {node[main2] {Aromáticos}}
+    }
+   %%%%%
+    child {node[main1]{Cadeia Fechada}
+      child {node[main2] {Ciclanos}}
+      child {node[main2] {Ciclenos}}
+    };
+\end{tikzpicture}
+\begin{tikzpicture}
+		\begin{scope}[yshift=5cm, xshift=-2cm]
+		\node[draw=none,text width=10cm, minimum size=10mm, font=\small] (-5,5) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
+			};
+		\end{scope}
+		\begin{scope}[yshift=5cm,xshift=-8cm]
+		\coordinate (dv) at (0,0);
+		\coordinate (base) at (25pt,0pt);
+		\coordinate (height) at (0pt,25pt);
+		\coordinate (diag) at ($(base)+(height)$);
+		\fill[rounded corners=2pt, violet] ($(dv)-.5*(diag)$) rectangle +(diag); 
+		\node[white] at (dv) {\sffamily\huge C};
+		\node[white, inner sep=2pt] (dvtext) at ($(dv)-.5*(height)$) [anchor=south] {\sffamily\tiny Carbono};
+		\node[white, inner sep=2pt] (dvnum) at ($(dv)+.5*(height)-.5*(base)$) [anchor=north west] {\sffamily\tiny 6};
+		\end{scope}
+		\end{tikzpicture}
+#+end_export
+
+
+
+** Hidrocarbonetos
+- Podem ser obtidos a partir da destilação fracionada do petróleo. Esquema de uma torre de fracionamento.
+
+#+LABEL:torrefra
+#+CAPTION: Esquema de uma torre de fracionamento.
+#+attr_latex:  :width 0.4\textwidth
+[[../Hidrocarbonetos/torre.jpg]]
+
+** Frações Típicas do Petróleo
+
+
+#+begin_export  latex
+%		{\centering \small
+			\begin{talltblr}[
+				theme= fancy,
+				caption={Composição do Petróleo},
+				]{
+					colspec = {lccc}, colsep = 2mm, hlines = {2pt, white},
+					row{odd} = {brown8}, row{even} = {gray8},
+					row{1} = {2em,azure2,fg=white,font=\bfseries},
+					%row{2-Z} = {3em,font=\large},
+				}
+				%	\hline
+				Fração   &  {Temperatura de Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
+				%	\hline
+				Gás residual & - &  \ch{C1-C2} & gás combustível\\
+				\hline
+				{Gás liquefeito \\ de petróleo - GLP} & Até 40 &  \ch{C3-C4}  & gás para uso doméstico e indrustrial\\
+				\hline
+				Gasolina & 40-175 & \ch{C5-C10} & automóveis, solvente\\
+				\hline
+				Querosene & 175-235 & \ch{C11-C12} & iluminação, combustível aviões\\
+				\hline
+				Gasoléo leve & 235-305 & \ch{C13-C17} & diesel, fornos\\
+				\hline
+				Gasoléo pesado & 305-400 & \ch{C18-C25} & combustível, lubrificantes\\
+				\hline
+				Lubrificantes & 400-510 & \ch{C26-C38} & óleos librificantes\\
+				\hline
+				Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
+				\hline
+			\end{talltblr}
+%		}
+#+end_export
+
+* Classificação
+
+** Grupos 
+- Os nomes *alcanos*, *alcenos*, *alcinos*, *alcadienos*, *ciclanos*, *ciclenos* e *aromáticos* designam grupos aos quais os hidrocarbonetos pertencem.
+  
+#+begin_export latex
+\vspace{0.1cm}
+\begin{tikzpicture}
+\tikzset{grow'=right,level distance=32mm}
+\tikzset{edge from parent/.style={draw,edge from parent fork right,red},-o,thick}
+\tikzset{level 1/.style={sibling distance=3.2cm}}
+\tikzset{level 2/.style={sibling distance=1.0cm,level distance=2.5cm},}
+\tikzset{main/.style={draw,rounded corners,font={\bfseries\small}, align=center, text width=17mm}}
+\tikzset{main1/.style={font={\bfseries\small}, align=center}}
+\tikzset{every tikzmarknode/.append style={inner sep=3pt,rounded
+corners}}
+%\begin{scope}[frontier/.style={distance from root=5mm}]
+\node[main] {Cadeia}
+	child {node[main] {Alifática (aberta)}
+		child {node[main1] {Alc\tikzmarknode[fill=red!30]{Red1}{an}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=green!30]{Green1}{en}o}}
+		child {node[main1]{Alc\tikzmarknode[fill=blue!30]{Blue1}{in}o}}
+		child {node[main1]{Alca\tikzmarknode[fill=yellow!30]{Yellow1}{dien}o}}
+		}
+	child {node [main] {Cíclica (fechada)}	
+		child [main1]{node {Cicl\tikzmarknode[fill=Teal!50]{Teal1}{an}o}}
+		child [main1]{node {Cicl\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid1}{en}o}}
+};
+%\end{scope}
+%%%%% LINHAS 
+\node[main1] at (9.5,3.1){\tikzmarknode[fill=red!30]{Red2}{an} indica apenas uma ligação simples};
+\node[main1] at (9.5,2.1){\tikzmarknode[fill=green!30]{Green2}{en} indica apenas uma ligação dupla};
+\node[main1] at (9.5,1.1){\tikzmarknode[fill=blue!30]{Blue2}{in} indica apenas uma ligação tripla};
+\node[main1] at (9.2,0.1){\tikzmarknode[fill=yellow!30]{Yellow2}{dien} indica duas ligações duplas};
+\node[main1] at (9.5,-1.1){\tikzmarknode[fill=Teal!50]{Teal2}{an} indica uma  ligação simples};
+\node[main1] at (9.3,-2.1){\tikzmarknode[fill=DarkOrchid!50]{DarkOrchid2}{en} indica uma ligação dupla};
+%%%%% SETA DE LIGACAO
+
+\end{tikzpicture}
+\annotatetwo[->]{below}{Red1}{Red2}{}
+\annotatetwo[->]{below}{Green1}{Green2}{}
+\annotatetwo[->]{below}{Blue1}{Blue2}{}
+\annotatetwo[->]{below}{Yellow1}{Yellow2}{}
+\annotatetwo[->]{below}{Teal1}{Teal2}{}
+\annotatetwo[->]{below}{DarkOrchid1}{DarkOrchid2}{}
+
+
+#+end_export
+
+
+
+** Subdivisões dos hidrocarbonetos
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+#+begin_export latex
+	
+	\begin{longtblr}[
+		theme = fancy,
+		caption = {Subdivisões importantes dos hidrocarbonetos},
+		entry = {Short Caption},
+		label = {tblr:test},
+		]{
+		colspec = {cccc}, colsep = 2mm, hlines = {2pt, white},
+		rowsep = 3.5pt, %% space line 
+		row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+		 }
+\hline
+Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
+\hline
+{Alcanos\\ ou parafinas} & {Cadeia aberta \\ Ligações simples} & {\chemfig{H_3C-CH_2-CH_3} \\  \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-CH([:-90]-CH_3)-CH_3}} &  \(\mathrm{C_nH_{2n+2}}\) \\
+ \hline
+ {Alcenos,  \\ alquenos \\ ou olefinas} & {Cadeia aberta com \\ 1 ligação dupla} & {\chemfig{H_2C=CH-CH_2-CH_3} \\ \chemfig{H_3C-C([:90]-CH_3)=CH-CH_3}} & \(\mathrm{C_nH_{2n}}\)\\
+ \hline \pagebreak
+ {Alcinos \\ ou alquinos} & {Cadeia aberta \\ 1 ligação tripla} & {\chemfig{HC~C-CH_3} \\ \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-C~C-CH_3}} & \(\mathrm{ C_nH_{2n-2}}\)\\ 
+ \hline
+ {Alcadienos \\ ou dienos} & {Cadeia aberta \\ 2 ligações duplas} & {\chemfig{H_2C=C=CH_2} \\[1pt] \chemfig{H_2C=CH-CH=CH_2}} & \(\mathrm{C_nH_{2n-2}}\)\\
+ \hline \pagebreak
+ Ciclanos & {Cadeia fechada \\ Ligações simples} & {\chemfig{*6(------)}} & \(\mathrm{C_nH_{2n}}\)\\
+ \hline 
+ Ciclenos & { Cadeia fechada \\  uma ligação dupla} & {  \chemfig{*6(-----=)}} & \(\mathrm{C_nH_{2n-2}}\)\\
+ \hline \pagebreak
+ Aromáticos & Contêm anel benzênico & {\chemfig{**6(-----(-CH_3)-)} \\   \chemfig{*6(-=-(*6(-=-=---))=-=)}} & \(\mathrm{C_nH_{2n-6}}\)\\
+ \hline 
+\end{longtblr}
+#+end_export
+
+
+
+* Exercício
+** Exemplos 
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+#+begin_question
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (5)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice etino.
+\choice propino.
+#+end_choice
+#+end_question
+\only<1>
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+(*FATEC*) O hidrocarboneto que apresenta a menor quantidade de átomos de H por molécula é:
+
+#+ATTR_LATEX: :options (5)
+#+begin_choice
+\choice metano.
+\choice etano.
+\choice eteno.
+\choice *etino*.
+\choice propino.
+#+end_choice
+
+Os compostos etano e propano são hidrocarbonetos da classe dos alcanos. Portanto apresentam o número de hidrogênios maior que o número de carbonos, pois sua fórmula geral é @@latex: \ch{C_nH_{2n+2}}@@.
+
+O eteno apresenta ligação dupla entre os dois carbonos, pois é um alceno de fórmula geral @@latex: \ch{C_nH_{2n}}@@.
+
+Etino e propino são alcinos, pois possuem uma tripla ligação entre os carbonos. Entretanto, o propino possui um maior número de hidrogênios, já que possui um carbono a mais na cadeia. A fórmula geral de um alcino é @@latex: \ch{C_nH_{2n-2}}@@.
+
+Portanto, o *etino* possui apenas dois átomos de carbono (\ch{C2H2}), sendo o alcino mais simples
+#+end_answer
+
+
+
+
+
+* Nomenclatura
+** Nomenclatura dos compostos orgânicos
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+  
+
+   #+latex: \begin{myrule}{Regra}
+   - A nomenclatura de compostos orgânicos segue as regras elaboradas pela IUPAC.
+
+   - De acordo com as regras da IUPAC, o nome de um composto orgânico é formado pela união de três fragmentos: *prefixo + infixo + sufixo*.
+
+   #+latex: \end{myrule}
+   
+** Nomenclatura dos compostos orgânicos
+   
+   - O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
+
+   #+begin_export latex
+
+\begin{longtblr}[theme=fancy,
+    caption = {Grupos substituintes orgânicos formados por carbono e hidrogênio},]
+    {
+        colspec = {c c c c }, colsep = 2mm, hlines = {2pt, white},
+        %row{odd} = {azure8}, row{even} = {gray8},
+        row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+        }
+\hline
+Prefixo  &  Número de carbonos  &  Prefixo  & Número de carbonos \\[0pt]
+\hline
+met & 1 & undec & 11\\[0pt]
+et & 2 & dodec & 12\\[0pt]
+prop & 3 & tridec & 13\\[0pt]
+but & 4 & tretadec & 14\\[0pt]
+pent & 5 & pentadec & 15\\[0pt]
+hex & 6 & hexadec & 16\\[0pt]
+hept & 7 & hepdec & 17\\[0pt]
+oct & 8 & octadec & 18\\[0pt]
+non & 9 & nonadec & 19\\[0pt]
+dec & 10 & icosa & 20\\[0pt]
+\hline
+\end{longtblr}
+   #+end_export
+   
+** Nomenclatura dos compostos orgânicos
+
+- O *infixo* indica o tipo de ligação química entre os átomos de carbono.
+
+
+#+begin_export latex
+\begin{talltblr}[theme=fancy,
+caption = {Infixos para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Infixo  &  Tipo de Ligação \\
+\hline
+an & simples\\
+en & dupla\\
+in & tripla\\
+\hline
+\end{talltblr}
+
+#+end_export
+
+
+
+** Nomenclatura dos compostos orgânicos
+
+- O *sufixo*, a parte final, indica a *classe funcional do composto*.
+
+#+begin_export latex
+\begin{talltblr}[theme=fancy,
+caption = {Sufixo para a nomenclatura orgânica},
+entry = {Short Caption},
+label = {tblr:tall},
+%note{a} = {It is the first footnote.},
+%note{$\dag$} = {It is the second long long long long long long footnote.},
+]{
+colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+row{1} = {1.5em,azure2,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Sufixo  &  Classe funcional \\
+\hline
+o & hidrocarbonet \alert{o}\\
+ol & álco \alert{ol}\\
+al & \alert{al} deído\\
+ona & cet \alert{ona}\\
+óico & ácido carboxíl \alert{ico}\\
+\hline
+\end{talltblr}
+
+#+end_export
+
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/2qnZtdzAjYynDWw} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+   
+

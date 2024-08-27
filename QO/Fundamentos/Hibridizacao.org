@@ -1,0 +1,21 @@
+* Hibridização do Carbono
+
+
+
+
+** Exercícios
+
+#+begin_question
+A distribuição eletrônica do carbono, no estado fundamental, entretanto, mostra que ele é bivalente. Para que o carbono atenda ao postulado de Kekulé,
+ele sofre:
+
+#+ATTR_LATEX: :options (3)
+#+begin_choice
+\choice  ressonância.
+\choice isomeria.
+\choice protonação.
+\choice  hibridização.
+\choice  efeito indutivo.
+#+end_choice 
+
+#+end_question 

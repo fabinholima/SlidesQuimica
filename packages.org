@@ -1,0 +1,187 @@
+
+#+LATEX_HEADER: %%%% Config X sim for BEAMER
+
+
+#+LATEX_HEADER:\makeatletter
+#+LATEX_HEADER: \@ifclassloaded{beamer}{%
+#+LATEX_HEADER:  %%% save beamer's `solution' environment as `beamersolution':
+#+LATEX_HEADER:  \let\beamersolution\solution
+#+LATEX_HEADER:  \let\endbeamersolution\endsolution
+#+LATEX_HEADER:  %%% "delete" the `solution' environment:
+#+LATEX_HEADER:  \let\solution\relax
+#+LATEX_HEADER:  \let\endsolution\relax
+#+LATEX_HEADER: }{%
+#+LATEX_HEADER: }%
+#+LATEX_HEADER: \makeatother
+#+LATEX_HEADER: \usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \usepackage[T1]{fontenc}
+
+#+LATEX_HEADER: %\usepackage[portuguese]{babel}
+
+#+LATEX_HEADER: %%%% FONTS
+
+#+LATEX_HEADER: %%% XSIM CONFIG BEAMER 
+#+LATEX_HEADER: \usepackage{xsim}
+#+LATEX_HEADER: \usepackage[most]{tcolorbox}
+#+LATEX_HEADER: \usepackage{amssymb}
+#+LATEX_HEADER: \usepackage{fontawesome}
+#+LATEX_HEADER: \usepackage{tasks}
+#+LATEX_HEADER: \newcounter{paragraph}
+#+LATEX_HEADER: \usepackage[dvipsnames,svgnames]{xcolor}
+#+LATEX_HEADER: \usepackage{annotate-equations}
+
+#+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
+
+#+LATEX_HEADER: \DeclareExerciseEnvironmentTemplate{custom}{%
+#+LATEX_HEADER:  \begin{tcolorbox}[boxrule = 0pt]
+#+LATEX_HEADER:  \tcbox[on line,colback=teal,colframe=teal,coltext=white,size=small]{%
+#+LATEX_HEADER:    \faBook\sffamily\bfseries\
+#+LATEX_HEADER:    \XSIMmixedcase{\GetExerciseName}
+#+LATEX_HEADER:    \GetExerciseProperty{counter}%
+#+LATEX_HEADER:  }\quad
+#+LATEX_HEADER: }{\end{tcolorbox}}
+
+
+#+LATEX_HEADER: %% == CUSTOM BOX BEAMER 
+
+#+LATEX_HEADER: \DeclareExerciseEnvironmentTemplate{custom2}{%
+#+LATEX_HEADER:  \begin{tcolorbox}[boxrule = 0pt]
+#+LATEX_HEADER:  \tcbox[on line,colback=violet,colframe=violet,coltext=white,size=small]{%
+#+LATEX_HEADER:    \faToggleOn\sffamily\bfseries\
+#+LATEX_HEADER:    \XSIMmixedcase{\GetExerciseName}
+#+LATEX_HEADER:    \GetExerciseProperty{counter}%
+#+LATEX_HEADER:  }\quad
+#+LATEX_HEADER: }{\end{tcolorbox}}
+
+
+
+
+#+LATEX_HEADER: \DeclareExerciseType{test}{
+#+LATEX_HEADER:  exercise-env = question ,
+#+LATEX_HEADER:  solution-env = answer ,
+#+LATEX_HEADER:  exercise-template = custom ,
+#+LATEX_HEADER:  solution-template = custom2 ,
+#+LATEX_HEADER:  exercise-name = Exemplo ,
+#+LATEX_HEADER:  exercises-name = Exemplo ,
+#+LATEX_HEADER:  solution-name = Solução ,
+#+LATEX_HEADER:  solutions-name = Sol. ,
+#+LATEX_HEADER:  exercise-heading = \textbf ,
+#+LATEX_HEADER:  solution-heading = \textbf
+#+LATEX_HEADER: }
+
+
+#+LATEX_HEADER: \xsimsetup{
+#+LATEX_HEADER:  exercise/within = section,
+#+LATEX_HEADER:  exercise/the-counter =  \arabic{exercise}, 
+#+LATEX_HEADER: %%solution-name = solution,  % used with headings=true
+#+LATEX_HEADER: solution/print=true,
+#+LATEX_HEADER: print-collection/print=both,
+#+LATEX_HEADER: }
+
+
+#+LATEX_HEADER: \NewTasksEnvironment[label = (\emph{\alph*}),
+#+LATEX_HEADER: label-width = 12pt]{choice}[\choice]
+
+#+LATEX_HEADER: \usepackage{empheq} %%% Brackers
+
+#+LATEX_HEADER: \usepackage{colortbl}
+#+LATEX_HEADER: \usepackage[tikz]{bclogo}
+#+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
+#+LATEX_HEADER: \usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
+#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+#+LATEX_HEADER: \usepackage{tikzpeople}
+#+LATEX_HEADER: \usepackage{qrcode,hyperref}
+#+LATEX_HEADER: \usepackage{upgreek}
+#+LATEX_HEADER: %\usepackage[version=4]{mhchem}
+#+LATEX_HEADER: \usepackage{tabularray}
+
+#+LATEX_HEADER: %%% CUSTOM TABLE 
+#+LATEX_HEADER:\NewTblrTheme{fancy}{
+#+LATEX_HEADER:\SetTblrStyle{caption-tag}{font=\bfseries,red2}
+#+LATEX_HEADER:\SetTblrInner[tblr,longtblr]{rowsep=2.5pt}
+#+LATEX_HEADER:\DefTblrTemplate{firsthead, middlehead,lasthead}{default}{} % <---
+#+LATEX_HEADER:\DefTblrTemplate{contfoot-text}{normal}{\scriptsize\textit{Continua ...}}
+#+LATEX_HEADER:\SetTblrTemplate{contfoot-text}{normal}
+#+LATEX_HEADER:}
+
+
+
+#+LATEX_HEADER: %% ==== CHEMMACROS E CHEMFIG CONFIG 
+
+
+#+LATEX_HEADER: \usepackage{chemfig,chemmacros,elements,chemformula}
+#+LATEX_HEADER: \chemsetup{modules={all}}
+#+LATEX_HEADER: \chemsetup[redox]{pos=top,roman=false}
+#+LATEX_HEADER: \chemsetup[redox]{pos=top}
+#+LATEX_HEADER: \chemsetup{redox/sep=.5em}
+#+LATEX_HEADER: \chemsetup[redox]{explicit-sign=true} %%% reaction redox 
+#+LATEX_HEADER: %% == CUSTOM PHASES IN CHEMMACROS
+#+LATEX_HEADER: \NewChemPhase\lqdd{\(\ell\)}
+#+LATEX_HEADER: \NewChemPhase\gr{grafite}
+#+LATEX_HEADER: \NewChemPhase\reac{reação}
+#+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+#+LATEX_HEADER: \usepackage{siunitx}
+#+LATEX_HEADER: \setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+#+LATEX_HEADER: %% == NUMEROS PARA FORMULES
+#+LATEX_HEADER: \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
+#+LATEX_HEADER: %%% INCLUDE PAGES PDFs
+#+LATEX_HEADER: \usepackage{pdfpages}
+#+LATEX_HEADER: \usepackage{mol2chemfig}
+#+LATEX_HEADER: \usepackage{subfig,caption}
+#+LATEX_HEADER: \usepackage{wrapfig}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setitemize{label=\usebeamerfont*{itemize item}%
+#+LATEX_HEADER: \usebeamercolor[fg]{itemize item}
+#+LATEX_HEADER: \usebeamertemplate {itemize item}}
+#+LATEX_HEADER: \usepackage{array} % ajust colunm table
+#+LATEX_HEADER: \usepackage{cancel}
+#+LATEX_HEADER: \usepackage[controls]{animate}
+#+LATEX_HEADER: \renewcommand{\CancelColor}{\color{red}}
+
+#+LATEX_HEADER: %%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX 
+
+#+LATEX_HEADER: \newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER: colback=blue!5!white, colframe=blue!75!black,
+#+LATEX_HEADER: fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER: colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER: attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER: title=#2,#1}
+
+#+LATEX_HEADER: \newtcolorbox{myrule}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER: colback=green!5!white, colframe=blue!75!black,
+#+LATEX_HEADER: fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER: colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER: attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER: title=#2,#1}
+
+
+#+LATEX_HEADER: \newtcolorbox{myex}[2][]{boxsep=0.5em,left=0.5em,
+#+LATEX_HEADER:  colback=yellow!5!white, colframe=blue!75!black, 
+#+LATEX_HEADER:  fonttitle=\bfseries\sffamily,
+#+LATEX_HEADER:  colbacktitle=blue!85!red!60,enhanced,
+#+LATEX_HEADER:  attach boxed title to top left={yshift=-3mm,xshift=5mm},
+#+LATEX_HEADER:  title=#2,#1}
+
+
+#+LATEX_HEADER: \definecolor{col1}{HTML}{FF7878}
+#+LATEX_HEADER: \definecolor{col2}{HTML}{51B5F8}
+#+LATEX_HEADER: \definecolor{col3}{HTML}{68E1AA}
+#+LATEX_HEADER: \definecolor{col4}{HTML}{B869EA}
+#+LATEX_HEADER: \definecolor{col5}{HTML}{FF5500}
+#+LATEX_HEADER: \definecolor{col6}{HTML}{FFF8E7}
+#+LATEX_HEADER: \definecolor{col7}{HTML}{FF9966}
+#+LATEX_HEADER: \definecolor{col8}{HTML}{9400D3}
+
+#+LATEX_HEADER: %% CONFIG COLOR CARBONO
+
+#+LATEX_HEADER: \tikzstyle{bal}=[inner sep=0.3pt,fill=orange,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{rect}=[inner sep=0.3pt,fill=red,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{bal2}=[inner sep=0.3pt,fill=blue,fill opacity=0.5,circle,minimum size=0.2cm]
+#+LATEX_HEADER: \tikzstyle{bal3}=[inner sep=0.3pt,fill=yellow,fill opacity=0.5,circle,minimum size=0.2cm]
+
+
+#+LATEX_HEADER: \definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
+#+LATEX_HEADER: \newcommand{\re}{\hspace{-1cm}}
+#+LATEX_HEADER: \newcommand{\af}{\hspace{2cm}}
+
+

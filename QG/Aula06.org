@@ -1,0 +1,326 @@
+* Ligações Químicas
+** Revisando conceitos
+
+#+begin_export latex
+\begin{center}
+\scalebox{.65}{
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+	level 1/.append style={level distance=5cm,sibling angle=50},
+	level 2/.append style={level distance=2.8cm,sibling angle=30},]
+
+	\node {Átomo}
+	child {node [concept color = blue!40] {Prótons}
+	%	child {node [concept color = teal!30] {carga (+)}}
+	}
+	child [concept color = blue!30] {node {Elétrons}
+    %child [concept color = teal!30, xshift=.5cm, yshift=1cm, text width=2.1cm,] {node{ carga (-)}}
+	}
+	child {node [concept color = blue!30] {Neutrôns}
+	%	child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {sem carga}}
+	}
+	child [concept color = blue!30] {node {Número Atômico (Z)}
+%		child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](-[:90]OH)=[:330]R}  }}
+	}
+	child [concept color = blue!30] {node {Isótopos}
+	%			child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.3cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-R}}}
+	}
+	child [concept color = blue!30] {node {Massa Atômica(A)}
+		%		child [concept color = teal!30,xshift=.5cm, yshift=1cm, text width=2.5cm] {node {\chemfig{R-O-R}}}
+%	}
+%	child [concept color = blue!30] {node {Mol}
+			%	child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]OH}}}
+};
+%\node[ellipse callout,rounded corners,fill=col7,callout absolute pointer={(.5,0)}, callout pointer width=1cm] at ([shift={(.5cm,1cm)}]3,0) {Revisando};
+\end{tikzpicture}
+}
+\end{center}
+
+#+end_export
+
+
+** Átomo 
+
+
+[[../QG/img/timelineatom.png]]
+
+
+#+begin_export latex
+
+
+
+#+end_export
+
+** Camada de Valência
+
+
+#+begin_export latex
+\begin{myrule}{Definição}
+É a última camada do átomo, camada mais externa do átomo. 
+\end{myrule}
+
+\setbohr{
+	shell-options-add = dashed, shell-options-add = red, nucleus-radius =.5cm, electron-radius = 3pt, shell-dist = 1.6em, nucleus-options-set = {draw=black,fill=orange,opacity=0.5}, electron-options-set = {color=black}, insert-missing}
+\begin{tikzpicture}
+%\draw[step=1cm,black,very thin] (0,0) grid (10,10);
+ \draw (7,8) node[below] {\bohr{11}{\bfseries \large Na}};
+ \draw (14,8) node[below] {\bfseries \ch{Na}- Sódio};
+ \draw (14,6.5) node[below] {\large \elconf{Na}};
+ %
+ \node[] at (9.1,5.3) (n1) {};
+ \node[rotate=0] at (13,5.3) (n2) {Camada de Valência};
+ \draw [arrows = {-Latex[width=10pt, length=10pt]}] (n1)-- (n2);
+\end{tikzpicture}
+#+end_export
+
+
+** Regra do octeto 
+
+#+ATTR_LATEX: :options {Regra} 
+#+begin_myrule
+A regra do octeto: os átomos tendem a ganhar, perder ou compartilhar elétrons até que eles estejam rodeados por 8 elétrons de valência (4 pares de elétrons).
+#+end_myrule
+#+begin_export latex
+\begin{tikzpicture}
+%\draw[step=1cm,black,very thin] (0,0) grid (10,10);
+ \draw (7,8) node[below] {\bohr{18}{\bfseries \large Na}};
+ \draw (14,8) node[below] {\bfseries \ch{Ar}- Argônio};
+ \draw (14,6.5) node[below] {\large \elconf{Ar}};
+\end{tikzpicture}
+#+end_export
+
+
+** Tabela
+
+#+begin_export latex
+\begin{center}
+\resizebox{0.8\textwidth}{!}{
+\pgfPT[show title=false,show legend=false]
+}
+\end{center}
+#+end_export
+
+
+
+
+
+** Ligação iônica
+
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[node distance=4cm]
+ \tikzstyle{every node}=[font=\bfseries]
+\node (a) [draw=none, align=center, rounded rectangle, fill=yellow!80] {Átomo com baixa \\ eletronegatividade};
+\node (a1) [draw=none, right= 1.2cm of a] {+};
+\node (a2) [draw=none, align=center, rounded rectangle, fill=orange!80, right= 2.3cm of a] {Átomo com alta \\ eletronegatividade};
+
+%%%%%%
+\node (b) [draw=none, align=center, rounded rectangle, fill=yellow!40, below=1.2cm of a] {Formação de íon positivo\\ (cátion)};
+%%%%
+\node (b2) [draw=none, align=center, rounded rectangle, fill=orange!40, right=1.2cm of b] {Formação de íon negativo\\ (ânion)};
+%%%
+\node (c) [draw=none, align=center, rounded rectangle, fill=blue!61, below=3.5cm of a1] {Atração eletrostática entre\\ cátions e ânions};
+\node (d) [draw=none, align=center, rounded rectangle, fill=pink!80, below=1.2cm of c] {Substância iônica ou \\ composto iônico};
+\draw [-{Stealth[scale=2]}]  (a) -- (b);
+\draw [-{Stealth[scale=2]}]  (a2) -- (b2);
+\draw [-{Stealth[scale=2]}]  (b2) -- (c);
+\draw[-{Stealth[scale=2]}] (b) -- (c);
+\draw[-{Stealth[scale=2]}] (c) -- (d);
+%%%%%%%%%%%%%
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+
+** Formação da Ligação
+
+
+
+#+begin_src python :results file :exports none
+'''
+Author Fábio Lima
+
+Energy Potential
+
+Inspired picture https://saylordotorg.github.io/text_general-chemistry-principles-patterns-and-applications-v1.0/section_12/95236acc5635a15c238054d04d2d320e.jpg
+
+
+'''
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib as mpl
+#Style
+plt.style.use('ggplot')
+mpl.rcParams['lines.linewidth'] = 2
+mpl.rcParams['font.size'] = 16
+#mpl.rcParams['ytick.major.pad']='22'
+#Eixo X
+r = np.arange(0.01,1.01,0.01)  # start, stop(exclusive), stepx
+
+Ea = -1.436/r              # attractive energy term
+Er = (7.32e-6)/(r**(8))    # repulsive energy term
+En = Ea + Er               # total energy
+
+fig, ax = plt.subplots(figsize=(12,6))
+#ax.set_ylabel('Energia Potencial / kJ $mol^{-1}$')
+#ax.xaxis.labelpad = 30
+
+ax.tick_params(axis='y', which='major', pad=20)
+ax.tick_params(top=False, bottom=False, left=False, labelleft=False, labelbottom=False)
+ax.get_xaxis().set_visible(True)
+ax.spines['left'].set_color('0.5')
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_linewidth(2.0)
+ax.axhline(0, color='black')
+#ax.yaxis.set_ticks_position('left')
+
+#Add line s
+ax.vlines(x=0.24, ymin=-0.11, ymax=-5.25, colors='black', ls=':', lw=2)
+ax.hlines(y=-5.25, xmin=0.010, xmax=0.24, colors='black', ls=':', lw=2)
+ax.scatter(x=0.165, y=5.0, color='purple', s=60)
+ax.scatter(x=0.24, y=-5.25, color='purple', s=60)
+ax.scatter(x=0.6, y=-2.35, color='purple', s=60)
+
+
+
+ax.text(-0.12,-12, r'Energia potencial (kJ/mol)', rotation='vertical', weight='bold')
+ax.text(-0.07,-5.4, r'- 589', weight='bold', fontsize=14)
+ax.text(-0.03,-0.13, r'0', weight='bold', fontsize=14)
+ax.text(0.20, 0.52, r'$r_0$', fontsize=14 )
+
+
+ax.annotate('distância internuclear, $r$ (pm)', xy=(0.9,0.9), xytext=(0.7,0.9), color='black', size=13, va='center', ha='center',
+            arrowprops={'arrowstyle': '->', 'lw': 3, 'color':'black'})
+
+
+#Anotate 2
+
+
+ax.annotate('Interação repulsiva', xy=(0.169,12), xytext=(0.25,12), color='black', size=11, va='center',
+            arrowprops={'arrowstyle': '-', 'color':'black'})
+
+
+ax.annotate('Energia total', xy=(0.159,10), xytext=(0.25,10), color='black', size=11, va='center',
+            arrowprops={'arrowstyle': '-', 'color':'black'})
+
+
+ax.annotate('Interação atrativa', xy=(0.14,-10.1), xytext=(0.22,-14), color='black', size=11,
+            arrowprops={'arrowstyle': '-', 'color':'black'}, va='center')
+
+
+### Text raio
+ax.text(0.09,4.7,r'r=180',fontsize=11)
+ax.text(0.2,-6.95, r'r=236',  fontsize=11)
+ax.text(0.59, -3.90, r'r=600', fontsize=11)
+#Atoms, ajust size circle
+Na = np.pi * (10 * 3)**2 # 0 to 15 point radiuses
+Cl= np.pi* (15 *  2.5)**2 # 0 to 15 point radiusesw
+#### Positions Balls
+ax.scatter(.23, 5.6, s=Na, c='orange', alpha=0.5)
+ax.scatter(.31, 5.6, s=Cl, c='green', alpha=0.5)
+ax.text(.22,5.2, r'Na$^+$',weight='bold',fontsize=14)
+ax.text(.3, 5.2, r'C$\ell^-$',weight='bold',fontsize=14)
+## Cicle 2
+ax.scatter(.32, -8.2, s=Na, c='orange', alpha=0.5)
+ax.scatter(.41, -8.2, s=Cl, c='green', alpha=0.5)
+ax.text(.3,-8.4, r'Na$^+$',weight='bold',fontsize=14)
+ax.text(.39, -8.4, r'C$\ell^-$',weight='bold',fontsize=14)
+## Cicle 3
+ax.scatter(.65, -8.2, s=Na, c='orange', alpha=0.5)
+ax.scatter(.86, -8.2, s=Cl, c='green', alpha=0.5)
+ax.text(.64,-8.4, r'Na$^+$',weight='bold',fontsize=14)
+ax.text(.825, -8.4, r'C$\ell^-$',weight='bold',fontsize=14)
+
+
+#Plots
+ax.plot(r,Ea, color='green') # atract
+ax.plot(r,Er, color='red') # repulsive
+ax.plot(r,En, color='purple') # totaly
+#
+plt.xlim([0.0, 1.00])
+plt.ylim([-15, 15])
+plt.grid(True)
+fig.savefig('Energia_NaCl.png', format='png', dpi=1200)
+#plt.show()
+#+end_src
+
+#+RESULTS:
+[[file:None]]
+
+#+ATTR_LATEX: :scale 0.5
+#+CAPTION: Energia de ligação
+[[../QG/Energia_NaCl.png]]
+
+
+
+** Ligação Compartilhada
+
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[node distance=7cm]
+ \tikzstyle{every node}=[font=\large\bfseries]
+\node (a) [draw=none, align=center, rounded rectangle, fill=orange!80] {Átomo com alta \\ eletronegatividade};
+\node (a1) [draw=none, right= 1.2cm of a] {+};
+\node (a2) [draw=none, align=center, rounded rectangle, fill=orange!80, right= 3.2cm of a] {Átomo com alta \\ eletronegatividade};
+%%%
+\node (c) [draw=none, align=center, rounded rectangle, fill=blue!41, below=2.0cm of a1] {Compartilhamento de elétrons na camada de valência};
+\node (d) [draw=none, align=center, rounded rectangle, fill=pink!80, below=1.2cm of c] {moléculas ou macromoléculas};
+\node (e) [draw=none, align=center, rounded rectangle, fill=green!40, below=1.2cm of d] {substâncias simples ou compostas};
+
+%\draw [-{Stealth[scale=2]}]  (a2) -- (b2);
+\draw [-{Stealth[scale=2]}]  (a2) -- (c);
+\draw[-{Stealth[scale=2]}] (a) -- (c);
+\draw[-{Stealth[scale=2]}] (c) -- (d);
+\draw [-{Stealth[scale=2]}]  (d) -- (e);
+%%%%%%%%%%%%%
+\end{tikzpicture}
+
+\end{center}
+#+end_export
+
+
+** Teoria de Ligação de Valência
+#+ATTR_LATEX: :options {Definição}
+#+begin_mybox
+/Linus Pauling/: A ligação   química é   uma   combinação   de   2 *orbitais atômicos* com   energia   semelhante,   sendo   que   essa combinação ocorre quando esses *orbitais* se aproximam o suficiente para que haja \alert{sobreposição}.
+- As ligações são formadas quando os orbitais dos átomos se superpõem.
+- Para que esta superposição ocorra existem dois elétrons de spins contrários.
+- A sobreposição ocorre à medida que os núcleos se aproximam.  
+#+end_mybox
+
+** Superposição
+
+#+begin_export latex
+
+\begin{tikzpicture}[scale=1.2]
+\node[draw=none] at (2,1) {Átomos se aproximam};
+\draw[->] (-1.0,0) -- (-.5,0); 
+\draw[<-] (4.0,0) -- (4.5,0); 
+\satom[color=red, name=H, pos={(3.6,0)}, scale=1.2]{red/180/west/1/1.}
+\satom[color=red, name=H, pos={(0,0)}]{red/0/east/1/1.}
+\draw [->] (1.4,0) ..controls +(.05cm:.6cm) and +(.3cm:.0cm) .. (1.9,-1.25);
+\draw [-] (2.16,0) ..controls +(0cm:-0.52cm) and +(.0cm:.06cm) .. (1.83,-0.45);
+\draw [->] (1.4,0) ..controls +(.05cm:.6cm) and +(.3cm:.0cm) .. (1.9,-1.25);
+\satom[color=red, name=H, pos={(3.1,-2)}, scale=1.2]{red/180/west/1/1.}
+\satom[color=red, name=H, pos={(0.8,-2)}]{red/0/east/1/1.}
+\draw[->] (1.9,-3) -- (1.9, -2.5);
+\atom[name=Cl, color=blue, scale=1.2, pos={(7,0)}]{
+	blue/90/north/2,
+	blue/0/east/1,
+	blue/270/south/2,
+	blue/180/west/2}
+	\atom[name=H, color=gray, pos={(9.2,0)}, scale=.8]{gray/180/west/1}
+\node[draw=none] at (2,-3.2) {região de superposição};
+\draw[<-] (8.2,-.6) ..controls +(2.7cm:-1.6cm) and +(4cm:-2.cm) .. (3.5,-3.4);
+%% Text Figure
+\node[above] at (7,1.6) {{\itshape 3p}};
+\node[above] at (0.5,-.8) {{\itshape 1s}};
+\node[above] at (3,-.8) {{\itshape 1s}};
+\end{tikzpicture}
+
+#+end_export
+
+
+

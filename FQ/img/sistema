@@ -1,0 +1,48 @@
+
+
+
+% Pattern Info
+
+\tikzset{
+	pattern size/.store in=\mcSize, 
+	pattern size = 5pt,
+	pattern thickness/.store in=\mcThickness, 
+	pattern thickness = 0.3pt,
+	pattern radius/.store in=\mcRadius, 
+	pattern radius = 1pt}
+\makeatletter
+\pgfutil@ifundefined{pgf@pattern@name@_iqr6wfnjy}{
+	\makeatletter
+	\pgfdeclarepatternformonly[\mcRadius,\mcThickness,\mcSize]{_iqr6wfnjy}
+	{\pgfpoint{-0.5*\mcSize}{-0.5*\mcSize}}
+	{\pgfpoint{0.5*\mcSize}{0.5*\mcSize}}
+	{\pgfpoint{\mcSize}{\mcSize}}
+	{
+		\pgfsetcolor{\tikz@pattern@color}
+		\pgfsetlinewidth{\mcThickness}
+		\pgfpathcircle\pgfpointorigin{\mcRadius}
+		\pgfusepath{stroke}
+}}
+\makeatother
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.55pt,y=0.55pt,yscale=-1,xscale=1]
+	%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+	
+	%Shape: Ellipse [id:dp11201423603831118] 
+	\draw  [pattern=_iqr6wfnjy,pattern size=16.125pt,pattern thickness=0.75pt,pattern radius=0.75pt, pattern color={rgb, 255:red, 214; green, 200; blue, 200}] (100,163.08) .. controls (100,94.83) and (182.86,39.5) .. (285.08,39.5) .. controls (387.3,39.5) and (470.17,94.83) .. (470.17,163.08) .. controls (470.17,231.34) and (387.3,286.67) .. (285.08,286.67) .. controls (182.86,286.67) and (100,231.34) .. (100,163.08) -- cycle ;
+	%Shape: Circle [id:dp33691632318189657] 
+	\draw  [fill={rgb, 255:red, 202; green, 200; blue, 200 }  ,fill opacity=1 ] (148.17,139) .. controls (148.17,101.72) and (178.39,71.5) .. (215.67,71.5) .. controls (252.95,71.5) and (283.17,101.72) .. (283.17,139) .. controls (283.17,176.28) and (252.95,206.5) .. (215.67,206.5) .. controls (178.39,206.5) and (148.17,176.28) .. (148.17,139) -- cycle ;
+	%Straight Lines [id:da18519900301055892] 
+	\draw    (242,243.67) -- (224.03,213.71) ;
+	\draw [shift={(223,212)}, rotate = 419.03999999999996] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+	
+	% Text Node
+	\draw (180,134) node [anchor=north west][inner sep=0.75pt]   [align=left] {Sistema};
+	% Text Node
+	\draw (222,251) node [anchor=north west][inner sep=0.75pt]   [align=left] {Fronteira};
+	% Text Node
+	\draw (369,143) node [anchor=north west][inner sep=0.75pt]   [align=left] {Vizinhança};
+	
+	
+\end{tikzpicture}
