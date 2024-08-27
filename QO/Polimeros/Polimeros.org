@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * Polímeros
 
 #+begin_comment
@@ -9,3 +10,6 @@ https://colegiohms.com.br/blog/wp-content/uploads/2023/03/exercicios-de-HIBRIDIZ
 http://paginapessoal.utfpr.edu.br/emanuele/quimica-5-1/quimica-5/Aula_8_Alcool_Fenol_aldeido.pdf
 
 #+end_comment  
+=======
+* Polímeros 
+>>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630

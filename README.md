@@ -1,6 +1,7 @@
 * Slides Quimica do Ensino Medio 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 * QG = Quimica Geral 
 * FQ = Fisico Quimica
 * QO = QUimica Organica
@@ -46,3 +47,8 @@ See 'git help git' for an overview of the system.
 >>>>>>> 225e96b (Slides Quimica em Org Mode)
 Slides de Quimica em Orgmode e Latex
 >>>>>>> 189e9ba (Readme)
+=======
+* QG = Quimica Geral 
+* FQ = Fisico Quimica
+* QO = QUimica Organica
+>>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
