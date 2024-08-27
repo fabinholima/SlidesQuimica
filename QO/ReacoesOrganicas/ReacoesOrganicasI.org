@@ -370,11 +370,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
   
 #+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Adição de água}
 #+begin_bclogo
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 #+begin_export latex
 
 \schemestart
@@ -389,13 +385,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 }
 \schemestop
 #+end_export
-<<<<<<< HEAD
 
-=======
-=======
-
->>>>>>> 1df46d3841a36f92c98a000dffaf8dc8133c8af8
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 
 #+end_bclogo 
 
@@ -482,7 +472,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 
 
 
-<<<<<<< HEAD
+
 * Alcinos 
 
 
@@ -491,8 +481,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 
 * Alcinos 
 
-<<<<<<< HEAD
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
+
 ** Reações de Adição
 
 - A ligação tripla dos alcinos comporta-se como a dupla dos alcenos, porém pode sofrer uma ou duas adições, dependendo da quantidade do outro reagente.
@@ -663,12 +652,9 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 \node (A) 
   {\chemfig{=^[:30]-[:90]=^[:150]-[:210]=^[:270](-[:330])}};
   \node [right=.1cm of A](A1){+};
-<<<<<<< HEAD
-se  \node [right=.1cm of A1](A2) {\ch{Br2}};
-=======
   \node [right=.1cm of A1](A2) {\ch{Br2}};
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
-   \node[above right=of A2] (B) 
+  \node [right=.1cm of A1](A2) {\ch{Br2}};
+  \node[above right=of A2] (B) 
   {\chemfig{Br-[:210]-[:270]=_[:210]-[:150]=_[:90]-[:30](=_[:330])}};
   \node[right=.3cm of B](HB){+ \quad
     HBr};
@@ -727,10 +713,7 @@ se  \node [right=.1cm of A1](A2) {\ch{Br2}};
  
 #+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Nitração e Sulfonação Aromáticos}
 #+begin_bclogo
-<<<<<<< HEAD
 
-=======
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 #+begin_export latex
 \scriptsize
 \schemestart
@@ -755,20 +738,13 @@ se  \node [right=.1cm of A1](A2) {\ch{Br2}};
 #+end_export
 #+end_bclogo
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 ** Alquilação e Acilação de Friedel-Crafts
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks
 :END:
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 #+begin_export latex
 \begin{center}
 \scriptsize
@@ -801,10 +777,8 @@ Haletos de acila \arrow
 }
 \end{center}
 #+end_export
-<<<<<<< HEAD
 
-=======
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
+
 \framebreak
 
 - É necessário catalisador apropriado geralmente @@latex: \ch{A$\ell$C$\ell$3}, \ch{FeC$\ell$3} ou \ch{FeBr3}.@@
@@ -822,11 +796,8 @@ Haletos de acila \arrow
 \schemestop
 \chemmove{
 \node[draw,dashed,inner sep=2pt,circle,yscale=1.5,red,fit=(AA1) (AA2)](circ1){};
-<<<<<<< HEAD
 \node[align=center,text width=2cm,minimum width=1cm,draw=none,right=.5cm of circ1,font=\scriptsize](text1){Grupo aquila (aquilação)};
-=======
 \node[align=center,text width=2cm,minimum width=1cm,draw=none,right=.5cm of circ1](text1){Grupo aquila (aquilação)};
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 \draw[->,red] (circ1)--(text1){};
 }
 
@@ -838,30 +809,26 @@ Haletos de acila \arrow
 \schemestop
 \chemmove{
 \node[draw,dashed,inner sep=2pt,circle,yscale=1.4,xscale=1.5,red,fit=(O2) (O3)](circ2){};
-<<<<<<< HEAD
 \node[align=center,text width=2cm,minimum width=1cm,draw=none,below=.5cm of circ2,font=\scriptsize](text2){Grupo acila  (acilação)};
 \draw[->,red] (circ2)--(text2){};
 }
 }
 \vspace{2cm}
-=======
+
 \node[align=center,text width=2cm,minimum width=1cm,draw=none,below=.5cm of circ2](text2){Grupo acila  (acilação)};
 \draw[->,red] (circ2)--(text2){};
 }
 }
 
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
+
 #+end_export
 #+end_bclogo
 
 
 ** Dirigência da Substituição
-<<<<<<< HEAD
-=======
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks
 :END:
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 
 - Grupos como o \ch{-OH}, que dirigem a reação para que ocorra nas posições *orto* e *para*, são chamados de /orto-para-dirigentes/ e grupos como o \ch{-CHO}, que dirigem a reação para a posição *meta*, são chamados /meta-dirigentes/.
 
@@ -883,7 +850,7 @@ Haletos de acila \arrow
 \end{talltblr}
 #+end_export
 
-<<<<<<< HEAD
+
 ** Diregência de Substituição-/Orto/
 
 
@@ -935,7 +902,7 @@ Haletos de acila \arrow
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,above= of c1,font=\normalfont](text1){Grupo \alert{orto-para} diregente};
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right=.2cm of c2,font=\normalfont](text2){\alert{orto}};
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right=.2cm of c3,font=\normalfont](text2){\alert{para}};
-=======
+
 \framebreak
 
 
@@ -954,12 +921,12 @@ Haletos de acila \arrow
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right= of c3,font=\normalfont](text2){O isômero \alert{meta} é obtido em quantidades desprezíveis.};
 \draw[->](c3)--(text2){};
 }
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
+
 }
 
 #+end_export
 
-<<<<<<< HEAD
+
 #+end_bclogo
 
 ** Diregência de Substituição-/Meta/
@@ -1022,9 +989,3 @@ Haletos de acila \arrow
 
 #+end_bclogo
 
-=======
-=======
->>>>>>> 1df46d3841a36f92c98a000dffaf8dc8133c8af8
-
-
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
