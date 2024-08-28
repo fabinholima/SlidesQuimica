@@ -48,7 +48,7 @@
 
 ** Álcoois
 
-Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (\chemfig{-OH}) ligada ao C saturado ($sp^3$).
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (\ch{-OH}) ligada ao C saturado ($sp^3$).
 
 
   #+begin_export latex
@@ -65,8 +65,56 @@ Grupo Funcional
 
  \end{center}
   #+end_export 
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Exemplo}
+#+begin_bclogo
+
+  #+begin_export latex
+  
+\schemestart
+\scriptsize
+\chemname{\chemfig{H_3C-CH_2-OH}}{Álcool alifático} \qquad \qquad \chemname{\chemfig{H_2C([:-90]-OH)-CH_2([:-90]-OH)}}{Diálcool alifático} \qquad \qquad 
+\chemname{\chemfig{*6(---(-OH)---)}}{Álcool cíclico} \qquad \qquad 
+\chemname{\chemfig{*6(-=-(-OH)=-=)}}{Álcool aromático}
+\schemestop
+  #+end_export
+#+end_bclogo
+
+
+
+** Classificação
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Quanto ao número de hidroxilas}
+#+begin_bclogo
+#+begin_export latex
+\schemestart
+\scriptsize
+\chemname{\chemfig{H_3C-CH_2-OH}}{Monoálcool} \qquad \qquad \chemname{\chemfig{CH_2([:-90]-OH)-CH_2([:-90]-OH)}}{Diálcool} \qquad \qquad
+\chemname{\chemfig{CH_2([:-90]-OH)-CH([:-90]-OH)-CH_2([:-90]-OH)}}{Triálcool} \qquad \qquad 
+\chemname{\chemfig{HO-[:30,,2](<[:90,,,1]OH)-[:330](<:[:270,,,1]OH)-[:30](%
+-[:330,,,1]OH)<[:90,,,1]OH}}{Poliálcool}
+\schemestop
+#+end_export
+#+end_bclogo
   
 
+
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Quanto ao tipo de carbono que contém a hidroxila}
+#+begin_bclogo
+#+begin_export latex
+\scriptsize
+\schemestart
+\chemname{\chemfig{H_3C-CH_2-OH}}{Álcool primário} \qquad \qquad 
+\chemname{\chemfig{H_3C-CH([:90]-OH)-CH_3}}{Álcool secundário} \qquad \qquad 
+\chemname{\chemfig{H_3C-C([:-90]-CH_3)([:90]-OH)-CH_3}}{Álcool terciário} 
+\schemestop
+
+#+end_export
+#+end_bclogo
 
 
   
