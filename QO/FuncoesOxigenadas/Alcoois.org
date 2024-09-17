@@ -118,3 +118,177 @@ Grupo Funcional
 
 
   
+** Nomenclatura
+
+- Segue as mesmas regras estabelecidas para os Hidrocarbonetos; a única diferença é a terminação
+
+  #+begin_export latex
+
+\begin{tblr}
+[
+theme= fancy,
+]
+{
+colspec = {ccc}, colsep = 10mm, hlines = {2pt, white},
+row{1} = {2em,azure3,fg=white,font=\bfseries\sffamily},
+}
+\hline 
+Prefixo & Intermediário & Sufixo \\
+Número de carbonos & tipo de ligação & \alert{ol}\\
+\hline
+\end{tblr}
+  #+end_export
+
+- A cadeia principal deve ser a mais longa que contém o carbono ligado ao OH;
+- A numeração da cadeia deve se iniciar pela extremidade mais próxima ao OH;
+- Se necessário, indicar a posição do grupo OH.
+  
+#+begin_export latex
+\begin{bclogo}[couleur=yellow!30, arrondi=0.1, logo=\bcplume, epBarre=3.5]{Exemplo} 
+\schemestart
+\chemfig{CH_3-CH_2-OH}
+\arrow
+\chemleft. 
+\subscheme
+{\begin{tabular}{lc}
+2 carbonos & \ch{->} \textcolor{blue}{\bfseries et}\\
+lig. simples & \ch{->} \textcolor{green}{\bfseries an}\\
+álcool & \ch{->} \textcolor{red}{\bfseries ol}\\
+\end{tabular}
+}
+\chemright\}
+%\node {A};
+\schemestop
+\chemmove{
+\node[draw,right= of c3,fill=orange,text=white,font=\Large\bfseries] (o1) {Etanol};
+}
+\end{bclogo}
+
+#+end_export
+
+
+
+** Exemplos de Álcoois
+
+
+
+#+begin_export latex
+\begin{bclogo}[couleur=yellow!30, arrondi=0.1, logo=\bcplume, epBarre=3.5]{Exemplo} 
+
+
+ 
+\scriptsize{
+\schemestart
+\chemfig[atom style={rotate=0}]{@{o1}\chemabove{C}{\color{blue}{1}}H_3-\chemabove{C}{\color{blue}{2}}H([:-90]-CH_3)-\chemabove{C}{\color{blue}{3}}@{o2}H_2-OH}
+\arrow
+\chemleft. 
+\subscheme
+{\begin{tabular}{lc}
+3 carbonos & \ch{->} \textcolor{blue}{\bfseries prop}\\
+lig. simples & \ch{->} \textcolor{green}{\bfseries an}\\
+álcool & \ch{->} \textcolor{red}{\bfseries ol}\\
+Radical metil & \ch{->} {\bfseries 2-metil} \\
+\end{tabular}
+}
+\chemright\}
+%\node {A};
+\schemestop
+\chemmove{
+\node[draw,right= of c3,fill=orange,text=white,font=\bfseries] (01) {2-metil-propan-1-ol};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit= (o1) (o2)]{};
+}
+}
+
+\vspace{.5cm}
+
+\schemestart
+\chemfig{@{a1}H_3\mcfabove{C}{\mcfatomno{5}}-\mcfabove{C}{\mcfatomno{4}}H([:-90]-CH_3)-\mcfabove{C}{\mcfatomno{3}}H_2-\mcfabove{C}{\mcfatomno{2}}H([:-90]-OH)-\mcfabove{C}{\mcfatomno{1}}H_3@{a2}}
+\arrow
+%\chemleft. 
+%\chemright\}
+\schemestop
+\chemmove{
+\node[draw,right= 1cm of c1,fill=orange,text=white,font=\bfseries] (01) {4-metil-pentan-2-ol};
+\node[inner sep=2pt,fill=red,fill opacity=0.2,fit= (a1) (a2)]{};
+}
+
+\vspace{.5cm}
+
+\schemestart
+\chemfig{H_3\mcfabove{C}{\mcfatomno{1}}-\mcfabove{C}{\mcfatomno{2}}H([:-90]-CH_3)-\mcfbelow{C}{\mcfatomno{3}}H([:90]-OH)-\mcfabove{C}{\mcfatomno{4}}H([:-90]-CH_2-CH_3)-\mcfbelow{C}{\mcfatomno{5}}H([:90]-CH_3)-\mcfabove{C}{\mcfatomno{6}}H_2-\mcfabove{C}{\mcfatomno{7}}H_3}
+\arrow{->} 
+\chemmove{
+\node[draw,right=1cm  of c1,fill=orange,text=white,font=\bfseries] (01) {4-etil-2,5-dimetil-heptan-3-ol};
+}
+\schemestop
+
+
+
+
+\end{bclogo}
+#+end_export
+
+
+
+** 
+
+#+begin_export  latex
+\small{
+\schemestart
+\chemup.
+\chemfig{CH_2([:90]-OH)-CH_2-CH([:90]-OH)-CH_3}
+\chemdown\}
+%%% Ciclopentanol
+\arrow(s1--)[-90,1.3,,,draw=none]
+\subscheme{
+\chemup.
+\chemfig{*5(---(-OH)--)}
+\chemdown\}
+%%% ciclo
+\arrow(s2--)[,1.5,,,draw=none] 
+}
+\arrow(@s2--)[,1.8,,,draw=none]
+\chemup.
+\chemfig{CH_3-[:270,,1]-[:330]-[:270](-[:330,,,1]OH)-[:210]-[:150]-[:90](%
+-[:30])}
+\chemdown\}
+%% ESQUEMA C2 LADO DIREITO
+\arrow(@s1--)[,2.3,,,draw=none]
+\subscheme{
+\chemup.
+\chemfig{H_2C=C([:-90]-CH_3)-CH_2-CH_2([:90]-OH)}
+\chemdown\}
+}
+%SETA DO ESQUEMA 2 X 2
+\arrow(s4--)[-90,1.,,,draw=none]
+\subscheme{
+\chemup. 
+\chemfig{*4(-(-OH)--(-CH_3)-)}
+\chemdown\}
+} 
+\schemestop
+\chemmove{
+\node[draw,below= .2cm of s1,fill=orange,text=white,font=\bfseries] (01) {Butan-1,3-diol};
+\node[draw,below= .15cm of s2,fill=orange,text=white,font=\bfseries] (01) {ciclopentanol};
+\node[draw,below= .15cm of s4,fill=orange,text=white,font=\bfseries] (01) {3-metilbut-3-en-1-ol};
+\node[draw,below= .15cm of c4,fill=orange,text=white,font=\bfseries] (01) {3-metilciclohexan-1-  ol};
+\node[draw,below= .15cm of c7,fill=orange,text=white,font=\bfseries] (01) {3-metilciclobutanol};
+}
+}
+#+end_export
+
+
+** 
+
+Em moléculas mais complicadas, a nomenclatura IUPAC considera a *oxidrila* como sendo uma ramificação, chamada de *hidróxi*.
+
+#+begin_export latex
+
+\schemestart
+\chemfig{[:30]*6(-=(-@{a1}\mcfabove{C}{\mcfatomno{1}}H_2-\mcfabove{C}{\mcfatomno{2}}H([:-90]-OH)-\mcfabove{C}{\mcfatomno{3}}H([:-90]-C{\ell})-\mcfabove{C}{\mcfatomno{4}}H_3@{a2})-=-=-)}
+\schemestop
+\chemmove{
+\node[inner sep=2.5pt,fill=red,fill opacity=0.2,fit=(a1) (a2)]{};
+\node[draw,below= .2cm of c1,fill=orange,text=white,font=\large\bfseries] (01) {3-cloro-1-fenil-2-hidróxi-butano};
+}
+#+end_export

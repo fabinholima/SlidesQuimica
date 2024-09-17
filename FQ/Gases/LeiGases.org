@@ -1,0 +1,74 @@
+* Gases 
+
+
+
+* Lei Boyle
+
+
+
+
+* Lei de Gay-Lussac
+
+
+
+
+* Lei de Charles
+
+
+
+* Lei dos Gases Combinada
+
+
+
+#+begin_export latex
+
+\tikzstyle{state}=[
+circle,minimum size =1.5cm, draw=none, thick, text=white,font=\Large\bfseries
+]
+\tikzstyle{state2}=[
+text width=1.9cm,font=\small\bfseries
+]
+
+\begin{center}
+\begin{tikzpicture}[-stealth,thick,text=Black,node distance=7.8cm,scale=1.5]
+% State q2
+\node[state, fill=TealBlue] (A) at (0,0){V};
+% State q1
+\node[state, fill=Melon] (B) at (4,0){P};
+% State q0
+\node[state, fill=Purple] (C) at (2,2.5){T};
+% Transition q2 to q0
+\draw (A) to[bend left] node[left, state2]{$\mathrm{\displaystyle\frac{V_1}{T_1} = \frac{V_2}{T_2}}$ Lei de Charles} (C) ;
+
+% Transition q0 to q1
+\draw (C) to[bend left] node[right,xshift =0.5cm,state2]{$\mathrm{\displaystyle\frac{P_1}{T_1} = \frac{P_2}{T_2}}$ Lei de Gay-Lussac}(B);
+
+% Transition q1 to q2
+\draw (B) to[bend left]node[below,state2]{$\mathrm{P_1\cdot V_1= P_2\cdot V_2}$ \qquad Lei de Boyle} (A);
+
+\node[below=0.9cm of C,text width=2cm,align=center,font=\scriptsize\bfseries] (origin) {$\displaystyle\mathrm{\frac{P_1V_1}{T_1}=\frac{P_2V_2}{T_2}} $ Lei dos Gases Combinadas};
+% Initial state
+%\draw (2,4) -- node[left]{$e_0$}(C.north);
+
+\end{tikzpicture}
+\end{center}
+
+
+#+end_export
+
+
+
+* Gás Ideal
+
+
+* Gás Real
+
+
+
+
+
+
+
+* Equação de  Van der Walls
+
+

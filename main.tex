@@ -1,4 +1,4 @@
-% Created 2024-08-27 Tue 21:56
+% Created 2024-09-16 Mon 13:49
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
@@ -166,10 +166,7 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
+\maketitle
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -179,9 +176,8 @@ title=#2,#1}
 
 
 \section{Funções Oxigenadas}
-\label{sec:orgf8a7333}
-
-\begin{frame}[label={sec:org801bc61}]{Definição}
+\label{sec:org7e7dc55}
+\begin{frame}[label={sec:orgcb140ed}]{Definição}
 \begin{center}
 \scalebox{.65}{
 \begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
@@ -225,8 +221,14 @@ title=#2,#1}
 \end{center}
 \end{frame}
 
-\begin{frame}[label={sec:org33ae652}]{Álcoois}
-Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (\ch{-OH}) ligada ao C saturado (\(sp^3\)).
+
+
+
+\section{Álcool}
+\label{sec:orgf427e4f}
+\begin{frame}[label={sec:org5bb5097}]{Álcool}
+\begin{mybox}{Álcool}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C saturado (\(sp^3\)).
 
 
   \begin{center}
@@ -239,48 +241,175 @@ Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (\ch{-OH}) lig
 	(b1) -- ++(0,-.45) -| (H.east) ;
 }
 Grupo Funcional
-
  \end{center}
 
+\end{mybox}
+\end{frame}
 
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Exemplo}
 
-
-  
-\schemestart
-\scriptsize
-\chemname{\chemfig{H_3C-CH_2-OH}}{Álcool alifático} \qquad \qquad \chemname{\chemfig{H_2C([:-90]-OH)-CH_2([:-90]-OH)}}{Diálcool alifático} \qquad \qquad 
-\chemname{\chemfig{*6(---(-OH)---)}}{Álcool cíclico} \qquad \qquad 
-\chemname{\chemfig{*6(-=-(-OH)=-=)}}{Álcool aromático}
-\schemestop
-\end{bclogo}
+\begin{frame}[label={sec:org68588e8}]{Fórmulas e aplicações álcoois}
 \end{frame}
 
 
 
-\begin{frame}[label={sec:org85f8e70}]{Classificação}
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Quanto ao número de hidroxilas}
+
+
+\section{Enol}
+\label{sec:org13ec3d0}
+\begin{frame}[label={sec:org1c8d7c7}]{Enóis}
+\begin{mybox}{Enol}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
+
+
+  \begin{center}
 \schemestart
-\scriptsize
-\chemname{\chemfig{H_3C-CH_2-OH}}{Monoálcool} \qquad \qquad \chemname{\chemfig{CH_2([:-90]-OH)-CH_2([:-90]-OH)}}{Diálcool} \qquad \qquad
-\chemname{\chemfig{CH_2([:-90]-OH)-CH([:-90]-OH)-CH_2([:-90]-OH)}}{Triálcool} \qquad \qquad 
-\chemname{\chemfig{HO-[:30,,2](<[:90,,,1]OH)-[:330](<:[:270,,,1]OH)-[:30](%
--[:330,,,1]OH)<[:90,,,1]OH}}{Poliálcool}
+\chemfig{-@{OH1}C([:90]-)([:-90]-)=C([:90]-)([:-90]-)-O@{OH2}H}
 \schemestop
-\end{bclogo}
+\chemmove{
+	\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(OH1) (OH2)]{};
+    }
+    \end{center}
+
+\end{mybox}
+   \begin{myex}{Exemplo}
+ \begin{center}  
+ %  \chemname{
+%   \chemfig{H_3{\color{red}C}-OH}}{{\color{red}Met}anol}\hspace{1cm}
+   \chemname{
+   \vspace{.3cm}
+\chemfig{
+           \mcfleft{\mcfatomno{4}}{C}H_3% 4
+     -[:0]\mcfabove{C}{\mcfatomno{3}}H_2% 3
+    -[:0]\mcfabove{C}{\mcfatomno{2}}H% 2
+     =[:0]\mcfabove{C}{\mcfatomno{1}}H% 1
+    -[:0]OH}% 
+}
+{But-1-en-1-ol}
+\end{center}\
+%
+\end{myex}
+\end{frame}
+
+
+
+\section{Fenol}
+\label{sec:org450acef}
+\begin{frame}[label={sec:org3ff8e06}]{Fenóis}
+\begin{mybox}{Fenol}
+Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao carbono do anel aromático.
+
+
+
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{*6(-=-=-(-OH)=-)}} \af
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}} \af
+\end{tikzpicture}
+\end{mybox}
+\end{frame}
+
+\begin{frame}[label={sec:org5064779}]{Tipos de fénois}
+\begin{myex}{Fénois}
+\centering
+\chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi \\ Benzeno} \af 
+\chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \af 
+\chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
+\end{myex}
+\end{frame}
+
+
+\section{Aldeídos}
+\label{sec:org2b71dec}
+\begin{frame}[label={sec:org02695c8}]{Aldeídos}
+\begin{mybox}{Aldeído}
+Os aldeídos apresentam o grupo carbonila na extremidade da cadeia.   
+
+
+   \begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-[:30]-[:330]-[:30](-[:330,,,1]H)=[:90]O}} \hspace{.3 cm}
+%\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\begin{frame}[label={sec:org00c44b7}]{Nomenclatura dos Aldeídos}
+
+\chemfig{H-[:150]\mcfatomno{1}(%
+=[:90]O)-[:210]\mcfatomno{2}-[:150]\mcfatomno{3}}
+\end{frame}
+
+\section{Cetonas}
+\label{sec:orge0e976a}
+
+\begin{frame}[label={sec:org6276cfd}]{Cetonas}
+\begin{mybox}{Cetonas}
+As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{C-C([:90]=O)-C}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\section{Ácido Carboxílicos}
+\label{sec:org3d117e7}
+\begin{frame}[label={sec:orgd2e1dbe}]{Ácidos Carboxílicos}
+\begin{mybox}{Ácidos Carboxílicos}
+Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo \alert{carboxila}, formado pela união dos grupos carbonila e hidroxila.
+
+
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-C([:30]=O)([:330]-OH)}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+\end{mybox}
+\end{frame}
+
+
+\section{Ésteres}
+\label{sec:org6fbb3a5}
+\begin{mybox}{Ésteres}
+Os ésteres orgânicos são caracterizados pelo grupo funcional:
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-O-R'}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+Simplificadamente podemos considerar queos ésteres
+se originam a partir da substituição do hidrogênio do grupo OH de um
+ácido carboxílico por um radical orgânico (R).
+\end{mybox}
+
+
+\section{Éteres}
+\label{sec:org678349a}
+
+\begin{frame}[label={sec:org187b3c3}]{Éteres}
+\begin{mybox}{Éteres}
+Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos.
+Seu grupo funcional é representado por:
+
+\begin{center}
+\begin{tikzpicture}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-O-R'}} \hspace{.3 cm}
+\end{tikzpicture}
+\end{center}
+
+\end{mybox}
+\end{frame}
 
 
 
 
 
+\section{Anidridos}
+\label{sec:org40a8554}
 
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Quanto ao tipo de carbono que contém a hidroxila}
-\scriptsize
-\schemestart
-\chemname{\chemfig{H_3C-CH_2-OH}}{Álcool primário} \qquad \qquad 
-\chemname{\chemfig{H_3C-CH([:90]-OH)-CH_3}}{Álcool secundário} \qquad \qquad 
-\chemname{\chemfig{H_3C-C([:-90]-CH_3)([:90]-OH)-CH_3}}{Álcool terciário} 
-\schemestop
-\end{bclogo}
+\begin{frame}[label={sec:org14005fe}]{Anidridos}
 \end{frame}
 \end{document}

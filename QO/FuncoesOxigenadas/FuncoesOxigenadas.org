@@ -55,12 +55,7 @@
 
 
   #+begin_export latex
-<<<<<<< HEAD
-  \begin{center}es
-  
-=======
   \begin{center}
->>>>>>> 9b96784d09df25da1846e265b1e2eb6e61241630
 % \chemfig{-C([:-90]-)([:90]-)-{\color{red}OH}}
 \chemfig{-C([:90]-)([:-90]-)-[@{b1,0}]{\color{red}O}@{H}{\color{red}H}}
 %\chemfig{C(-[2]H)(-[4]H)(-[6]H)-C(-[2]H)(-[6]H)-[@{b1,0}]O@{H}H}
@@ -76,140 +71,8 @@ Grupo Funcional
   #+latex: \end{mybox}
 
 
-** Classificação do álcoois I
+** Fórmulas e aplicações álcoois
    
-   #+begin_export latex
-   \begin{myrule}{Critérios}
-\begin{itemize}
-\item  Posição do radical
-%\item Quantidade de radicais oxidrilas
-\end{itemize}
-   \end{myrule}
-   #+end_export
-
-   
-#+begin_export latex
-\begin{myex}{Exemplo}
-\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-H)-OH}}{Carbono Primário} \af 
-\qquad \chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-OH)([:-90]-H)-CH_3}}{Carbono Secundário} \af
-\qquad \chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-CH_3)([:-90]-OH)-CH_3}}{Carbono Terciário}
-\end{myex}
-#+end_export
-
-** Classificação do álcoois II
-
-   #+latex: \begin{myrule}{Número de oxidrilas}
-
-   - Monoálcoois ou monóis: apresentam uma oxidrila
-   - Diálcoois ou dióis: apresentam duas oxidrilas
-   - Triálcoois ou trióis: apresentam três oxidrilas
-   
-   #+latex: \end{myrule}
-
-   #+begin_export latex
-\begin{myex}{Exemplo}
-\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-H)-{\color{red}OH}}}{Monol} \af
-\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-H)([:-90]-{\color{red}OH})-{\color{red}OH}}}{Diol} \af
-\chemname{\chemfig[atom style={scale=.8}]{H_3C-C([:90]-{\color{red}OH})([:-90]-{\color{red}OH})-{\color{red}OH}}}{Triol}
-\end{myex}
-   #+end_export
-   
-** Nomenclatura do álcoois
-
-   #+begin_export latex
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-
-%Shape: Ellipse [id:dp5361300348946546] 
-\draw  [fill={rgb, 255:red, 79; green, 209; blue, 180 }  ,fill opacity=1 ] (39,183.5) .. controls (39,147.88) and (65.32,119) .. (97.78,119) .. controls (130.25,119) and (156.56,147.88) .. (156.56,183.5) .. controls (156.56,219.12) and (130.25,248) .. (97.78,248) .. controls (65.32,248) and (39,219.12) .. (39,183.5) -- cycle ;
-%Shape: Ellipse [id:dp6942133129332804] 
-\draw  [fill={rgb, 255:red, 147; green, 243; blue, 125 }  ,fill opacity=1 ] (200.14,183.5) .. controls (200.14,147.88) and (226.45,119) .. (258.92,119) .. controls (291.38,119) and (317.7,147.88) .. (317.7,183.5) .. controls (317.7,219.12) and (291.38,248) .. (258.92,248) .. controls (226.45,248) and (200.14,219.12) .. (200.14,183.5) -- cycle ;
-%Shape: Ellipse [id:dp9270081825456703] 
-\draw  [fill={rgb, 255:red, 159; green, 192; blue, 246 }  ,fill opacity=1 ] (356.44,183.5) .. controls (356.44,147.88) and (382.75,119) .. (415.22,119) .. controls (447.68,119) and (474,147.88) .. (474,183.5) .. controls (474,219.12) and (447.68,248) .. (415.22,248) .. controls (382.75,248) and (356.44,219.12) .. (356.44,183.5) -- cycle ;
-
-% Text Node
-\draw (56.5,150.34) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{58.332644pt}\setlength\topsep{0pt}
-\begin{center}
-Quantidade \\de\\Carbonos
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (167.94,166.08) node [anchor=north west][inner sep=0.75pt]   [align=left] {+};
-% Text Node
-\draw (330.2,167.39) node [anchor=north west][inner sep=0.75pt]   [align=left] {+};
-% Text Node
-\draw (233.28,152.97) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{39.043356pt}\setlength\topsep{0pt}
-\begin{center}
-Tipo \\de\\Ligação
-\end{center}
-
-\end{minipage}};
-% Text Node
-\draw (364.96,165.29) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{71.93244pt}\setlength\topsep{0pt}
-\begin{center}
-Grupo fucional \\ \alert{ol}
-\end{center}
-
-\end{minipage}};
-
-
-\end{tikzpicture}
-
-   #+end_export
-
-   #+begin_export latex 
-   \begin{myex}{Regra}
-   \chemname{
-   \chemfig{H_3{\color{red}C}-OH}}{{\color{red}Met}anol}\hspace{1cm}
-   \chemname{
-   \vspace{.3cm}
-\chemfig{
-           \mcfleft{\mcfatomno{4}}{C}H_3% 4
-     -[:0]\mcfabove{C}{\mcfatomno{3}}H_2% 3
-    -[:0]\mcfabove{C}{\mcfatomno{2}}H_2% 2
-     -[:0]\mcfabove{C}{\mcfatomno{1}}H_2% 1
-    -[:0]OH}% 
-}
-{Butan-1-ol}
-   \end{myex}
-   #+end_export
-
-** Outros Exemplos
-:PROPERTIES:
-:BEAMER_opt: allowframebreaks
-:END:
-  
-   #+latex: \begin{myrule}{}
-
-   - Escolher a cadeia com o maior número de carbonos.
-   - Enumerar o mais prćximo da hidroxila.
-   - Separar os radicais, usar di, tri, tetra ... quando os radicais forem iguais.
-   - Seguir ordem alfabética para os radicais.      
-
-
-   #+begin_export latex
-   \begin{center}
-   \chemname{
-   \chemfig{H_3C-\mcfabove{C}{\mcfatomno{4}}H([:-90]-(!\nobond{\hspace{-.45cm}5})CH_2-(!\nobond{\hspace{-.45cm}6})CH_3)-\mcfbelow{C}{\mcfatomno{3}}H([:90]-CH_3)-\mcfabove{C}{\mcfatomno{2}}H([:-90]-OH)-\mcfabove{C}{\mcfatomno{1}}H_3}
-   }{3,4-dimetilexan-2-ol}
-   \end{center}
-
-
-
-   \chemfig{CH_3-CH([:-90]-CH_3)-CH_2-OH} \af
-   \chemfig{CH_3-CH([:-90]-CH_3)-CH_2-CH([:-90]-OH)-CH_3}\af
-   
-   
-
-
-#+end_export
-
-#+latex: \end{myrule}
-
    
 
 
@@ -222,7 +85,9 @@ Grupo fucional \\ \alert{ol}
 
   #+begin_export latex
   \begin{center}
+\schemestart
 \chemfig{-@{OH1}C([:90]-)([:-90]-)=C([:90]-)([:-90]-)-O@{OH2}H}
+\schemestop
 \chemmove{
 	\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(OH1) (OH2)]{};
     }
@@ -278,17 +143,6 @@ Grupo fucional \\ \alert{ol}
    \end{myex}
    #+end_export
    
-** Nomenclatura dos Fénois
-
-   - Na nomenclatura dos fénois a cadeia principal é o benzeno e a hidroxila torna-se radical chamado *hidróxi*.
-   - O *hidróxi* é o radical principal para iniciar a contar a posição em caso de radicais presentes no anel benzênico.
-   #+begin_export latex
-\chemname{\chemfig{**6(----(-OH)--)}}{hidróxi benzeno} \af
-\chemname{\chemfig{**6(---(-CH_3)-(-OH)--)}}{1-hidróxi-2-metil-benzeno} \af
-\chemname{\chemfig{**6(--(-C_2H_5)--(-OH)--)}}{1-hidróxi-3-etil-benzeno} \af
-\chemname{\chemfig{**6(---(-OH)-(-OH)--)}}{1,2-dihidroxi-benzeno} 
-   #+end_export
-
 
 * Aldeídos
 ** Aldeídos
@@ -337,8 +191,7 @@ As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
 * Ácido Carboxílicos
 ** Ácidos Carboxílicos
     #+latex: \begin{mybox}{Ácidos Carboxílicos}
-   Os ácidos carboxílicos são compostos caracterizados pela
-   presença do grupo *carboxila*, formado pela união dos grupos carbonila e hidroxila.
+   Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo *carboxila*, formado pela união dos grupos carbonila e hidroxila.
 
 
    #+begin_export latex

@@ -1,0 +1,16 @@
+* Fenois
+
+** Fenois
+
+
+** Nomenclatura dos Fénois
+
+   - Na nomenclatura dos fénois a cadeia principal é o benzeno e a hidroxila torna-se radical chamado *hidróxi*.
+   - O *hidróxi* é o radical principal para iniciar a contar a posição em caso de radicais presentes no anel benzênico.
+   #+begin_export latex
+\chemname{\chemfig{**6(----(-OH)--)}}{hidróxi benzeno} \af
+\chemname{\chemfig{**6(---(-CH_3)-(-OH)--)}}{1-hidróxi-2-metil-benzeno} \af
+\chemname{\chemfig{**6(--(-C_2H_5)--(-OH)--)}}{1-hidróxi-3-etil-benzeno} \af
+\chemname{\chemfig{**6(---(-OH)-(-OH)--)}}{1,2-dihidroxi-benzeno} 
+   #+end_export
+
