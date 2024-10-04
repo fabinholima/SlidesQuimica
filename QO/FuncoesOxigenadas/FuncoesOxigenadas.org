@@ -71,7 +71,54 @@ Grupo Funcional
   #+latex: \end{mybox}
 
 
-** Fórmulas e aplicações álcoois
+** Fórmulas
+
+
+*** Etanol                                                       :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+
+
+#+ATTR_LATEX: :scale .5
+[[../FuncoesOxigenadas/Ethanol.png]]
+
+
+
+*** Etanol                                                       :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+
+
+#+begin_export latex
+
+    
+\begin{center}
+\chemfig{H_3C-[:30,,2]-[:330]O-[:30]H}
+\end{center}
+
+
+\scriptsize{
+\begin{tblr}{lc}
+Fórmula química & 	\ch{C2H6O} \\
+Massa molar & 	46.06 \unit{\gram\per\mol}\\
+Aparência  &	líquido sem cor\\
+{Densidade\\ (Massa Específica 20°C)} & 0,789 \unit{\gram\per\cubic\centi\metre}\\
+Ponto de fusão & −114.18 °C, 159 K, -174 °F\\
+Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
+\end{tblr}
+}
+#+end_export    
+
+    
+
+** Aplicações
    
    
 
@@ -110,7 +157,7 @@ Grupo Funcional
     -[:0]OH}% 
 }
 {But-1-en-1-ol}
-\end{center}\
+\end{center}
 %
 \end{myex}
 #+end_export
@@ -135,12 +182,13 @@ Grupo Funcional
 
 ** Tipos de fénois
    #+begin_export latex
-   \begin{myex}{Fénois}
+   \begin{center}
+   \small
    \centering
-   \chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi \\ Benzeno} \af 
-   \chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \af 
+   \chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi Benzeno} \qquad  
+   \chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \\
    \chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
-   \end{myex}
+   \end{center}
    #+end_export
    
 
@@ -153,7 +201,7 @@ Grupo Funcional
    #+begin_export latex
    \begin{center}
 \begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-[:30]-[:330]-[:30](-[:330,,,1]H)=[:90]O}} \hspace{.3 cm}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:60]=O)([:300]-H)}} \hspace{.3 cm}
 %\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}}
 \end{tikzpicture}
 \end{center}
@@ -161,17 +209,61 @@ Grupo Funcional
    #+latex: \end{mybox}   
    
 
-** Nomenclatura dos Aldeídos
+** Exemplos de Aldeídos
+
+*** Metanal                                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+- Metanal (Formaldeído): ::  Conhecido como formol, o aldeído fórmico, de fórmula estrutural CH2O, é utilizado na fabricação de desinfetantes e plásticos. Ademais, é importante no desenvolvimento de estudos científicos, uma vez que serve para conservação de cadáveres (fluido de embalsamamento).
+
+
+*** Metanal                                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+
+
+
+    
+
+[[./formol.jpg]]
+    
+    
+
+** 
+
+*** Aldeido                                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
 
 
 #+begin_export latex
 
-\chemfig{H-[:150]\mcfatomno{1}(%
-=[:90]O)-[:210]\mcfatomno{2}-[:150]\mcfatomno{3}}
-
-
+ \chemname{\chemfig{*6(-=-(-[:30]=[:-30]-([:90]=O)([:-30]-H))=-=)}}{Cinamaldeído}
 #+end_export
-   
+
+
+*** Aldeido                                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+
+
+
+#+ATTR_LATEX: scale 
+[[./canela.jpg]]
+
+    
 * Cetonas
 
 ** Cetonas
@@ -181,12 +273,33 @@ As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
 #+begin_export latex
    \begin{center}
    \begin{tikzpicture}
-   \tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{C-C([:90]=O)-C}} \hspace{.3 cm}
+   \tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-R}} \hspace{.3 cm}
    \end{tikzpicture}
    \end{center}
    #+end_export
 #+latex: \end{mybox}
-   
+
+
+
+** Propriedades Cetonas
+
+#+begin_export latex
+\begin{center}
+\chemfig{H_3C-[:30,,2](-[:330,,,1]CH_3)=[:90]O}
+\end{center}
+#+end_export
+
+
+- As cetonas possuem o grupo carbonila como grupo funcional.
+- A carbonila das cetonas deve estar ligada a outros átomos de carbono, não podendo estar na extremidade da cadeia.
+- As cetonas podem ser tanto de cadeia aberta quanto de cadeia fechada.
+- Toda cetona possui sufixo -ona em sua nomenclatura oficial.
+- O grupo carbonila aumenta o caráter polar das cetonas.
+- A propanona, vendida como acetona, é amplamente utilizada com solvente e removedora de tinta e esmalte.
+- As cetonas podem ser utilizadas na fabricação de perfumes e demais cosméticos devido a sua fragrância agradável.
+
+
+
 
 * Ácido Carboxílicos
 ** Ácidos Carboxílicos
@@ -245,6 +358,30 @@ Seu grupo funcional é representado por:
 * Anidridos
 
 ** Anidridos
+
+
+    #+latex: \begin{mybox}{Anidridos}
+
+Os anidridos orgânicos são compostos derivados de reações de desidratação dos ácidos carboxílicos. Daí a origem de seu nome, pois *anhydros*, em grego, significa “ *sem água* ”.
+    
+
+#+begin_export latex
+   \begin{center}
+\schemestart
+\chemfig{R-C([:60]=O)([:300]-@{a1}OH@{a2})} \+
+\chemfig{[:180]R-C([:120]=O)([:240]-@{a3}H@{a4}O)}
+\arrow
+\chemfig{R-C(=[::+60]O)-[::-60]O-[::-60]C(=[::+60]O)-[::-60]R} \+ \chemfig{H_2O}
+\schemestop
+\chemmove{
+\node[draw, blue, inner sep=1.3pt, fit=(a1) (a3)](quadro){};
+\node[below=.8cm of quadro, ](text) {Desidratação Intermolecular};
+\draw[>-Stealth] (quadro)--(text){};
+}
+ \end{center}
+   #+end_export
+
+   #+latex: \end{mybox}
 
 
 

@@ -27,7 +27,8 @@
 #+LATEX_HEADER: \usepackage{fontawesome}
 #+LATEX_HEADER: \usepackage{tasks}
 #+LATEX_HEADER: \newcounter{paragraph}
-#+LATEX_HEADER: \usepackage[dvipsnames,svgnames]{xcolor}
+#+LATEX_HEADER: %\usepackage[dvipsnames,svgnames]{xcolor}
+#+LATEX_HEADER: \usepackage{xcolor}
 #+LATEX_HEADER: \usepackage{annotate-equations}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 

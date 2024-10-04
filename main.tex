@@ -1,4 +1,4 @@
-% Created 2024-09-16 Mon 13:49
+% Created 2024-10-03 Thu 21:47
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
@@ -27,7 +27,8 @@
 \usepackage{fontawesome}
 \usepackage{tasks}
 \newcounter{paragraph}
-\usepackage[dvipsnames,svgnames]{xcolor}
+%\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{xcolor}
 \usepackage{annotate-equations}
 %%% BOX EXERCISE BEAMER
 \DeclareExerciseEnvironmentTemplate{custom}{%
@@ -166,7 +167,10 @@ title=#2,#1}
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
@@ -176,8 +180,8 @@ title=#2,#1}
 
 
 \section{Funções Oxigenadas}
-\label{sec:org7e7dc55}
-\begin{frame}[label={sec:orgcb140ed}]{Definição}
+\label{sec:org5f87523}
+\begin{frame}[label={sec:org4d27bf5}]{Definição}
 \begin{center}
 \scalebox{.65}{
 \begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
@@ -225,8 +229,8 @@ title=#2,#1}
 
 
 \section{Álcool}
-\label{sec:orgf427e4f}
-\begin{frame}[label={sec:org5bb5097}]{Álcool}
+\label{sec:org8e9583b}
+\begin{frame}[label={sec:org5f72865}]{Álcool}
 \begin{mybox}{Álcool}
 Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C saturado (\(sp^3\)).
 
@@ -247,7 +251,45 @@ Grupo Funcional
 \end{frame}
 
 
-\begin{frame}[label={sec:org68588e8}]{Fórmulas e aplicações álcoois}
+\begin{frame}[label={sec:org11d4d68}]{Fórmulas}
+\begin{columns}
+\begin{column}{0.45\columnwidth}
+\begin{block}{Etanol}
+\begin{center}
+\includegraphics[scale=.5]{QO/FuncoesOxigenadas/Ethanol.png}
+\end{center}
+\end{block}
+\end{column}
+
+
+
+\begin{column}{0.45\columnwidth}
+\begin{block}{Etanol}
+
+    
+\begin{center}
+\chemfig{H_3C-[:30,,2]-[:330]O-[:30]H}
+\end{center}
+
+
+\scriptsize{
+\begin{tblr}{lc}
+Fórmula química & 	\ch{C2H6O} \\
+Massa molar & 	46.06 \unit{\gram\per\mol}\\
+Aparência  &	líquido sem cor\\
+{Densidade\\ (Massa Específica 20°C)} & 0,789 \unit{\gram\per\cubic\centi\metre}\\
+Ponto de fusão & −114.18 °C, 159 K, -174 °F\\
+Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
+\end{tblr}
+}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgbe7cd5a}]{Aplicações}
 \end{frame}
 
 
@@ -255,8 +297,8 @@ Grupo Funcional
 
 
 \section{Enol}
-\label{sec:org13ec3d0}
-\begin{frame}[label={sec:org1c8d7c7}]{Enóis}
+\label{sec:org45b6a61}
+\begin{frame}[label={sec:orgfdd41aa}]{Enóis}
 \begin{mybox}{Enol}
 Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
 
@@ -285,7 +327,7 @@ Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada a
     -[:0]OH}% 
 }
 {But-1-en-1-ol}
-\end{center}\
+\end{center}
 %
 \end{myex}
 \end{frame}
@@ -293,8 +335,8 @@ Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada a
 
 
 \section{Fenol}
-\label{sec:org450acef}
-\begin{frame}[label={sec:org3ff8e06}]{Fenóis}
+\label{sec:org310d26b}
+\begin{frame}[label={sec:org5b1f0eb}]{Fenóis}
 \begin{mybox}{Fenol}
 Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao carbono do anel aromático.
 
@@ -307,26 +349,27 @@ Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada a
 \end{mybox}
 \end{frame}
 
-\begin{frame}[label={sec:org5064779}]{Tipos de fénois}
-\begin{myex}{Fénois}
+\begin{frame}[label={sec:org3d8c542}]{Tipos de fénois}
+\begin{center}
+\small
 \centering
-\chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi \\ Benzeno} \af 
-\chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \af 
+\chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi Benzeno} \qquad  
+\chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \\
 \chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
-\end{myex}
+\end{center}
 \end{frame}
 
 
 \section{Aldeídos}
-\label{sec:org2b71dec}
-\begin{frame}[label={sec:org02695c8}]{Aldeídos}
+\label{sec:org0cfcdac}
+\begin{frame}[label={sec:org464edae}]{Aldeídos}
 \begin{mybox}{Aldeído}
 Os aldeídos apresentam o grupo carbonila na extremidade da cadeia.   
 
 
    \begin{center}
 \begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-[:30]-[:330]-[:30](-[:330,,,1]H)=[:90]O}} \hspace{.3 cm}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:60]=O)([:300]-H)}} \hspace{.3 cm}
 %\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}}
 \end{tikzpicture}
 \end{center}
@@ -334,30 +377,89 @@ Os aldeídos apresentam o grupo carbonila na extremidade da cadeia.
 \end{frame}
 
 
-\begin{frame}[label={sec:org00c44b7}]{Nomenclatura dos Aldeídos}
+\begin{frame}[label={sec:org4ec7605}]{Exemplos de Aldeídos}
+\begin{columns}
+\begin{column}{0.45\columnwidth}
+\begin{block}{Metanal}
+\begin{description}
+\item[{Metanal (Formaldeído):}] Conhecido como formol, o aldeído fórmico, de fórmula estrutural CH2O, é utilizado na fabricação de desinfetantes e plásticos. Ademais, é importante no desenvolvimento de estudos científicos, uma vez que serve para conservação de cadáveres (fluido de embalsamamento).
+\end{description}
+\end{block}
+\end{column}
 
-\chemfig{H-[:150]\mcfatomno{1}(%
-=[:90]O)-[:210]\mcfatomno{2}-[:150]\mcfatomno{3}}
+
+\begin{column}{0.45\columnwidth}
+\begin{block}{Metanal}
+\begin{center}
+\includegraphics[width=.9\linewidth]{QO/FuncoesOxigenadas/formol.jpg}
+\end{center}
+\end{block}
+\end{column}
+\end{columns}
 \end{frame}
 
-\section{Cetonas}
-\label{sec:orge0e976a}
 
-\begin{frame}[label={sec:org6276cfd}]{Cetonas}
+
+\begin{frame}[label={sec:orga314ac5}]{}
+\begin{columns}
+\begin{column}{0.45\columnwidth}
+\begin{block}{Aldeido}
+
+\chemname{\chemfig{*6(-=-(-[:30]=[:-30]-([:90]=O)([:-30]-H))=-=)}}{Cinamaldeído}
+\end{block}
+\end{column}
+
+
+\begin{column}{0.45\columnwidth}
+\begin{block}{Aldeido}
+\begin{center}
+\includegraphics[width=.9\linewidth]{QO/FuncoesOxigenadas/canela.jpg}
+\end{center}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\section{Cetonas}
+\label{sec:orgf3f9ec7}
+
+\begin{frame}[label={sec:org3ec9742}]{Cetonas}
 \begin{mybox}{Cetonas}
 As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
 \begin{center}
 \begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{C-C([:90]=O)-C}} \hspace{.3 cm}
+\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-R}} \hspace{.3 cm}
 \end{tikzpicture}
 \end{center}
 \end{mybox}
 \end{frame}
 
 
+
+\begin{frame}[label={sec:org9d5afbb}]{Propriedades Cetonas}
+\begin{center}
+\chemfig{H_3C-[:30,,2](-[:330,,,1]CH_3)=[:90]O}
+\end{center}
+
+
+\begin{itemize}
+\item As cetonas possuem o grupo carbonila como grupo funcional.
+\item A carbonila das cetonas deve estar ligada a outros átomos de carbono, não podendo estar na extremidade da cadeia.
+\item As cetonas podem ser tanto de cadeia aberta quanto de cadeia fechada.
+\item Toda cetona possui sufixo -ona em sua nomenclatura oficial.
+\item O grupo carbonila aumenta o caráter polar das cetonas.
+\item A propanona, vendida como acetona, é amplamente utilizada com solvente e removedora de tinta e esmalte.
+\item As cetonas podem ser utilizadas na fabricação de perfumes e demais cosméticos devido a sua fragrância agradável.
+\end{itemize}
+\end{frame}
+
+
+
+
 \section{Ácido Carboxílicos}
-\label{sec:org3d117e7}
-\begin{frame}[label={sec:orgd2e1dbe}]{Ácidos Carboxílicos}
+\label{sec:orgfad0c39}
+\begin{frame}[label={sec:orgfdf971f}]{Ácidos Carboxílicos}
 \begin{mybox}{Ácidos Carboxílicos}
 Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo \alert{carboxila}, formado pela união dos grupos carbonila e hidroxila.
 
@@ -372,7 +474,7 @@ Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo 
 
 
 \section{Ésteres}
-\label{sec:org6fbb3a5}
+\label{sec:org0364133}
 \begin{mybox}{Ésteres}
 Os ésteres orgânicos são caracterizados pelo grupo funcional:
 \begin{center}
@@ -387,9 +489,9 @@ se originam a partir da substituição do hidrogênio do grupo OH de um
 
 
 \section{Éteres}
-\label{sec:org678349a}
+\label{sec:org84734c2}
 
-\begin{frame}[label={sec:org187b3c3}]{Éteres}
+\begin{frame}[label={sec:org65d58a5}]{Éteres}
 \begin{mybox}{Éteres}
 Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos.
 Seu grupo funcional é representado por:
@@ -408,8 +510,28 @@ Seu grupo funcional é representado por:
 
 
 \section{Anidridos}
-\label{sec:org40a8554}
+\label{sec:orge732d56}
 
-\begin{frame}[label={sec:org14005fe}]{Anidridos}
+\begin{frame}[label={sec:org99fe7ac}]{Anidridos}
+\begin{mybox}{Anidridos}
+
+Os anidridos orgânicos são compostos derivados de reações de desidratação dos ácidos carboxílicos. Daí a origem de seu nome, pois \alert{anhydros}, em grego, significa “ \alert{sem água} ”.
+
+
+   \begin{center}
+\schemestart
+\chemfig{R-C([:60]=O)([:300]-@{a1}OH@{a2})} \+
+\chemfig{[:180]R-C([:120]=O)([:240]-@{a3}H@{a4}O)}
+\arrow
+\chemfig{R-C(=[::+60]O)-[::-60]O-[::-60]C(=[::+60]O)-[::-60]R} \+ \chemfig{H_2O}
+\schemestop
+\chemmove{
+\node[draw, blue, inner sep=1.3pt, fit=(a1) (a3)](quadro){};
+\node[below=.8cm of quadro, ](text) {Desidratação Intermolecular};
+\draw[>-Stealth] (quadro)--(text){};
+}
+ \end{center}
+
+\end{mybox}
 \end{frame}
 \end{document}
