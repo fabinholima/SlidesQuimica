@@ -1,51 +1,12 @@
+#+TITLE: Funções Orgânicas Oxigenadas
+
+
 * Funções Oxigenadas
 ** Definição
 
-#+begin_export latex
-\begin{center}
-\scalebox{.65}{
-\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
-	level 1/.append style={level distance=5cm,sibling angle=35},
-	level 2/.append style={level distance=2.8cm,sibling angle=90},]
-
-	\node {Funções \\ Oxigendas}
-	child {node [concept color = blue!40] {Álcoois}
-	%	child {node [concept color = teal!30] {\chemfig{R-OH} \\ }}
-	}
-	child [concept color = blue!30] {node {Áldeído}
-		%	child [concept color = teal!30, xshift=.5cm, yshift=1cm, text width=2.1cm,] {node {\chemfig{R-[:30](=[:90]O)-[:330]H}}}
-	}
-	child {node [concept color = blue!30] {Cetonas}
-		%child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]R}  }}
-	}
-	child [concept color = blue!30] {node {Enol}
-%		child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](-[:90]OH)=[:330]R}  }}
-	}
-	child [concept color = blue!30] {node {Éster}
-	%			child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.3cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-R}}}
-	}
-	child [concept color = blue!30] {node {Éter}
-		%		child [concept color = teal!30,xshift=.5cm, yshift=1cm, text width=2.5cm] {node {\chemfig{R-O-R}}}
-	}
-	child [concept color = blue!30] {node {Ácido \\ Carboxílico}
-			%	child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]OH}}}
-	}
-	child [concept color = blue!30] {node {Fenóis}
-				%child [concept color = teal!30, xshift=.5cm, yshift=.5cm, text width=2.2cm] {node {\chemfig{**6(----(-OH)--)}  }}		
-	}
-	child [concept color = blue!30] {node {Sais \\ Orgânicos}
-				%child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-Metal}}}
-	}
-	child [concept color = blue!30] {node {Anidridos}
-				%child [concept color = teal!30, xshift=1.5cm, yshift=.3cm, text width=4.2cm] {node {\chemfig{R-[:150](=[:90]O)-[:210]O-[:150](-[:210]R)=[:90]O}}}
-};
-	
-\end{tikzpicture}
-}
-\end{center}
-#+end_export
-
-
+- As funções oxigenadas são um grupo de compostos que possuem átomo de *oxigênio* ligado diretamente à cadeia carbônica.
+- As diferentes funções oxigenadas são caracterizadas por um arranjo estrutural específico de átomos, denominado grupo funcional.
+- Os grupos funcionais são responsáveis pelas propriedades de cada função orgânica.
 
 
 * Álcool
@@ -97,7 +58,6 @@ Grupo Funcional
 
 
 #+begin_export latex
-
     
 \begin{center}
 \chemfig{H_3C-[:30,,2]-[:330]O-[:30]H}
@@ -121,17 +81,32 @@ Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
 ** Aplicações
    
    
-
-
+- Metanol (álcool metílico): :: fórmula \ch{H_3C-OH}, é produzido em escala industrial a partir de carvão e água, é usado como solventes em muitas reações e como matéria-prima em polímeros.
+#+begin_center
+\chemfig{H_3C-OH}
+#+end_center
+- 1,2,3-propanotriol (Glicerol): :: líquido xaroposo, incolor e adocicado, é obtido através de uma saponificação (reação que origina sabão) dos ésteres que constituem óleos e gorduras. Empregado na fabricação de tintas, cosméticos e na preparação de nitroglicerina (explosivo).
+#+begin_center
+#+begin_export latex
+\chemfig{HO-[:330,,2]-[:30](-[:90,,,1]OH)-[:330]-[:30,,,1]OH}
+#+end_export
+#+end_center
+- Etanol (álcool etílico): :: é usado como solvente na produção de bebidas alcoólicas, na preparação de ácido acético, éter, tintas, perfumes e como combustível de automóveis.
+  #+begin_center
+  #+begin_export latex
+\chemfig{H_3C-[:30,,2]-[:330]O-[:30]H}
+  #+end_export
+  #+end_center
       
 * Enol
 ** Enóis
      #+latex: \begin{mybox}{Enol}
-  Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
+
+- Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
 
 
   #+begin_export latex
-  \begin{center}
+\begin{center}
 \schemestart
 \chemfig{-@{OH1}C([:90]-)([:-90]-)=C([:90]-)([:-90]-)-O@{OH2}H}
 \schemestop
@@ -183,15 +158,24 @@ Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
 ** Tipos de fénois
    #+begin_export latex
    \begin{center}
-   \small
-   \centering
-   \chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi Benzeno} \qquad  
-   \chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \\
-   \chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
+   \scriptsize
+   \chemname{\chemfig{*6(-=-=(-OH)-=)}}{Hidroxi Benzeno} \qquad  
+  % \chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \\
+  % \chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
    \end{center}
    #+end_export
-   
 
+   - Eugenol: ::  Possui ação antisséptica e seus efeitos medicinais auxiliam no tratamento de náuseas, flatulências, indigestão e diarreia. Contém propriedades bactericidas, antivirais, e é também usado como anestésico e antisséptico para o alívio de dores de dente. 
+     #+begin_center
+     #+begin_export latex
+\chemfig{-[:270]O-[:210]=_[:270](-[:330,,,1]OH)-[:210]=_[:150]-[:90](%
+=_[:30]-[:330])-[:150]-[:210]=[:150]}
+     #+end_export
+     #+end_center
+
+
+   
+   
 * Aldeídos
 ** Aldeídos
    #+latex: \begin{mybox}{Aldeído}
@@ -217,8 +201,11 @@ Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
     :BEAMER_env: block
     :END:
 
-- Metanal (Formaldeído): ::  Conhecido como formol, o aldeído fórmico, de fórmula estrutural CH2O, é utilizado na fabricação de desinfetantes e plásticos. Ademais, é importante no desenvolvimento de estudos científicos, uma vez que serve para conservação de cadáveres (fluido de embalsamamento).
+- Metanal (Formaldeído): ::  Conhecido como formol, o aldeído fórmico, de fórmula estrutural \ch{CH2O}, é utilizado na fabricação de desinfetantes e plásticos. Ademais, é importante no desenvolvimento de estudos científicos, uma vez que serve para conservação de cadáveres (fluido de embalsamamento).
 
+  #+begin_export latex
+\chemfig{H-[:30]C(-[:330]H)=[:90]O}
+  #+end_export
 
 *** Metanal                                                      :BMCOL:B_block:
     :PROPERTIES:
@@ -237,7 +224,7 @@ Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
 
 ** 
 
-*** Aldeido                                                      :BMCOL:B_block:
+*** 3-fenil-prop-2-enal                                        :BMCOL:B_block:
     :PROPERTIES:
     :BEAMER_col: 0.45
     :BEAMER_env: block
@@ -260,7 +247,7 @@ Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
 
 
 
-#+ATTR_LATEX: scale 
+#+ATTR_LATEX: scale 0.5
 [[./canela.jpg]]
 
     
@@ -301,7 +288,8 @@ As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
 
 
 
-* Ácido Carboxílicos
+* Ácidos Carboxílicos
+
 ** Ácidos Carboxílicos
     #+latex: \begin{mybox}{Ácidos Carboxílicos}
    Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo *carboxila*, formado pela união dos grupos carbonila e hidroxila.
@@ -316,21 +304,91 @@ As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
    #+end_export
    #+latex: \end{mybox}   
 
+** 
 
+*** Ácido Etanóico                                               :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+
+O ácido etanoico, também conhecido como ácido acético, é um composto do grupo dos ácidos carboxílicos e é o constituinte principal do vinagre.
+
+#+begin_export latex
+\begin{center}
+%\chemfig{CH_3-C([:60]=O)([:300]-OH)}
+\end{center}
+#+END_export
+
+#+ATTR_LATEX: :scale 0.2 
+[[./vinagre.png]]
+
+
+*** Vinagre                                                      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+
+    #+begin_export latex
+    \tiny{
+    \schemestart
+\chemname{\chemfig{O=[:210](-[:270]H)-[:150](<[:90,,,1]OH)-[:210](<[:270,,,1]OH)%
+-[:150](<[:90,,,1]OH)-[:210](<:[:270,,,1]OH)-[:150]-[:210,,,2]HO}}{Glucose}
+%\chemfig{OH-[:120,,1]-[:180](<:[:240,,,2]HO)-[:120](<[:180,,,2]HO)-[:60](<:[:120,,,2]HO)-(-[:300]O-[:240])<[:60]-[,,,1]OH}
+\arrow{->[*{0}levedura]}[-90]
+%\chemleft.
+\chemfig{-[:330]-[:30,,,1]OH}
+\arrow{->[*{0}bactéria]}[-90]
+%\chemname{
+\chemfig{-[:30](=[:90]O)-[:330,,,1]OH}
+%}{Ácido Acético}
+%\chemright\}
+\schemestop
+}
+    #+end_export
+
+
+
+** Para que servem os ácidos carboxílicos?
+
+
+    - Síntese orgânica: ::  são utilizados como precursores na síntese de diversos compostos orgânicos, incluindo ésteres, amidas, anidridos e muitos outros. A reação de esterificação, por exemplo, ocorre por meio da conversão de ácidos carboxílicos em ésteres.
+    - Produção de polímeros e resinas: :: incluindo poliamidas (como o nylon e a resina poliéster) que têm aplicações em plásticos reforçados com fibra de vidro, uma fibra sintética feita com etileno (um polímero termoplástico) por um processo denominado polimerização.
+    - Conservantes: ::  como exemplos, temos o ácido cítrico e o ácido ascórbico (vitamina C), utilizados como conservantes em alimentos para prolongar sua vida útil.
+    - Aromatizantes: :: contribuem para os sabores característicos de muiutos alimentos. O ácido acético, por exemplo, é encontrado no vinagre, enquanto o ácido butírico contribui para o sabor da manteiga.
+    - Síntese de fármacos: :: muitos medicamentos são sintetizados com base em ácidos carboxílicos ou seus derivados. Além disso, alguns deles têm aplicações diretas como medicamentos, como o ácido acetilsalicílico (aspirina).
+
+
+   
 * Ésteres
+
+** Ésteres
     #+latex: \begin{mybox}{Ésteres}
     Os ésteres orgânicos são caracterizados pelo grupo funcional:
    #+begin_export latex
+   
    \begin{center}
    \begin{tikzpicture}
    \tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-O-R'}} \hspace{.3 cm}
    \end{tikzpicture}
    \end{center}
+
    #+end_export
-   Simplificadamente podemos considerar queos ésteres
-   se originam a partir da substituição do hidrogênio do grupo OH de um
+   
+   Simplificadamente podemos considerar queos ésteres se originam a partir da substituição do hidrogênio do grupo OH de um
    ácido carboxílico por um radical orgânico (R).
    #+latex: \end{mybox}
+
+** Aplicação dos ésteres
+
+    - Como aromatizantes e essências artificiais, usados em balas, bolachas e outros alimentos industrializados e também no setor de perfumaria e cosméticos.
+    - Na fabricação de fármacos como a aspirina.
+    - Na fabricação de biocombustível.
+    - Na fabricação de produtos de limpeza por reação de saponificação, tendo-se como produto sabão e glicerol.
+
+
 
    
 * Éteres
@@ -338,8 +396,7 @@ As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
 ** Éteres
 
     #+latex: \begin{mybox}{Éteres}
-Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos.
-Seu grupo funcional é representado por:
+Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos. Seu grupo funcional é representado por:
 
 #+begin_export latex
    \begin{center}
@@ -350,6 +407,21 @@ Seu grupo funcional é representado por:
    #+end_export
 
    #+latex: \end{mybox}
+
+   
+** 
+
+- Éteres são usados como solventes de óleos, gorduras, resinas e na fabricação de seda artificial. Dentre as variadas aplicações dos éteres se destaca sua utilização na medicina que é muito importante, sendo usado como anestésico e na preparação de medicamentos.
+
+
+
+#+begin_export latex
+\begin{center}
+\chemfig{CH_3-O-CH_2-CH_3}
+\end{center}
+#+end_export
+
+- Os éteres são compostos incolores, de cheiro agradável e pouco solúvel em água, em condições ambientes podem se apresentar na fase sólida, líquida ou gasosa.
 
 
 
@@ -378,10 +450,44 @@ Os anidridos orgânicos são compostos derivados de reações de desidratação 
 \node[below=.8cm of quadro, ](text) {Desidratação Intermolecular};
 \draw[>-Stealth] (quadro)--(text){};
 }
+\vspace{.5cm}
  \end{center}
    #+end_export
 
    #+latex: \end{mybox}
 
 
+** Anidridos
+
+#+begin_center
+#+begin_export latex
+\chemfig{CH_3-C(=[::+60]O)-[::-60]O-[::-60]C(=[::+60]O)-[::-60]CH_3}
+#+end_export
+#+end_center
+- Fabricação de corantes (anidrido etanoico)
+- Matéria-prima para a produção de filmes fotográficos (anidrido etanoico);
+- Matéria-prima para a fabricação de fibras têxteis (anidrido etanoico);
+- Muito utilizados em sínteses orgânicas.
+
+
+
+   
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & &  \\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/FuncoesOxigenadasI.pdf} & %& \qrcode[height=2in]{https://mark.nl.tab.digital/s/eC3yxDocrjxEr4N}\\
+ \end{tabular}
+ \end{center}
+#+end_export
 

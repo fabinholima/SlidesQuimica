@@ -1,10 +1,12 @@
-% Created 2024-10-03 Thu 21:47
+% Created 2024-10-13 Sun 18:01
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
 
 % \input{packages2.tex}
 %%%% Config X sim for BEAMER
+\usepackage{ragged2e}
+\justifying
 \makeatletter
 \@ifclassloaded{beamer}{%
 %%% save beamer's `solution' environment as `beamersolution':
@@ -157,10 +159,10 @@ title=#2,#1}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{Funções Orgânicas Oxigenadas}
+\title{ Isomeria Plana}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={Funções Orgânicas Oxigenadas},
+ pdftitle={ Isomeria Plana},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
@@ -176,362 +178,257 @@ title=#2,#1}
 \end{frame}
 
 
+\section{Isomeria Plana}
+\label{sec:orgf9b3366}
 
 
-
-\section{Funções Oxigenadas}
-\label{sec:org5f87523}
-\begin{frame}[label={sec:org4d27bf5}]{Definição}
-\begin{center}
-\scalebox{.65}{
-\begin{tikzpicture}[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
-	level 1/.append style={level distance=5cm,sibling angle=35},
-	level 2/.append style={level distance=2.8cm,sibling angle=90},]
-
-	\node {Funções \\ Oxigendas}
-	child {node [concept color = blue!40] {Álcoois}
-	%	child {node [concept color = teal!30] {\chemfig{R-OH} \\ }}
-	}
-	child [concept color = blue!30] {node {Áldeído}
-		%	child [concept color = teal!30, xshift=.5cm, yshift=1cm, text width=2.1cm,] {node {\chemfig{R-[:30](=[:90]O)-[:330]H}}}
-	}
-	child {node [concept color = blue!30] {Cetonas}
-		%child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]R}  }}
-	}
-	child [concept color = blue!30] {node {Enol}
-%		child [concept color = teal!30, xshift=.3cm, yshift=.3cm, text width=2.2cm] {node {\chemfig{R-[:30](-[:90]OH)=[:330]R}  }}
-	}
-	child [concept color = blue!30] {node {Éster}
-	%			child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.3cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-R}}}
-	}
-	child [concept color = blue!30] {node {Éter}
-		%		child [concept color = teal!30,xshift=.5cm, yshift=1cm, text width=2.5cm] {node {\chemfig{R-O-R}}}
-	}
-	child [concept color = blue!30] {node {Ácido \\ Carboxílico}
-			%	child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]OH}}}
-	}
-	child [concept color = blue!30] {node {Fenóis}
-				%child [concept color = teal!30, xshift=.5cm, yshift=.5cm, text width=2.2cm] {node {\chemfig{**6(----(-OH)--)}  }}		
-	}
-	child [concept color = blue!30] {node {Sais \\ Orgânicos}
-				%child [concept color = teal!30, xshift=1.5cm, yshift=1cm, text width=3.cm] {node {\chemfig{R-[:30](=[:90]O)-[:330]O-Metal}}}
-	}
-	child [concept color = blue!30] {node {Anidridos}
-				%child [concept color = teal!30, xshift=1.5cm, yshift=.3cm, text width=4.2cm] {node {\chemfig{R-[:150](=[:90]O)-[:210]O-[:150](-[:210]R)=[:90]O}}}
-};
-	
-\end{tikzpicture}
-}
-\end{center}
-\end{frame}
-
-
-
-
-\section{Álcool}
-\label{sec:org8e9583b}
-\begin{frame}[label={sec:org5f72865}]{Álcool}
-\begin{mybox}{Álcool}
-Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C saturado (\(sp^3\)).
-
-
-  \begin{center}
-% \chemfig{-C([:-90]-)([:90]-)-{\color{red}OH}}
-\chemfig{-C([:90]-)([:-90]-)-[@{b1,0}]{\color{red}O}@{H}{\color{red}H}}
-%\chemfig{C(-[2]H)(-[4]H)(-[6]H)-C(-[2]H)(-[6]H)-[@{b1,0}]O@{H}H}
-\chemmove{
-	\draw[-,magenta]
-	(b1) -- ++(0,.45) -| (H.east)
-	(b1) -- ++(0,-.45) -| (H.east) ;
-}
-Grupo Funcional
- \end{center}
-
-\end{mybox}
-\end{frame}
-
-
-\begin{frame}[label={sec:org11d4d68}]{Fórmulas}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{Etanol}
-\begin{center}
-\includegraphics[scale=.5]{QO/FuncoesOxigenadas/Ethanol.png}
-\end{center}
-\end{block}
-\end{column}
-
-
-
-\begin{column}{0.45\columnwidth}
-\begin{block}{Etanol}
-
-    
-\begin{center}
-\chemfig{H_3C-[:30,,2]-[:330]O-[:30]H}
-\end{center}
-
-
-\scriptsize{
-\begin{tblr}{lc}
-Fórmula química & 	\ch{C2H6O} \\
-Massa molar & 	46.06 \unit{\gram\per\mol}\\
-Aparência  &	líquido sem cor\\
-{Densidade\\ (Massa Específica 20°C)} & 0,789 \unit{\gram\per\cubic\centi\metre}\\
-Ponto de fusão & −114.18 °C, 159 K, -174 °F\\
-Ponto de ebulição & 	78.25 °C, 351 K, 173 °F\\
-\end{tblr}
-}
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:orgbe7cd5a}]{Aplicações}
-\end{frame}
-
-
-
-
-
-\section{Enol}
-\label{sec:org45b6a61}
-\begin{frame}[label={sec:orgfdd41aa}]{Enóis}
-\begin{mybox}{Enol}
-Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao C com uma dupla ligação.
-
-
-  \begin{center}
-\schemestart
-\chemfig{-@{OH1}C([:90]-)([:-90]-)=C([:90]-)([:-90]-)-O@{OH2}H}
-\schemestop
-\chemmove{
-	\node[inner sep=2pt,fill=red,fill opacity=0.2,fit=(OH1) (OH2)]{};
-    }
-    \end{center}
-
-\end{mybox}
-   \begin{myex}{Exemplo}
- \begin{center}  
- %  \chemname{
-%   \chemfig{H_3{\color{red}C}-OH}}{{\color{red}Met}anol}\hspace{1cm}
-   \chemname{
-   \vspace{.3cm}
-\chemfig{
-           \mcfleft{\mcfatomno{4}}{C}H_3% 4
-     -[:0]\mcfabove{C}{\mcfatomno{3}}H_2% 3
-    -[:0]\mcfabove{C}{\mcfatomno{2}}H% 2
-     =[:0]\mcfabove{C}{\mcfatomno{1}}H% 1
-    -[:0]OH}% 
-}
-{But-1-en-1-ol}
-\end{center}
-%
-\end{myex}
-\end{frame}
-
-
-
-\section{Fenol}
-\label{sec:org310d26b}
-\begin{frame}[label={sec:org5b1f0eb}]{Fenóis}
-\begin{mybox}{Fenol}
-Substâncias  orgânicas  que  apresentam  hidroxila  ou oxidrila (-OH) ligada ao carbono do anel aromático.
-
-
-
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{*6(-=-=-(-OH)=-)}} \af
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}} \af
-\end{tikzpicture}
-\end{mybox}
-\end{frame}
-
-\begin{frame}[label={sec:org3d8c542}]{Tipos de fénois}
-\begin{center}
-\small
-\centering
-\chemname{\chemfig{*6(-=(-OH)-=-=)}}{Hidroxi Benzeno} \qquad  
-\chemname{\chemfig{**6(---(**6(------))---)}}{Naftaleno} \\
-\chemname{\chemfig{**6(--(**6(-**6(------)-----))----)}}{Antraceno}
-\end{center}
-\end{frame}
-
-
-\section{Aldeídos}
-\label{sec:org0cfcdac}
-\begin{frame}[label={sec:org464edae}]{Aldeídos}
-\begin{mybox}{Aldeído}
-Os aldeídos apresentam o grupo carbonila na extremidade da cadeia.   
-
-
-   \begin{center}
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:60]=O)([:300]-H)}} \hspace{.3 cm}
-%\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{**6(-----(-OH)--)}}
-\end{tikzpicture}
-\end{center}
-\end{mybox}
-\end{frame}
-
-
-\begin{frame}[label={sec:org4ec7605}]{Exemplos de Aldeídos}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{Metanal}
-\begin{description}
-\item[{Metanal (Formaldeído):}] Conhecido como formol, o aldeído fórmico, de fórmula estrutural CH2O, é utilizado na fabricação de desinfetantes e plásticos. Ademais, é importante no desenvolvimento de estudos científicos, uma vez que serve para conservação de cadáveres (fluido de embalsamamento).
-\end{description}
-\end{block}
-\end{column}
-
-
-\begin{column}{0.45\columnwidth}
-\begin{block}{Metanal}
-\begin{center}
-\includegraphics[width=.9\linewidth]{QO/FuncoesOxigenadas/formol.jpg}
-\end{center}
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:orga314ac5}]{}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{Aldeido}
-
-\chemname{\chemfig{*6(-=-(-[:30]=[:-30]-([:90]=O)([:-30]-H))=-=)}}{Cinamaldeído}
-\end{block}
-\end{column}
-
-
-\begin{column}{0.45\columnwidth}
-\begin{block}{Aldeido}
-\begin{center}
-\includegraphics[width=.9\linewidth]{QO/FuncoesOxigenadas/canela.jpg}
-\end{center}
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\section{Cetonas}
-\label{sec:orgf3f9ec7}
-
-\begin{frame}[label={sec:org3ec9742}]{Cetonas}
-\begin{mybox}{Cetonas}
-As cetonas apresentam o grupo carbonila,sendo este carbono secundário.
-\begin{center}
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-R}} \hspace{.3 cm}
-\end{tikzpicture}
-\end{center}
-\end{mybox}
-\end{frame}
-
-
-
-\begin{frame}[label={sec:org9d5afbb}]{Propriedades Cetonas}
-\begin{center}
-\chemfig{H_3C-[:30,,2](-[:330,,,1]CH_3)=[:90]O}
-\end{center}
-
-
+\begin{frame}[label={sec:org61425b8}]{Isomeria Plana}
 \begin{itemize}
-\item As cetonas possuem o grupo carbonila como grupo funcional.
-\item A carbonila das cetonas deve estar ligada a outros átomos de carbono, não podendo estar na extremidade da cadeia.
-\item As cetonas podem ser tanto de cadeia aberta quanto de cadeia fechada.
-\item Toda cetona possui sufixo -ona em sua nomenclatura oficial.
-\item O grupo carbonila aumenta o caráter polar das cetonas.
-\item A propanona, vendida como acetona, é amplamente utilizada com solvente e removedora de tinta e esmalte.
-\item As cetonas podem ser utilizadas na fabricação de perfumes e demais cosméticos devido a sua fragrância agradável.
+\item Pode ser percebida observando-se a  fórmula estrutural plana dos compostos.
+\item \alert{Isômeros constitucionais} diferem na  maneira com que seus átomos estão  conectados.
 \end{itemize}
 \end{frame}
 
 
+\section{Isomeria de Função}
+\label{sec:org465cb39}
 
-
-\section{Ácido Carboxílicos}
-\label{sec:orgfad0c39}
-\begin{frame}[label={sec:orgfdf971f}]{Ácidos Carboxílicos}
-\begin{mybox}{Ácidos Carboxílicos}
-Os ácidos carboxílicos são compostos caracterizados pela  presença do grupo \alert{carboxila}, formado pela união dos grupos carbonila e hidroxila.
-
-
-\begin{center}
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{-C([:30]=O)([:330]-OH)}} \hspace{.3 cm}
-\end{tikzpicture}
-\end{center}
-\end{mybox}
-\end{frame}
-
-
-\section{Ésteres}
-\label{sec:org0364133}
-\begin{mybox}{Ésteres}
-Os ésteres orgânicos são caracterizados pelo grupo funcional:
-\begin{center}
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-C([:90]=O)-O-R'}} \hspace{.3 cm}
-\end{tikzpicture}
-\end{center}
-Simplificadamente podemos considerar queos ésteres
-se originam a partir da substituição do hidrogênio do grupo OH de um
-ácido carboxílico por um radical orgânico (R).
-\end{mybox}
-
-
-\section{Éteres}
-\label{sec:org84734c2}
-
-\begin{frame}[label={sec:org65d58a5}]{Éteres}
-\begin{mybox}{Éteres}
-Os éteres apresentam um átomo de oxigênio(O) ligado a dois radicais orgânicos.
-Seu grupo funcional é representado por:
-
-\begin{center}
-\begin{tikzpicture}
-\tcbox[enhanced,sharp corners,colback=red!10,colframe=red]{\chemfig{R-O-R'}} \hspace{.3 cm}
-\end{tikzpicture}
-\end{center}
-
-\end{mybox}
-\end{frame}
+\begin{frame}[allowframebreaks]{Isomeria de Função}
+\begin{itemize}
+\item A diferença entre os isômeros está no grupo funcional.
+\end{itemize}
 
 
 
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C3H6O}}
 
 
-\section{Anidridos}
-\label{sec:orge732d56}
-
-\begin{frame}[label={sec:org99fe7ac}]{Anidridos}
-\begin{mybox}{Anidridos}
-
-Os anidridos orgânicos são compostos derivados de reações de desidratação dos ácidos carboxílicos. Daí a origem de seu nome, pois \alert{anhydros}, em grego, significa “ \alert{sem água} ”.
-
-
-   \begin{center}
-\schemestart
-\chemfig{R-C([:60]=O)([:300]-@{a1}OH@{a2})} \+
-\chemfig{[:180]R-C([:120]=O)([:240]-@{a3}H@{a4}O)}
-\arrow
-\chemfig{R-C(=[::+60]O)-[::-60]O-[::-60]C(=[::+60]O)-[::-60]R} \+ \chemfig{H_2O}
-\schemestop
-\chemmove{
-\node[draw, blue, inner sep=1.3pt, fit=(a1) (a3)](quadro){};
-\node[below=.8cm of quadro, ](text) {Desidratação Intermolecular};
-\draw[>-Stealth] (quadro)--(text){};
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
 }
- \end{center}
+\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
+& 
+\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Propanal} \\
+Cetona & Aldeído \\
+\end{tblr}
+\end{bclogo}
 
-\end{mybox}
+\framebreak
+
+
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular:  \ch{C2H6O}}
+
+
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[2ex]{\chemfig{H_3C-CH_2-[0,,,,red]\textcolor{red}{OH}}}{Etanol}
+& 
+\chemname{\chemfig{H_3C-\textcolor{red}{O}-CH_3}}{metóxi-metano} \\
+Álcool & Éter \\
+\end{tblr}
+\end{bclogo}
+\end{frame}
+
+
+
+
+
+\section{Isomeria de cadeia}
+\label{sec:orgf3ee7c9}
+
+\begin{frame}[label={sec:org221f0c5}]{Isomeria de cadeia}
+\begin{itemize}
+\item A diferença entre os isômeros está no tipo de cadeia.
+\item Por exemplo, um isômero é de cadeia aberta e o outro de cadeia fechada, ou um é de cadeia normal e o outro de cadeia ramificada, ou então, um tem cadeia homogênea e o outro possui cadeia heterogênea.
+\end{itemize}
+
+
+
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H10}}
+
+
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[-2ex]{\chemfig{H_3C-CH([:90]-CH_3)-CH_3}}{Metil-propano}
+& 
+\chemname[-2ex]{\chemfig{H_3C-CH_2-CH_2-CH_3}}{Butano} \\
+Cadeia ramificada & Cadeia normal \\
+\end{tblr}
+\end{bclogo}
+\end{frame}
+
+
+
+
+\section{Isomeria de posição}
+\label{sec:orgc78e6a9}
+
+\begin{frame}[label={sec:org645e445}]{Isomeria de posição}
+\begin{itemize}
+\item A diferença está na posição de uma insaturação, de um grupo funcional, de um heteroátomo ou de um substituinte.
+\end{itemize}
+
+
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
+
+
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[-2ex]{\chemfig{HC~[0,,,,red]C-CH_2-CH_3}}{But-1-ino}
+& 
+\chemname[-2ex]{\chemfig{H_3C-C~[0,,,,red]C-CH_3}}{But-2-ino} \\
+Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
+\end{tblr}
+\end{bclogo}
+\end{frame}
+
+
+
+
+\section{Metameria}
+\label{sec:org1b0108e}
+
+\begin{frame}[label={sec:org479a4aa}]{Metameria}
+\begin{itemize}
+\item É um tipo especial de isomeria de posição, em que a diferença consiste na posição do \alert{heteroátomo}.
+\end{itemize}
+
+
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
+
+
+\small{
+\begin{tblr}
+{
+colspec = {X[l] X[r]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{O}-CH_2-CH_2-CH_3}}{Metoxi-propano}
+& 
+\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{O}-CH_2-CH_3}}{Etoxi-etano} \\
+Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
+\end{tblr}
+}
+\end{bclogo}
+\end{frame}
+
+
+
+
+\section{Tautomeria}
+\label{sec:org24b81d5}
+
+\begin{frame}[label={sec:orgcbda60b}]{Tautomeria}
+\begin{itemize}
+\item É um tipo especial de isomeria de função, em que os isômeros coexistem em equilíbrio dinâmico em solução.
+\end{itemize}
+
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Tautomeria}
+
+
+\begin{center}
+\small
+\schemestart
+\chemup.
+\subscheme{
+\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
+\arrow(.mid east--.mid west){<<->}
+\chemname[-2ex]{\chemfig{H_2C=[0,,,,red]\textcolor{red}{C}([2,,,,red]-\textcolor{red}{OH})-CH_3}}{propenol}
+}
+\chemdown\}
+\arrow{0}[-90,0]
+Equilíbrio ceto-enólico
+\schemestop
+
+\vspace{.3cm}
+
+\schemestart
+\chemup.
+\subscheme{
+\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Etanal}
+\arrow(.mid east--.mid west){<<->}
+\chemname[-2ex]{\chemfig{H_3C=[0,,,,red]\textcolor{red}{C}-[0,,,,red]\textcolor{red}{OH}}}{Etenol}
+}
+\chemdown\}
+\arrow{0}[-90,0]
+Equilíbrio aldo-enólico
+\schemestop
+\end{center}
+\end{bclogo}
+\end{frame}
+
+\section{Isomeria Geometrica}
+\label{sec:org0eae0e5}
+
+\begin{frame}[label={sec:org3c4b9ad}]{Isomeria Geométrica}
+\begin{itemize}
+\item Conhecida como a isomeria \emph{cis-trans}.
+\item Ocorre em compostos com dupla ligação ou cíclicos .
+\item Compostos com dupla ligação
+\end{itemize}
+\begin{center}
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+[   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
+    hydrogen/.style={circle, ball color=white, minimum size=2.5mm, inner sep=0},
+    carbon/.style={circle, ball color=black!75, minimum size=7mm, inner sep=0}
+]
+\draw   (196.35,141.5) -- (330.17,141.5) -- (272.82,186) -- (139,186) -- cycle ;
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org0d34ca6}]{Exemplos}
+\begin{question}
+(\alert{UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial:
+
+%\chemfig{-[:330]-[:30]-[:330]-[:30]-[:330]=[:30]-[:330]-[:30]=[:330]-[:30]%
+%-[:330]-[:30]-[:330]-[:30]-[:330]-[:30]-[:330](=[:30]O)-[:270]H}
+{\scriptsize
+\centering 
+\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
+-[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]}
+}
+
+Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente:
+
+\begin{choice}(2)
+\choice cis e cis
+\choice cis e trans
+\choice trans e cis
+\choice trans e trans
+\end{choice}
+\end{question}
+\end{frame}
+
+\begin{frame}[label={sec:orgc955176}]{}
+\begin{answer}
+Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert{cis}.
+
+\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
+-[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](%
+-[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]}
+\end{answer}
 \end{frame}
 \end{document}

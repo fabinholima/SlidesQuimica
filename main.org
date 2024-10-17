@@ -1,5 +1,5 @@
 
-#+TITLE: Funções Orgânicas Oxigenadas
+#+TITLE: 
 
 #+AUTHOR: Fábio Lima
 #+DATE: 
@@ -27,12 +27,15 @@
 #+LATEX_COMPILER: lualatex 
 
 
+#+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
+
+#+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
+
+#+begin_comment
 
 
 #+INCLUDE: "QO/FuncoesOxigenadas/FuncoesOxigenadas.org"
 
-
-#+begin_comment
 
 #+INCLUDE: "QO/FuncoesOxigenadas/Alcoois.org"
 

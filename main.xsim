@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{}
-\XSIM{exercise-body}{}
+\XSIM{solution-body}{test-1=={Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert {cis}. \par \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](-[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]}}}
+\XSIM{exercise-body}{test-1=={(\alert {UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial: \par {\scriptsize \centering \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]} } \par Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente: \par \begin {choice}(2) \choice cis e cis \choice cis e trans \choice trans e cis \choice trans e trans \end {choice}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{}
+\XSIM{order}{1}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{}
+\XSIM{used}{test-1=={true}}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{}
-\XSIM{total-number}{0}
+\XSIM{printed}{test-1=={true}}
+\XSIM{total-number}{1}
 \XSIM{exercise}{0}
-\XSIM{test}{0}
+\XSIM{test}{1}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{}
-\XSIM{collections}{}
-\XSIM{collection:all exercises}{}
+\XSIM{idtypes}{1=={test}}
+\XSIM{collections}{test-1=={all exercises}}
+\XSIM{collection:all exercises}{test-1}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{0}
-\XSIM{id}{}
-\XSIM{ID}{}
-\XSIM{counter}{}
-\XSIM{counter-value}{}
+\setcounter{totaltestinall exercises}{1}
+\XSIM{id}{test-1=={1}}
+\XSIM{ID}{test-1=={1}}
+\XSIM{counter}{test-1=={1}}
+\XSIM{counter-value}{test-1=={1}}
 \XSIM{solution}{}
-\XSIM{section-value}{}
-\XSIM{section}{}
-\XSIM{sectioning}{}
+\XSIM{section-value}{test-1=={7}}
+\XSIM{section}{test-1=={7}}
+\XSIM{sectioning}{test-1=={{0}{7}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{}
-\XSIM{page}{}
+\XSIM{page-value}{test-1=={18}}
+\XSIM{page}{test-1=={18}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

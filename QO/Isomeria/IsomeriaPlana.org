@@ -1,29 +1,204 @@
+#+TITLE: Isomeria Plana
+
 * Isomeria Plana
 
 
-* Isomeria Espacial
+** Isomeria Plana
 
-** Isomeria Geométrica
+- Pode ser percebida observando-se a  fórmula estrutural plana dos compostos.
+- *Isômeros constitucionais* diferem na  maneira com que seus átomos estão  conectados.
+
+
+* Isomeria de Função
+
+** Isomeria de Função
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+- A diferença entre os isômeros está no grupo funcional.
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C3H6O}}
+#+begin_bclogo
+
+#+begin_export latex
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
+& 
+\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Propanal} \\
+Cetona & Aldeído \\
+\end{tblr}
+#+end_export
+
+#+end_bclogo
+
+\framebreak
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular:  \ch{C2H6O}}
+#+begin_bclogo
+
+#+begin_export latex
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[2ex]{\chemfig{H_3C-CH_2-[0,,,,red]\textcolor{red}{OH}}}{Etanol}
+& 
+\chemname{\chemfig{H_3C-\textcolor{red}{O}-CH_3}}{metóxi-metano} \\
+Álcool & Éter \\
+\end{tblr}
+#+end_export
+
+#+end_bclogo
 
 
 
 
- -  Conhecida como a isomeria /cis-trans/.
- -  Ocorre em compostos com dupla ligação ou cíclicos .
- - Compostos com dupla ligação
+
+* Isomeria de cadeia
+
+** Isomeria de cadeia
+
+- A diferença entre os isômeros está no tipo de cadeia.
+- Por exemplo, um isômero é de cadeia aberta e o outro de cadeia fechada, ou um é de cadeia normal e o outro de cadeia ramificada, ou então, um tem cadeia homogênea e o outro possui cadeia heterogênea.
+
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H10}}
+#+begin_bclogo
+
+#+begin_export latex
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[-2ex]{\chemfig{H_3C-CH([:90]-CH_3)-CH_3}}{Metil-propano}
+& 
+\chemname[-2ex]{\chemfig{H_3C-CH_2-CH_2-CH_3}}{Butano} \\
+Cadeia ramificada & Cadeia normal \\
+\end{tblr}
+#+end_export
+
+#+end_bclogo
+
+
+
+
+* Isomeria de posição
+
+** Isomeria de posição
+
+- A diferença está na posição de uma insaturação, de um grupo funcional, de um heteroátomo ou de um substituinte.
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
+#+begin_bclogo
+
+#+begin_export latex
+\begin{tblr}
+{
+colspec = {X[c] X[c]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[-2ex]{\chemfig{HC~[0,,,,red]C-CH_2-CH_3}}{But-1-ino}
+& 
+\chemname[-2ex]{\chemfig{H_3C-C~[0,,,,red]C-CH_3}}{But-2-ino} \\
+Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
+\end{tblr}
+#+end_export
+
+#+end_bclogo
+
+  
+
+
+* Metameria
+
+** Metameria
+
+- É um tipo especial de isomeria de posição, em que a diferença consiste na posição do *heteroátomo*.
+
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
+#+begin_bclogo
+
+#+begin_export latex
+\small{
+\begin{tblr}
+{
+colspec = {X[l] X[r]},
+colsep = 15mm,
+row{2} = {font=\bfseries, fg=teal},
+}
+\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{O}-CH_2-CH_2-CH_3}}{Metoxi-propano}
+& 
+\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{O}-CH_2-CH_3}}{Etoxi-etano} \\
+Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
+\end{tblr}
+}
+#+end_export
+
+#+end_bclogo
+
+
+
+
+* Tautomeria
+
+** Tautomeria
+
+- É um tipo especial de isomeria de função, em que os isômeros coexistem em equilíbrio dinâmico em solução.
+
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Tautomeria}
+#+begin_bclogo
+
 #+begin_export latex
 \begin{center}
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-[   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
-    hydrogen/.style={circle, ball color=white, minimum size=2.5mm, inner sep=0},
-    carbon/.style={circle, ball color=black!75, minimum size=7mm, inner sep=0}
-]
-\draw   (196.35,141.5) -- (330.17,141.5) -- (272.82,186) -- (139,186) -- cycle ;
-\end{tikzpicture}
+\small
+\schemestart
+\chemup.
+\subscheme{
+\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
+\arrow(.mid east--.mid west){<<->}
+\chemname[-2ex]{\chemfig{H_2C=[0,,,,red]\textcolor{red}{C}([2,,,,red]-\textcolor{red}{OH})-CH_3}}{propenol}
+}
+\chemdown\}
+\arrow{0}[-90,0]
+Equilíbrio ceto-enólico
+\schemestop
+
+\vspace{.3cm}
+
+\schemestart
+\chemup.
+\subscheme{
+\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Etanal}
+\arrow(.mid east--.mid west){<<->}
+\chemname[-2ex]{\chemfig{H_3C=[0,,,,red]\textcolor{red}{C}-[0,,,,red]\textcolor{red}{OH}}}{Etenol}
+}
+\chemdown\}
+\arrow{0}[-90,0]
+Equilíbrio aldo-enólico
+\schemestop
 \end{center}
 #+end_export
 
-
-
-
-*  Isomeria Óptica
+#+end_bclogo

@@ -3,6 +3,9 @@
 https://www.fcav.unesp.br/Home/departamentos/tecnologia/LUCIANAMARIASARAN/principais-reacoes-para-hidrocarbonetos-2017.pdf
 #+end_comment
 
+#+TITLE: Reações Orgânicas 
+
+
 * Reações Orgânicas
 ** Reações Orgânicas
 
@@ -476,12 +479,6 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 * Alcinos 
 
 
-=======
-
-
-* Alcinos 
-
-
 ** Reações de Adição
 
 - A ligação tripla dos alcinos comporta-se como a dupla dos alcenos, porém pode sofrer uma ou duas adições, dependendo da quantidade do outro reagente.
@@ -788,6 +785,7 @@ Haletos de acila \arrow
 #+begin_bclogo
 
 #+begin_export latex
+
 \small{
 \schemestart
 \chemfig{**6(---(-H)---)} \+{1em} \chemfig{H_3C-C{\ell}}
@@ -797,7 +795,7 @@ Haletos de acila \arrow
 \chemmove{
 \node[draw,dashed,inner sep=2pt,circle,yscale=1.5,red,fit=(AA1) (AA2)](circ1){};
 \node[align=center,text width=2cm,minimum width=1cm,draw=none,right=.5cm of circ1,font=\scriptsize](text1){Grupo aquila (aquilação)};
-\node[align=center,text width=2cm,minimum width=1cm,draw=none,right=.5cm of circ1](text1){Grupo aquila (aquilação)};
+%\node[align=center,text width=2cm,minimum width=1cm,draw=none,right=.5cm of circ1](text1){Grupo aquila (aquilação)};
 \draw[->,red] (circ1)--(text1){};
 }
 
@@ -815,13 +813,9 @@ Haletos de acila \arrow
 }
 \vspace{2cm}
 
-\node[align=center,text width=2cm,minimum width=1cm,draw=none,below=.5cm of circ2](text2){Grupo acila  (acilação)};
-\draw[->,red] (circ2)--(text2){};
-}
-}
-
 
 #+end_export
+
 #+end_bclogo
 
 
@@ -858,6 +852,7 @@ Haletos de acila \arrow
 #+begin_bclogo
 
 #+begin_export latex
+
 \tiny{
 \setchemfig{atom sep=2.5em}
 \schemestart[,0.5]
@@ -888,7 +883,7 @@ Haletos de acila \arrow
 #+begin_bclogo
 
 #+begin_export latex
-\small
+\scriptsize
 \setchemfig{atom sep=2.0em}
 \schemestart
 \chemname{\chemfig{*6(-=-=(-OH)-=)}}{fenol} \+{1.5em}
@@ -899,11 +894,20 @@ Haletos de acila \arrow
 \chemfig{*6(-(-C{\ell})=-=(-OH)-=)} \+{1em} HC{\ell}
 \schemestop
 \chemmove{
-\node[align=center,text width=3cm,minimum width=1cm,draw=none,above= of c1,font=\normalfont](text1){Grupo \alert{orto-para} diregente};
+\node[align=center,text width=3cm,minimum width=1cm,draw=none,above= .1cm of c1,font=\normalfont](text1){Grupo \alert{orto-para} diregente};
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right=.2cm of c2,font=\normalfont](text2){\alert{orto}};
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right=.2cm of c3,font=\normalfont](text2){\alert{para}};
+}
 
-\framebreak
+#+end_export
+
+#+end_bclogo
+
+** 
+
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Orto diregente}
+#+begin_bclogo
 
 
 #+begin_export latex
@@ -911,11 +915,12 @@ Haletos de acila \arrow
 \schemestart
 \chemname{\chemfig{*6(-=-=(-OH)-=)}}{fenol} \+{1.5em}
 \chemfig{C{\ell}_2}
-\arrow(@c1--.base west){->}[45,2] \chemname{\chemfig{*6(-=(-C{\ell})-=(-OH)-=)}}{orto} \+{1em} \ch{HC$\ell$}
+\arrow(@c1--.base west){->}[35,2.5]
+\chemfig{*6(-=(-C{\ell})-=(-OH)-=)} \+{1em} \ch{HC$\ell$}
 \arrow(@c1.mid east--.mid west){->}[0,2]
-\chemname{\chemfig{*6(-=(-C{\ell})-=(-OH)-=)}}{meta} \+{1em} \ch{HC$\ell$}
-\arrow(@c1--.north west){->}[-45,2]
-\chemname{\chemfig{*6(-=(-C{\ell})-=(-OH)-=)}}{para} \+{1em} \ch{HC$\ell$} 
+\chemfig{*6(-=(-C{\ell})-=(-OH)-=)} \+{1em} \ch{HC$\ell$}
+\arrow(@c1--.north west){->}[-10,3]
+\chemfig{*6(-=(-C{\ell})-=(-OH)-=)} \+{1em} \ch{HC$\ell$} 
 \schemestop 
 \chemmove{
 \node[align=center,text width=3cm,minimum width=1cm,draw=none,right= of c3,font=\normalfont](text2){O isômero \alert{meta} é obtido em quantidades desprezíveis.};
@@ -946,9 +951,9 @@ Haletos de acila \arrow
 \arrow(@c1--.base west){-/>}[40,2] 
 \chemfig{*6(-=-(-Cl)=(-C([:40]-H)([:140]=O))-=)} \+{1em} HC{\ell}
 \arrow(@c1--.base west){->}[0,2]
-\chemfig{*6(-=-=(-C([:40]-H)([:140]=O))-=)} \+{1em} HC{\ell}
+\chemfig{*6(-=(-C{\ell})-=(-C([:40]-H)([:140]=O))-=)}  \+{1em} HC{\ell}
 \arrow(@c1--.base west){-/>}[-40,2] 
-\chemfig{*6(-=-=(-C([:40]-H)([:140]=O))-=)} \+{1em} HC{\ell}
+\chemfig{*6(-(-C{\ell})=-=(-C([:40]-H)([:140]=O))-=)} \+{1em} HC{\ell}
 \schemestop
 \chemmove{
 \node[align=center,text width=1.5cm,minimum width=1cm,draw=none,above= .5cm of c1,font=\normalfont](text1){Grupo \textit{meta} diregente};

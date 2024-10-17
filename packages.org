@@ -1,6 +1,8 @@
 
 #+LATEX_HEADER: %%%% Config X sim for BEAMER
 
+#+LATEX_HEADER: \usepackage{ragged2e}
+#+LATEX_HEADER: \justifying
 
 #+LATEX_HEADER:\makeatletter
 #+LATEX_HEADER: \@ifclassloaded{beamer}{%
