@@ -27,11 +27,17 @@
 #+LATEX_COMPILER: lualatex 
 
 
+#+INCLUDE: "FQ/Solucoes/Solucoes.org"
+#+INCLUDE: "FQ/Solucoes/Concentracoes.org"
+
+#+begin_comment
+
+
+
+
 #+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
 
 #+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
-
-#+begin_comment
 
 
 #+INCLUDE: "QO/FuncoesOxigenadas/FuncoesOxigenadas.org"

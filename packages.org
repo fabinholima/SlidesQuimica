@@ -24,6 +24,7 @@
 
 #+LATEX_HEADER: %%% XSIM CONFIG BEAMER 
 #+LATEX_HEADER: \usepackage{xsim}
+#+LATEX_HEADER: \usepackage{amsmath}
 #+LATEX_HEADER: \usepackage[most]{tcolorbox}
 #+LATEX_HEADER: \usepackage{amssymb}
 #+LATEX_HEADER: \usepackage{fontawesome}
@@ -91,12 +92,19 @@
 #+LATEX_HEADER: \usepackage[tikz]{bclogo}
 #+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
 #+LATEX_HEADER: \usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
-#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning,snakes}
 #+LATEX_HEADER: \usepackage{tikzpeople}
 #+LATEX_HEADER: \usepackage{qrcode,hyperref}
 #+LATEX_HEADER: \usepackage{upgreek}
 #+LATEX_HEADER: %\usepackage[version=4]{mhchem}
 #+LATEX_HEADER: \usepackage{tabularray}
+
+
+#+LATEX_HEADER: %%% PACKAGE PLOT GRAPH 
+#+LATEX_HEADER: \usepackage{pgfplots}
+#+LATEX_HEADER: \pgfplotsset{width=10cm,compat=1.9}
+
+
 
 #+LATEX_HEADER: %%% CUSTOM TABLE 
 #+LATEX_HEADER:\NewTblrTheme{fancy}{
@@ -166,6 +174,10 @@
 #+LATEX_HEADER:  title=#2,#1}
 
 
+#+LATEX_HEADER: \tcbset{colback=yellow!10!white, colframe=red!50!black, highlight math style= {enhanced, %<-- needed for the ’remember’ options
+#+LATEX_HEADER: colframe=red,colback=red!10!white,boxsep=0pt}}
+
+
 #+LATEX_HEADER: \definecolor{col1}{HTML}{FF7878}
 #+LATEX_HEADER: \definecolor{col2}{HTML}{51B5F8}
 #+LATEX_HEADER: \definecolor{col3}{HTML}{68E1AA}
@@ -187,4 +199,5 @@
 #+LATEX_HEADER: \newcommand{\re}{\hspace{-1cm}}
 #+LATEX_HEADER: \newcommand{\af}{\hspace{2cm}}
 
-
+#+LATEX_HEADER: \tikzstyle{mybox} = [draw=red, fill=blue!20, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+#+LATEX_HEADER: \tikzstyle{fancytitle} =[fill=red, text=white]

@@ -1,3 +1,5 @@
+#+TITLE: Soluções 
+
 * Soluções
 
 ** Soluções
@@ -9,13 +11,21 @@
    *Observação:* /Se todos os componentes estiverem no mesmo estado físico, o solvente é aquele presente em maior quantidade./
 
 ** Solubilidade /versus/ Temperatura
+ :PROPERTIES:
+   :BEAMER_envargs: [t]
+   :END:
 
-
-
+*** A block                                                             :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+    
 #+begin_export latex
-\begin{tikzpicture}
+\begin{figure}
+\centering 
+\begin{tikzpicture}[scale=0.5, transform shape]]
 	\begin{axis}[
-		ylabel=Solubilidade g/g \ch{H2O},
+       ylabel=Solubilidade g/g \ch{H2O},
 		xlabel=Temperatura / \si{\celsius},
 		title=Curva de Solubilidade, 
 		legend style={draw=none},
@@ -60,6 +70,17 @@
 	\legend{\ch{KNO3}, KI, \ch{KC$\ell$O4}, \ch{NaC$\ell$}}
 	\end{axis}
 \end{tikzpicture}
+\caption{Curvas de Solubilidade}
+\end{figure}
 #+end_export
 
-A solubilidade de uma substância é a quantidade máxima de uma substância que pode ser dissolvida em uma quantidade fixa de solvente a uma determinada temperatura. A solubilidade de uma substância geralmente aumenta com a temperatura. Isso ocorre porque as moléculas da substância têm mais energia cinética a temperaturas mais altas, o que torna mais provável que elas colidam com as moléculas do solvente e se dissolvam.
+*** A screenshot                                            :BMCOL:B_example:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+- A solubilidade de uma substância é a quantidade máxima de uma substância que pode ser dissolvida em uma quantidade fixa de solvente a uma determinada temperatura.
+- A solubilidade de uma substância geralmente aumenta com a temperatura.
+- As moléculas da substância têm mais energia cinética a temperaturas mais altas, o que torna mais provável que elas colidam com as moléculas do solvente e se dissolvam.
+
+
+ 
