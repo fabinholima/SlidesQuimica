@@ -1,4 +1,4 @@
-% Created 2024-10-13 Sun 18:01
+% Created 2024-10-27 Sun 21:59
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
@@ -24,6 +24,7 @@
 %%%% FONTS
 %%% XSIM CONFIG BEAMER
 \usepackage{xsim}
+\usepackage{amsmath}
 \usepackage[most]{tcolorbox}
 \usepackage{amssymb}
 \usepackage{fontawesome}
@@ -76,12 +77,15 @@ label-width = 12pt]{choice}[\choice]
 \usepackage[tikz]{bclogo}
 \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
 \usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
-\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning}
+\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning,snakes}
 \usepackage{tikzpeople}
 \usepackage{qrcode,hyperref}
 \usepackage{upgreek}
 %\usepackage[version=4]{mhchem}
 \usepackage{tabularray}
+%%% PACKAGE PLOT GRAPH
+\usepackage{pgfplots}
+\pgfplotsset{width=10cm,compat=1.9}
 %%% CUSTOM TABLE
 \NewTblrTheme{fancy}{
 \SetTblrStyle{caption-tag}{font=\bfseries,red2}
@@ -138,6 +142,8 @@ fonttitle=\bfseries\sffamily,
 colbacktitle=blue!85!red!60,enhanced,
 attach boxed title to top left={yshift=-3mm,xshift=5mm},
 title=#2,#1}
+\tcbset{colback=yellow!10!white, colframe=red!50!black, highlight math style= {enhanced, %<-- needed for the ’remember’ options
+colframe=red,colback=red!10!white,boxsep=0pt}}
 \definecolor{col1}{HTML}{FF7878}
 \definecolor{col2}{HTML}{51B5F8}
 \definecolor{col3}{HTML}{68E1AA}
@@ -154,15 +160,17 @@ title=#2,#1}
 \definesubmol\nobond{-[,0.2,,,draw=none]\scriptstyle\color{blue}}
 \newcommand{\re}{\hspace{-1cm}}
 \newcommand{\af}{\hspace{2cm}}
+\tikzstyle{mybox} = [draw=red, fill=blue!20, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
+\tikzstyle{fancytitle} =[fill=red, text=white]
 \date{}
 %\usetheme{minflat}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{ Isomeria Plana}
+\title{ Soluções}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={ Isomeria Plana},
+ pdftitle={ Soluções},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
@@ -178,257 +186,367 @@ title=#2,#1}
 \end{frame}
 
 
-\section{Isomeria Plana}
-\label{sec:orgf9b3366}
 
+\section{Soluções}
+\label{sec:orge930067}
 
-\begin{frame}[label={sec:org61425b8}]{Isomeria Plana}
-\begin{itemize}
-\item Pode ser percebida observando-se a  fórmula estrutural plana dos compostos.
-\item \alert{Isômeros constitucionais} diferem na  maneira com que seus átomos estão  conectados.
-\end{itemize}
+\begin{frame}[label={sec:orgbd3cab3}]{Soluções}
+\begin{description}
+\item[{Solução:}] é uma mistura homogênea de soluto e solvente
+\item[{Solvente:}] Componente cujo estado físico é preservado.
+\item[{Soluto:}] Dissolvido no solvente
+
+\alert{Observação:} \emph{Se todos os componentes estiverem no mesmo estado físico, o solvente é aquele presente em maior quantidade.}
+\end{description}
 \end{frame}
 
-
-\section{Isomeria de Função}
-\label{sec:org465cb39}
-
-\begin{frame}[allowframebreaks]{Isomeria de Função}
-\begin{itemize}
-\item A diferença entre os isômeros está no grupo funcional.
-\end{itemize}
-
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C3H6O}}
-
-
-\begin{tblr}
-{
-colspec = {X[c] X[c]},
-colsep = 15mm,
-row{2} = {font=\bfseries, fg=teal},
-}
-\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
-& 
-\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Propanal} \\
-Cetona & Aldeído \\
-\end{tblr}
-\end{bclogo}
-
-\framebreak
-
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular:  \ch{C2H6O}}
-
-
-\begin{tblr}
-{
-colspec = {X[c] X[c]},
-colsep = 15mm,
-row{2} = {font=\bfseries, fg=teal},
-}
-\chemname[2ex]{\chemfig{H_3C-CH_2-[0,,,,red]\textcolor{red}{OH}}}{Etanol}
-& 
-\chemname{\chemfig{H_3C-\textcolor{red}{O}-CH_3}}{metóxi-metano} \\
-Álcool & Éter \\
-\end{tblr}
-\end{bclogo}
-\end{frame}
-
-
-
-
-
-\section{Isomeria de cadeia}
-\label{sec:orgf3ee7c9}
-
-\begin{frame}[label={sec:org221f0c5}]{Isomeria de cadeia}
-\begin{itemize}
-\item A diferença entre os isômeros está no tipo de cadeia.
-\item Por exemplo, um isômero é de cadeia aberta e o outro de cadeia fechada, ou um é de cadeia normal e o outro de cadeia ramificada, ou então, um tem cadeia homogênea e o outro possui cadeia heterogênea.
-\end{itemize}
-
-
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H10}}
-
-
-\begin{tblr}
-{
-colspec = {X[c] X[c]},
-colsep = 15mm,
-row{2} = {font=\bfseries, fg=teal},
-}
-\chemname[-2ex]{\chemfig{H_3C-CH([:90]-CH_3)-CH_3}}{Metil-propano}
-& 
-\chemname[-2ex]{\chemfig{H_3C-CH_2-CH_2-CH_3}}{Butano} \\
-Cadeia ramificada & Cadeia normal \\
-\end{tblr}
-\end{bclogo}
-\end{frame}
-
-
-
-
-\section{Isomeria de posição}
-\label{sec:orgc78e6a9}
-
-\begin{frame}[label={sec:org645e445}]{Isomeria de posição}
-\begin{itemize}
-\item A diferença está na posição de uma insaturação, de um grupo funcional, de um heteroátomo ou de um substituinte.
-\end{itemize}
-
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
-
-
-\begin{tblr}
-{
-colspec = {X[c] X[c]},
-colsep = 15mm,
-row{2} = {font=\bfseries, fg=teal},
-}
-\chemname[-2ex]{\chemfig{HC~[0,,,,red]C-CH_2-CH_3}}{But-1-ino}
-& 
-\chemname[-2ex]{\chemfig{H_3C-C~[0,,,,red]C-CH_3}}{But-2-ino} \\
-Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
-\end{tblr}
-\end{bclogo}
-\end{frame}
-
-
-
-
-\section{Metameria}
-\label{sec:org1b0108e}
-
-\begin{frame}[label={sec:org479a4aa}]{Metameria}
-\begin{itemize}
-\item É um tipo especial de isomeria de posição, em que a diferença consiste na posição do \alert{heteroátomo}.
-\end{itemize}
-
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Fórmula Molecular: \ch{C4H6}}
-
-
-\small{
-\begin{tblr}
-{
-colspec = {X[l] X[r]},
-colsep = 15mm,
-row{2} = {font=\bfseries, fg=teal},
-}
-\chemname[2ex]{\chemfig{H_3C-\textcolor{red}{O}-CH_2-CH_2-CH_3}}{Metoxi-propano}
-& 
-\chemname{\chemfig{H_3C-CH_2-\textcolor{red}{O}-CH_2-CH_3}}{Etoxi-etano} \\
-Insaturação carbono 1 e 2  & Insaturação carbono 2 e 3 \\
-\end{tblr}
-}
-\end{bclogo}
-\end{frame}
-
-
-
-
-\section{Tautomeria}
-\label{sec:org24b81d5}
-
-\begin{frame}[label={sec:orgcbda60b}]{Tautomeria}
-\begin{itemize}
-\item É um tipo especial de isomeria de função, em que os isômeros coexistem em equilíbrio dinâmico em solução.
-\end{itemize}
-
-
-\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Tautomeria}
-
-
-\begin{center}
-\small
-\schemestart
-\chemup.
-\subscheme{
-\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([2,,,,red]=\textcolor{red}{O})-CH_3}}{Propanona}
-\arrow(.mid east--.mid west){<<->}
-\chemname[-2ex]{\chemfig{H_2C=[0,,,,red]\textcolor{red}{C}([2,,,,red]-\textcolor{red}{OH})-CH_3}}{propenol}
-}
-\chemdown\}
-\arrow{0}[-90,0]
-Equilíbrio ceto-enólico
-\schemestop
-
-\vspace{.3cm}
-
-\schemestart
-\chemup.
-\subscheme{
-\chemname[-2ex]{\chemfig{H_3C-\textcolor{red}{C}([1,,,,red]=\textcolor{red}{O})([7,,,,red]-\textcolor{red}{H})}}{Etanal}
-\arrow(.mid east--.mid west){<<->}
-\chemname[-2ex]{\chemfig{H_3C=[0,,,,red]\textcolor{red}{C}-[0,,,,red]\textcolor{red}{OH}}}{Etenol}
-}
-\chemdown\}
-\arrow{0}[-90,0]
-Equilíbrio aldo-enólico
-\schemestop
-\end{center}
-\end{bclogo}
-\end{frame}
-
-\section{Isomeria Geometrica}
-\label{sec:org0eae0e5}
-
-\begin{frame}[label={sec:org3c4b9ad}]{Isomeria Geométrica}
-\begin{itemize}
-\item Conhecida como a isomeria \emph{cis-trans}.
-\item Ocorre em compostos com dupla ligação ou cíclicos .
-\item Compostos com dupla ligação
-\end{itemize}
-\begin{center}
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-[   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
-    hydrogen/.style={circle, ball color=white, minimum size=2.5mm, inner sep=0},
-    carbon/.style={circle, ball color=black!75, minimum size=7mm, inner sep=0}
-]
-\draw   (196.35,141.5) -- (330.17,141.5) -- (272.82,186) -- (139,186) -- cycle ;
-\end{tikzpicture}
-\end{center}
-\end{frame}
-
-
-\begin{frame}[label={sec:org0d34ca6}]{Exemplos}
-\begin{question}
-(\alert{UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial:
-
-%\chemfig{-[:330]-[:30]-[:330]-[:30]-[:330]=[:30]-[:330]-[:30]=[:330]-[:30]%
-%-[:330]-[:30]-[:330]-[:30]-[:330]-[:30]-[:330](=[:30]O)-[:270]H}
-{\scriptsize
+\begin{frame}[label={sec:org3015545}]{Solubilidade \emph{versus} Temperatura}
+\begin{columns}
+\begin{column}{0.4\columnwidth}
+\begin{figure}
 \centering 
-\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
--[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]}
+\begin{tikzpicture}[scale=0.5, transform shape]]
+	\begin{axis}[
+       ylabel=Solubilidade g/g \ch{H2O},
+		xlabel=Temperatura / \si{\celsius},
+		title=Curva de Solubilidade, 
+		legend style={draw=none},
+		legend pos=north west]
+		%% KNO3
+	\addplot[color=red,mark=*] coordinates {
+		(0,13.25)
+		(20,31.66)
+		(40,63.9)
+		(60,109.9)
+		(80,169)
+		(100,245.2)
+	};
+	%%% KI
+	\addplot[color=blue,mark=*] coordinates {
+		(0,127.8)
+		(20,144.51)
+		(40,161)
+		(60,176.2)
+		(80,191.5)
+		(100,208)
+	};
+	%% KClO4
+	\addplot[color=black,mark=*] coordinates {
+		(0,0.76)
+		(20,1.73)
+		(40,3.63)
+		(60,7.18)
+		(80,13.38)
+		(100,22.2)
+	};
+	%% NaCl
+	%35.6	35.8	36.42	37.05	38.05	39.2
+	\addplot[color=green,mark=*] coordinates {
+		(0,35.6)
+		(20,35.8)
+		(40,36.42)
+		(60,37.05)
+		(80,38.05)
+		(100,39.2)
+	};
+	\legend{\ch{KNO3}, KI, \ch{KC$\ell$O4}, \ch{NaC$\ell$}}
+	\end{axis}
+\end{tikzpicture}
+\caption{Curvas de Solubilidade}
+\end{figure}
+\end{column}
+
+\begin{column}{0.6\columnwidth}
+\begin{itemize}
+\item A solubilidade de uma substância é a quantidade máxima de uma substância que pode ser dissolvida em uma quantidade fixa de solvente a uma determinada temperatura.
+\item A solubilidade de uma substância geralmente aumenta com a temperatura.
+\item As moléculas da substância têm mais energia cinética a temperaturas mais altas, o que torna mais provável que elas colidam com as moléculas do solvente e se dissolvam.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\section{Concentrações}
+\label{sec:orgd278599}
+
+
+
+\begin{frame}[label={sec:org5f28868}]{Concentração Comum (g/L)}
+\begin{itemize}
+\item A quantidade de soluto dissolvido num dado volume de solução é denominada de concentração
+\item É o quociente entre a massa do soluto e o volume da solução
+\item Concentração comum é expressa em \alert{g/L} ou \alert{\unit{\gram\per\litre}}
+\end{itemize}
+
+
+
+\begin{tcolorbox}[ams equation]
+\mathcal{C}=\frac{m}{V}
+\end{tcolorbox}
+\end{frame}
+
+\begin{frame}[label={sec:org0c166e6}]{Exemplo}
+\begin{question}
+Qual a massa de cloreto de sódio (NaC\(\ell\)) necessária para preparar 250 mL de uma solução aquosa de concentração igual a 58,5 \unit{\gram\per\litre}.
+\end{question}
+
+\begin{answer}[print=true]
+\begin{tcolorbox}[ams align*]
+\mathcal{C}=& \frac{m_{soluto}}{V_{\text{solu\c{c}\~ao}}} \\
+m_{soluto} = & \mathcal{C} \cdot V(mL)_{\text{solu\c{c}\~ao}}\\
+m_{soluto}= &  58\;\unit{\gram\per\cancel\litre} \cdot 0,25\; \unit{\cancel\litre}\\
+m_{soluto}= & 14,625\; \unit{\gram}
+\end{tcolorbox}
+\end{answer}
+\end{frame}
+
+\begin{frame}[label={sec:orgbd017e9}]{Concentração molar \(\mathcal{M}\) (mol/L)}
+\begin{tcolorbox}[ams align]
+\mathcal{M}=\frac{m_{\rm massa\; soluto}}{MM_{massa\;molar} \cdot V_{\text{ solu\c{c}\~ao}}}
+\end{tcolorbox}
+
+\begin{itemize}
+\item Expressa o número de moles do soluto em 1L de solução, sua unidade é \alert{mol/L} ou \alert{\unit{\mole\per\liter}}.
+\item A molaridade exprime também o número de milimoles (mmol ou \num{e-3} mol) de um soluto por mililitro (mL ou \num{e-3} L) de solução.
+\end{itemize}
+
+\begin{tcolorbox}[ams equation]
+\mathcal{M}=\frac{n_{moles\; soluto}}{V_{\text{solu\c{c}\~ao}}} \Longrightarrow \mathcal{M}=\frac{n_{mmol\; soluto}}{V(mL)_{\text{solu\c{c}\~ao}}}
+\end{tcolorbox}
+
+\begin{itemize}
+\item Se soubermos a massa do soluto e o volume de solução, podemos calcular a concentração molar.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org3d06f64}]{Exemplo}
+\begin{question}
+Encontrar a molaridade de uma solução aquosa que contém 2,30 g de álcool etílico (EtOH; \ch{C2H5OH}) (MM = 46,07 \unit{\gram\per\mole}) em 3,50 L.
+\end{question}
+
+\visible<1->{
+
+\begin{answer}[print=true]
+\begin{tcolorbox}[ams align*]
+\mathcal{M}=& \frac{m_{\rm massa\; soluto}}{MM_{massa\;molar} \cdot V_{\text{ solu\c{c}\~ao}}}\\
+\mathcal{M}=& \frac{2,3}{46,07\cdot 3,5}\\
+\mathcal{M}=& 0,0143\; \unit{\mol\per\litre}
+\end{tcolorbox}
+\end{answer}
 }
+\end{frame}
 
-Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente:
 
-\begin{choice}(2)
-\choice cis e cis
-\choice cis e trans
-\choice trans e cis
-\choice trans e trans
+\section{Percentual de uma solução}
+\label{sec:org16fb2bd}
+
+
+\begin{frame}[label={sec:org5d9b9a4}]{Relação massa x volume}
+\begin{tcolorbox}[ams align]
+\%(m/v)=\frac{m}{v_{total}}\cdot 100\% & \quad \text{massa por volume}\\
+\%(m/m)= \frac{m}{m_{total}}\cdot 100\% & \quad \text{massa por massa total}\\
+\%(v/v)= \frac{v}{v_{total}}\cdot 100\% & \quad \text{volume por volume}
+\end{tcolorbox}
+\end{frame}
+
+
+\begin{frame}[label={sec:org7a8d27d}]{Exemplo I}
+\begin{question}
+Uma solução foi preparada pela dissolução de 40 gramas de açúcar em 960 gramas de água. Determine seu título e sua porcentagem em massa?
+\end{question}
+
+\begin{answer}[print=true]
+O título em massa é calculado através da relação entre massa de soluto e massa da solução, ou seja, 40 g/1000 g = \alert{0,04}. Portanto, a porcentagem em massa de açúcar na solução é de \alert{4\%}.
+\end{answer}
+\end{frame}
+
+
+\begin{frame}[label={sec:org9858bd1}]{Exemplo II}
+\begin{question}
+Descreva o procedimento para preparar uma solução de Ácido sulfúrico com concentração de 1 \unit{\mol\per\litre} em 1 L de solução com pureza de 98\%. Dados: MM (\ch{H2SO4})= 98 \unit{\gram\per\mol} d=1,84 g/cm\textsuperscript{3}.
+
+\begin{center}
+\includegraphics[scale=.3]{FQ/Solucoes/acid.png}
+\end{center}
+\end{question}
+\end{frame}
+
+\begin{frame}[label={sec:org9147d8a}]{}
+\begin{answer}[print=true]
+\scriptsize
+\begin{description}
+\item[{1:}] Estimar a massa do soluto
+\end{description}
+\begin{align*}
+\mathcal{M}=\frac{m}{MM \cdot V} \Rightarrow 1 = \frac{m}{98 \cdot 1 } \Rightarrow m = 98 \; \text{g de}~ \ch{H2SO4}
+\end{align*}
+\begin{description}
+\item[{2:}] Relacionar com densidade para achar o volume
+\end{description}
+\begin{align*}
+\mathcal{d}=\frac{m}{v} \Rightarrow 1,84 ~\text{g/cm$^3$}=\frac{98}{v} \Rightarrow v=53,26 ~\text{mL}  
+\end{align*}
+\begin{description}
+\item[{3:}] Relacione a pureza
+\begin{align*}
+& 53,26~\text{ mL} -\!\!\!-\!\!\!- 98~\text{\%}\\
+& x~\text{mL} -\!\!\!-\!\!\!- 100~\text{\%}\\
+& x= 54,4 ~\text{mL}
+\end{align*}
+\end{description}
+\end{answer}
+\end{frame}
+
+
+\section{Partes por milhão e bilhão (ppm \& ppb)}
+\label{sec:org8abc208}
+
+\begin{frame}[label={sec:org5a2482e}]{Partes por milhão e bilhão (ppm \& ppb)}
+
+\begin{tikzpicture}
+	 \node[rectangle, draw = teal, text = white, fill = teal, minimum width = 2cm, minimum height = 1cm, font={\bfseries\large}] (r1) at (0,0) {PPM};
+    \node[rectangle, draw = red, text = white, fill = red, minimum width = 2cm, minimum height = 1cm,
+    font={\bfseries\large}] (r2) at (0,-1.5) {PPB};
+        \node[rectangle, draw = gray, text = white, fill = gray, minimum width = 2cm, minimum height = 1cm,
+    font={\bfseries\large}] (r3) at (0,-3.0) {PPT};
+    \node[rectangle, draw=none, right=1cm of r1, font={\bfseries\Large}]{partes por milhão 1 mg/L};
+    \node[rectangle, draw=none, right=1cm of r2, font={\bfseries\Large}]{partes por bilhão 1 $\mu$g/L};
+    \node[rectangle, draw=none, right=1cm of r3, font={\bfseries\Large}]{partes por trilhão 1 ng/L};
+\end{tikzpicture}
+
+
+\begin{align*}
+\text{ppm}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^6 & \Rightarrow  \frac{mg}{L}\\
+\text{ppb}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^9 & \Rightarrow  \frac{\upmu g}{L}\\
+\text{ppt}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^{12} & \Rightarrow  \frac{ng}{L}\\
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:org761dc1a}]{Exemplo}
+\begin{question}
+\alert{(UFSCAR-SP)} O flúor tem um papel importante na prevenção e controle da cárie dentária. Estudos demonstram que, após a fluoretação da água, os índices de cáries nas populações têm diminuído. O flúor também é adicionado a produtos e materiais odontológicos. Suponha que o teor de flúor em determinada água de consumo seja 0,9 ppm (partes por milhão) em massa. Considerando a densidade da água 1g/mL, a quantidade, em miligramas, de flúor que um adulto ingere ao tomar 2 litros dessa água, durante um dia, é igual a
+
+\begin{choice}(5)
+\choice 0,09.
+\choice 0,18.
+\choice 0,90.
+\choice 1,80.
+\choice 18,0
 \end{choice}
 \end{question}
 \end{frame}
 
-\begin{frame}[label={sec:orgc955176}]{}
-\begin{answer}
-Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert{cis}.
+\begin{frame}[label={sec:orge830c79}]{}
+\begin{answer}[print=true]
 
-\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
--[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](%
--[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]}
+
+Usar a densidade
+
+\begin{align*}
+d=\frac{m}{v} \Rightarrow 1 \text{g/mL}=\frac{m}{2000~\text{mL}} \Rightarrow  m = 2000 \; \text{g de \ch{H2O}}
+\end{align*}
+
+Cálculo da massa de flúor nesses 2 litros dessa água
+
+\begin{align*}
+\frac{0,9~g}{10^6~ \cancel{g}} \cdot 2000~\text{\cancel{g}} \Rightarrow 1,8 \times 10^{-3}~\text{g de F} 
+\end{align*}
+
+Isso corresponde a 1,8 mg de  flúor.
 \end{answer}
+\end{frame}
+
+
+
+\section{Diluição de Soluções}
+\label{sec:org4a5d702}
+
+
+\begin{frame}[label={sec:orgc802ffa}]{Diluição de Soluções}
+\begin{itemize}
+\item As soluções concentradas também podem ser misturadas com solventes para torná-las diluídas.
+\item Em diluições a quantidade de solvente é que aumenta e a quantidade de soluto permanece sempre constante. Assim, o número inicial de mols do soluto é igual ao número de mols do soluto no final.mols do soluto no final.
+\end{itemize}
+
+\begin{tcolorbox}[ams align]
+\mathcal{M}_1 \cdot V_1 = \mathcal{M}_2 \cdot V_2 
+\end{tcolorbox}
+
+
+\begin{center}
+\includegraphics[scale=.3]{FQ/Solucoes/Diluicao.png}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgb9be7e2}]{Exemplo}
+\begin{question}
+Ao adicionar uma quantia de 75mL de água diretamente em 25mL de uma solução 0,20 \unit{\mol\per\litre} de cloreto de sódio (NaC\(\ell\)), obtemos uma solução de concentração molar igual a:
+\end{question}
+
+\begin{answer}[print=true]
+Volume adicionado (V\textsubscript{a}) = 75 mL;  Volume inicial (V\textsubscript{i}) = 25 mL; Molaridade inicial (\(\mathcal{M}_i\)) = 0,2 \unit{\mol\per\litre}; Molaridade final (\(\mathcal{M}_f\)) = ?
+
+\begin{align*}
+\mathcal{M}_i \cdot V_i = \mathcal{M}_f \cdot V_f \\
+0,2 \cdot 25 = \mathcal{M}_f \cdot 100\\
+\mathcal{M}_f= 0,05~\unit{\mol\per\litre}
+\end{align*}
+\end{answer}
+\end{frame}
+
+\section{Mistura de Soluções}
+\label{sec:org8646531}
+
+
+\begin{frame}[label={sec:orgfc269cc}]{Mistura de Soluções}
+\begin{itemize}
+\item Ocorre quando uma mistura de soluções de mesmo soluto sem reação química consiste em reunir em um mesmo recipiente duas soluções.
+\end{itemize}
+
+\begin{tcolorbox}[ams align]
+\mathcal{M}_f= \frac{\mathcal{M}_1 \cdot V_1 + \mathcal{M}_2 \cdot V_2}{V_1 + V_2}
+\end{tcolorbox}
+
+
+\begin{center}
+\includegraphics[scale=.3]{FQ/Solucoes/Mistura_Solucao.png}
+\end{center}
+\end{frame}
+
+
+
+
+\begin{frame}[label={sec:org4e85eb6}]{Exemplo}
+\begin{question}
+Se misturarmos 400 mL de uma solução aquosa de NaC\(\ell\) 0,2 mol/L com 250 mL de outra solução de NaC\(\ell\) 0,4 mol/L, teremos uma nova solução. Qual será a concentração em \unit{\mol\per\litre} da solução final?
+\end{question}
+
+
+\begin{answer}[print=true]
+\small
+\begin{tcolorbox}[ams align*]
+\mathcal{M}_f= & \frac{\mathcal{M}_1 \cdot V_1 + \mathcal{M}_2 \cdot V_2}{V_1 + V_2}\\
+\mathcal{M}_f= & \frac{0,2 \cdot 400 + 0,4 \cdot 250}{400 + 250}\\
+\mathcal{M}_f= & \frac{80+100}{650}\\
+\mathcal{M}_f= & 0,27 \unit{\mol\per\litre}
+\end{tcolorbox}
+\end{answer}
+\end{frame}
+
+
+\begin{frame}[label={sec:org44d85ad}]{Fim da Aula}
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & \\%Lista de Exercícios
+\qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Solucoes.pdf} \\  %\qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+ \end{tabular}
+ \end{center}
 \end{frame}
 \end{document}

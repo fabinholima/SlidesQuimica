@@ -1,16 +1,323 @@
-* Concentrações
-
-
-* Concentração Comum
+#+TITLE: Soluções 
 
 
 
-* Concentração molar
+#+begin_comment
+https://edisciplinas.usp.br/pluginfile.php/5225358/mod_resource/content/1/Aula%202-%20Solucoes_laboratorio_QFL1101.pdf
+#+end_comment
 
 
-* Diluição
+* Concentrações 
 
 
-* Mistura
+  
+** Concentração Comum (g/L)
+
+- A quantidade de soluto dissolvido num dado volume de solução é denominada de concentração
+- É o quociente entre a massa do soluto e o volume da solução
+- Concentração comum é expressa em *g/L* ou *\unit{\gram\per\litre}*
 
 
+
+  #+begin_export latex
+\begin{tcolorbox}[ams equation]
+\mathcal{C}=\frac{m}{V}
+\end{tcolorbox}
+  #+end_export
+
+** Exemplo
+
+#+begin_question
+Qual a massa de cloreto de sódio (NaC$\ell$) necessária para preparar 250 mL de uma solução aquosa de concentração igual a 58,5 \unit{\gram\per\litre}.
+#+end_question
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+#+begin_export latex
+\begin{tcolorbox}[ams align*]
+\mathcal{C}=& \frac{m_{soluto}}{V_{\text{solu\c{c}\~ao}}} \\
+m_{soluto} = & \mathcal{C} \cdot V(mL)_{\text{solu\c{c}\~ao}}\\
+m_{soluto}= &  58\;\unit{\gram\per\cancel\litre} \cdot 0,25\; \unit{\cancel\litre}\\
+m_{soluto}= & 14,625\; \unit{\gram}
+\end{tcolorbox}
+#+end_export
+#+end_answer
+
+** Concentração molar $\mathcal{M}$ (mol/L)
+
+#+begin_export latex
+\begin{tcolorbox}[ams align]
+\mathcal{M}=\frac{m_{\rm massa\; soluto}}{MM_{massa\;molar} \cdot V_{\text{ solu\c{c}\~ao}}}
+\end{tcolorbox}
+#+end_export
+  
++ Expressa o número de moles do soluto em 1L de solução, sua unidade é *mol/L* ou *\unit{\mole\per\liter}*.
++ A molaridade exprime também o número de milimoles (mmol ou \num{e-3} mol) de um soluto por mililitro (mL ou \num{e-3} L) de solução.
+
+#+begin_export latex
+\begin{tcolorbox}[ams equation]
+\mathcal{M}=\frac{n_{moles\; soluto}}{V_{\text{solu\c{c}\~ao}}} \Longrightarrow \mathcal{M}=\frac{n_{mmol\; soluto}}{V(mL)_{\text{solu\c{c}\~ao}}}
+\end{tcolorbox}
+#+end_export
+
++ Se soubermos a massa do soluto e o volume de solução, podemos calcular a concentração molar.
+
+** Exemplo
+
+#+begin_question
+Encontrar a molaridade de uma solução aquosa que contém 2,30 g de álcool etílico (EtOH; \ch{C2H5OH}) (MM = 46,07 \unit{\gram\per\mole}) em 3,50 L.
+#+end_question
+
+#+LATEX: \visible<1->{
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+#+begin_export latex
+\begin{tcolorbox}[ams align*]
+\mathcal{M}=& \frac{m_{\rm massa\; soluto}}{MM_{massa\;molar} \cdot V_{\text{ solu\c{c}\~ao}}}\\
+\mathcal{M}=& \frac{2,3}{46,07\cdot 3,5}\\
+\mathcal{M}=& 0,0143\; \unit{\mol\per\litre}
+\end{tcolorbox}
+#+end_export
+#+end_answer
+#+LATEX: }
+
+
+* Percentual de uma solução
+
+
+** Relação massa x volume 
+
+#+begin_export latex
+\begin{tcolorbox}[ams align]
+\%(m/v)=\frac{m}{v_{total}}\cdot 100\% & \quad \text{massa por volume}\\
+\%(m/m)= \frac{m}{m_{total}}\cdot 100\% & \quad \text{massa por massa total}\\
+\%(v/v)= \frac{v}{v_{total}}\cdot 100\% & \quad \text{volume por volume}
+\end{tcolorbox}
+#+end_export
+
+
+** Exemplo I
+
+#+begin_question
+ Uma solução foi preparada pela dissolução de 40 gramas de açúcar em 960 gramas de água. Determine seu título e sua porcentagem em massa?
+#+end_question
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+O título em massa é calculado através da relação entre massa de soluto e massa da solução, ou seja, 40 g/1000 g = *0,04*. Portanto, a porcentagem em massa de açúcar na solução é de *4%*.
+#+end_answer
+
+
+** Exemplo II
+
+#+begin_question
+Descreva o procedimento para preparar uma solução de Ácido sulfúrico com concentração de 1 \unit{\mol\per\litre} em 1 L de solução com pureza de 98%. Dados: MM (\ch{H2SO4})= 98 \unit{\gram\per\mol} d=1,84 g/cm^3.
+
+#+ATTR_LATEX: :scale .3
+[[./acid.png]]
+
+
+#+end_question
+
+** 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+#+LATEX: \scriptsize
+- 1: :: Estimar a massa do soluto
+#+begin_export latex
+\begin{align*}
+\mathcal{M}=\frac{m}{MM \cdot V} \Rightarrow 1 = \frac{m}{98 \cdot 1 } \Rightarrow m = 98 \; \text{g de}~ \ch{H2SO4}
+\end{align*}
+#+end_export
+- 2: :: Relacionar com densidade para achar o volume
+#+begin_export latex
+\begin{align*}
+\mathcal{d}=\frac{m}{v} \Rightarrow 1,84 ~\text{g/cm$^3$}=\frac{98}{v} \Rightarrow v=53,26 ~\text{mL}  
+\end{align*}
+#+end_export
+- 3: :: Relacione a pureza
+   #+begin_export latex
+\begin{align*}
+& 53,26~\text{ mL} -\!\!\!-\!\!\!- 98~\text{\%}\\
+& x~\text{mL} -\!\!\!-\!\!\!- 100~\text{\%}\\
+& x= 54,4 ~\text{mL}
+\end{align*}
+
+   #+end_export 
+#+end_answer
+
+
+* Partes por milhão e bilhão (ppm & ppb)
+
+** Partes por milhão e bilhão (ppm & ppb)
+
+
+
+
+#+begin_export latex
+
+\begin{tikzpicture}
+	 \node[rectangle, draw = teal, text = white, fill = teal, minimum width = 2cm, minimum height = 1cm, font={\bfseries\large}] (r1) at (0,0) {PPM};
+    \node[rectangle, draw = red, text = white, fill = red, minimum width = 2cm, minimum height = 1cm,
+    font={\bfseries\large}] (r2) at (0,-1.5) {PPB};
+        \node[rectangle, draw = gray, text = white, fill = gray, minimum width = 2cm, minimum height = 1cm,
+    font={\bfseries\large}] (r3) at (0,-3.0) {PPT};
+    \node[rectangle, draw=none, right=1cm of r1, font={\bfseries\Large}]{partes por milhão 1 mg/L};
+    \node[rectangle, draw=none, right=1cm of r2, font={\bfseries\Large}]{partes por bilhão 1 $\mu$g/L};
+    \node[rectangle, draw=none, right=1cm of r3, font={\bfseries\Large}]{partes por trilhão 1 ng/L};
+\end{tikzpicture}
+
+
+\begin{align*}
+\text{ppm}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^6 & \Rightarrow  \frac{mg}{L}\\
+\text{ppb}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^9 & \Rightarrow  \frac{\upmu g}{L}\\
+\text{ppt}=\frac{\text{massa soluto}}{\text{volume solução}} \times 10^{12} & \Rightarrow  \frac{ng}{L}\\
+\end{align*}
+#+end_export
+
+
+
+** Exemplo
+
+#+begin_question
+*(UFSCAR-SP)* O flúor tem um papel importante na prevenção e controle da cárie dentária. Estudos demonstram que, após a fluoretação da água, os índices de cáries nas populações têm diminuído. O flúor também é adicionado a produtos e materiais odontológicos. Suponha que o teor de flúor em determinada água de consumo seja 0,9 ppm (partes por milhão) em massa. Considerando a densidade da água 1g/mL, a quantidade, em miligramas, de flúor que um adulto ingere ao tomar 2 litros dessa água, durante um dia, é igual a
+
+#+ATTR_LATEX: :options (5)
+#+begin_choice
+\choice 0,09.
+\choice 0,18.
+\choice 0,90.
+\choice 1,80.
+\choice 18,0
+#+end_choice 
+#+end_question 
+
+** 
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+
+Usar a densidade
+
+  #+begin_export latex
+\begin{align*}
+d=\frac{m}{v} \Rightarrow 1 \text{g/mL}=\frac{m}{2000~\text{mL}} \Rightarrow  m = 2000 \; \text{g de \ch{H2O}}
+\end{align*}
+ #+end_export
+
+ Cálculo da massa de flúor nesses 2 litros dessa água
+
+#+begin_export latex
+\begin{align*}
+\frac{0,9~g}{10^6~ \cancel{g}} \cdot 2000~\text{\cancel{g}} \Rightarrow 1,8 \times 10^{-3}~\text{g de F} 
+\end{align*}
+#+end_export
+  
+Isso corresponde a 1,8 mg de  flúor.
+
+#+end_answer 
+
+
+
+* Diluição de Soluções
+
+
+** Diluição de Soluções
+
+
+
+- As soluções concentradas também podem ser misturadas com solventes para torná-las diluídas.
+- Em diluições a quantidade de solvente é que aumenta e a quantidade de soluto permanece sempre constante. Assim, o número inicial de mols do soluto é igual ao número de mols do soluto no final.mols do soluto no final.
+
+#+begin_export latex
+\begin{tcolorbox}[ams align]
+\mathcal{M}_1 \cdot V_1 = \mathcal{M}_2 \cdot V_2 
+\end{tcolorbox}
+#+end_export
+
+
+#+ATTR_LATEX: :options :scale .3
+[[../Solucoes/Diluicao.png]]
+
+
+** Exemplo
+
+#+begin_question
+Ao adicionar uma quantia de 75mL de água diretamente em 25mL de uma solução 0,20 \unit{\mol\per\litre} de cloreto de sódio (NaC$\ell$), obtemos uma solução de concentração molar igual a:
+#+end_question 
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+Volume adicionado (V_a) = 75 mL;  Volume inicial (V_i) = 25 mL; Molaridade inicial ($\mathcal{M}_i$) = 0,2 \unit{\mol\per\litre}; Molaridade final ($\mathcal{M}_f$) = ?
+
+#+begin_export latex
+\begin{align*}
+\mathcal{M}_i \cdot V_i = \mathcal{M}_f \cdot V_f \\
+0,2 \cdot 25 = \mathcal{M}_f \cdot 100\\
+\mathcal{M}_f= 0,05~\unit{\mol\per\litre}
+\end{align*}
+#+end_export
+
+#+end_answer
+
+* Mistura de Soluções
+
+
+** Mistura de Soluções
+
+
+- Ocorre quando uma mistura de soluções de mesmo soluto sem reação química consiste em reunir em um mesmo recipiente duas soluções.
+
+#+begin_export latex
+\begin{tcolorbox}[ams align]
+\mathcal{M}_f= \frac{\mathcal{M}_1 \cdot V_1 + \mathcal{M}_2 \cdot V_2}{V_1 + V_2}
+\end{tcolorbox}
+#+end_export
+
+
+#+ATTR_LATEX: :scale .3
+[[./Mistura_Solucao.png]]
+
+
+
+
+** Exemplo 
+
+
+#+begin_question
+Se misturarmos 400 mL de uma solução aquosa de NaC$\ell$ 0,2 mol/L com 250 mL de outra solução de NaC$\ell$ 0,4 mol/L, teremos uma nova solução. Qual será a concentração em \unit{\mol\per\litre} da solução final?
+#+end_question
+
+
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+\small
+#+begin_export latex
+\begin{tcolorbox}[ams align*]
+\mathcal{M}_f= & \frac{\mathcal{M}_1 \cdot V_1 + \mathcal{M}_2 \cdot V_2}{V_1 + V_2}\\
+\mathcal{M}_f= & \frac{0,2 \cdot 400 + 0,4 \cdot 250}{400 + 250}\\
+\mathcal{M}_f= & \frac{80+100}{650}\\
+\mathcal{M}_f= & 0,27 \unit{\mol\per\litre}
+\end{tcolorbox}
+#+end_export
+
+#+end_answer
+
+
+** Fim da Aula
+
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula & & \\%Lista de Exercícios
+\qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Solucoes.pdf} \\  %\qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+ \end{tabular}
+ \end{center}
+#+end_export
