@@ -31,29 +31,3 @@
 #+INCLUDE: "FQ/Solucoes/Concentracoes.org"
 
 
-
-
-#+begin_comment
-
-
-
-#+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
-
-#+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
-
-
-#+INCLUDE: "QO/FuncoesOxigenadas/FuncoesOxigenadas.org"
-
-
-#+INCLUDE: "QO/FuncoesOxigenadas/Alcoois.org"
-
-
-#+INCLUDE: "QO/Fundamentos/Hibridizacao.org"
-
-
-
-
-#+INCLUDE: "QO/Fundamentos/Introducao.org"
-
-
-#+end_comment
