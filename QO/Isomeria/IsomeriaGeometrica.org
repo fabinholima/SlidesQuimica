@@ -1,43 +1,47 @@
+#+TITLE: Isomeria Geométrica
 
-
-* Isomeria Geometrica
+* Isomeria Geométrica
 
 ** Isomeria Geométrica
 
-
-
-
  -  Conhecida como a isomeria /cis-trans/.
  -  Ocorre em compostos com dupla ligação ou cíclicos .
- - Compostos com dupla ligação
-#+begin_export latex
-\begin{center}
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-[   oxygen/.style={circle, ball color=red, minimum size=6mm, inner sep=0},
-    hydrogen/.style={circle, ball color=white, minimum size=2.5mm, inner sep=0},
-    carbon/.style={circle, ball color=black!75, minimum size=7mm, inner sep=0}
-]
-\draw   (196.35,141.5) -- (330.17,141.5) -- (272.82,186) -- (139,186) -- cycle ;
-\end{tikzpicture}
-\end{center}
-#+end_export
+ -  Compostos com dupla ligação.
 
+
+*** A block                                           :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+
+#+CAPTION: /cis/ grupos do mesmo lado. /cis/-1,2-dicloro-eteno    
+[[./CIS.png]]
+
+*** A block                                           :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+#+CAPTION: /trans/ grupos de lados opostos.  /cis/-1,2-dicloro-eteno
+[[./Trans.png]]
 
 ** Exemplos
 
 #+begin_question
+\scriptsize{
 (*UERJ*) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial:
 
+#+begin_center
 #+begin_export latex
 %\chemfig{-[:330]-[:30]-[:330]-[:30]-[:330]=[:30]-[:330]-[:30]=[:330]-[:30]%
 %-[:330]-[:30]-[:330]-[:30]-[:330]-[:30]-[:330](=[:30]O)-[:270]H}
 {\scriptsize
-\centering 
+
 \chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
 -[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]}
 }
 #+end_export
 
+#+end_center
 Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente:
 
 #+ATTR_LATEX: :options (2)
@@ -46,12 +50,14 @@ Como é possível observar, as ligações duplas presentes nos átomos de carbon
 \choice cis e trans
 \choice trans e cis
 \choice trans e trans
-#+end_choice 
+#+end_choice
+}
 #+end_question 
 
 ** 
-
+#+ATTR_LATEX: :options [print=true]
 #+begin_answer
+\scriptsize{
 Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição *cis*.
 
 #+begin_export latex
@@ -59,5 +65,49 @@ Analisando as duas insaturações das moléculas, observa-se que os ligantes nã
 -[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](%
 -[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]}
 #+end_export
-
+}
 #+end_answer
+
+
+
+
+**  Prefixos E e Z
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+
+
+- Para designar alquenos tri e tetrassubstituídos utiliza-se outro sistema de nomenclatura, denominado *E-Z*.
+- No sistema E-Z são examinados os grupos ligados a cada átomo de carbono da dupla ligação e colocados em ordem de prioridade.
+- Os átomos de maior número atômico têm maior prioridade. Ordem decrescente de prioridade:
+  
+#+begin_export latex
+\begin{center}
+\schemestart
+I > Br > \ch{C$\ell$} > S > F > O > N > C > H
+\schemestop
+	\chemmove{
+	\node[single arrow, draw=black, fill=red8!30, 
+	minimum width = 10pt, single arrow head extend=3pt,
+	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem descrescente de prioridade}; % length of arrow
+	}
+	\end{center}
+#+end_export
+
+\framebreak
+
+- No caso de átomos de mesmo número atômico, o isótopo de maior número de massa tem maior prioridade:
+  
+  #+begin_export latex
+\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
+ Hidrogênio \ch{->} \isotope{3,H} > \isotope{2,H} > \isotope{1,H}\\
+ Carbono \ch{->} \isotope{14,C} > \isotope{13,C} > \isotope{12,C} 
+\end{tcolorbox}
+  #+end_export
+
+- Quando os átomos ligados aos carbonos da ligação dupla forem iguais, os números e as massas atômicas dos elementos ligados a esses átomos são usados para realizar o desempate.
+- No sistema *E-Z*, examinam-se os dois átomos ou grupos ligados em cada um dos carbonos da ligação dupla e determina-se a ordem de prioridade de cada um deles.
+- Se os grupos de maior prioridade em cada carbono estiverem do mesmo lado de um plano imaginário passando por esses carbonos, a geometria dessa dupla ligação será designada pela letra Z (do alemão /Zusammen/, *“juntos”*).
+- Se os grupos de maior prioridade em cada carbono estiverem em lados opostos da dupla ligação, a geometria da ligação será designada pela letra E (do alemão /Entgegen/, *“opostos”*).
+
+

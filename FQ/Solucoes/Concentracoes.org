@@ -82,6 +82,34 @@ Encontrar a molaridade de uma solução aquosa que contém 2,30 g de álcool et�
 #+end_answer
 #+LATEX: }
 
+* Soluções iônicas
+
+** Soluções iônicas
+
+- Ocorre quando solutos iônicos na água e eles sofrem uma dissociação iônica, ou seja, os seus íons são separados e ficam no meio aquoso.
+- Ex: \ch{KNO3} = 1 \unit{\mol\per\litre}
+  
+#+begin_export latex
+\begin{tcolorbox}[ams align*]
+\ch{KNO3\aq ->} &  \ch{K^+ \aq} & + &  \ch{NO3^-\aq} \\
+1 M  \ch{-> }& 1 M & & 1 M 
+\end{tcolorbox}
+#+end_export
+
+- Ex: \ch{Ba(NO3)2} = 0,5 \unit{\mol\per\litre}
+
+  #+begin_export latex
+\begin{tcolorbox}[ams align*]
+\ch{Ba(NO3)2\aq ->} &  \ch{Ba^{2+} \aq} & + &  2  \ch{NO3^-\aq} \\
+0,5 M  & 0,5 M & &  2 \times 0,5 M \\ 
+%0,5 M  & 0,5 M & 1 M \\
+\end{tcolorbox}
+#+end_export
+
+
+
+
+
 
 * Percentual de uma solução
 
@@ -210,7 +238,7 @@ d=\frac{m}{v} \Rightarrow 1 \text{g/mL}=\frac{m}{2000~\text{mL}} \Rightarrow  m 
 
 #+begin_export latex
 \begin{align*}
-\frac{0,9~g}{10^6~ \cancel{g}} \cdot 2000~\text{\cancel{g}} \Rightarrow 1,8 \times 10^{-3}~\text{g de F} 
+\frac{0,9~g}{10^6~ \cancel{mL}} \cdot 2000~\text{\cancel{mL}} \Rightarrow 1,8 \times 10^{-3}~\text{g de F} 
 \end{align*}
 #+end_export
   
@@ -316,8 +344,8 @@ Se misturarmos 400 mL de uma solução aquosa de NaC$\ell$ 0,2 mol/L com 250 mL 
 \end{tikzpicture}
 \begin{center}
 \begin{tabular}{ccc}
-Download Aula & & \\%Lista de Exercícios
-\qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Solucoes.pdf} \\  %\qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+Download Aula \\ % & & Lista de Exercícios\\
+\qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Solucoes.pdf} \\% & &  \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Lista_Solucoes.pdf}\\
  \end{tabular}
  \end{center}
 #+end_export

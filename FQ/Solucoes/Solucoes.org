@@ -1,4 +1,4 @@
-#+TITLE: Soluções 
+#+TITLE: 
 
 * Soluções
 
@@ -83,4 +83,49 @@
 - As moléculas da substância têm mais energia cinética a temperaturas mais altas, o que torna mais provável que elas colidam com as moléculas do solvente e se dissolvam.
 
 
+* Densidade
  
+** Densidade
+
+
+- Densidade das soluções é uma propriedade física dessas misturas homogêneas, ou seja, pode ser obtida por meio da determinação laboratorial de algumas variáveis, a exemplo da temperatura, peso, volume.
+
+  #+begin_export latex
+  \begin{tcolorbox}[ams align*]
+  \mathcal{d}=\frac{m}{v}
+  \end{tcolorbox}
+  #+end_export
+
+  - A densidade pode ser expressa em \unit{\gram\per\litre}, \unit{\gram\per\ml}, \unit{\gram\per\cubic\centi\metre} , entre outras unidades.
+
+ - A densidade é uma propriedade específica da matéria, podendo ser utilizada para identificar substâncias, determinar propriedades da matéria e controlar a qualidade.
+
+** Exemplo
+
+#+begin_question
+Uma quantidade igual a 40,0 g de \ch{KNO3} foi dissolvida em 190 \unit{\gram\per\cubic\centi\metre} de água, resultando em 200 \unit{\gram\per\cubic\centi\metre} de solução. Calcule a densidade em \unit{\gram\per\litre} dessa solução. Considere: $\mathcal{d}_{\text{água}}$ = 1 \unit{\gram\per\ml}.
+#+end_question 
+
+
+
+** 
+
+#+ATTR_LATEX: :options [print=true]
+ #+begin_answer
+- 1: :: Calcular massa do solvente.
+ #+begin_export latex
+\begin{align*}
+\mathcal{d}=\frac{m_1}{v} \Rightarrow 1 = \frac{m_1}{190} \Rightarrow m_1= 190\ \unit{g} 
+\end{align*}
+ #+end_export
+
+- 2: :: Transformação da unidade do volume de cm^3 para L. 1 cm^3 = 1 mL. 200 mL = 0,2 L
+- 3: :: Cálculo da densidade da solução.
+ #+begin_export latex
+\begin{align*}
+\mathcal{d} = \frac{m_1 + m_2}{V} \Rightarrow \mathcal{d} = \frac{40 + 190}{0,2}\\
+\mathcal{d} = 1150 ~\unit{\gram\per\litre}
+\end{align*}
+ #+end_export
+       
+ #+end_answer

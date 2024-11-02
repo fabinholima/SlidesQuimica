@@ -1,0 +1,39 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/fabio/Nextcloud/SlidesQuimica/FQ/Solucoes/Concentracoes.org
+
+
+* Soluções iônicas
+:PROPERTIES:
+:ARCHIVE_TIME: 2024-11-01 Fri 15:17
+:ARCHIVE_FILE: ~/Nextcloud/SlidesQuimica/FQ/Solucoes/Concentracoes.org
+:ARCHIVE_OLPATH: Soluções iônicas
+:ARCHIVE_CATEGORY: Concentracoes
+:END:
+
+- Ocorre quando solutos iônicos na água e eles sofrem uma dissociação iônica, ou seja, os seus íons são separados e ficam no meio aquoso.
+- Ex: \ch{KNO3} = 1 \unit{\mol\per\litre}
+  
+#+begin_export latex
+\begin{tcolorbox}[ams align*]
+\ch{KNO3\aq ->} &  \ch{K^+ \aq} & + &  \ch{NO3^-\aq} \\
+1 M  \ch{-> }& 1 M & & 1 M 
+\end{tcolorbox}
+#+end_export
+
+- Ex: \ch{Ba(NO3)2} = 0,5 \unit{\mol\per\litre}
+
+  #+begin_export latex
+\begin{tcolorbox}[ams align*]
+\ch{Ba(NO3)2\aq ->} &  \ch{Ba^{2+} \aq} & + &  2  \ch{NO3^-\aq} \\
+0,5 M  & 0,5 M & &  2 \times 0,5 M \\ 
+%0,5 M  & 0,5 M & 1 M \\
+\end{tcolorbox}
+#+end_export
+
+
+
+
+
+

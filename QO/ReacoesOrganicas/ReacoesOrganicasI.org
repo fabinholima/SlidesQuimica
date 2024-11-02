@@ -234,7 +234,7 @@ Onde *AB* = @@latex: \ch{H2}, HX, \ch{H2O}, \ch{X2}, ROH @@
 	\chemmove{
 	\node[single arrow, draw=black, fill=red8!30, 
 	minimum width = 10pt, single arrow head extend=3pt,
-	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem decrescente de estabilidade dos carbocátions}; % length of arrow
+	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem descrescente de estabilidade dos carbocátions}; % length of arrow
 	}
 	\end{center}
 #+end_export

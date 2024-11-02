@@ -27,7 +27,26 @@
 #+LATEX_COMPILER: lualatex 
 
 
+#+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
+
+
+
+
+
+
+#+begin_comment
+
+#+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
+
+
+
+
+
+
 #+INCLUDE: "FQ/Solucoes/Solucoes.org"
 #+INCLUDE: "FQ/Solucoes/Concentracoes.org"
 
 
+
+
+#+end_comment
