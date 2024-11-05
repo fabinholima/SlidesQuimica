@@ -1,26 +1,60 @@
 * Slides Química do Ensino Medio
 
-* QG = Química Geral
+** Química Ambiental
+
+- Introdução da Química Ambiental  
+- Aquecimento global  
+- Camada de ozônio e efeito estufa  
+- Química atmosférica  
+- Energias Renováveis  
+- Química do Petróleo  
+- Química da Água  
+- Química do Solo 
+- Ciclos Biogequimicos 
+
+
+**  Química Geral
+
+- '[R]' Introdução ao estudo da química  
+- Atomística  
+- Tabela Periódica  
+- Estequiometria  
+- Reações químicas  
+- Ligações Químicas   
+- Funções Inorgânicas  
+- Teoria Ácido-base  
+- Estudo dos Gases  
+- Substâncias Químicas
+- Soluções 
 
 
 
 * FQ = Físico Química
 
-
-
-
-** Radioatividade '[R]'
+- '[]' Termoquímica
+- Entalpia de Formação  
+- Leis de Hess
+- Energia de Ligação
+- Cinética Química
+- Equilíbrio Químico
+- Equilíbrio Iônica
+- Constante de Solubilidade         
+- '[X]' Radioatividade 
 
 * QO = Química Orgânica
-** Introdução Química Organica
-** Cadeias Carbônicas '[X]'
-** Hidrocarbonetos '[-]'
-** Funções Oxigenadas '[-]'
-** Funcos Nitrogenadas '[]'
-** Funcoes Sulfuradas '[]'
-** Isomeria Plana '[X]'
-** Isomeria Geométrica '[X]'
-** Carboidratos '[]
-** Polimeros '[]'
-** Lípidios '[]'
-** Reações Orgânicas '[X]'
+- '[X]' Introdução Química Organica
+- Cadeias Carbônicas '[X]'
+- Hidrocarbonetos '[-]'
+- Funções Oxigenadas '[-]'
+- Funcos Nitrogenadas '[]'
+- Funcoes Sulfuradas '[]'
+- Isomeria Plana '[X]'
+- Isomeria Geométrica '[X]'
+- Isomeria Òptica  
+- Carboidratos '[]
+- Polimeros '[]'
+- Lípidios '[]'
+- Reações Orgânicas '[X]'
+- Acidez e Basicidade em compostos orgânicos '[]' 
+
+
