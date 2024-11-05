@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{test-1=={\begin {description} \item [{1:}] Calcular massa do solvente. \begin {align*} \mathcal {d}=\frac {m_1}{v} \Rightarrow 1 = \frac {m_1}{190} \Rightarrow m_1= 190\ \unit {g} \end {align*} \par \item [{2:}] Transformação da unidade do volume de cm\textsuperscript {3} para L. 1 cm\textsuperscript {3} = 1 mL. 200 mL = 0,2 L \item [{3:}] Cálculo da densidade da solução. \begin {align*} \mathcal {d} = \frac {m_1 + m_2}{V} \Rightarrow \mathcal {d} = \frac {40 + 190}{0,2}\\ \mathcal {d} = 1150 ~\unit {\gram \per \litre } \end {align*} \end {description}}||test-2=={\begin {tcolorbox}[ams align*] \mathcal {C}=& \frac {m_{soluto}}{V_{\text {solu\c {c}\~ao}}} \\ m_{soluto} = & \mathcal {C} \cdot V(mL)_{\text {solu\c {c}\~ao}}\\ m_{soluto}= & 58\;\unit {\gram \per \cancel \litre } \cdot 0,25\; \unit {\cancel \litre }\\ m_{soluto}= & 14,625\; \unit {\gram } \end {tcolorbox}}||test-3=={\begin {tcolorbox}[ams align*] \mathcal {M}=& \frac {m_{\rm massa\; soluto}}{MM_{massa\;molar} \cdot V_{\text { solu\c {c}\~ao}}}\\ \mathcal {M}=& \frac {2,3}{46,07\cdot 3,5}\\ \mathcal {M}=& 0,0143\; \unit {\mol \per \litre } \end {tcolorbox}}||test-4=={O título em massa é calculado através da relação entre massa de soluto e massa da solução, ou seja, 40 g/1000 g = \alert {0,04}. Portanto, a porcentagem em massa de açúcar na solução é de \alert {4\%}.}||test-5=={\scriptsize \begin {description} \item [{1:}] Estimar a massa do soluto \end {description} \begin {align*} \mathcal {M}=\frac {m}{MM \cdot V} \Rightarrow 1 = \frac {m}{98 \cdot 1 } \Rightarrow m = 98 \; \text {g de}~ \ch {H2SO4} \end {align*} \begin {description} \item [{2:}] Relacionar com densidade para achar o volume \end {description} \begin {align*} \mathcal {d}=\frac {m}{v} \Rightarrow 1,84 ~\text {g/cm$^3$}=\frac {98}{v} \Rightarrow v=53,26 ~\text {mL} \end {align*} \begin {description} \item [{3:}] Relacione a pureza \begin {align*} & 53,26~\text { mL} -\!\!\!-\!\!\!- 98~\text {\%}\\ & x~\text {mL} -\!\!\!-\!\!\!- 100~\text {\%}\\ & x= 54,4 ~\text {mL} \end {align*} \end {description}}||test-6=={\par \par Usar a densidade \par \begin {align*} d=\frac {m}{v} \Rightarrow 1 \text {g/mL}=\frac {m}{2000~\text {mL}} \Rightarrow m = 2000 \; \text {g de \ch {H2O}} \end {align*} \par Cálculo da massa de flúor nesses 2 litros dessa água \par \begin {align*} \frac {0,9~g}{10^6~ \cancel {mL}} \cdot 2000~\text {\cancel {mL}} \Rightarrow 1,8 \times 10^{-3}~\text {g de F} \end {align*} \par Isso corresponde a 1,8 mg de flúor.}||test-7=={Volume adicionado (V\textsubscript {a}) = 75 mL; Volume inicial (V\textsubscript {i}) = 25 mL; Molaridade inicial (\(\mathcal {M}_i\)) = 0,2 \unit {\mol \per \litre }; Molaridade final (\(\mathcal {M}_f\)) = ? \par \begin {align*} \mathcal {M}_i \cdot V_i = \mathcal {M}_f \cdot V_f \\ 0,2 \cdot 25 = \mathcal {M}_f \cdot 100\\ \mathcal {M}_f= 0,05~\unit {\mol \per \litre } \end {align*}}||test-8=={\small \begin {tcolorbox}[ams align*] \mathcal {M}_f= & \frac {\mathcal {M}_1 \cdot V_1 + \mathcal {M}_2 \cdot V_2}{V_1 + V_2}\\ \mathcal {M}_f= & \frac {0,2 \cdot 400 + 0,4 \cdot 250}{400 + 250}\\ \mathcal {M}_f= & \frac {80+100}{650}\\ \mathcal {M}_f= & 0,27 \unit {\mol \per \litre } \end {tcolorbox}}}
-\XSIM{exercise-body}{test-1=={Uma quantidade igual a 40,0 g de \ch {KNO3} foi dissolvida em 190 \unit {\gram \per \cubic \centi \metre } de água, resultando em 200 \unit {\gram \per \cubic \centi \metre } de solução. Calcule a densidade em \unit {\gram \per \litre } dessa solução. Considere: \(\mathcal {d}_{\text {água}}\) = 1 \unit {\gram \per \ml }.}||test-2=={Qual a massa de cloreto de sódio (NaC\(\ell \)) necessária para preparar 250 mL de uma solução aquosa de concentração igual a 58,5 \unit {\gram \per \litre }.}||test-3=={Encontrar a molaridade de uma solução aquosa que contém 2,30 g de álcool etílico (EtOH; \ch {C2H5OH}) (MM = 46,07 \unit {\gram \per \mole }) em 3,50 L.}||test-4=={Uma solução foi preparada pela dissolução de 40 gramas de açúcar em 960 gramas de água. Determine seu título e sua porcentagem em massa?}||test-5=={Descreva o procedimento para preparar uma solução de Ácido sulfúrico com concentração de 1 \unit {\mol \per \litre } em 1 L de solução com pureza de 98\%. Dados: MM (\ch {H2SO4})= 98 \unit {\gram \per \mol } d=1,84 g/cm\textsuperscript {3}. \par \begin {center} \includegraphics [scale=.3]{FQ/Solucoes/acid.png} \end {center}}||test-6=={\alert {(UFSCAR-SP)} O flúor tem um papel importante na prevenção e controle da cárie dentária. Estudos demonstram que, após a fluoretação da água, os índices de cáries nas populações têm diminuído. O flúor também é adicionado a produtos e materiais odontológicos. Suponha que o teor de flúor em determinada água de consumo seja 0,9 ppm (partes por milhão) em massa. Considerando a densidade da água 1g/mL, a quantidade, em miligramas, de flúor que um adulto ingere ao tomar 2 litros dessa água, durante um dia, é igual a \par \begin {choice}(5) \choice 0,09. \choice 0,18. \choice 0,90. \choice 1,80. \choice 18,0 \end {choice}}||test-7=={Ao adicionar uma quantia de 75mL de água diretamente em 25mL de uma solução 0,20 \unit {\mol \per \litre } de cloreto de sódio (NaC\(\ell \)), obtemos uma solução de concentração molar igual a:}||test-8=={Se misturarmos 400 mL de uma solução aquosa de NaC\(\ell \) 0,2 mol/L com 250 mL de outra solução de NaC\(\ell \) 0,4 mol/L, teremos uma nova solução. Qual será a concentração em \unit {\mol \per \litre } da solução final?}}
+\XSIM{solution-body}{test-1=={\scriptsize { Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert {cis}. \par \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](-[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]} }}}
+\XSIM{exercise-body}{test-1=={\scriptsize \{ (\alert {UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial: \par \begin {center} {\scriptsize \par \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]} } \end {center} Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente: \par \begin {choice}(2) \choice cis e cis \choice cis e trans \choice trans e cis \choice trans e trans \end {choice} \}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{1||2||3||4||5||6||7||8}
+\XSIM{order}{1}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{test-1=={true}||test-2=={true}||test-3=={true}||test-4=={true}||test-5=={true}||test-6=={true}||test-7=={true}||test-8=={true}}
+\XSIM{used}{test-1=={true}}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{test-1=={true}||test-2=={true}||test-3=={true}||test-4=={true}||test-5=={true}||test-6=={true}||test-7=={true}||test-8=={true}}
-\XSIM{total-number}{8}
+\XSIM{printed}{test-1=={true}}
+\XSIM{total-number}{1}
 \XSIM{exercise}{0}
-\XSIM{test}{8}
+\XSIM{test}{1}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{1=={test}||2=={test}||3=={test}||4=={test}||5=={test}||6=={test}||7=={test}||8=={test}}
-\XSIM{collections}{test-1=={all exercises}||test-2=={all exercises}||test-3=={all exercises}||test-4=={all exercises}||test-5=={all exercises}||test-6=={all exercises}||test-7=={all exercises}||test-8=={all exercises}}
-\XSIM{collection:all exercises}{test-1||test-2||test-3||test-4||test-5||test-6||test-7||test-8}
+\XSIM{idtypes}{1=={test}}
+\XSIM{collections}{test-1=={all exercises}}
+\XSIM{collection:all exercises}{test-1}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{8}
-\XSIM{id}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
-\XSIM{ID}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
-\XSIM{counter}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
-\XSIM{counter-value}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
+\setcounter{totaltestinall exercises}{1}
+\XSIM{id}{test-1=={1}}
+\XSIM{ID}{test-1=={1}}
+\XSIM{counter}{test-1=={1}}
+\XSIM{counter-value}{test-1=={1}}
 \XSIM{solution}{}
-\XSIM{section-value}{test-1=={2}||test-2=={3}||test-3=={3}||test-4=={5}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
-\XSIM{section}{test-1=={2}||test-2=={3}||test-3=={3}||test-4=={5}||test-5=={5}||test-6=={6}||test-7=={7}||test-8=={8}}
-\XSIM{sectioning}{test-1=={{0}{2}{0}{0}{0}}||test-2=={{0}{3}{0}{0}{0}}||test-3=={{0}{3}{0}{0}{0}}||test-4=={{0}{5}{0}{0}{0}}||test-5=={{0}{5}{0}{0}{0}}||test-6=={{0}{6}{0}{0}{0}}||test-7=={{0}{7}{0}{0}{0}}||test-8=={{0}{8}{0}{0}{0}}}
+\XSIM{section-value}{test-1=={2}}
+\XSIM{section}{test-1=={2}}
+\XSIM{sectioning}{test-1=={{0}{2}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{test-1=={8}||test-2=={12}||test-3=={14}||test-4=={19}||test-5=={20}||test-6=={24}||test-7=={28}||test-8=={31}}
-\XSIM{page}{test-1=={8}||test-2=={12}||test-3=={14}||test-4=={19}||test-5=={20}||test-6=={24}||test-7=={28}||test-8=={31}}
+\XSIM{page-value}{test-1=={8}}
+\XSIM{page}{test-1=={8}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

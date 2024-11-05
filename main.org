@@ -27,16 +27,24 @@
 #+LATEX_COMPILER: lualatex 
 
 
+
+
+
+
 #+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
-
-
-
 
 
 
 #+begin_comment
 
+332
+
+334
+
+
+
 #+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
+
 
 
 

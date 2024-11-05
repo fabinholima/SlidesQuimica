@@ -281,3 +281,24 @@ Na estrutura *A* o grupo funcional corresponde a grupo nitro e na estrutura *B* 
 
 
 #+end_answer
+
+
+
+
+** Fim da Aula
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula  \\%& & Lista de Exercícios \\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Isomeria/Isomeria_Plana.pdf} \\  %& & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+   

@@ -4,12 +4,25 @@ https://www.fcav.unesp.br/Home/departamentos/tecnologia/LUCIANAMARIASARAN/aula-i
 #+end_comment
 
 
+#+TITLE: Isomeria Óptica 
+
+
 * Isomeria Ótica
 
-** Isomeria Ótica
+** Isomeria Óptica
 
 - Tipo de isomeria em que uma molécula é a imagem especular da outra.
 - Ocorre em moléculas que não apresentam plano de simetria (moléculas assimétricas).
 - *Isômeros Óticos* ou *Enantiomorfos* ou *Enantiômeros*
 
 
+** Isômeros Ópticos
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Definição}
+#+begin_bclogo
+Estereoisômeros são substâncias que têm a mesma sequência de átomos ligados, mas que se diferenciam no arranjo espacial dos átomos. Eles também são chamados de isômeros configuracionais
+#+end_bclogo 
+
+Existem duas classes de isômeros ópticos:
+- *Enantiômeros*: estereoisômeros que são imagens especulares um do outro, que não se superpõem.
+- *Diastereômeros*: estereoisômeros que não são imagens especulares um do outro e que não se superpõem.

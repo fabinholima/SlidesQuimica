@@ -138,6 +138,8 @@
 #+LATEX_HEADER: %%% INCLUDE PAGES PDFs
 #+LATEX_HEADER: \usepackage{pdfpages}
 #+LATEX_HEADER: \usepackage{mol2chemfig}
+#+LATEX_HEADER: \usepackage{xymtexpdf}
+#+LATEX_HEADER: \changeunitlength{0.08pt}
 #+LATEX_HEADER: \usepackage{subfig,caption}
 #+LATEX_HEADER: \usepackage{wrapfig}
 #+LATEX_HEADER: \usepackage{enumitem}
