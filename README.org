@@ -2,59 +2,64 @@
 
 ** Química Ambiental
 
-- Introdução da Química Ambiental  
-- Aquecimento global  
-- Camada de ozônio e efeito estufa  
-- Química atmosférica  
-- Energias Renováveis  
-- Química do Petróleo  
-- Química da Água  
-- Química do Solo 
-- Ciclos Biogequimicos 
+- [ ] Introdução da Química Ambiental  
+- [ ] Aquecimento global  
+- [ ] Camada de ozônio e efeito estufa  
+- [ ] Química atmosférica  
+- [ ] Energias Renováveis  
+- [ ] Química do Petróleo  
+- [ ] Química da Água  
+- [ ] Química do Solo 
+- [ ] Ciclos Biogequimicos 
 
 
 **  Química Geral
 
-- '[R]' Introdução ao estudo da química  
-- Atomística  
-- Tabela Periódica  
-- Estequiometria  
-- Reações químicas  
-- Ligações Químicas   
-- Funções Inorgânicas  
-- Teoria Ácido-base  
-- Estudo dos Gases  
-- Substâncias Químicas
-- Soluções 
+- [ ] Introdução ao estudo da química  
+- [ ] Atomística  
+- [ ] Tabela Periódica  
+- [ ] Reações químicas  
+- [ ] Ligações Químicas   
+- [ ] Funções Inorgânicas  
+- [ ] Teoria Ácido-base  
+- [ ] Estudo dos Gases  
+- [ ] Substâncias Químicas
+- [ ] Estequiometria  
+- [ ] Soluções 
 
 
 
-* FQ = Físico Química
+** Físico Química
 
-- '[]' Termoquímica
-- Entalpia de Formação  
-- Leis de Hess
-- Energia de Ligação
-- Cinética Química
-- Equilíbrio Químico
-- Equilíbrio Iônica
-- Constante de Solubilidade         
-- '[X]' Radioatividade 
+- [ ] Termoquímica
+- [ ] Entalpia de Formação  
+- [ ] Leis de Hess
+- [ ] Energia de Ligação
+- [ ] Cinética Química
+- [ ] Equilíbrio Químico
+- [ ] Equilíbrio Iônica
+- [ ] Constante de Solubilidade
+- [X] Nox
+- [X] Óxido Redução
+- [X] Balanceamento Redox
+- [-] Pilhas
+- [ ] Eletrólise                
+- [X] Radioatividade 
 
-* QO = Química Orgânica
-- '[X]' Introdução Química Organica
-- Cadeias Carbônicas '[X]'
-- Hidrocarbonetos '[-]'
-- Funções Oxigenadas '[-]'
-- Funcos Nitrogenadas '[]'
-- Funcoes Sulfuradas '[]'
-- Isomeria Plana '[X]'
-- Isomeria Geométrica '[X]'
-- Isomeria Òptica  
-- Carboidratos '[]
-- Polimeros '[]'
-- Lípidios '[]'
-- Reações Orgânicas '[X]'
-- Acidez e Basicidade em compostos orgânicos '[]' 
+** Química Orgânica
+- [X] Introdução Química Organica
+- [-] Cadeias Carbônicas
+- [ ] Hidrocarbonetos
+- [ ] Funções Oxigenadas
+- [ ] Funcos Nitrogenadas
+- [ ] Funcoes Sulfuradas
+- [ ] Isomeria Plana
+- [ ] Isomeria Geométrica
+- [ ] Isomeria Òptica  
+- [ ] Carboidratos
+- [ ] Polimeros
+- [ ] Lípidios
+- [X] Reações Orgânicas
+- [ ] Acidez e Basicidade em compostos orgânicos 
 
 
