@@ -31,7 +31,7 @@
 #+LATEX_HEADER: \usepackage{tasks}
 #+LATEX_HEADER: \newcounter{paragraph}
 #+LATEX_HEADER: %\usepackage[dvipsnames,svgnames]{xcolor}
-#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage[dvipsnames]{xcolor}
 #+LATEX_HEADER: \usepackage{annotate-equations}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
@@ -90,13 +90,16 @@
 
 #+LATEX_HEADER: \usepackage{colortbl}
 #+LATEX_HEADER: \usepackage[tikz]{bclogo}
+#+LATEX_HEADER: \usetikzlibrary{calc,fadings,shadings}
 #+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-#+LATEX_HEADER: \usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
-#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning,snakes}
+#+LATEX_HEADER: \usetikzlibrary{arrows,snakes,shapes,arrows.meta,decorations.markings,shapes.symbols}
+#+LATEX_HEADER: \usetikzlibrary{backgrounds,shapes.geometric}
+#+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,arrows,positioning}
 #+LATEX_HEADER: \usepackage{tikzpeople}
 #+LATEX_HEADER: \usepackage{qrcode,hyperref}
 #+LATEX_HEADER: \usepackage{upgreek}
 #+LATEX_HEADER: %\usepackage[version=4]{mhchem}
+
 #+LATEX_HEADER: \usepackage{tabularray}
 
 
@@ -139,7 +142,8 @@
 #+LATEX_HEADER: \usepackage{pdfpages}
 #+LATEX_HEADER: \usepackage{mol2chemfig}
 #+LATEX_HEADER: \usepackage{xymtexpdf}
-#+LATEX_HEADER: \changeunitlength{0.08pt}
+#+LATEX_HEADER: %\changeunitlength{0.08pt}
+#+LATEX_HEADER: %%\wedgehasheddash
 #+LATEX_HEADER: \usepackage{subfig,caption}
 #+LATEX_HEADER: \usepackage{wrapfig}
 #+LATEX_HEADER: \usepackage{enumitem}
@@ -149,6 +153,8 @@
 #+LATEX_HEADER: \usepackage{array} % ajust colunm table
 #+LATEX_HEADER: \usepackage{cancel}
 #+LATEX_HEADER: \usepackage[controls]{animate}
+#+LATEX_HEADER: \usepackage{movie15}
+
 #+LATEX_HEADER: \renewcommand{\CancelColor}{\color{red}}
 
 #+LATEX_HEADER: %%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX 

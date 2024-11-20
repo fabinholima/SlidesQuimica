@@ -31,15 +31,16 @@
 
 
 
-#+INCLUDE: "QO/Isomeria/IsomeriaGeometrica.org"
+#+INCLUDE: "QO/Isomeria/IsomeriaOptica.org"
 
 
 
 #+begin_comment
 
-332
+x»»332
 
 334
+
 
 
 

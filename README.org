@@ -17,12 +17,17 @@
 
 - [ ] Introdução ao estudo da química  
 - [ ] Atomística  
-- [ ] Tabela Periódica  
+- [ ] Tabela Periódica
+- [ ] Propriedades Periódicas 
 - [ ] Reações químicas  
-- [ ] Ligações Químicas   
+- [ ] Ligações Químicas
+- [ ] Geometria Molecular
+- [ ] Polaridade e Interação Molecular   
 - [ ] Funções Inorgânicas  
-- [ ] Teoria Ácido-base  
+- [ ] Teoria Ácido-base
+- [ ] Mol e Massa Molar  
 - [ ] Estudo dos Gases  
+- [ ] Fração Molar e Lei de Dalton
 - [ ] Substâncias Químicas
 - [ ] Estequiometria  
 - [ ] Soluções 
@@ -37,7 +42,8 @@
 - [ ] Energia de Ligação
 - [ ] Cinética Química
 - [ ] Equilíbrio Químico
-- [ ] Equilíbrio Iônica
+- [ ] Equilíbrio Iônico
+- [ ] Propriedades Coligativas
 - [ ] Constante de Solubilidade
 - [X] Nox
 - [X] Óxido Redução
@@ -48,14 +54,15 @@
 
 ** Química Orgânica
 - [X] Introdução Química Organica
-- [-] Cadeias Carbônicas
-- [ ] Hidrocarbonetos
-- [ ] Funções Oxigenadas
+- [X] Cadeias Carbônicas
+- [X] Hidrocarbonetos
+- [X] Funções Oxigenadas
 - [ ] Funcos Nitrogenadas
 - [ ] Funcoes Sulfuradas
-- [ ] Isomeria Plana
-- [ ] Isomeria Geométrica
-- [ ] Isomeria Òptica  
+- [ ] Funções Mistas
+- [X] Isomeria Plana
+- [X] Isomeria Geométrica
+- [X] Isomeria Òptica  
 - [ ] Carboidratos
 - [ ] Polimeros
 - [ ] Lípidios

@@ -7,7 +7,7 @@ https://www.fcav.unesp.br/Home/departamentos/tecnologia/LUCIANAMARIASARAN/aula-i
 #+TITLE: Isomeria Óptica 
 
 
-* Isomeria Ótica
+* Isomeria Óptica
 
 ** Isomeria Óptica
 
@@ -15,14 +15,366 @@ https://www.fcav.unesp.br/Home/departamentos/tecnologia/LUCIANAMARIASARAN/aula-i
 - Ocorre em moléculas que não apresentam plano de simetria (moléculas assimétricas).
 - *Isômeros Óticos* ou *Enantiomorfos* ou *Enantiômeros*
 
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Definição}
+#+begin_bclogo
+*Estereoisômeros* são substâncias que têm a mesma sequência de átomos ligados, mas que se diferenciam no arranjo espacial dos átomos. Eles também são chamados de isômeros configuracionais.
+#+end_bclogo 
+  
+
+** 
+- Esta molécula não apresenta nenhum plano de simetria.
+- É denominada molécula assimétrica ou molécula *quiral*.
+- Se a colocarmos diante de um espelho, a imagem especular será diferente dela.
+
+** 
+
+#+ATTR_LATEX: :scale .45
+[[./Isomeria_Espelho.jpg]]
+
+
+
+* Carbono Quiral
+
+** Carbono Quiral
+
+- Condição para haver isômeros óticos: presença de carbono *quiral* ou *assimétrico*
+
+#+ATTR_LATEX: :options [couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{}
+#+begin_bclogo
+#+begin_export latex
+	\begin{center}
+		\resetchemfig
+		\schemestart
+		\chemfig{R_2-@{a1}\textcolor{red}{C}([:90]-R_1)([:-90]-R_3)-R_4} \qquad \qquad 	\arrow 	\chemfig{Br-\textcolor{red}{C}([:90]-F)([:-90]-NH_2)-OH}
+		\schemestop
+		\chemmove{
+		\node (text) [draw=none, font=\bfseries] at (-8,2){Carbono Quiral};
+		\draw[red,shorten <=2pt,shorten >=1pt] (text) -- (a1) {};
+		}
+	\end{center}
+#+end_export
+R1, R2, R3 e R4 são todos ligantes diferentes 
+#+end_bclogo
+
+
+
+** Compostos oticamente ativos
+
+
+ - Exemplo açúcares, incluindo a *sacarose.* \textcolor{red}{$*$} Este asterisco sinaliza os carbonos assimétricos.
+
+   
+*** A block                                           :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+
+
+
+    #+begin_export latex
+    \scriptsize
+\schemestart
+	\resetchemfig	\chemname{\chemfig{[2]CH_2@{a1}OH@{a2}-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a3}OH@{a4})-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a5}OH@{a6})-C\rlap{\large\textcolor{red}{*}}(-[4]@{a7}HO@{a8})([0]-H)-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a9}OH@{a10})-@{AA1}C(=[1]@{AA1a}O)(-[3]H)@{AA2}}}{Glicose}
+	 %\arrow{0}[2,0]
+	\schemestop
+	\chemmove{
+	\tikzstyle{colorir1}=[circle,inner sep=1pt,fill=ForestGreen,fill opacity=0.5,]
+	\tikzstyle{colorir2}=[inner ysep=.1pt,inner xsep=2pt,fill=Plum,fill opacity=0.3,]
+	\node[colorir1,fit=(a1) (a2) ]{};
+	\node[colorir1,fit=(a3) (a4) ]{};
+	\node (add1) [colorir1,fit=(a5) (a6) ]{};
+	\node[colorir1,fit=(a7) (a8) ]{};
+	\node[colorir1, fit=(a9) (a10) ]{};
+	\node (ad) [colorir2, ellipse, rotate=0, fit=(AA1) (AA1a) (AA2) (AA1)] {}; 
+	\node[draw=none, right=.3 cm of ad, blue, font=\bfseries] {Aldeído}; 
+	\node[draw=none, right=.3 cm of add1, blue, font=\bfseries] {poliálcool};   
+	}
+	
+    #+end_export
+
+
+    
+*** A block                                           :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+
+
+    #+begin_export latex
+\scriptsize
+\schemestart
+	 \resetchemfig \chemname{\chemfig{[2]CH_2@{i1}OH@{i2}-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{i3}OH@{i4})-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{i5}OH@{i6})-C\rlap{\large\textcolor{red}{*}}(-[4]@{i7}HO@{i8})([0]-H)-@{j1}C([:0]=O@{j2})-[2]CH_2@{i9}OH@{i10}}}{Frutose}
+	\schemestop
+	\chemmove{
+	\tikzstyle{colorir1}=[circle,inner sep=1pt,fill=ForestGreen,fill opacity=0.5,]
+	\tikzstyle{colorir2}=[inner ysep=5pt,inner xsep=3pt,fill=Plum,fill opacity=0.3,]
+	\node[colorir1,fit=(i1) (i2) ]{};
+	\node[colorir1,fit=(i3) (i4) ]{};
+	\node (add1) [colorir1,fit=(i5) (i6) ]{};
+    \node[colorir1,fit=(i7) (i8) ]{};
+    \node[colorir1,fit=(i9) (i10) ]{};
+    \node (add) [colorir2,ellipse, rotate=0,fit=(j1) (j2) ]{};
+    	\node[draw=none, right=.3 cm of add, blue, font=\bfseries] {Cetona}; 
+    \node[draw=none, right=.3 cm of add1, blue, font=\bfseries] {poliálcool};	 
+	}
+    #+end_export
+
+
+
+
+
+* Isômeros Ópticos
 
 ** Isômeros Ópticos
 
-#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Definição}
-#+begin_bclogo
-Estereoisômeros são substâncias que têm a mesma sequência de átomos ligados, mas que se diferenciam no arranjo espacial dos átomos. Eles também são chamados de isômeros configuracionais
-#+end_bclogo 
 
 Existem duas classes de isômeros ópticos:
 - *Enantiômeros*: estereoisômeros que são imagens especulares um do outro, que não se superpõem.
+
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[thick,scale=1, every node/.style={scale=1}]
+%\draw[help lines] (-10,-10) grid (10,10);
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+%\node (wall1) [ground, minimum width=2cm] {};
+\node (d1) [draw=none] at (-2,0){
+\dtetrahedralS{0==C;1==COOH;2==CH$_{3}$;3A==H;4B==OH}};
+\node (0,0) at (0,0) [ground,right= 1.5cm of d1, minimum height=2cm] (espelho) {};
+\node (d2) [draw=none,right=.3cm] at (2,0){
+\DtetrahedralS{0==C;1==COOH;2==CH$_{3}$;3A==H;4B==OH}};
+\node (text1) [draw=none, below=0.2cm of d1, font=\bfseries] {$\mathcal{D}$-ácido lático};
+\node (text2) [draw=none, below=0.2cm of d2, font=\bfseries] {$\mathcal{L}$-ácido lático};
+\node (text3) [draw=none, above=0.2cm of espelho, font=\bfseries] {Espelho};
+\end{tikzpicture}   
+\end{center}
+#+end_export
+
+- As linhas normais (@@latex:\ch{-}@@) representam os grupos que estão no plano do papel.
+- A linha tracejada representa o grupo que está atrás do plano.
+- A linha escura, em forma de cunha, representa o grupo que está na frente do plano do papel.
+
+
+** 
+
+
 - *Diastereômeros*: estereoisômeros que não são imagens especulares um do outro e que não se superpõem.
+
+#+begin_export latex
+\begin{center}
+\begin{XyMcompd}(600,1150)(0,50){}{}
+\tetrahedral{0==C;2B==Br;3A==H;4B==C$\ell$;%
+1==\tetrahedral{0==C;3==(yl);2B==H$_3$C;4B==OH;1A==H}
+}
+\end{XyMcompd}
+\hspace{1cm}
+\begin{XyMcompd}(600,1150)(0,50){}{}
+\tetrahedral{0==C;2B==Br;3A==H;4B==C$\ell$;%
+1==\tetrahedral{0==C;3==(yl);2B==OH;4B==CH$_3$;1A==H}
+}
+\end{XyMcompd}
+\end{center}
+
+#+end_export
+
+
+** Projeção de Fischer
+
+- Uma maneira muito simples para representar compostos orgânicos em duas dimensões foi introduzida pelo químico alemão Emmil Fischer e denomina-se *projeção de Fischer*.
+-  As projeções de Fischer para os compostos (I) e (II) são:
+
+  #+begin_export latex
+\begin{center}
+\small
+\schemestart
+\resetchemfig
+\chemname{\chemfig{C{\ell}>: C([:90]:<F)([:-90]<Br)<:H}}{I} 
+%\arrow{->}[2,0]
+\resetchemfig
+$\quad \equiv \quad$
+\chemname{\chemfig{C{\ell}-C([:90]-F)([:-90]-Br)-H}}{Projeção de Fisher}
+$\qquad \quad$
+\resetchemfig
+\chemname{\chemfig{H>: C([:90]:<F)([:-90]<Br)<:C{\ell}}}{II} 
+$\quad \equiv \quad$
+\resetchemfig
+\chemname{\chemfig{H-C([:90]-F)([:-90]-Br)-C{\ell}}}{Projeção de Fisher}
+\schemestop
+
+\end{center}
+  #+end_export
+
+- Nessas projeções, as linhas na horizontal representam grupos  que estão na frente do plano do papel e as linhas na vertical, os grupos que estão atrás do plano.
+
+** Propriedades Físicas
+
+- As propriedades físicas (PF, PE e densidade de dois enântiômeros são iguais, *exceto* o desvio sobre a luz polarizada.
+- Isômeros óticos desviam o plano de vibração da luz polarizada.
+- Um dos enantiômeros desvia o plano da luz polarizada no sentido horário e o outro no anti-horário.
+
+
+* Luz Polarizadas
+
+** Luz Polarizada
+
+
+#+begin_export latex
+\begin{center}
+%\animategraphics[autoplay,loop,width=14cm]{5}{QO/Isomeria/KLCF10-03
+\animategraphics[autoplay,loop,width=14cm]{10}{QO/Isomeria/Luz-}{0}{29}
+%\movie[autostart]{}{QO/Isomeria/KLCF10-03.gif}
+%\includemovie{2cm}{2cm}{QO/Isomeria/KLCF10-03.gif}
+\end{center}
+
+#+end_export
+
+** 
+- A luz polarizada é obtida quando a luz atravessa lentes especiais denominadas polarizadores.
+- Uma das propriedades características de moléculas quirais é a sua capacidade de desviar o plano de vibração da luz polarizada.
+- O aparelho utilizado para medir esse desvio é denominado *polarímetro*.
+- *Destrorrotatório (ou dextrógiro)*: desvia o plano da luz polarizada no sentido horário. É indicado como *(+)*.
+- *Levorrotatório (ou levógiro)*: desvia o plano da luz polarizada no sentido anti-horário. É indicado como *(-)*.
+
+
+** 
+
+- As palavras dextrorrotatório e levorrotatório vêm do latim /dexter/, *“direita”* e /laevu/, *“esquerda”*.
+#+begin_export latex
+\begin{center}
+\scalebox{1.3}{
+{\wedgehashedwedge
+\begin{tblr}{cc}
+\dtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} &
+\DtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} \\
+(I) & (II) 
+\end{tblr}
+}
+}
+\end{center}
+#+end_export
+
+- Estas moléculas parecem idênticas, mas um exame mais detalhado mostra que uma é a imagem especular da outra.
+- Estas duas formas do ácido lático são isômeros óticos e denominadas *enantiômeros*.
+
+
+** 
+
+#+begin_export latex
+\begin{center}
+\scalebox{1.3}{
+{\wedgehashedwedge
+\begin{tblr}{cc}
+\dtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} &
+\DtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} \\
+(I) & (II) 
+\end{tblr}
+}
+}
+\end{center}
+#+end_export
+
+- O composto (I) desvia o plano de vibração da luz polarizada para esquerda ou no sentido anti-horário ([$\alpha$ = -2,6^o]) e corresponde à forma do ácido lático produzido pelos músculos e responsável pela dor causada após exercícios físicos.
+- O composto (II), encontrado em grande quantidade no leite azedo, desvia o plano da luz polarizada para a direita ou no sentido horário ([$\alpha$ = +2,6^o]).
+
+
+** Mistura Racêmica 
+- É uma mistura formada por iguais quantidades de uma substância levorrotatória e seu respectivo enantiômero dextrorrotatório.
+- É *oticamente inativa*, ou seja, não desvia o plano da luz polarizada.
+
+
+** Carbonos Assimétricos 
+
+
+#+begin_export latex
+\begin{exampleblock}{Exemplo}
+\begin{center}
+\resetchemfig
+\chemname[]{\chemfig{H_3C-\mcfabove{C}{\;\textcolor{red}{*}}([:90]-H)([:-90]-Br)-\mcfabove{C}{\;\textcolor{red}{*}}([:90]-H)([:-90]-C{\ell})-CH_3}}{\bfseries 2-bromo-3-clorobutano}
+\end{center}
+\end{exampleblock}
+#+end_export
+
+- A moléculas acima apresenta dois carbonos (2 e 3) *assimétricos* (*C).
+- No caso do composto possuir *n* carbonos assimétricos, o número máximo de estereoisômeros que pode existir é *2^n*
+  
+** 
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}[inner sep=.5cm,auto=left, node distance=2cm,>=latex']
+\tikzstyle{arrow} = [thick,<->,>=stealth]
+\node (a) at (0,0) {\tetramethylene{}{1W==HO;2B==OH;3B==OH;4D==O;4W==OH}};
+\node (b) at (7,0) {\wedgehashedwedge\tetramethylene{}{1W==HO;2B==OH;3A==OH;4D==O;4W==OH}};
+\node (c) at (0,-5) {\wedgehashedwedge\tetramethylene{}{1W==HO;2A==OH;3B==OH;4D==O;4W==OH}};
+\node (d) at (7,-5) {\wedgehashedwedge\tetramethylene{}{1W==HO;2A==OH;3A==OH;4D==O;4W==OH}};
+\draw[arrow,blue,font={\bfseries\small}] (a)-- node[above=-0.3cm,rotate=0] {Diastereômeros} (b) {};
+\draw[arrow,blue,font={\bfseries\small}] (c)--node[below=-.4cm]{Diastereômeros}(d) {};
+\draw[arrow,blue,font={\bfseries\small}] (a)--node[above=.2cm,rotate=90]{Diastereômeros}(c) {};
+\draw[arrow,blue,font={\bfseries\small}] (b)--node[above=-.1cm,rotate=90]{Diastereômeros}(d) {};
+%%%% LINE RED 
+\draw[arrow,red] (d)--(a) {};
+\draw[arrow,red,font={\bfseries\small}] (b)-- node[fill=white,above=-6mm,rotate=0] {Enantiômeros} (c) {};
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+* Exemplos
+
+#+begin_question
+(*ITA*) Qual das substâncias a seguir pode ter isômeros ópticos, ou seja, contém carbono quiral?
+
+#+ATTR_LATEX: :options (2)
+#+begin_choice 
+\choice Flúor-cloro-bromo-metano
+\choice 1,2-dicloro-eteno
+\choice Metil-propano
+\choice Dimetil-propano
+\choice Normal-butanol
+#+end_choice 
+#+end_question 
+
+** 
+#+ATTR_LATEX: :options [print=true]
+ #+begin_answer
+#+begin_export latex
+\scriptsize{
+a) \chemfig{F-C([:90]-C{\ell})([:-90]-Br)-H}
+Apresenta um carbono quiral *Resposta A*
+
+b) \chemfig{H-[:240]C(-[:300]H)=[:180]C(-[:240]C{\ell})-[:120]C{\ell}}
+Apresenta uma dupla ligação isomeria geométrica 
+
+c) \chemfig{H_3C-CH([:90]-CH_3)-CH_3}
+Não apresenta carbono quiral 2 ligantes iguais 
+
+d) \chemfig{CH([:90]-CH_3)-CH_2-CH([:90]-CH_3)}
+Não apresenta carbono quiral, 4 ligantes diferentes
+
+e) \chemfig{CH_3-CH_2-CH_2-CH_3}
+Não apresenta carbono quiral, 4 ligantes diferentes
+}
+#+end_export
+ #+end_answer 
+
+
+
+** Fim da Aula
+
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tabular}{ccc}
+Download Aula  \\%& & Lista de Exercícios \\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Isomeria/Isomeria_Optica.pdf} \\  %& & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
+ \end{tabular}
+ \end{center}
+#+end_export
+
+   

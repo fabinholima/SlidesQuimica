@@ -1,7 +1,7 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{test-1=={\scriptsize { Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert {cis}. \par \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](-[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]} }}}
-\XSIM{exercise-body}{test-1=={\scriptsize \{ (\alert {UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial: \par \begin {center} {\scriptsize \par \chemfig {OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]} } \end {center} Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente: \par \begin {choice}(2) \choice cis e cis \choice cis e trans \choice trans e cis \choice trans e trans \end {choice} \}}}
+\XSIM{solution-body}{test-1=={\scriptsize { a) \chemfig {F-C([:90]-C{\ell })([:-90]-Br)-H} Apresenta um carbono quiral *Resposta A* \par b) \chemfig {H-[:240]C(-[:300]H)=[:180]C(-[:240]C{\ell })-[:120]C{\ell }} Apresenta uma dupla ligação isomeria geométrica \par c) \chemfig {H_3C-CH([:90]-CH_3)-CH_3} Não apresenta carbono quiral 2 ligantes iguais \par d) \chemfig {CH([:90]-CH_3)-CH_2-CH([:90]-CH_3)} Não apresenta carbono quiral, 4 ligantes diferentes \par e) \chemfig {CH_3-CH_2-CH_2-CH_3} Não apresenta carbono quiral, 4 ligantes diferentes }}}
+\XSIM{exercise-body}{test-1=={(\alert {ITA}) Qual das substâncias a seguir pode ter isômeros ópticos, ou seja, contém carbono quiral? \par \begin {choice}(2) \choice Flúor-cloro-bromo-metano \choice 1,2-dicloro-eteno \choice Metil-propano \choice Dimetil-propano \choice Normal-butanol \end {choice}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
@@ -29,14 +29,14 @@
 \XSIM{counter}{test-1=={1}}
 \XSIM{counter-value}{test-1=={1}}
 \XSIM{solution}{}
-\XSIM{section-value}{test-1=={2}}
-\XSIM{section}{test-1=={2}}
-\XSIM{sectioning}{test-1=={{0}{2}{0}{0}{0}}}
+\XSIM{section-value}{test-1=={5}}
+\XSIM{section}{test-1=={5}}
+\XSIM{sectioning}{test-1=={{0}{5}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{test-1=={8}}
-\XSIM{page}{test-1=={8}}
+\XSIM{page-value}{test-1=={24}}
+\XSIM{page}{test-1=={24}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

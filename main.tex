@@ -1,4 +1,4 @@
-% Created 2024-11-05 Tue 08:31
+% Created 2024-11-20 Wed 17:44
 % Intended LaTeX compiler: lualatex
 \documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
                 
@@ -31,7 +31,7 @@
 \usepackage{tasks}
 \newcounter{paragraph}
 %\usepackage[dvipsnames,svgnames]{xcolor}
-\usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{annotate-equations}
 %%% BOX EXERCISE BEAMER
 \DeclareExerciseEnvironmentTemplate{custom}{%
@@ -75,9 +75,11 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{empheq} %%% Brackers
 \usepackage{colortbl}
 \usepackage[tikz]{bclogo}
+\usetikzlibrary{calc,fadings,shadings}
 \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
-\usetikzlibrary{arrows,arrows.meta,decorations.markings,shapes.symbols}
-\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,calc,arrows,positioning,snakes}
+\usetikzlibrary{arrows,snakes,shapes,arrows.meta,decorations.markings,shapes.symbols}
+\usetikzlibrary{backgrounds,shapes.geometric}
+\usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,arrows,positioning}
 \usepackage{tikzpeople}
 \usepackage{qrcode,hyperref}
 \usepackage{upgreek}
@@ -114,7 +116,8 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{pdfpages}
 \usepackage{mol2chemfig}
 \usepackage{xymtexpdf}
-\changeunitlength{0.08pt}
+%\changeunitlength{0.08pt}
+%%\wedgehasheddash
 \usepackage{subfig,caption}
 \usepackage{wrapfig}
 \usepackage{enumitem}
@@ -124,6 +127,7 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{array} % ajust colunm table
 \usepackage{cancel}
 \usepackage[controls]{animate}
+\usepackage{movie15}
 \renewcommand{\CancelColor}{\color{red}}
 %%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX
 \newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
@@ -169,267 +173,386 @@ colframe=red,colback=red!10!white,boxsep=0pt}}
 \usetheme{minflat}
 \author{Fábio Lima}
 \date{}
-\title{ Isomeria Geométrica}
+\title{ Isomeria Óptica}
 \hypersetup{
  pdfauthor={Fábio Lima},
- pdftitle={ Isomeria Geométrica},
+ pdftitle={ Isomeria Óptica},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
  pdflang={En Portuguese}}
 \begin{document}
 
-\maketitle
+\begingroup
+  \setbeamertemplate{headline}{}
+  \maketitle
+  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
 
 
-\section{Isomeria Geométrica}
-\label{sec:orgc9ec6eb}
 
-\begin{frame}[label={sec:orgcf42248}]{Isomeria Geométrica}
+\section{Isomeria Óptica}
+\label{sec:orgb9bf24b}
+
+\begin{frame}[label={sec:orgc648da3}]{Isomeria Óptica}
 \begin{itemize}
-\item Conhecida como a isomeria \emph{cis-trans}.
-\item Ocorre em compostos com dupla ligação ou cíclicos .
-\item Compostos com dupla ligação.
+\item Tipo de isomeria em que uma molécula é a imagem especular da outra.
+\item Ocorre em moléculas que não apresentam plano de simetria (moléculas assimétricas).
+\item \alert{Isômeros Óticos} ou \alert{Enantiomorfos} ou \alert{Enantiômeros}
+\end{itemize}
+
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{Definição}
+\alert{Estereoisômeros} são substâncias que têm a mesma sequência de átomos ligados, mas que se diferenciam no arranjo espacial dos átomos. Eles também são chamados de isômeros configuracionais.
+\end{bclogo}
+\end{frame}
+
+
+\begin{frame}[label={sec:org08c99e6}]{}
+\begin{itemize}
+\item Esta molécula não apresenta nenhum plano de simetria.
+\item É denominada molécula assimétrica ou molécula \alert{quiral}.
+\item Se a colocarmos diante de um espelho, a imagem especular será diferente dela.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org6944305}]{}
+\begin{center}
+\includegraphics[scale=.45]{QO/Isomeria/Isomeria_Espelho.jpg}
+\end{center}
+\end{frame}
+
+
+
+\section{Carbono Quiral}
+\label{sec:orgda921eb}
+
+\begin{frame}[label={sec:org2e8935c}]{Carbono Quiral}
+\begin{itemize}
+\item Condição para haver isômeros óticos: presença de carbono \alert{quiral} ou \alert{assimétrico}
+\end{itemize}
+
+\begin{bclogo}[couleur=yellow!30 , arrondi=0.1 , logo=\bcplume , epBarre=3.5]{}
+\begin{center}
+	\resetchemfig
+	\schemestart
+	\chemfig{R_2-@{a1}\textcolor{red}{C}([:90]-R_1)([:-90]-R_3)-R_4} \qquad \qquad 	\arrow 	\chemfig{Br-\textcolor{red}{C}([:90]-F)([:-90]-NH_2)-OH}
+	\schemestop
+	\chemmove{
+	\node (text) [draw=none, font=\bfseries] at (-8,2){Carbono Quiral};
+	\draw[red,shorten <=2pt,shorten >=1pt] (text) -- (a1) {};
+	}
+\end{center}
+R1, R2, R3 e R4 são todos ligantes diferentes 
+\end{bclogo}
+\end{frame}
+
+
+
+\begin{frame}[label={sec:orgc521007}]{Compostos oticamente ativos}
+\begin{itemize}
+\item Exemplo açúcares, incluindo a \alert{sacarose.} \textcolor{red}{$*$} Este asterisco sinaliza os carbonos assimétricos.
 \end{itemize}
 
 
 \begin{columns}
 \begin{column}{0.4\columnwidth}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.9\linewidth]{QO/Isomeria/CIS.png}
-\caption{\emph{cis} grupos do mesmo lado. \emph{cis}-1,2-dicloro-eteno}
-\end{figure}
+    \scriptsize
+\schemestart
+	\resetchemfig	\chemname{\chemfig{[2]CH_2@{a1}OH@{a2}-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a3}OH@{a4})-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a5}OH@{a6})-C\rlap{\large\textcolor{red}{*}}(-[4]@{a7}HO@{a8})([0]-H)-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{a9}OH@{a10})-@{AA1}C(=[1]@{AA1a}O)(-[3]H)@{AA2}}}{Glicose}
+	 %\arrow{0}[2,0]
+	\schemestop
+	\chemmove{
+	\tikzstyle{colorir1}=[circle,inner sep=1pt,fill=ForestGreen,fill opacity=0.5,]
+	\tikzstyle{colorir2}=[inner ysep=.1pt,inner xsep=2pt,fill=Plum,fill opacity=0.3,]
+	\node[colorir1,fit=(a1) (a2) ]{};
+	\node[colorir1,fit=(a3) (a4) ]{};
+	\node (add1) [colorir1,fit=(a5) (a6) ]{};
+	\node[colorir1,fit=(a7) (a8) ]{};
+	\node[colorir1, fit=(a9) (a10) ]{};
+	\node (ad) [colorir2, ellipse, rotate=0, fit=(AA1) (AA1a) (AA2) (AA1)] {}; 
+	\node[draw=none, right=.3 cm of ad, blue, font=\bfseries] {Aldeído}; 
+	\node[draw=none, right=.3 cm of add1, blue, font=\bfseries] {poliálcool};   
+	}
 \end{column}
 
+
+
 \begin{column}{0.4\columnwidth}
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=.9\linewidth]{QO/Isomeria/Trans.png}
-\caption{\emph{trans} grupos de lados opostos.  \emph{cis}-1,2-dicloro-eteno}
-\end{figure}
+\scriptsize
+\schemestart
+	 \resetchemfig \chemname{\chemfig{[2]CH_2@{i1}OH@{i2}-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{i3}OH@{i4})-C\rlap{\large\textcolor{red}{*}}(-[4]H)([0]-@{i5}OH@{i6})-C\rlap{\large\textcolor{red}{*}}(-[4]@{i7}HO@{i8})([0]-H)-@{j1}C([:0]=O@{j2})-[2]CH_2@{i9}OH@{i10}}}{Frutose}
+	\schemestop
+	\chemmove{
+	\tikzstyle{colorir1}=[circle,inner sep=1pt,fill=ForestGreen,fill opacity=0.5,]
+	\tikzstyle{colorir2}=[inner ysep=5pt,inner xsep=3pt,fill=Plum,fill opacity=0.3,]
+	\node[colorir1,fit=(i1) (i2) ]{};
+	\node[colorir1,fit=(i3) (i4) ]{};
+	\node (add1) [colorir1,fit=(i5) (i6) ]{};
+    \node[colorir1,fit=(i7) (i8) ]{};
+    \node[colorir1,fit=(i9) (i10) ]{};
+    \node (add) [colorir2,ellipse, rotate=0,fit=(j1) (j2) ]{};
+    	\node[draw=none, right=.3 cm of add, blue, font=\bfseries] {Cetona}; 
+    \node[draw=none, right=.3 cm of add1, blue, font=\bfseries] {poliálcool};	 
+	}
 \end{column}
 \end{columns}
 \end{frame}
 
 
 
-\section{Isomeria dos  Compostos cíclicos}
-\label{sec:orgbe59c15}
-\begin{frame}[label={sec:org5d99ea1}]{Compostos cíclicos}
-\schemestart
-\chemname{\chemfig{@{a1}H_3C@{a2}>[:330,,2](<:[:225]H)-(<[:30,,,1]@{a3}CH_3@{a4})(<:[:315]H)-[:240](%
--[:120])}}{{\itshape cis}-1,2-dimetilcicloprano} 
-\schemestop
-\chemmove{
-\node[inner sep=2pt,fill=red,fill opacity=0.2, fit=(a1) (a2)]{};
-\node[inner sep=2pt,fill=red,fill opacity=0.2, fit=(a3) (a4)]{};
-}
-\hspace{2cm}
 
 
-\schemestart
-\chemname{\chemfig{@{a1}H_3C@{a2}>[:330,,2](<:[:225]H)-(<[:30]H)(<:[:315,,,1]@{a3}CH_3@{a4})-[:240](%
--[:120])}}{{\itshape trans}-1,2-dimetilcicloprano}
-\schemestop
-\chemmove{
-    \node[inner sep=2pt,fill=red,fill opacity=0.2, fit=(a1) (a2)]{};
-    \node[inner sep=2pt,fill=red,fill opacity=0.2, fit=(a3) (a4)]{};
-}
+\section{Isômeros Ópticos}
+\label{sec:org0cf8b3b}
 
+\begin{frame}[label={sec:orgcb09eb6}]{Isômeros Ópticos}
+Existem duas classes de isômeros ópticos:
+\begin{itemize}
+\item \alert{Enantiômeros}: estereoisômeros que são imagens especulares um do outro, que não se superpõem.
+\end{itemize}
 
-\wedgehasheddash
-\cyclohexanev{2B==OH;3A==OH}
-\cyclohexanev{2SA==H;2SB==OH;3SA==OH;3SB==H}
-\cyclohexanev{2SA==H;2SB==OH;3Sd==OH;3Su==H}
+\begin{center}
+\begin{tikzpicture}[thick,scale=1, every node/.style={scale=1}]
+%\draw[help lines] (-10,-10) grid (10,10);
+\tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=0.3,minimum height=0.6]
+%\node (wall1) [ground, minimum width=2cm] {};
+\node (d1) [draw=none] at (-2,0){
+\dtetrahedralS{0==C;1==COOH;2==CH$_{3}$;3A==H;4B==OH}};
+\node (0,0) at (0,0) [ground,right= 1.5cm of d1, minimum height=2cm] (espelho) {};
+\node (d2) [draw=none,right=.3cm] at (2,0){
+\DtetrahedralS{0==C;1==COOH;2==CH$_{3}$;3A==H;4B==OH}};
+\node (text1) [draw=none, below=0.2cm of d1, font=\bfseries] {$\mathcal{D}$-ácido lático};
+\node (text2) [draw=none, below=0.2cm of d2, font=\bfseries] {$\mathcal{L}$-ácido lático};
+\node (text3) [draw=none, above=0.2cm of espelho, font=\bfseries] {Espelho};
+\end{tikzpicture}   
+\end{center}
+
+\begin{itemize}
+\item As linhas normais (\ch{-}) representam os grupos que estão no plano do papel.
+\item A linha tracejada representa o grupo que está atrás do plano.
+\item A linha escura, em forma de cunha, representa o grupo que está na frente do plano do papel.
+\end{itemize}
 \end{frame}
 
 
-\begin{frame}[label={sec:org35391bb}]{Alquenos Dissubstituídos}
+\begin{frame}[label={sec:org707565e}]{}
 \begin{itemize}
-\item Os termos \emph{cis} e \emph{trans} são usados apenas para alcenos \alert{dissubstituídos}.
+\item \alert{Diastereômeros}: estereoisômeros que não são imagens especulares um do outro e que não se superpõem.
 \end{itemize}
+
+\begin{center}
+\begin{XyMcompd}(600,1150)(0,50){}{}
+\tetrahedral{0==C;2B==Br;3A==H;4B==C$\ell$;%
+1==\tetrahedral{0==C;3==(yl);2B==H$_3$C;4B==OH;1A==H}
+}
+\end{XyMcompd}
+\hspace{1cm}
+\begin{XyMcompd}(600,1150)(0,50){}{}
+\tetrahedral{0==C;2B==Br;3A==H;4B==C$\ell$;%
+1==\tetrahedral{0==C;3==(yl);2B==OH;4B==CH$_3$;1A==H}
+}
+\end{XyMcompd}
+\end{center}
+\end{frame}
+
+
+\begin{frame}[label={sec:org598f093}]{Projeção de Fischer}
+\begin{itemize}
+\item Uma maneira muito simples para representar compostos orgânicos em duas dimensões foi introduzida pelo químico alemão Emmil Fischer e denomina-se \alert{projeção de Fischer}.
+\item As projeções de Fischer para os compostos (I) e (II) são:
 
 \begin{center}
 \small
 \schemestart
-\chemname{\chemfig{H_3C-[:-60]C(-[:-120]H)=C(-[:-60]H)-[:60]CH_3}}{\bfseries{\itshape cis}-but-2-eno}
-\qquad
-\chemname{\chemfig{H-[:-60]C(-[:-120]H_3C)=C(-[:-60]H)-[:60]CH_3}}{\bfseries{\itshape trans}-but-2-eno}
-\qquad
-\chemname{\chemfig{H_3CCH_2-[:-60,,3]C(-[:-120]H)=C(-[:-60]H)-[:60]CH_3}}{\bfseries{\itshape cis}-pent-2-eno}
-\qquad
-\chemname{\chemfig{H-[:-60]C(-[:-120]H_3C)=C(-[:-60]H)-[:60]CH_2CH_3}}{\bfseries{\itshape trans}-pent-2-eno}
+\resetchemfig
+\chemname{\chemfig{C{\ell}>: C([:90]:<F)([:-90]<Br)<:H}}{I} 
+%\arrow{->}[2,0]
+\resetchemfig
+$\quad \equiv \quad$
+\chemname{\chemfig{C{\ell}-C([:90]-F)([:-90]-Br)-H}}{Projeção de Fisher}
+$\qquad \quad$
+\resetchemfig
+\chemname{\chemfig{H>: C([:90]:<F)([:-90]<Br)<:C{\ell}}}{II} 
+$\quad \equiv \quad$
+\resetchemfig
+\chemname{\chemfig{H-C([:90]-F)([:-90]-Br)-C{\ell}}}{Projeção de Fisher}
 \schemestop
+
 \end{center}
+
+\item Nessas projeções, as linhas na horizontal representam grupos  que estão na frente do plano do papel e as linhas na vertical, os grupos que estão atrás do plano.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org83061bc}]{Propriedades Físicas}
+\begin{itemize}
+\item As propriedades físicas (PF, PE e densidade de dois enântiômeros são iguais, \alert{exceto} o desvio sobre a luz polarizada.
+\item Isômeros óticos desviam o plano de vibração da luz polarizada.
+\item Um dos enantiômeros desvia o plano da luz polarizada no sentido horário e o outro no anti-horário.
+\end{itemize}
 \end{frame}
 
 
+\section{Luz Polarizadas}
+\label{sec:org8a90708}
 
-
-\begin{frame}[label={sec:orga77f203}]{Exemplos}
-\begin{question}
-\scriptsize\{
-(\alert{UERJ}) O ácido linoleico, essencial à dieta humana, apresenta a seguinte fórmula estrutural espacial:
-
+\begin{frame}[label={sec:org796a345}]{Luz Polarizada}
 \begin{center}
-%\chemfig{-[:330]-[:30]-[:330]-[:30]-[:330]=[:30]-[:330]-[:30]=[:330]-[:30]%
-%-[:330]-[:30]-[:330]-[:30]-[:330]-[:30]-[:330](=[:30]O)-[:270]H}
-{\scriptsize
+%\animategraphics[autoplay,loop,width=14cm]{5}{QO/Isomeria/KLCF10-03
+\animategraphics[autoplay,loop,width=14cm]{10}{QO/Isomeria/Luz-}{0}{29}
+%\movie[autostart]{}{QO/Isomeria/KLCF10-03.gif}
+%\includemovie{2cm}{2cm}{QO/Isomeria/KLCF10-03.gif}
+\end{center}
+\end{frame}
 
-\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
--[:210]-[:150]=[:210]-[:270]-[:210]=[:150]-[:90]-[:150]-[:90]-[:150]-[:90]}
+\begin{frame}[label={sec:orgd6b4aa3}]{}
+\begin{itemize}
+\item A luz polarizada é obtida quando a luz atravessa lentes especiais denominadas polarizadores.
+\item Uma das propriedades características de moléculas quirais é a sua capacidade de desviar o plano de vibração da luz polarizada.
+\item O aparelho utilizado para medir esse desvio é denominado \alert{polarímetro}.
+\item \alert{Destrorrotatório (ou dextrógiro)}: desvia o plano da luz polarizada no sentido horário. É indicado como \alert{(+)}.
+\item \alert{Levorrotatório (ou levógiro)}: desvia o plano da luz polarizada no sentido anti-horário. É indicado como \alert{(-)}.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org090d741}]{}
+\begin{itemize}
+\item As palavras dextrorrotatório e levorrotatório vêm do latim \emph{dexter}, \alert{“direita”} e \emph{laevu}, \alert{“esquerda”}.
+\end{itemize}
+\begin{center}
+\scalebox{1.3}{
+{\wedgehashedwedge
+\begin{tblr}{cc}
+\dtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} &
+\DtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} \\
+(I) & (II) 
+\end{tblr}
+}
 }
 \end{center}
-Como é possível observar, as ligações duplas presentes nos átomos de carbono 9 e 12 afetam o formato espacial da molécula. As conformações espaciais nessas ligações duplas são denominadas, respectivamente:
 
-\begin{choice}(2)
-\choice cis e cis
-\choice cis e trans
-\choice trans e cis
-\choice trans e trans
-\end{choice}
-\}
-\end{question}
+\begin{itemize}
+\item Estas moléculas parecem idênticas, mas um exame mais detalhado mostra que uma é a imagem especular da outra.
+\item Estas duas formas do ácido lático são isômeros óticos e denominadas \alert{enantiômeros}.
+\end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org42d3a4c}]{}
+
+\begin{frame}[label={sec:org81c4855}]{}
+\begin{center}
+\scalebox{1.3}{
+{\wedgehashedwedge
+\begin{tblr}{cc}
+\dtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} &
+\DtetrahedralS{0==C;2==OH;3A==H;4B==CH$_3$;%
+1==CO$_2$H} \\
+(I) & (II) 
+\end{tblr}
+}
+}
+\end{center}
+
+\begin{itemize}
+\item O composto (I) desvia o plano de vibração da luz polarizada para esquerda ou no sentido anti-horário ([\(\alpha\) = -2,6\textsuperscript{o}]) e corresponde à forma do ácido lático produzido pelos músculos e responsável pela dor causada após exercícios físicos.
+\item O composto (II), encontrado em grande quantidade no leite azedo, desvia o plano da luz polarizada para a direita ou no sentido horário ([\(\alpha\) = +2,6\textsuperscript{o}]).
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:orgb58fbf3}]{Mistura Racêmica}
+\begin{itemize}
+\item É uma mistura formada por iguais quantidades de uma substância levorrotatória e seu respectivo enantiômero dextrorrotatório.
+\item É \alert{oticamente inativa}, ou seja, não desvia o plano da luz polarizada.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[label={sec:org415bc55}]{Carbonos Assimétricos}
+\begin{exampleblock}{Exemplo}
+\begin{center}
+\resetchemfig
+\chemname[]{\chemfig{H_3C-\mcfabove{C}{\;\textcolor{red}{*}}([:90]-H)([:-90]-Br)-\mcfabove{C}{\;\textcolor{red}{*}}([:90]-H)([:-90]-C{\ell})-CH_3}}{\bfseries 2-bromo-3-clorobutano}
+\end{center}
+\end{exampleblock}
+
+\begin{itemize}
+\item A moléculas acima apresenta dois carbonos (2 e 3) \alert{assimétricos} (*C).
+\item No caso do composto possuir \alert{n} carbonos assimétricos, o número máximo de estereoisômeros que pode existir é \alert{2\textsuperscript{n}}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org7418526}]{}
+\begin{center}
+\begin{tikzpicture}[inner sep=.5cm,auto=left, node distance=2cm,>=latex']
+\tikzstyle{arrow} = [thick,<->,>=stealth]
+\node (a) at (0,0) {\tetramethylene{}{1W==HO;2B==OH;3B==OH;4D==O;4W==OH}};
+\node (b) at (7,0) {\wedgehashedwedge\tetramethylene{}{1W==HO;2B==OH;3A==OH;4D==O;4W==OH}};
+\node (c) at (0,-5) {\wedgehashedwedge\tetramethylene{}{1W==HO;2A==OH;3B==OH;4D==O;4W==OH}};
+\node (d) at (7,-5) {\wedgehashedwedge\tetramethylene{}{1W==HO;2A==OH;3A==OH;4D==O;4W==OH}};
+\draw[arrow,blue,font={\bfseries\small}] (a)-- node[above=-0.3cm,rotate=0] {Diastereômeros} (b) {};
+\draw[arrow,blue,font={\bfseries\small}] (c)--node[below=-.4cm]{Diastereômeros}(d) {};
+\draw[arrow,blue,font={\bfseries\small}] (a)--node[above=.2cm,rotate=90]{Diastereômeros}(c) {};
+\draw[arrow,blue,font={\bfseries\small}] (b)--node[above=-.1cm,rotate=90]{Diastereômeros}(d) {};
+%%%% LINE RED 
+\draw[arrow,red] (d)--(a) {};
+\draw[arrow,red,font={\bfseries\small}] (b)-- node[fill=white,above=-6mm,rotate=0] {Enantiômeros} (c) {};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+
+\section{Exemplos}
+\label{sec:org4198316}
+
+\begin{question}
+(\alert{ITA}) Qual das substâncias a seguir pode ter isômeros ópticos, ou seja, contém carbono quiral?
+
+\begin{choice}(2)
+\choice Flúor-cloro-bromo-metano
+\choice 1,2-dicloro-eteno
+\choice Metil-propano
+\choice Dimetil-propano
+\choice Normal-butanol
+\end{choice}
+\end{question}
+
+\begin{frame}[label={sec:orga67f27f}]{}
 \begin{answer}[print=true]
 \scriptsize{
-Analisando as duas insaturações das moléculas, observa-se que os ligantes não mostrados são átomos de hidrogênio. Em ambas as insaturações, os átomos de hidrogênio estão do mesmo lado da ligação dupla, logo estão em posição \alert{cis}.
+a) \chemfig{F-C([:90]-C{\ell})([:-90]-Br)-H}
+Apresenta um carbono quiral *Resposta A*
 
-\chemfig{OH-[:150,,1](=[:90]O)-[:210]-[:150]-[:210]-[:150]-[:210]-[:150]%
--[:210]-[:150](-[:90]H)=[:210](-[:150]H)-[:270]-[:210](-[:270]H)=[:150](%
--[:210]H)-[:90]-[:150]-[:90]-[:150]-[:90]}
+b) \chemfig{H-[:240]C(-[:300]H)=[:180]C(-[:240]C{\ell})-[:120]C{\ell}}
+Apresenta uma dupla ligação isomeria geométrica 
+
+c) \chemfig{H_3C-CH([:90]-CH_3)-CH_3}
+Não apresenta carbono quiral 2 ligantes iguais 
+
+d) \chemfig{CH([:90]-CH_3)-CH_2-CH([:90]-CH_3)}
+Não apresenta carbono quiral, 4 ligantes diferentes
+
+e) \chemfig{CH_3-CH_2-CH_2-CH_3}
+Não apresenta carbono quiral, 4 ligantes diferentes
 }
 \end{answer}
 \end{frame}
 
 
 
-\section{Regra de Cahn–Ingold–Prelog}
-\label{sec:org5990230}
-\begin{frame}[allowframebreaks]{Prefixos E e Z}
-\begin{itemize}
-\item Para designar alquenos tri e tetrassubstituídos utiliza-se outro sistema de nomenclatura, denominado \alert{E-Z}.
-\item No sistema E-Z são examinados os grupos ligados a cada átomo de carbono da dupla ligação e colocados em ordem de prioridade.
-\item Os átomos de maior número atômico têm maior prioridade. Ordem decrescente de prioridade:
-\end{itemize}
-
-\begin{center}
-\schemestart
-I > Br > \ch{C$\ell$} > S > F > O > N > C > H
-\schemestop
-	\chemmove{
-	\node[single arrow, draw=black, fill=red8!30, 
-	minimum width = 10pt, single arrow head extend=3pt,
-	minimum height=10mm, below=1cm of c1,font=\bfseries] {Ordem descrescente de prioridade}; % length of arrow
-	}
-	\end{center}
-
-\framebreak
-
-\begin{itemize}
-\item No caso de átomos de mesmo número atômico, o isótopo de maior número de massa tem maior prioridade:
-
-\begin{tcolorbox}[colback=red!5!white,colframe=red!75!black]
- Hidrogênio \ch{->} \isotope{3,H} > \isotope{2,H} > \isotope{1,H}\\
- Carbono \ch{->} \isotope{14,C} > \isotope{13,C} > \isotope{12,C} 
-\end{tcolorbox}
-
-\item Quando os átomos ligados aos carbonos da ligação dupla forem iguais, os números e as massas atômicas dos elementos ligados a esses átomos são usados para realizar o desempate.
-\item No sistema \alert{E-Z}, examinam-se os dois átomos ou grupos ligados em cada um dos carbonos da ligação dupla e determina-se a ordem de prioridade de cada um deles.
-\item Se os grupos de maior prioridade em cada carbono estiverem do mesmo lado de um plano imaginário passando por esses carbonos, a geometria dessa dupla ligação será designada pela letra Z (do alemão \emph{Zusammen}, \alert{“juntos”}).
-\item Se os grupos de maior prioridade em cada carbono estiverem em lados opostos da dupla ligação, a geometria da ligação será designada pela letra E (do alemão \emph{Entgegen}, \alert{“opostos”}).
-\end{itemize}
-
-\framebreak
-
-
-\begin{center}
-\schemestart                                           
-\chemfig{@{a1}C{\ell}@{a2}-[:-60,1]C(-[:-120]@{a4}F)=C(-[:-60]@{a5}H)-[:60]@{a3}Br}
-\schemestop
-\end{center}
-
-\begin{itemize}
-\item Os átomos ligados ao \alert{C1} são Cl (prioridade 1) e F (prioridade 2) e os ligados ao \alert{C2}, Br (prioridade 1) e H (prioridade 2). Grupos de maior prioridade ligados do mesmo lado da dupla.
-\end{itemize}
-
-\vspace{.4cm}
-\begin{center}
-\schemestart                                           
-\chemname[4ex]{\chemfig{@{a1}C{\ell}@{a2}-[:-60,1]C(-[:-120]@{a4}F)=C(-[:-60]@{a5}H)-[:60]@{a3}Br}}{\textcolor{red}{(Z )-2-bromo-1-cloro-1-fluoroeteno}}
-\schemestop
-\chemmove{
-\node[circle, draw, inner sep=2pt,above=.2cm of a1] (label) {1};
-\node[circle, draw, inner sep=2pt,above=.2cm of a3] (label) {1};
-\node[circle, draw, inner sep=2pt,below=.2cm of a4] (label) {2};
-\node[circle, draw, inner sep=2pt,below=.2cm of a5] (label) {2};
-}
-\end{center}
-
-
-\framebreak
-
-
-\begin{center}
-\schemestart                                           
-\chemname[6ex]{\chemfig{@{a1}H_3C@{a2}-[:-60,1]C(-[:-120]@{a4}H)=C(-[:-60]@{a5}H)-[:60]@{a3}CH_3}}{\bfseries {\itshape Z}-but-2-eno} \qquad \qquad  \qquad 
-\chemname[6ex]{\chemfig{@{a7}H_3C@{a7}-[:-60,1]C(-[:-120]@{a8}H)=C(-[:-60]@{a9}CH_3)-[:60]@{a10}H}}{\bfseries {\itshape E}-but-2-eno}
-\schemestop
-\chemmove{
-\node[circle, draw, inner sep=2pt,above=.2cm of a1] (label) {1};
-\node[circle, draw, inner sep=2pt,above=.2cm of a3] (label) {1};
-\node[circle, draw, inner sep=2pt,below=.2cm of a4] (label) {2};
-\node[circle, draw, inner sep=2pt,below=.2cm of a5] (label) {2};
-%%%%% MOLECULA 2
-\node[circle, draw, inner sep=2pt,above=.33cm of a7] (label) {1};
-\node[circle, draw, inner sep=2pt,above=.33cm of a10] (label) {2};
-\node[circle, draw, inner sep=2pt,below=.3cm of a8] (label) {2};
-\node[circle, draw, inner sep=2pt,below=.3cm of a9] (label) {1};
-}
-
-\end{center}
-
-
-\framebreak
-
-\begin{center}
-\includegraphics[scale=0.22]{QO/Isomeria/org_ez.png}
-\end{center}
-\end{frame}
-
-\section{Isomeria Geométrica com Heteroátomos}
-\label{sec:org101c668}
-
-\begin{frame}[label={sec:org83b5884}]{Isomeria Geométrica com Heteroátomos}
-\begin{itemize}
-\item Algumas funções que contém ligados a carbono sp\textsuperscript{2}, como as oximas e iminas, possuem geometria definida já que o giro em torno da ligação \(\pi\) possui energia em geral proibitiva. Esses compostos podem ser nomeados seguindo o sistema (\alert{E})-(\alert{Z}) como utilizado em alcenos.
-\end{itemize}
-
-\begin{center}
-\includegraphics[width=.9\linewidth]{QO/Isomeria/org_ez_hetero.png}
-\end{center}
-\end{frame}
-
-
-
-
-
-
-
-\begin{frame}[label={sec:org275a8ed}]{Fim da Aula}
+\begin{frame}[label={sec:org409f0ce}]{Fim da Aula}
 \begin{tikzpicture}
 \node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
 \end{tikzpicture}
 \begin{center}
 \begin{tabular}{ccc}
 Download Aula  \\%& & Lista de Exercícios \\
- \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Isomeria/Isomeria_Geometrica.pdf} \\  %& & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QO/Isomeria/Isomeria_Optica.pdf} \\  %& & \qrcode[height=2in]{https://mark.nl.tab.digital/s/6kSsDYwW4icCK9X}\\
  \end{tabular}
  \end{center}
 \end{frame}
