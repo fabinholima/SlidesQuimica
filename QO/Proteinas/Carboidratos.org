@@ -1,3 +1,5 @@
+#+TITLE: Carboidratos
+
 * Carboidratos
 
 
@@ -7,7 +9,7 @@ Os carboidratos são compostos orgânicos que contêm: *C*, *H* e *O* em várias
 
 Conhecidos como açúcar ou sacarídeo, originária do Latim /saccharum/ e do Grego /sakcharon/.
 
-#+ATTR_LATEX: :scale 0.25
+#+ATTR_LATEX: :scale 0.22
 #+CAPTION: Molécula da glicose composta por carbono, hidrogênio e oxigênio.
 [[./glucose.png]]
 
@@ -22,7 +24,7 @@ Conhecidos como açúcar ou sacarídeo, originária do Latim /saccharum/ e do Gr
     :BEAMER_col: 0.45
     :BEAMER_env: block
     :END:
-#+ATTR_LATEX: scale 0.4
+#+ATTR_LATEX: scale 0.28
     [[./esteira.png]]
 
 O carboidrato é a única fonte de energia aceita pelo cérebro, importante para o bom funcionamento do sistema nervoso.    
@@ -40,7 +42,7 @@ O carboidrato é a única fonte de energia aceita pelo cérebro, importante para
 - Reserva de energia
 - Estrutural
 
-  #+ATTR_LATEX: :scale 0.2
+  #+ATTR_LATEX: :scale 0.17
   [[./pao.png]]
 
   
@@ -49,4 +51,51 @@ O carboidrato é a única fonte de energia aceita pelo cérebro, importante para
 
 ** Classificação
 
+- Natureza química do grupo carbonila
+- Número de átomos de carbono (trioses, tetroses, pentoses, hexoses)
 
+  #+begin_export latex
+
+  #+end_export
+
+
+** Base do Carboidratos
+
+#+begin_export latex
+\begin{tblr}{|c|c|}
+\hline 
+\chemfig{H-C([:90]=O)([:-90]-H)-C([:90]-OH)([:-90]-H)-C([:90]-H)([:-90]-OH)-C([:90]-OH)([:-90]-H)-C([:90]-OH)([:-90]-H)-C([:90]-OH)([:-90]-H)-H} & 
+\begin{XyMcompd}(2200,1200)(250,-150){}{}
+%%%%%%%%%%%%%%%%%
+\put(673,-46){%outer picture environment
+\put(0,0){\chair{1Sa==H;1Se==HO;2Se==HO;2Sa==H;3Sa==H ;3Se==OH;4Sa==OH;4Se==H;6Se==CH$_2$OH;6Sa==H}}
+\put(1030,552){\makebox(0,0){\upnobond{\SetTwoAtomx{O}{}}}}
+}
+\end{XyMcompd} \\
+Projeção Linear & Projeção de  Cadeira  \\  \hline
+\pyranose{1Sa==OH;1Sb==H;2Sa==OH;2Sb==H;3Sa==H;3Sb==OH;4Sa==OH;4Sb==H;5Sb==CH$_2$OH} &
+\begin{XyMcompd}(100,400)(260,40){}{}
+\tetrahedral{2==H;3==CH$_{2}$OH;4==OH;%
+1==\tetrahedral{3==(yl);2==H;4==OH;%
+1==\tetrahedral{3==(yl);2==HO;4==H;%
+1==\tetrahedral{3==(yl);2==H;4==OH;1==CHO%
+}}}}
+\end{XyMcompd}
+\\
+Projeção de Haworth & Projeção de Fischer \\ \hline
+\end{tblr}
+
+#+end_export
+
+** Classes dos carboidratos
+
+- Monossacarídeos ou simplesmente açúcares (glicose).
+- Dissacarídeos 2 unidades de açúcar.
+- Oligossacarídeos- cadeias pequenas ou resíduos, exemplo: dissacarídeos (sacarose, o açúcar da cana).
+- Polissacarídeos: + de 20 unidades de monossacarídeos (celulose, glicogênio).
+
+
+
+#+begin_export latex
+
+#+end_export

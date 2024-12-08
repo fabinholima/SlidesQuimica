@@ -1,9 +1,8 @@
-% Created 2024-12-07 sáb 20:54
+% Created 2024-11-25 Mon 11:13
 % Intended LaTeX compiler: lualatex
-\documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
+\documentclass{beamer}
                 
 
-% \input{packages2.tex}
 %%%% Config X sim for BEAMER
 \usepackage{ragged2e}
 \justifying
@@ -20,7 +19,7 @@
 \makeatother
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage[portuguese, ]{babel}
+%\usepackage[portuguese, american]{babel}
 %\usepackage[br]{pgf-PeriodicTable}
 %%%% FONTS
 %%% XSIM CONFIG BEAMER
@@ -32,8 +31,8 @@
 \usepackage{tasks}
 \newcounter{paragraph}
 %\usepackage[dvipsnames,svgnames]{xcolor}
-\usepackage[dvipsnames]{xcolor}
-%\usepackage{annotate-equations}
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{annotate-equations}
 %%% BOX EXERCISE BEAMER
 \DeclareExerciseEnvironmentTemplate{custom}{%
 \begin{tcolorbox}[boxrule = 0pt]
@@ -128,7 +127,7 @@ label-width = 12pt]{choice}[\choice]
 \usepackage{array} % ajust colunm table
 \usepackage{cancel}
 \usepackage[controls]{animate}
-%\usepackage{movie15}
+\usepackage{movie15}
 \renewcommand{\CancelColor}{\color{red}}
 %%%%%%%%%%%%%%%%%%% CONFIG TCOLORBOX
 \newtcolorbox{mybox}[2][]{boxsep=0.5em,left=0.5em,
@@ -169,123 +168,21 @@ colframe=red,colback=red!10!white,boxsep=0pt}}
 \newcommand{\af}{\hspace{2cm}}
 \tikzstyle{mybox} = [draw=red, fill=blue!20, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
-\date{}
-%\usetheme{minflat}
-\usetheme{minflat}
-\author{Fábio Lima}
-\date{}
-\title{ Carboidratos}
+\usetheme{default}
+\author{fabio}
+\date{\today}
+\title{}
 \hypersetup{
- pdfauthor={Fábio Lima},
- pdftitle={ Carboidratos},
+ pdfauthor={fabio},
+ pdftitle={},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 29.4 (Org mode 9.6.15)}, 
- pdflang={En Portuguese}}
+ pdflang={English}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
 
-
-\section{Carboidratos}
-\label{sec:org591545c}
-
-
-\begin{frame}[label={sec:org7af97e0}]{Carboidratos}
-Os carboidratos são compostos orgânicos que contêm: \alert{C}, \alert{H} e \alert{O} em várias combinações
-
-Conhecidos como açúcar ou sacarídeo, originária do Latim \emph{saccharum} e do Grego \emph{sakcharon}.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.22]{QO/Proteinas/glucose.png}
-\caption{Molécula da glicose composta por carbono, hidrogênio e oxigênio.}
-\end{figure}
-\end{frame}
-
-
-
-
-
-\begin{frame}[label={sec:orge4da82f}]{Função}
-\begin{columns}
-\begin{column}{0.45\columnwidth}
-\begin{block}{}
-\begin{center}
-\includegraphics[width=.9\linewidth]{QO/Proteinas/esteira.png}
-\end{center}
-
-O carboidrato é a única fonte de energia aceita pelo cérebro, importante para o bom funcionamento do sistema nervoso.    
-\end{block}
-\end{column}
-\begin{column}{0.45\columnwidth}
-\begin{block}{}
-\begin{itemize}
-\item Fornecimento de energia
-\begin{bclogo}{Valores}
-1g = 4 Kcal 
-\end{bclogo}
-\item Reserva de energia
-\item Estrutural
-
-\begin{center}
-\includegraphics[scale=0.17]{QO/Proteinas/pao.png}
-\end{center}
-\end{itemize}
-\end{block}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-
-
-
-\begin{frame}[label={sec:orgcb3d123}]{Classificação}
-\begin{itemize}
-\item Natureza química do grupo carbonila
-\item Número de átomos de carbono (trioses, tetroses, pentoses, hexoses)
-\end{itemize}
-\end{frame}
-
-
-\begin{frame}[label={sec:org3903669}]{Base do Carboidratos}
-\begin{tblr}{|c|c|}
-\hline 
-\chemfig{H-C([:90]=O)([:-90]-H)-C([:90]-OH)([:-90]-H)-C([:90]-H)([:-90]-OH)-C([:90]-OH)([:-90]-H)-C([:90]-OH)([:-90]-H)-C([:90]-OH)([:-90]-H)-H} & 
-\begin{XyMcompd}(2200,1200)(250,-150){}{}
-%%%%%%%%%%%%%%%%%
-\put(673,-46){%outer picture environment
-\put(0,0){\chair{1Sa==H;1Se==HO;2Se==HO;2Sa==H;3Sa==H ;3Se==OH;4Sa==OH;4Se==H;6Se==CH$_2$OH;6Sa==H}}
-\put(1030,552){\makebox(0,0){\upnobond{\SetTwoAtomx{O}{}}}}
-}
-\end{XyMcompd} \\
-Projeção Linear & Projeção de  Cadeira  \\  \hline
-\pyranose{1Sa==OH;1Sb==H;2Sa==OH;2Sb==H;3Sa==H;3Sb==OH;4Sa==OH;4Sb==H;5Sb==CH$_2$OH} &
-\begin{XyMcompd}(100,400)(260,40){}{}
-\tetrahedral{2==H;3==CH$_{2}$OH;4==OH;%
-1==\tetrahedral{3==(yl);2==H;4==OH;%
-1==\tetrahedral{3==(yl);2==HO;4==H;%
-1==\tetrahedral{3==(yl);2==H;4==OH;1==CHO%
-}}}}
-\end{XyMcompd}
-\\
-Projeção de Haworth & Projeção de Fischer \\ \hline
-\end{tblr}
-\end{frame}
-
-\begin{frame}[label={sec:orgbccb6bc}]{Classes dos carboidratos}
-\begin{itemize}
-\item Monossacarídeos ou simplesmente açúcares (glicose).
-\item Dissacarídeos 2 unidades de açúcar.
-\item Oligossacarídeos- cadeias pequenas ou resíduos, exemplo: dissacarídeos (sacarose, o açúcar da cana).
-\item Polissacarídeos: + de 20 unidades de monossacarídeos (celulose, glicogênio).
-\end{itemize}
-\end{frame}
 \end{document}

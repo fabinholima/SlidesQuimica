@@ -19,7 +19,7 @@
 #+LATEX_HEADER: \usepackage[T1]{fontenc}
 
 #+LATEX_HEADER: %\usepackage[portuguese]{babel}
-
+#+LATEX_HEADER: %\usepackage[br]{pgf-PeriodicTable}
 #+LATEX_HEADER: %%%% FONTS
 
 #+LATEX_HEADER: %%% XSIM CONFIG BEAMER 
@@ -32,7 +32,7 @@
 #+LATEX_HEADER: \newcounter{paragraph}
 #+LATEX_HEADER: %\usepackage[dvipsnames,svgnames]{xcolor}
 #+LATEX_HEADER: \usepackage[dvipsnames]{xcolor}
-#+LATEX_HEADER: \usepackage{annotate-equations}
+#+LATEX_HEADER: %\usepackage{annotate-equations}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
 
@@ -153,7 +153,7 @@
 #+LATEX_HEADER: \usepackage{array} % ajust colunm table
 #+LATEX_HEADER: \usepackage{cancel}
 #+LATEX_HEADER: \usepackage[controls]{animate}
-#+LATEX_HEADER: \usepackage{movie15}
+#+LATEX_HEADER: %\usepackage{movie15}
 
 #+LATEX_HEADER: \renewcommand{\CancelColor}{\color{red}}
 

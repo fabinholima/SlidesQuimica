@@ -1,11 +1,11 @@
 
-#+TITLE: 
+#+TITLE:
 
 #+AUTHOR: Fábio Lima
-#+DATE: 
+#+DATE:
 #+OPTIONS: H:2 toc:t num:t
 #+STARTUP:beamer
-#+LATEX_CLASS:beamer 
+#+LATEX_CLASS:beamer
 #+LANGUAGE: en portuguese
 #+LATEX_CLASS_OPTIONS: [presentation,professionalfonts,aspectratio=169]
 
@@ -17,22 +17,19 @@
 #+INCLUDE: "packages.org"
 
 
+
 #+LATEX_HEADER: \date{}
 #+LATEX_HEADER: %\usetheme{minflat}
-
 
 #+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
 
 
-#+LATEX_COMPILER: lualatex 
+#+LATEX_COMPILER: lualatex
 
 
 
 
-
-
-#+INCLUDE: "QO/Isomeria/IsomeriaOptica.org"
-
+#+INCLUDE: "QO/Proteinas/Carboidratos.org"
 
 
 #+begin_comment
@@ -40,6 +37,9 @@
 x»»332
 
 334
+
+
+#+INCLUDE: "QO/Isomeria/IsomeriaOptica.org"
 
 
 
