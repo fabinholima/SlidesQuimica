@@ -1,0 +1,518 @@
+
+#+TITLE: Termoquímica
+
+
+* Termoquímica
+
+** Termoquímica
+
+
+- Termoquímica: :: é a parte da Físico-Química voltada para o estudo dos processos que envolvem troca de energia (liberada ou absorvida), sob a forma de *calor*, à pressão constante
+- Calor: :: é energia térmica que passa de um corpo em maior temperatura para um corpo de menor temperatura!
+
+
+
+** Entalpia (H)
+
+*Entalpia (H)* é, de forma simplificada, a quantidade total de energia que se encontra nas substâncias e que pode estar em trânsito, mediante transformações físicas ou químicas.
+
+  
+#+begin_export latex 
+ \begin{tcolorbox}[ams align*]
+ \underbrace{\ch{CH4\gas{} + O2\gas{} }}_{Reagentes}  \ch{->} &      \underbrace{\ch{CO2\gas{} + 2 H2O\lqdd{}}}_{Produtos} \\
+ %(Reagentes)     & \; \;         (Produtos)
+\end{tcolorbox}
+#+end_export
+
+- A variação de entalpia é dada por:
+
+  #+begin_export latex
+  \begin{tcolorbox}[ams align*]
+  \Delta H = H_{final}- H_{inicial} \\
+  \Delta H = H_{produtos} - H_{reagentes}
+  \end{tcolorbox}
+  #+end_export
+
+
+
+
+
+
+* Transformações Químicas
+
+** Processos Endotérmicos
+
+- Nas reações endotérmicas, ocorre *absorção* de calor (o sistema *esfria*), a entalpia dos produtos (\(\mathrm{H_p}\)) é *maior* do que a entalpia dos reagentes (\(\mathrm{H_r}\)) e o  *\(\Delta\)H = ( + )*.
+
+
+#+begin_export latex
+\begin{bclogo}[logo=\bcinfo]{Exemplo}
+%A combustão do álcool etílico \ch{C2H6O_{\lqdd}}
+\begin{reactions*}\small
+CaCO3_{\sld} -> CaO_{\sld} + CO2_{\gas} & $\qquad \Enthalpy{177.5}$
+\end{reactions*}
+\end{bclogo}
+#+end_export
+
+
+**  Processos Endotérmicos 
+
+***                                          :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+
+#+begin_export latex
+\begin{tikzpicture}[scale=1]
+	%% 
+	% horizontal axis
+	\draw[->] (0,0) -- (6,0) node[anchor=north] {Caminho da reação};
+	% labels
+	% vertical axis
+	\draw[->] (0,0) -- (0,5) node[anchor=east] {Entalpia (H)};
+	% nominal speed
+	\draw[thick,dashed] (0,3) -- (3,3);
+	\draw[thick,dashed] (2,1) -- (5.5,1);
+	% Us
+	\draw[thick] (0,1) -- (2,1) -- (3,3)--(5.5,3);
+	\draw (-.47,1) node {$\mathrm{H_{reag.}}$};
+	\draw (-.47,3) node {$\mathrm{H_{prod.}}$};
+	% Psis
+%	\draw[thick] (0,3) -- (2,3) -- (3,1)--(5.5,1);
+	\draw[blue] (0.95,1.3) node {\ch{CaCO3\sld}}; %label
+	\draw[blue] (4,3.3) node {\ch{CaO\sld{} +  CO2\gas{}}}; %label
+	\draw[->,red] (4,1)--(4,3);
+	\draw[red](4.6,2) node {$\Delta$H > 0};
+	%\draw[blue](3,4.5) node {\ch{aA + bB  ->cC + dD} $\Delta$H > 0};	
+\end{tikzpicture}
+
+#+end_export
+
+  
+***                                :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+[[./gelo.png]]
+
+
+
+** Processos Exotérmicos 
+
+- Reações exotérmicas, ocorre liberação de calor (o sistema esquenta), a entalpia dos produtos (\(\mathrm{H_P}\)) é menor do que a entalpia dos reagentes (\(\mathrm{H_R}\)) e o  *\(\Delta\)H=(–)*.
+
+
+#+begin_export latex
+\begin{bclogo}[couleur=blue!30 , arrondi=0.1 , logo=\bcinfo , epBarre=3.5]{Exemplo}
+%A combustão do álcool etílico \ch{C2H6O_{\lqdd}}
+\begin{reactions*}\small
+C2H6O_{\lqdd} + 3 O2_{\gas} -> 2 CO2_{\gas} + 3 H2O_{\lqdd} & $\qquad \enthalpy[unit=\kilo\joule\per\mole]{-1368}$ \\
+%\; \; \;  \(\Delta\)H = – 1368 kJ/mol
+\end{reactions*}
+\end{bclogo}
+#+end_export
+
+
+**  Processos Exotérmicos 
+
+***                                                           :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+  
+
+#+begin_export latex 
+\begin{tikzpicture}[scale=1]
+		%% 
+		% horizontal axis
+		\draw[->] (0,0) -- (6,0) node[anchor=north] {Caminho da reação};
+		% labels
+		% vertical axis
+		\draw[->] (0,0) -- (0,5) node[anchor=east] {Entalpia (H)};
+		% nominal speed
+		\draw[thick,dashed] (2,3) -- (5.5,3);
+		\draw[thick,dashed] (0,1) -- (3,1);
+		% Us
+		%\draw[thick] (0,1) -- (2,1) -- (3,3)--(5.5,3);
+		\draw (-.45,1) node {$\mathrm{H_{prod.}}$};
+		\draw (-.45,3) node {$\mathrm{H_{reag.}}$};
+		% Psis
+		\draw[thick] (0,3) -- (2,3) -- (3,1)--(5.5,1);
+		\draw[blue,font=\small] (1.25,3.3) node {\ch{C2H6O_\lqdd{} + O2_\gas{} }}; %label
+		\draw[blue,font=\small] (4.5,1.3) node {\ch{CO2_\gas{} + H2O_\gas{} }}; %label
+		\draw[->,red] (1.7,3)--(1.7,1); 
+		\draw[red](0.9,2) node {$\Delta$H < 0}; 
+		%\draw[blue](3,4.5) node {\ch{aA + bB ->cC + dD} $\Delta$H < 0};	
+\end{tikzpicture}
+#+end_export 
+
+
+*** 						      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :END:
+
+    [[./vulcao.png]]
+
+
+
+* Fatores que influenciam a entalpia
+
+** Fatores que influenciam a entalpia
+
+#+ATTR_LATEX: :options [logo=\bcplume]{Principais Fatores}
+#+begin_bclogo
+ - Temperatura
+ - Pressão
+ - Estado físico
+ - Quantidade de matéria
+ - Estado alotrópico
+#+end_bclogo
+
+
+
+
+
+* Estado Alotrópico
+
+** Carbono (C)
+
+
+#+begin_export latex
+
+\begin{tikzpicture}
+% Axis y
+\draw[->,ultra thick] (0,0)--(0,5) node[above]{$\Delta$H};
+% Axis X
+\draw[-,ultra thick] (0,1)--(5,1) node[xshift=-2.3cm,anchor=south] (n1) {Grafite};
+ \draw[-,ultra thick] (0,4)--(5,4) node[xshift=-2.3cm,anchor=south] (n2) {Diamante};
+\draw[->,ultra thick] (4,1)--(4,3.8);
+  \node[blue,font=\bfseries] (c) at (2,2.5) {$\enthalpy{1.9}$};
+\node (d) at (7,4) {\includegraphics[scale=.32]{FQ/Termoquimica/diamante}};
+\node (e) at (7,1) {\includegraphics[scale=.32]{FQ/Termoquimica/grafite}};
+\node at (n1) [red,font=\bfseries,below=.75cm] (f)  {forma + estável};
+\end{tikzpicture}
+#+end_export
+
+
+
+** Oxigênio (O)
+
+
+#+begin_export latex
+
+\begin{tikzpicture}
+% Axis y
+\draw[->,ultra thick] (0,0)--(0,6) node[above]{$\Delta$H (\unit{\kilo\joule})};
+% Axis X
+\draw[-,ultra thick] (0,1)--(5,1) node[xshift=-2.3cm,anchor=south] (n1) {Oxigênio Atômico};
+ \draw[-,ultra thick] (0,3)--(5,3) node[xshift=-2.3cm,anchor=south] (n2) {Ozônio};
+\draw[-,ultra thick] (0,5)--(5,5) node[xshift=-2.3cm,anchor=south] (n3) {Oxigênio Molecular};
+%\draw[->,ultra thick] (4,1)--(4,3.8);
+ %\node[blue,font=\bfseries] (c) at (2,2.5) {$\enthalpy{1.9}$};
+\node (d) at (8,1) {\includegraphics[scale=.3]{FQ/Termoquimica/Oxigen}};
+\node (e) at (8,3.3) {\includegraphics[scale=.3]{FQ/Termoquimica/Ozone}};
+\node (f) at (8,5.2) {\includegraphics[scale=.2]{FQ/Termoquimica/OxigenMolecular}};
+\node at (n1) [red,font={\bfseries},below=.75cm] (g)  {forma + estável};
+\node (text1) at (-.41,1) {0};
+\node (text2) at (-0.46,3) {142,1};
+\node (text3) at (-0.46,5) {249,1};
+\end{tikzpicture}
+
+#+end_export
+
+
+
+
+** Enxofre (S)
+
+
+#+begin_export latex
+
+\begin{tikzpicture}
+% Axis y
+\draw[->,ultra thick] (0,0)--(0,5) node[above]{$\Delta$H};
+% Axis X
+\draw[-,ultra thick] (0,1)--(5,1) node[xshift=-2.3cm,anchor=south] (n1) {S\textsubscript{monocíclico}};
+ \draw[-,ultra thick] (0,4)--(5,4) node[xshift=-2.3cm,anchor=south] (n2) {S\textsubscript{rômbico}};
+\draw[->,ultra thick] (4.5,1)--(4.5,3.8);
+  \node[blue,font=\bfseries] (c) at (2,2.5) {$\enthalpy[unit=\kilo\cal\per\mol]{-4.3}$};
+\node (d) at (7,4) {\includegraphics[scale=.09]{FQ/Termoquimica/EnxofreRom.jpg}};
+\node (e) at (7,1) {\includegraphics[scale=.09]{FQ/Termoquimica/EnxofreMono.jpg}};
+%\node at (n1) [red,font=\bfseries,below=.75cm] (f)  {forma + estável};
+\node at (d) [font=\small, above=1.2cm] (g) {S\textsubscript{romb.} + \ch{O2\gas{} -> SO2\gas{}} };
+\node at (e) [font=\small, below=1.2cm] (h) {S\textsubscript{mono} + \ch{O2\gas{} -> SO2\gas{}} };
+\end{tikzpicture}
+#+end_export
+
+
+
+** Fósforo (P) 
+
+#+begin_export latex
+\begin{center}
+\begin{tikzpicture}
+\node (fig) at (0,0) {\includegraphics[scale=.5]{FQ/Termoquimica/Fosforo.png}};
+\node[single arrow, draw=black, fill=red8!30, minimum width = 10pt, single arrow head extend=3pt, minimum height=10mm, below=1cm of fig,font=\bfseries] {Ordem descrescente de estabilidade}; % length of arrow
+\end{tikzpicture}
+\end{center}
+#+end_export
+
+
+
+
+* Entalpia Padrão
+
+** Entalpia padrão (\(\Delta\)Hº)
+
+- *Entalpia de padrão (\(\Delta\)Hº )* devido à impossibilidade de determinarmos diretamente a entalpia das substâncias, trabalhamos com a variação de entalpia (\(\Delta\)H). Porém, a variação de entalpia de uma reação depende da temperatura, da pressão, do estado físico, do número de mols e da variedade alotrópica das substâncias envolvidas.
+- O estado padrão de uma substância corresponde à sua forma mais estável, a 1 atm, a 25 °C. A entalpia padrão de uma substância é indicada por \(\Delta\)H\(^0\).
+
+Por convenção foi estabelecido que:
+
+#+ATTR_LATEX: :options [logo=\bcinfo]{Definição}
+#+begin_bclogo
+/*“Toda substância simples, no estado padrão e na sua forma alotrópica mais estável (mais comum), tem entalpia (H) igual a zero.”*/
+#+end_bclogo
+
+
+
+* Entalpia de padrão de formação 
+
+** Entalpia Padrão de Formação 
+
+*Entalpia Padrão de Formação:* é a variação de entalpia que ocorre na formação de 1 mol de uma substância composta a partir de substâncias simples no estado padrão. 
+
+#+begin_export latex
+\begin{bclogo}[logo=\bcinfo]{Exemplo \ch{H2O} (a \SI{25}{\celsius} e 1 atm)}
+\small
+\begin{reactions*}
+H2_{\gas} + {1/2} O2_{\gas} -> H2O_{\lqdd} & $\qquad \enthalpy[unit=\kilo\cal\per\mole]{-68.4}$ \\ % \(\Delta\)H_f^0 = - 68,4 Kcal/mol
+H2_{\gas} + {1/2} O2_{\gas} -> H2O_{\lqdd} & $\qquad \enthalpy[unit=\kilo\joule\per\mole]{-285}$ 
+\end{reactions*}
+\end{bclogo}
+#+end_export
+
+
+Observe que todos os reagentes são substâncias simples no estado padrão
+#+begin_export latex
+\begin{reactions*}
+H2\gas{} ->  H^0 = & \(\enthalpy{0}\)  \\
+O2\gas{} ->  H^0 = & \(\enthalpy{0}\)
+\end{reactions*}
+#+end_export
+
+
+
+** Equação de Formação
+
+
+#+begin_export latex
+\begin{bclogo}[logo=\bcinfo]{Exemplo}
+\begin{reactions*}
+C\sld{} + O2\gas{} -> CO2\gas{} &  \\
+H2\gas{} + 1/2 O2\gas{} -> H2O\lqdd{} & \\
+\end{reactions*}
+\end{bclogo}
+#+end_export 
+
+
+* Tipos de Entalpia
+
+** Entalpia de dissolução (@@latex: $\Delta$H$_{\mathrm{dissol.}}$ @@) 
+
+
+O calor de dissolução é a variação de entalpia associada à dissolução de um mol de uma substância num determinado solvente para preparar uma solução diluída ideal:
+
+#+begin_export latex
+\begin{bclogo}[logo=\bcinfo]{Exemplo (a \SI{25}{\celsius} e 1 atm)}
+\begin{reactions*}
+HC$\ell$\gas{} + H2O\lqdd{} -> HC$\ell$(aq)  & $\quad \enthalpy[unit=\kilo\cal\per\mol]{-18}$
+\end{reactions*}
+\end{bclogo}
+#+end_export
+
+
+** Entalpia de neutralização (@@latex: $\Delta$H$_{\mathrm{neutr.}}$ @@)
+
+- O calor de neutralização é a variação de entalpia associada à formação de 1 mol de @@latex: \ch{H2O\lqdd{}}@@ a partir de 1 mol de @@latex: \ch{H^+_{\aq{}}}@@ e 1 mol de @@latex: \ch{OH^-_{\aq{}}}@@, no estado padrão, em reações de neutralização entre ácidos e bases.
+
+A entalpia de neutralização é praticamente constante no caso de ácidos e bases fortes.
+
+#+begin_export latex
+\begin{bclogo}[logo=\bcinfo]{Exemplo}
+\begin{reactions*}
+HC$\ell$\aq{} + NaOH\aq{} -> NaC$\ell$\aq{} + H2O\lqdd{} &  $\qquad \enthalpy[unit=\kilo\cal]{-13.8}$ \\
+HNO3\aq{} + KOH\aq{} -> KNO3\aq{} + H2O\lqdd{} & $\qquad \enthalpy[unit=\kilo\cal]{-13.8}$
+\end{reactions*}
+\end{bclogo}
+#+end_export
+Isto ocorre porque a reação que realmente acontece é:
+
+
+#+begin_export latex
+\begin{reaction*}
+H^+\aq{} + OH^-\aq{} ->  H2O\lqdd{}  $\qquad \enthalpy[unit=\kilo\cal]{-13.8}$
+\end{reaction*}
+#+end_export
+
+
+** Cálculo de ΔH por entalpia de formação
+
+
+#+begin_question
+*(Fuvest)* A seguir são fornecidos dados relativos ao etanol hidratado e à gasolina.
+
+#+begin_export latex 
+\begin{talltblr}[
+note{*} = {(U. M. = unidade monetária arbitrária.)},
+caption ={Dados  relativos ao etanol hidratado e à gasolina.},
+]
+{
+colspec = {cccc}, colsep = 3mm, hlines = {1pt, white},
+row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+}
+Combustível &	{Calor de \\ Combustão (kcal/g)}  &	{Densidade \\ (kg/L)} &	{Preço por \\ litro (U. M.) \TblrNote{*}} \\
+Etanol hidratado &	6,0  &	0,80  &	65 \\
+Gasolina &	11,5 &	0,70 &	100 \\
+\hline
+\end{talltblr}
+#+end_export
+
+
+Calcule:
+#+begin_choice 
+\choice As energias liberadas na combustão de 1 L de cada combustível.
+\choice Os custos de 1 000 kcal (em U. M.) provenientes da queima do etanol e da gasolina.
+#+end_choice
+
+
+#+end_question
+
+
+** 
+#+ATTR_LATEX: :options [print=true]
+#+begin_answer
+Transforme as unidades equivalentes
+
+a)
+
+*Etanol* = 0,80 kg/L = 800 g/L  @@latex: \ch{->} 6 kcal/\cancel{g} $\times$ 800 \cancel{g}/L  = 4800 kcal/L @@
+
+*Gasolina* = 0,70 kg/L = 700 g/L @@latex: \ch{->} 11,5 kcal/\cancel{g} $\times$ 700 \cancel{g}/L = 8050 kcal/L@@  
+
+b)
+
+*Etanol*
+
+#+begin_export latex 
+\begin{align*}
+& 65 ~\text{\small U.M.} -\!\!\!-\!\!\!- 4800~\text{\small kcal}\\
+& x~\text{\small U.M.} -\!\!\!-\!\!\!- 1000~\text{\small kcal}
+& x = 13,54 ~\text{U.M.}
+\end{align*}
+#+end_export
+
+*Gasolina* 
+
+#+begin_export latex
+\begin{align*}
+& 100 ~\text{\small U.M.} -\!\!\!-\!\!\!- 8050~\text{\small kcal}\\
+& x~\text{\small U.M.} -\!\!\!-\!\!\!- 1000 ~\text{\small kcal}
+& x = 12,42 ~\text{U.M.} 
+\end{align*}
+#+end_export
+
+
+#+end_answer
+
+
+
+** 
+
+
+#+begin_question
+\small 
+*(UERJ)* O alumínio é utilizado como redutor de óxidos, no processo denominado de aluminotermia, conforme mostra a equação química:
+
+#+begin_export latex
+\begin{reaction*}
+8 A$\ell$\sld{} + 3 Mn3O4\sld{} -> 4 A$\ell$2O3\sld{} + 9 Mn\sld{}
+\end{reaction*}
+#+end_export
+
+
+Observe a tabela:
+
+#+begin_export latex
+\begin{center}
+\begin{tblr}[
+]{
+colspec = {ccc}, colsep = 2mm, hlines = {1pt, white},
+row{1} = {2em,azure2,fg=white,font=\bfseries},
+}
+Substância & Entalpia de Formação $\Delta$H a 298 K \\ %\hline
+\ch{A$\ell$2O3\sld{}} & - 1667,8 \\
+\ch{Mn3O2\sld{}} & - 1385,5 \\ \hline
+\end{tblr}
+\end{center}
+#+end_export 
+
+Segundo a equação acima, para a obtenção do @@latex: \ch{Mn\sld{}}@@, a variação de entalpia, na temperatura de 298 K, em KJ, é de:
+
+#+ATTR_LATEX: :options (4)
+#+begin_choice
+\choice -282,5
+\choice -2515,3
+\choice -3053,1
+\choice -10827,1
+#+end_choice
+
+#+end_question 
+
+
+** 
+#+ATTR_LATEX: :options [print=true]
+ #+begin_answer
+\scriptsize
+*Letra b)*. Veja o passo a passo para a determinação da variação de entalpia:
+ 
+- 1º Passo: ::  O cálculo da entalpia dos produtos (H_p) é feito pela multiplicação do coeficiente de cada participante pela sua entalpia e, depois, pela soma dos resultados.
+- 2º Passo: :: O cálculo da entalpia dos reagentes (H_r) é feito pela multiplicação do coeficiente de cada participante pela sua entalpia e, depois, pela soma dos resultados.
+
+#+begin_export latex
+
+\begin{tblr}[
+]{
+ 			colspec = {lcc}, colsep = 1mm, hlines = {2pt, white},
+% 			row{1,3} = {2em,azure3,fg=white,font=\bfseries\sffamily},
+}
+$\Delta$ H = & H\textsubscript{produtos} &  \hspace{1.5cm}  -  H\textsubscript{reagentes} \\
+$\Delta$ H = & [ ( 4 $\cdot$ $\Delta$ H\textsubscript{\ch{A$\ell$2O3\sld{}}} + 9 $\cdot$ $\Delta$ H\textsubscript{\ch{Mn\sld{}}}) ]  & -   [ 8  $\cdot$ $\Delta$ H\textsubscript{\ch{A$\ell$\sld{}}} + 3 $\cdot$ $\Delta$ H\textsubscript{\ch{Mn3O4\sld{}}}]\\
+$\Delta$ H= & [4 \cdot (-1667,8) + 9 \cdot (0)]   & -  [8 \cdot (0) + 3 \cdot (-1385,3)]\\
+$\Delta$ H= & [- 6671,2]  & -   [- 4155,9]\\
+$\Delta$ H = & \hspace{2.0cm}    -2515,3 ~\unit{\kilo\joule\per\mol}&&
+\end{tblr}
+
+#+end_export
+
+ #+end_answer 
+
+** Fim da Aula
+
+
+#+begin_export latex
+\begin{tikzpicture}
+\node[graduate,sword, minimum size=1cm]{ \bfseries Bons Estudos !!!!};
+\end{tikzpicture}
+\begin{center}
+\begin{tblr}
+{ccc}
+Download Aula & & Lista de Exercícios \\
+ \qrcode[height=2in]{https://mark.nl.tab.digital/s/8ocJrDKNYRkxmfG} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+ \end{tblr}
+ \end{center}
+#+end_export
+

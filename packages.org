@@ -133,7 +133,8 @@
 #+LATEX_HEADER: \NewChemPhase\lqdd{\(\ell\)}
 #+LATEX_HEADER: \NewChemPhase\gr{grafite}
 #+LATEX_HEADER: \NewChemPhase\reac{reação}
-#+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule}%
+#+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule\per\mole}%
+#+LATEX_HEADER: \NewChemState\Entalpia{symbol=H,superscript=,unit=\kilo\cal\per\mole}%
 #+LATEX_HEADER: \usepackage{siunitx}
 #+LATEX_HEADER: \setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
 #+LATEX_HEADER: %% == NUMEROS PARA FORMULES

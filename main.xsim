@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{}
-\XSIM{exercise-body}{}
+\XSIM{solution-body}{test-1=={Transforme as unidades equivalentes \par a) \par \alert {Etanol} = 0,80 kg/L = 800 g/L \ch {->} 6 kcal/\cancel {g} $\times $ 800 \cancel {g}/L = 4800 kcal/L \par \alert {Gasolina} = 0,70 kg/L = 700 g/L \ch {->} 11,5 kcal/\cancel {g} $\times $ 700 \cancel {g}/L = 8050 kcal/L \par b) \par \alert {Etanol} \par \begin {align*} & 65 ~\text {\small U.M.} -\!\!\!-\!\!\!- 4800~\text {\small kcal}\\ & x~\text {\small U.M.} -\!\!\!-\!\!\!- 1000~\text {\small kcal} & x = 13,54 ~\text {U.M.} \end {align*} \par \alert {Gasolina} \par \begin {align*} & 100 ~\text {\small U.M.} -\!\!\!-\!\!\!- 8050~\text {\small kcal}\\ & x~\text {\small U.M.} -\!\!\!-\!\!\!- 1000 ~\text {\small kcal} & x = 12,42 ~\text {U.M.} \end {align*}}||test-2=={\scriptsize \alert {Letra b)}. Veja o passo a passo para a determinação da variação de entalpia: \par \begin {description} \item [{1º Passo:}] O cálculo da entalpia dos produtos (H\textsubscript {p}) é feito pela multiplicação do coeficiente de cada participante pela sua entalpia e, depois, pela soma dos resultados. \item [{2º Passo:}] O cálculo da entalpia dos reagentes (H\textsubscript {r}) é feito pela multiplicação do coeficiente de cada participante pela sua entalpia e, depois, pela soma dos resultados. \end {description} \par \par \begin {tblr}[ ]{ colspec = {lcc}, colsep = 1mm, hlines = {2pt, white}, } $\Delta $ H = & H\textsubscript {produtos} & \hspace {1.5cm} - H\textsubscript {reagentes} \\ $\Delta $ H = & [ ( 4 $\cdot $ $\Delta $ H\textsubscript {\ch {A$\ell $2O3\sld {}}} + 9 $\cdot $ $\Delta $ H\textsubscript {\ch {Mn\sld {}}}) ] & - [ 8 $\cdot $ $\Delta $ H\textsubscript {\ch {A$\ell $\sld {}}} + 3 $\cdot $ $\Delta $ H\textsubscript {\ch {Mn3O4\sld {}}}]\\ $\Delta $ H= & [4 \cdot (-1667,8) + 9 \cdot (0)] & - [8 \cdot (0) + 3 \cdot (-1385,3)]\\ $\Delta $ H= & [- 6671,2] & - [- 4155,9]\\ $\Delta $ H = & \hspace {2.0cm} -2515,3 ~\unit {\kilo \joule \per \mol }&& \end {tblr}}}
+\XSIM{exercise-body}{test-1=={\alert {(Fuvest)} A seguir são fornecidos dados relativos ao etanol hidratado e à gasolina. \par \begin {talltblr}[ note{*} = {(U. M. = unidade monetária arbitrária.)}, caption ={Dados relativos ao etanol hidratado e à gasolina.}, ] { colspec = {cccc}, colsep = 3mm, hlines = {1pt, white}, row{1} = {2em,azure2,fg=white,font=\bfseries \sffamily }, } Combustível & {Calor de \\ Combustão (kcal/g)} & {Densidade \\ (kg/L)} & {Preço por \\ litro (U. M.) \TblrNote {*}} \\ Etanol hidratado & 6,0 & 0,80 & 65 \\ Gasolina & 11,5 & 0,70 & 100 \\ \hline \end {talltblr} \par \par Calcule: \begin {choice} \choice As energias liberadas na combustão de 1 L de cada combustível. \choice Os custos de 1 000 kcal (em U. M.) provenientes da queima do etanol e da gasolina. \end {choice}}||test-2=={\small \alert {(UERJ)} O alumínio é utilizado como redutor de óxidos, no processo denominado de aluminotermia, conforme mostra a equação química: \par \begin {reaction*} 8 A$\ell $\sld {} + 3 Mn3O4\sld {} -> 4 A$\ell $2O3\sld {} + 9 Mn\sld {} \end {reaction*} \par \par Observe a tabela: \par \begin {center} \begin {tblr}[ ]{ colspec = {ccc}, colsep = 2mm, hlines = {1pt, white}, row{1} = {2em,azure2,fg=white,font=\bfseries }, } Substância & Entalpia de Formação $\Delta $H a 298 K \\ \ch {A$\ell $2O3\sld {}} & - 1667,8 \\ \ch {Mn3O2\sld {}} & - 1385,5 \\ \hline \end {tblr} \end {center} \par Segundo a equação acima, para a obtenção do \ch {Mn\sld {}}, a variação de entalpia, na temperatura de 298 K, em KJ, é de: \par \begin {choice}(4) \choice -282,5 \choice -2515,3 \choice -3053,1 \choice -10827,1 \end {choice}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{}
+\XSIM{order}{1||2}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{}
+\XSIM{used}{test-1=={true}||test-2=={true}}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{}
-\XSIM{total-number}{0}
+\XSIM{printed}{test-1=={true}||test-2=={true}}
+\XSIM{total-number}{2}
 \XSIM{exercise}{0}
-\XSIM{test}{0}
+\XSIM{test}{2}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{}
-\XSIM{collections}{}
-\XSIM{collection:all exercises}{}
+\XSIM{idtypes}{1=={test}||2=={test}}
+\XSIM{collections}{test-1=={all exercises}||test-2=={all exercises}}
+\XSIM{collection:all exercises}{test-1||test-2}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{0}
-\XSIM{id}{}
-\XSIM{ID}{}
-\XSIM{counter}{}
-\XSIM{counter-value}{}
+\setcounter{totaltestinall exercises}{2}
+\XSIM{id}{test-1=={1}||test-2=={2}}
+\XSIM{ID}{test-1=={1}||test-2=={2}}
+\XSIM{counter}{test-1=={1}||test-2=={2}}
+\XSIM{counter-value}{test-1=={1}||test-2=={2}}
 \XSIM{solution}{}
-\XSIM{section-value}{}
-\XSIM{section}{}
-\XSIM{sectioning}{}
+\XSIM{section-value}{test-1=={7}||test-2=={7}}
+\XSIM{section}{test-1=={7}||test-2=={7}}
+\XSIM{sectioning}{test-1=={{0}{7}{0}{0}{0}}||test-2=={{0}{7}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{}
-\XSIM{page}{}
+\XSIM{page-value}{test-1=={26}||test-2=={28}}
+\XSIM{page}{test-1=={26}||test-2=={28}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

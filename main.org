@@ -28,34 +28,5 @@
 
 
 
+#+INCLUDE: "FQ/Termoquimica/TermoquimicaI.org"
 
-#+INCLUDE: "QO/Proteinas/Carboidratos.org"
-
-
-#+begin_comment
-
-x»»332
-
-334
-
-
-#+INCLUDE: "QO/Isomeria/IsomeriaOptica.org"
-
-
-
-
-#+INCLUDE: "QO/Isomeria/IsomeriaPlana.org"
-
-
-
-
-
-
-
-#+INCLUDE: "FQ/Solucoes/Solucoes.org"
-#+INCLUDE: "FQ/Solucoes/Concentracoes.org"
-
-
-
-
-#+end_comment
