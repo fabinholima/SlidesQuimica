@@ -28,5 +28,5 @@
 
 
 
-#+INCLUDE: "FQ/Termoquimica/TermoquimicaI.org"
+#+INCLUDE: "FQ/Radioatividade/Radioatividade.org"
 

@@ -153,8 +153,11 @@
 #+LATEX_HEADER: \usebeamertemplate {itemize item}}
 #+LATEX_HEADER: \usepackage{array} % ajust colunm table
 #+LATEX_HEADER: \usepackage{cancel}
+#+LATEX_HEADER: %%%% ---------- FILMES AND ANIMATIONS 
 #+LATEX_HEADER: \usepackage[controls]{animate}
 #+LATEX_HEADER: %\usepackage{movie15}
+#+LATEX_HEADER: \usepackage{media9}
+
 
 #+LATEX_HEADER: \renewcommand{\CancelColor}{\color{red}}
 

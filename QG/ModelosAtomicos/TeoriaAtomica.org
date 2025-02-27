@@ -1,3 +1,6 @@
+#+TITLE: Teoria Atômica  
+
+
 * Teoria Atômica
 ** Teoria 
 Em química e física, teoria atômica ou teoria atómica é uma teoria científica sobre a natureza da matéria, que afirma que a matéria é composta de unidades discretas chamadas de átomos. 
@@ -17,8 +20,22 @@ Propuseram o nome \alert{ÁTOMO} para a partícula fundamental da matéria.
 #+end_bclogo
 
 
+** 
+
+- Demócrito perguntou: Se você continuar quebrando a matéria ao meio, quantos pausas você terá que fazer antes você não consegue mais separá-lo?
+- Demócrito chamou o menor possível pedaços de átomos de matéria. (indivisível em Grego)
+-  Ele não tinha experimentos para apoiar seu teoria
+
+
+
+
+
 * A Origem
 
+** Alquimia (1200-1500 A.C.)
+
+ - Importância reconhecida de experimentação
+ - Responsável pelo laboratório de desenvolvimento equipamentos e procedimentos ainda usados hoje
 
 
 * Jonh Dalton
@@ -103,6 +120,23 @@ Propuseram o nome \alert{ÁTOMO} para a partícula fundamental da matéria.
 #+ATTR_LATEX: :center nil :scale 0.5
    [[./tubocrookes.jpg]]
 
+
+
+
+
+
+
+
+** Postulados de Thomson
+
+ - átomo: partícula maciça, mas não indivisível;
+ - esfera gelatinosa com os elétrons incrustrados, neutralizando a carga positiva do núcleo, formando um conjunto eletricamente neutro.
+ - descoberta do elétron.
+ - a existência de partículas subatômicas
+
+
+
+
 * Rutherford
 
 ** O Modelo de Rutherford
@@ -114,5 +148,10 @@ Propuseram o nome \alert{ÁTOMO} para a partícula fundamental da matéria.
 - As partículas positivas do átomo estão concentradas numa região extremamente pequena (núcleo).
 - As cargas negativas estão dispersas numa região periférica cerca de 104 a 105  vezes maior que o núcleo do átomo eletrosfera).
 #+end_myrule
+
+
+
+
+
 
 

@@ -474,6 +474,7 @@ Segundo a equação acima, para a obtenção do @@latex: \ch{Mn\sld{}}@@, a vari
 
 
 ** 
+@@latex: \addtobeamertemplate{frametitle}{\vspace*{-1.4cm}}{\vspace*{0.2cm}}@@
 #+ATTR_LATEX: :options [print=true]
  #+begin_answer
 \scriptsize
@@ -511,7 +512,8 @@ $\Delta$ H = & \hspace{2.0cm}    -2515,3 ~\unit{\kilo\joule\per\mol}&&
 \begin{tblr}
 {ccc}
 Download Aula & & Lista de Exercícios \\
- \qrcode[height=2in]{https://mark.nl.tab.digital/s/8ocJrDKNYRkxmfG} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/LQwiRJGiybMj32g}\\
+ \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Termoquimica/TermoquimicaI.pdf} & & \qrcode[height=2in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/FQ/Termoquimica/Lista_TermoquimicaI.pdf}\\
+ 
  \end{tblr}
  \end{center}
 #+end_export
