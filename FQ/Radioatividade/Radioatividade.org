@@ -400,17 +400,17 @@ A atividade de uma amostra é definida pelo número de desintegrações por segu
 \vspace{-1cm}
 
 #+begin_question
-#+LATEX: \small{
+\scriptsize
 Um radioisótopo utilizado no tratamento radioterápico apresenta uma meia-vida (período de semidesintegração) de 5 horas. Se um técnico utilizar uma massa de 50 g no tratamento de um paciente, após quantas horas a massa seria reduzida para 6,25 g?
 
 a) 5 horas.  \quad b) 25 horas. \quad c) 15 horas. \quad d) 30 horas. \quad e) 10 horas.
 
-#+LATEX}
+
 #+ATTR_LATEX: :options {Solução}
 #+begin_myrule
 #+ATTR_LATEX: :options {0.5\textwidth}
 #+begin_minipage
-\small
+\scriptsize 
 *1º Passo:* Calcular o número de meias-vidas que foram necessárias para a redução de 50 g para 6,25 g por meio da fórmula a seguir.
 
 #+begin_export latex
@@ -428,7 +428,7 @@ x= 3
 \hspace{0.05\textwidth}
 #+ATTR_LATEX: :options {0.4\textwidth}
 #+begin_minipage
-\small
+
 *2º Passo:* Em seguida, para calcular o tempo, basta utilizar a seguinte expressão:
 #+begin_export latex
 \begin{align*}
@@ -436,6 +436,7 @@ t = x \cdot P \\
 t = 5 \cdot 3 \\
 t = 15 ~ \text{h}
 \end{align*}
+
 #+end_export
 #+end_minipage 
 #+end_myrule
