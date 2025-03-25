@@ -42,8 +42,19 @@ Propuseram o nome \alert{ÁTOMO} para a partícula fundamental da matéria.
 
 ** Jonh Dalton e o Modelo Atômico
 
-#+ATTR_LATEX: :float wrap :width 0.15\textwidth  :placement {r}{0.15\textwidth}
+***                                            :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+
+    
+#+ATTR_LATEX: :scale 0.40
     [[./dalton.jpg]]
+
+***                                            :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
 
 - *John Dalton* –1766 –1844: Físico, Químico e Meteorologista inglês
 - Primeira tentativa de relacionar mudanças químicas a eventos que ocorrem ao nível de átomos individuais
@@ -115,15 +126,15 @@ Propuseram o nome \alert{ÁTOMO} para a partícula fundamental da matéria.
  :END:  
    
  
-#+LABEL: tubos
-#+CAPTION:  Experimentos com tubos de Crookes
-#+ATTR_LATEX: :center nil :scale 0.5
-   [[./tubocrookes.jpg]]
+
+#+begin_export latex
+\begin{center}
+ \animategraphics[loop,controls,scale=0.34]{3}{QG/ModelosAtomicos/AmpolaCrookes-}{0}{76}
+\end{center}
+ #+end_export
 
 
-
-
-
+ 
 
 
 

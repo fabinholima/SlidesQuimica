@@ -325,8 +325,10 @@ O principal método de tratamento de esgoto e efluentes é o do lodo ativado, qu
 \end{tikzpicture}
 \begin{center}
 \begin{tabular}{ccc}
-Download Aula & & Lista de Exercícios \\
- \qrcode[height=2in]{https://mark.nl.tab.digital/s/BEwSLgNXJmZayNG} & & \qrcode[height=2in]{https://mark.nl.tab.digital/s/QdQwFPgPcJ68tkJ}\\
+Download Aula & Resumo & Lista de Exercícios \\
+ \qrcode[height=1.5in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QG/SeparacaoMisturas/Separacao_Misturas.pdf} & \qrcode[height=1.5in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QG/SeparacaoMisturas/Resumo_SeparacaoMisturas.pdf}& \qrcode[height=1.5in]{https://github.com/fabinholima/AulaQuimicaPDF/blob/main/QG/SeparacaoMisturas/Lista_SeparacaoMisturas.pdf}\\
  \end{tabular}
  \end{center}
 #+end_export
+
+

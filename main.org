@@ -26,7 +26,13 @@
 
 #+LATEX_COMPILER: lualatex
 
+#+begin_comment
+#+INCLUDE: "QG/SeparacaoMisturas/SeparacaoMisturas.org"
 
 
-#+INCLUDE: "FQ/Radioatividade/Radioatividade.org"
+#+INCLUDE: "QG/ModelosAtomicos/TeoriaAtomica.org"
 
+#+end_comment
+
+
+#+INCLUDE: "FQ/CineticaQuimica/CineticaQuimica.org"

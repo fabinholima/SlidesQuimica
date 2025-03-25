@@ -7,16 +7,27 @@
 ** Introdução
 
 
-Em termos clássicos, *Cinética Química* pode ser entendida como o estudo da velocidade em que as reações químicas ocorrem
-
-Seus objetivos, no entanto, vão um pouco além de avaliar apenas esse aspecto. A cinética se ocupa também de compreender como as reações químicas acontem. Ou seja, de identificar quais espécies químicas estão envolvidas, segundo quantas/quais etapas essas transformações se desenvolvem
-Para que a ação da cinética química seja efetiva, é inevitável que a reações sejam observadas no nível molecular
+- Em termos clássicos, *Cinética Química* pode ser entendida como o estudo da velocidade em que as reações químicas ocorrem.
+- A cinética se ocupa também de compreender como as reações químicas acontem. Ou seja, de identificar quais espécies químicas estão envolvidas, segundo quantas/quais etapas essas transformações se desenvolvem.
+- Para que a ação da cinética química seja efetiva, é inevitável que a reações sejam observadas no nível molecular.
 
 ** Fatores que alteram a velocidade
 
 Existem quatro fatores (importantes) que afetam as velocidades das reações:
 
-1. Estado físico e/ou fase de cada reagente
-2. *Concentrações* dos reagentes
-3. *Temperatura* do meio reacional
-4. Presença de um *catalisador* ou de um *inibidor*
+- Estado físico e/ou fase de cada reagente
+- *Concentrações* dos reagentes
+- *Temperatura* do meio reacional
+- Presença de um *catalisador* ou de um *inibidor*
+
+
+** Estado Físico
+
+
+** Concentrações
+
+
+** Temperatura
+
+
+** Catalisador 
