@@ -26,13 +26,15 @@
 
 #+LATEX_COMPILER: lualatex
 
+#+INCLUDE: "FQ/EquilibrioQuimico/EquilibrioIonico.org"
+
 #+begin_comment
 #+INCLUDE: "QG/SeparacaoMisturas/SeparacaoMisturas.org"
 
 
 #+INCLUDE: "QG/ModelosAtomicos/TeoriaAtomica.org"
 
-#+end_comment
-
 
 #+INCLUDE: "FQ/CineticaQuimica/CineticaQuimica.org"
+
+#+end_comment

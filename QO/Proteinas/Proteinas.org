@@ -1,0 +1,20 @@
+#+BEGIN_COMMENT
+https://www.fcav.unesp.br/Home/departamentos/tecnologia/luciamariacararetoalves/aula-1---estrutura-geral-das-biomoleculas.pdf
+
+
+#+END_COMMENT
+
+
+#+TITLE: Proteínas
+
+* Proteínas
+
+- Macromolécula mais abundante nas células
+- Produto final da informação genética (DNA-RNA-Proteína)
+- Grande variedade tamanho, estrutura e composição
+- Diversidade funcional (enzimas, estruturais, defesa, sinais, transportadores, hormônios, etc)
+- São polímeros da unidade monomérica, *aminoácidos*, unidos por ligações peptídicas
+
+* Aminoácidos
+
+

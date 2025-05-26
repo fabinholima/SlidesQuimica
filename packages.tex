@@ -1,9 +1,8 @@
-% Created 2025-05-17 sáb 16:11
+% Created 2025-05-16 Fri 02:25
 % Intended LaTeX compiler: lualatex
-\documentclass[presentation,professionalfonts,aspectratio=169]{beamer}
+\documentclass{beamer}
                 
 
-% \input{packages2.tex}
 %%%% Config X sim for BEAMER
 \usepackage{ragged2e}
 \justifying
@@ -20,7 +19,7 @@
 \makeatother
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage[portuguese, ]{babel}
+%\usepackage[portuguese, english]{babel}
 %\usepackage[br]{pgf-PeriodicTable}
 %%%% FONTS
 %%% XSIM CONFIG BEAMER
@@ -28,7 +27,7 @@
 \usepackage{amsmath}
 \usepackage[most]{tcolorbox}
 \usepackage{amssymb}
-%\usepackage{fontawesome}
+\usepackage{fontawesome}
 \usepackage{tasks}
 \newcounter{paragraph}
 %\usepackage[dvipsnames,svgnames]{xcolor}
@@ -91,8 +90,7 @@ label-width = 12pt]{choice}[\choice]
 \pgfplotsset{width=10cm,compat=1.9}
 %%%% FONTS
 \usepackage{smartdiagram}
-\usesmartdiagramlibrary{additions}
-\usepackage[fixed]{fontawesome6}
+\usepackage{fontawesome6}
 %%% CUSTOM TABLE
 \NewTblrTheme{fancy}{
 \SetTblrStyle{caption-tag}{font=\bfseries,red2}
@@ -176,83 +174,20 @@ colframe=red,colback=red!10!white,boxsep=0pt}}
 \newcommand{\af}{\hspace{2cm}}
 \tikzstyle{mybox} = [draw=red, fill=blue!20, very thick, rectangle, rounded corners, inner sep=10pt, inner ysep=20pt]
 \tikzstyle{fancytitle} =[fill=red, text=white]
-\date{}
-%\usetheme{minflat}
-\usetheme{minflat}
-\author{Fábio Lima}
-\date{}
-\title{ Equilíbrio Iônico}
+\usetheme{default}
+\date{\today}
+\title{}
 \hypersetup{
- pdfauthor={Fábio Lima},
- pdftitle={ Equilíbrio Iônico},
+ pdfauthor={},
+ pdftitle={},
  pdfkeywords={},
  pdfsubject={},
  pdfcreator={Emacs 30.1 (Org mode 9.7.11)}, 
- pdflang={En Portuguese}}
+ pdflang={English}}
 \begin{document}
 
-\begingroup
-  \setbeamertemplate{headline}{}
-  \maketitle
-  \endgroup
 \begin{frame}{Sumário}
 \tableofcontents
 \end{frame}
 
-\section{Equilíbrio Iônico}
-\label{sec:org5cf63cb}
-
-\begin{frame}[label={sec:org76779a1}]{Equilíbrio Iônico}
-O equilíbrio iônico é o equilíbrio observado em reações onde temos íons em solução.
-\end{frame}
-\section{Constante de Ionização}
-\label{sec:orgaba8940}
-
-\begin{frame}[label={sec:org542c976}]{}
-\alert{Constante de ionização de um ácido (K\textsubscript{i} ou K\textsubscript{a})}
-
-Reação de ionização de um ácido HX:
-
-\begin{reaction*}
-HX <=> H^+\aq{} + X^-\aq{}
-\end{reaction*}
-
-Constante de equilíbrio
-
-\begin{equation}
-K_i = \frac{[\text{H}^{+}] \cdot [\text{X}^{-}]}{[\text{HX}]}
-\end{equation}
-
-
-\alert{Reação de dissociação de uma base (K\textsubscript{d} ou K\textsubscript{b})}
-
-\begin{reaction*}
- BOH\sld{} <=> B^+\aq{} + OH^-\aq{}
-\end{reaction*}
-
-Constante de equilíbrio
-
- \begin{equation}
-\text{K}_b = [\text{B}^{+}] \cdot [\text{OH}^{-}]
- \end{equation}
-\end{frame}
-\begin{frame}[label={sec:orgfe94680}]{}
-\begin{bclogo}[couleur=yellow!20, epBord=2, arrondi=0.2, logo=\bcinfo,marge=8, ombre=true, blur, couleurBord=yellow!60, barre=snake, tailleOndu=3]{Observação}
-\small Conforme pode ser verificado , no equilíbrio iônico, a água não aparece na expressão da constante de ionização, pois ela age apenas como \alert{solvente} e não como reagente
-\end{bclogo}
-
-
-\begin{center}
-\smartdiagramset{back arrow disabled=true, module minimum height=2.5cm,text width=3cm,   module x sep=4.2cm,description title font=\small}
-%\smartdiagramset{description title font=\small,description font=\sffamily}
-\scalebox{.75}{
-\smartdiagram[flow diagram:horizontal]{
-\faFile~Elevados valores de constante maior força do ácido ou base,
-\faAddressBook~Maior valor de de K$_i$ maior será grau de ionização ($\alpha$),
-\faPencil~Toda constante de ionização K$_i$ temos um grau de ionização associado,
-\faAlignLeft~K$_i$ também depende da temperatura
-}
-}
-\end{center}
-\end{frame}
 \end{document}
