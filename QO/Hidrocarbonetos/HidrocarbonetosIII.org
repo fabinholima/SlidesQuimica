@@ -624,6 +624,7 @@ Se houver mais de um substituinte, deve-se numerar a cadeia principal começando
 
 #+ATTR_LATEX: #+ATTR_LATEX: :options [logo=\bcattention, noborder=true, barre=none]{Atenção}
 #+BEGIN_bclogo
+\small
 Os prefixos /orto/, /meta/ e /para/ podem ser *utilizados apenas quando um anel benzênico possuir dois grupos ligados a ele ligados:*\\
 
 \(\bullet \) /orto/ *indica 1, 2*; \quad \(\bullet\) meta *indica 1, 3*; \quad \(\bullet\) /para/ *indica 1, 4*
@@ -631,9 +632,9 @@ Os prefixos /orto/, /meta/ e /para/ podem ser *utilizados apenas quando um anel 
 #+END_bclogo
 
 #+begin_export latex
-\chemname{\chemfig{**6(---(-CH_3)-(-CH_3)--)}}{\emph{orto}-dimetil-benzeno \\ {\color{col8} \emph{orto:}indica posição 1,2}} \af  
-\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\emph{meta}-dimetil-benzeno \\ {\color{col8} \emph{meta:}indica posição 1,3}} \af
-\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\emph{para}-dimetil-benzeno \\ {\color{col8} \emph{para:}indica posição 1,4}} 
+\chemname{\chemfig{**6(---(-CH_3)-(-CH_3)--)}}{\vspace{-1.9cm} \scriptsize \emph{orto}-dimetil-benzeno \\} \af  
+\chemname{\chemfig{**6(--(-CH_3)--(-CH_3)--)}}{\scriptsize \emph{meta}-dimetil-benzeno } \af
+\chemname{\chemfig{**6(-(-CH_3)---(-CH_3)--)}}{\scriptsize \emph{para}-dimetil-benzeno} 
 #+end_export
 
 
@@ -653,10 +654,10 @@ Os prefixos /orto/, /meta/ e /para/ podem ser *utilizados apenas quando um anel 
 ** Cadeis Mistas - Outros exemplos
 
 #+begin_export latex 
-\chemname{\chemfig{**6(---(-CH_3)-(-C_2H_5)--)}}{\emph{orto}-etil-metil-benzeno} \af  
-\chemname{\chemfig{**6(--(-CH_3)--(-C_2H_5)--)}}{\emph{meta}-etil-metil-benzeno} \af
-\chemname{\chemfig{**6(-(-CH_3)---(-C_2H_5)--)}}{\emph{para}-etil-metil-benzeno} \af
-\chemname{\chemfig{**6(-(-C_2H_5)--(-C_2H_5)-(-CH_3)--)}}{2,4-dietil-1-metil-benzeno} 
+\chemname{\chemfig{**6(---(-CH_3)-(-C_2H_5)--)}}{\small\emph{orto}-etil-metil-benzeno} \af  
+\chemname{\chemfig{**6(--(-CH_3)--(-C_2H_5)--)}}{\small \emph{meta}-etil-metil-benzeno} \af
+\chemname{\chemfig{**6(-(-CH_3)---(-C_2H_5)--)}}{\small \emph{para}-etil-metil-benzeno} \af
+\chemname{\chemfig{**6(-(-C_2H_5)--(-C_2H_5)-(-CH_3)--)}}{\small 2,4-dietil-1-metil-benzeno} 
 #+end_export
 
 - Os prefixos /*orto*/, /*meta*/ e /*para*/ vêm do grego e podem ser traduzidos, respectivamente, por /''diretamente''/, /``depois de''/ e /``mais longe de''/ 

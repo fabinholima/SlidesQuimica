@@ -500,8 +500,19 @@
 		    %	\begin{beamercolorbox}[wd=.7\textwidth,ht=1pt]{purple bar}
 		%	    \end{beamercolorbox}%
 	}
-	
-	\mode
+
+	\setbeamertemplate{framesubtitle}
+	{
+		\vspace*{-0.7cm}
+		\hspace*{-3pt}\color{darkpurple}{\insertframesubtitle}
+		    	\begin{beamercolorbox}[wd=.7\textwidth,ht=1pt]{purple bar}
+			    \end{beamercolorbox}%
+	}
+    
+%\setbeamerfont{framesubtitle}{size=\normalfont\tiny}
+%\setbeamercolor{framesubtitle}{fg=red}
+
+    \mode
 	<all>
 	
 	\linespread{.9}

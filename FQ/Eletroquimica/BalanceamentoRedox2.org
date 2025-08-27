@@ -1,3 +1,9 @@
+
+#+BEGIN_COMMENT
+https://www.feis.unesp.br/Home/departamentos/fisicaequimica/relacaodedocentes973/eletroquimica.pdf
+
+#+END_COMMENT
+
 * Balanceamento por Semirreações
 
 ** Balanceamento por Semirreações
@@ -6,7 +12,7 @@
 - 2 :: Isto envolve considerar (apenas no papel) que a redução e a oxidação são dois processos separados.
 - 3 :: Balanceia-se as reações para estes processos, combinando-as no final para se obter a equação balanceada da reação global.
 
-** Etapas do Balancemanto 
+** Etapas do Balanceamento 
 
 - 1) :: Atribua os números de oxidação para verificar o que é oxidado e o que é reduzido.
 - 2) :: Escreva as semirreações de oxidação e de redução.
@@ -23,23 +29,77 @@
 - 6) :: Certifique-se de que a equação está balanceada em *massa*.
 - 7) :: Certifique-se de que a equação está balanceada em *carga*.
 
-** Exemplo I
+** Balanceamento Redox em meio ácido
 
-Considere a reação entre @@latex: \ch{HC$\ell$3^−}@@ e @@latex: \ch{Cr2O7^{2-}}@@:
+Considere a reação entre @@latex: \ch{Cr2O7^{-2}}@@ e @@latex: \ch{H2S}@@:
 
 #+begin_export latex
 \begin{reaction*}
-HC$\ell$O^-_{\aq} + Cr2O7^{2-}_{\aq} -> C$\ell$O3^{-}_{\aq}  + Cr^{+3}_{\aq}
+Cr2O7^{-2}_{\aq} + H2S_{\gas} -> Cr^{3+}_{\aq}  + S_{\sld}
 \end{reaction*}
 #+end_export
+
+#+ATTR_LATEX: :options [logo=\bcinfo, noborder=true, barre=none]{Semirreação Redução}
+#+begin_bclogo
+#+begin_export latex
+\begin{reaction*}
+ "\ox*{+7,Cr}" 2O7^{-2} -> "\ox*{+3,Cr}" ^{+3}
+\end{reaction*}
+#+end_export
+#+end_bclogo
 
 #+ATTR_LATEX: :options [logo=\bcinfo, noborder=true, barre=none]{Semirreação Oxidação}
 #+begin_bclogo
 #+begin_export latex
-\ch{HC$\ell$O -> C$\ell$O3^⁻}
+\begin{reaction*}
+H2 "\ox*{-2,S}"  -> "\ox*{0,S}" 
+\end{reaction*}
 #+end_export
 #+end_bclogo
 
+** Meia reação de redução
+
+- Balanceie o número de átomos em ambos os lados da equação
+- Precisamos multiplicar o lado direito por dois para que o número de átomos de Cr fique equilibrado.
+- Em um meio ácido, há moléculas de água e íons \ch{H^+} na solução, então estes podem ser usados ​​para equilibrar a equação.
+- Para equilibrar os átomos de oxigênio, precisaremos adicionar moléculas de *água* ao lado direito:
+  #+begin_export latex
+\begin{equation*}
+\ch{Cr2O7^{2-}\aq{} ->  2 Cr^{3+}\aq{} + 7 H2O\lqdd{}}
+\end{equation*}
+  #+end_export
+- Agora, os átomos de oxigênio se equilibram, mas os de hidrogênio não. Como a reação ocorre em meio ácido, podemos adicionar íons de hidrogênio ao lado esquerdo.
+   #+begin_export latex
+\begin{equation*}
+\ch{Cr2O7^{2-}\aq{} + 14 H^+\aq{} ->  2 Cr^{3+}\aq{} + 7 H2O\lqdd{}}
+\end{equation*}
+  #+end_export
 
 
+** Meia-reação de oxidação
 
+A meia-reação de oxidação desbalanceada é:
+
+#+begin_export latex
+\begin{reaction*}
+H2S\gas{} -> S\sld{}
+\end{reaction*}
+#+end_export 
+
+No entanto, você pode ignorar o \ch{H^+} no \ch{H2S} pois eles são explicados pelo meio ácido e pela meia-reação de redução.
+
+#+begin_export latex
+\begin{reaction*}
+S^{-2}\aq{} -> S\sld{}
+\end{reaction*}
+#+end_export 
+
+Os átomos se equilibram, mas as cargas não. Dois elétrons devem ser adicionados ao lado direito da equação.
+#+begin_export latex
+\begin{reaction*}
+S^{2−}\sld{} -> "\ox*{0,S}" \sld{} + 2 e- 
+\end{reaction*}
+#+end_export
+ 
+
+** Balanceamento em meio básico   

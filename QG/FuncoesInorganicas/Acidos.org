@@ -1,1 +1,100 @@
-* Ácidos 
+* Ácidos e Bases - Teoria de Arrhenius  
+
+** Teoria de Arrhenius (1887)
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcinfo , epBarre=3.5] {Definição}
+#+begin_bclogo 
+Segundo *ARRHENIUS* toda substância que em solução aquosa sofre ionização
+produzindo como cátion, apenas o íon \ch{H^+}, é um *ÁCIDO*
+
+- Ácido: :: – substância que libera íons \ch{H+} (prótons), quando dissolvida em água.
+
+#+begin_export latex
+\begin{reactions}
+HBr -> H^+\aq{} + Br^-\aq{} \\
+H2SO4 -> 2 H^+\aq{} + SO4^{2-}\aq{} \\
+H3PO4 -> 3 H^+\aq{} + PO4^{3-}\aq{} 
+\end{reactions}
+#+end_export 
+#+end_bclogo 
+
+** Teoria de Arrhenius - Bases
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcinfo , epBarre=3.5]{Definição}
+#+begin_bclogo 
+- Base - substância que libera íons \ch{OH^-} (hidroxila), quando dissolvida em água.
+#+begin_export latex
+\begin{reactions}
+NaOH\sld{} -> Na^+\aq{} + OH^-\aq{} \\
+Ca(OH)2\sld{} -> Ca^{2+}\aq{} + 2 OH^-\aq{} \\
+A$\ell$(OH)3\sld{} -> A$\ell$^{3+}\aq{} + 3 OH^-\aq{} 
+\end{reactions}
+#+end_export
+#+end_bclogo 
+
+
+
+* Ácidos e bases - Teoria de Brønsted-Lowry
+
+** Teoria de Brønsted-Lowry
+
+- Ácido de Brønsted-Lowry: :: Doa prótons. 
+- Base de Brønsted-Lowry: :: Aceita prótons. 
+- Reação ácido-base: :: Envolve a transferência de um próton de um ácido para uma base. 
+- Par conjugado ácido-base: :: Quando um ácido perde um próton, forma sua base conjugada, e quando uma base ganha um próton, forma seu ácido conjugado. 
+
+
+** Teoria de Brønsted-Lowry
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcinfo , epBarre=3.5]{Definição}
+#+begin_bclogo 
+- Ácido: :: substância que libera íons \ch{H3O^+} (hidrônio), quando dissolvido em água.
+#+begin_export latex
+\begin{reactions}
+HBr\sld{} -> H3O^+\aq{} + Br^-\aq{} \\
+H2SO4\lqdd{} -> 2 H3O^{+}\aq{} + SO4^{-2}\aq{} \\
+\end{reactions}
+#+end_export
+#+end_bclogo 
+
+* Ácidos e bases: Teoria de Lewis
+
+** Ácidos e bases: Teoria de Lewis
+
+- Teoria de Lewis , generalização sobre ácidos e bases introduzida em 1923 pelo químico norte-americano *Gilbert Newton Lewis*
+
+
+#+ATTR_LATEX: :options [couleur=blue!30 , arrondi=0.1 , logo=\bcinfo , epBarre=3.5]{Definição}
+#+begin_bclogo
+- Ácido: :: é toda espécie química, íon ou molécula que aceita receber um par de elétrons,
+- Base: :: é toda espécie química, íon ou molécula que é capaz de oferecer um par de elétrons.
+
+#+begin_export latex
+
+\schemestart
+\chemfig{C\ell-\charge{90=\delta-, 270=\delta+}{H}} 
+\+ 
+\chemfig{[:30]\lewis{0:6,O}(-[2]H)-[6]H}
+\arrow{<=>}
+\chemfig{[:30]H-\lewis{0:6,O}(-[2]H)-[6]H}
+\+ 
+\chemfig{Cl^{-}}
+\schemestop
+
+\textit{ácido de Lewis \hspace{3cm} base de Lewis}
+
+\vspace{1cm}
+
+\schemestart
+\chemfig{Cl-Al(-Cl)-Cl} 
+\+ 
+\chemfig{N(-[2]CH_3)(-[6]CH_3)(-[0]CH_3)}
+\arrow{<=>}
+\chemfig{Cl-Al(-Cl)(-[2]N^+(-[6]CH_3)(-[0]CH_3)(-[4]CH_3))-Cl}
+\schemestop
+
+\textit{ácido de Lewis \hspace{3cm} base de Lewis}
+
+#+end_export 
+#+end_bclogo
+

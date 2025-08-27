@@ -1,42 +1,42 @@
 \providecommand\numberofexercises{}
 \providecommand\numberoftests{}
-\XSIM{solution-body}{}
-\XSIM{exercise-body}{}
+\XSIM{solution-body}{test-1=={Alternativa \alert {d}. \par \begin {itemize} \item É acíclica, ou seja, possui cadeia aberta, com extremidades livres, sem nenhum ciclo; \item Possui duas ramificações, os grupos metil; \item É insaturada, pois possui duas ligações duplas entre carbonos; \item É homogênea porque não possui nenhum heteroátomo entre os átomos de carbono. \end {itemize}}||test-2=={\scriptsize Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas: \par a) três carbonos terciários: \par \par \begin {tikzpicture} \par \par \node [] at (0,0){ \chemfig {Cl-[:30]C=^[:330]\mcfbelow {C}{H}-[:30,,,1]CH=^[:90,,1]C(-[:150]\mcfabove {C}{H}=^[:210,,,2]HC-[:270,,2]\phantom {C})-[:30]\mcfbelow {C}{H}(-[:90]C(-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]C=^[:270,,,2]HC-[:330,,2]\mcfbelow {C}{H}=^[:30]C(-[:330]Cl)-[:90,,,1]CH=^[:150,,1]\mcfabove {C}{H}(-[:210]\phantom {C})} }; \draw [red,dashed] (0,-0.3) ellipse (1.2cm and 0.5cm); \end {tikzpicture} \par Apresenta \alert {3 carbono terciários} \par Está correto, apresenta três C terciários. \par b) somente carbonos secundários: não, já vimos que existem C terciários na molécula. \par c) um carbono quaternário: não tem nenhum que faça quatro ligações com outros carbonos. \par d) somente carbonos primários: não, justificativa vide alternativa A. \par e) somente um carbono terciário: não, são três. \par Alternativa correta: \alert {A}.}||test-3=={\par \par \chemfig {O=[:150]C(-[:210,,,2]HO)-[:90,,,2]H_2C-[:30,,2]N(-[:90,,,1]CH_2-[:150,,1]C(-[:90,,,1]OH)=[:210]O)-[:330]\mcfbelow {C}{\mcfright {H}{_2}}-[:30]\mcfabove {C}{\mcfright {H}{_2}}-[:330]N(-[:270,,,2]H_2C-[:330,,2]C(-[:270,,,1]OH)=[:30]O)-[:30,,,1]CH_2-[:90,,1]C(=[:150]O)-[:30,,,1]OH} \par \par \par \alert {acíclica, saturada, heterogênea.} \par \par ALTERNATIVA \alert {B}}||test-4=={{\scriptsize \par \chemfig {-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom {N})-[:30](=[:330]O)-[:90,,,1]NH-[:150,,1](=[:90]O)-[:210]N(-[:270])-[:150]} \par \par \begin {description} \item [{Correta:}] As ligações p correspondem às ligações duplas nessa molécula; \item [{Incorreta:}] As cadeias saturadas são aquelas que apresenta apenas ligações simples. Como essa cadeia apresenta diversas ligações duplas, ela é insaturada; \item [{Correta:}] A hibridização sp\textsuperscript {2} é comum em moléculas orgânicas, como é o caso da teobromina; \item [{Correta:}] nenhum átomo de carbono na molécula de teobromina está ligado a três outros átomos de carbono. \end {description} \par ALTERNATIVA \alert {A} }}}
+\XSIM{exercise-body}{test-1=={\small (\alert {UFAM-PSC}) O pau-rosa, típico da região amazônica, é uma rica fonte natural do óleo essencial conhecido por linalol, o qual também pode ser isolado do óleo de alfazema. Esse óleo apresenta a seguinte fórmula estrutural: \par \chemfig {H_3C-C([:-90]-CH_3)=CH-CH_2-CH_2-C([:-90]-CH_3)([:90]-OH)-CH=CH2} Sua cadeia carbônica deve ser classificada como: \par \begin {choice}(2) \choice acíclica, ramificada, saturada e heterogênea. \choice acíclica, normal, insaturada e homogênea. \choice alicíclica, ramificada, insaturada e homogênea. \choice acíclica, ramificada, insaturada e homogênea. \choice alicíclica, normal, saturada e heterogênea. \end {choice}}||test-2=={\alert {(MACKENZIE-SP)} O inseticida dicloro-difenil-tricloroetano (DDT), cuja fórmula estrutural é : \par \chemfig {Cl-[:30]=^[:330]-[:30]=^[:90](-[:150]=^[:210]-[:270])-[:30](-[:90](-[:30]Cl)(-[:90]Cl)-[:150]Cl)-[:330]=^[:270]-[:330]=^[:30](-[:330]Cl)-[:90]=^[:150](-[:210])} \par \par \begin {choice}(2) \choice três carbonos terciários. \choice somente carbonos secundários. \choice um carbono quaternário. \choice somente carbonos primários. \choice somente um carbono terciário \end {choice}}||test-3=={\scriptsize (\alert {PUC-RS}) O ácido etilenodiaminotetracético, conhecido como \alert {EDTA}, utilizado como antioxidante em margarinas, de fórmula \par \chemfig {O=[:150]C(-[:210,,,2]HO)-[:90,,,2]H_2C-[:30,,2]N(-[:90,,,1]CH_2-[:150,,1]C(-[:90,,,1]OH)=[:210]O)-[:330]\mcfbelow {C}{\mcfright {H}{_2}}-[:30]\mcfabove {C}{\mcfright {H}{_2}}-[:330]N(-[:270,,,2]H_2C-[:330,,2]C(-[:270,,,1]OH)=[:30]O)-[:30,,,1]CH_2-[:90,,1]C(=[:150]O)-[:30,,,1]OH} \par Apresenta cadeia carbônica \par \begin {choice}(2) \choice acíclica, insaturada, homogênea. \choice acíclica, saturada, heterogênea. \choice acíclica, saturada, homogênea. \choice cíclica, saturada, heterogênea. \choice cíclica, insaturada, homogênea. \end {choice}}||test-4=={\scriptsize A teobromina é um alcaloide presente no cacau e, consequentemente, no chocolate, sobretudo no chocolate amargo e meio amargo. \par \begin {minipage}[b]{2.5cm} \chemfig {-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom {N})-[:30](=[:330]O)-[:90,,,1]NH-[:150,,1](=[:90]O)-[:210]N(-[:270])-[:150]} \par \end {minipage}\hfill \begin {minipage}[b]{8cm} Essa molécula: \begin {enumerate}[label=\Roman *] \item contém em sua estrutura quatro ligações \(\pi \); \item possui cadeia carbônica saturada; \item apresenta todos os carbonos dos anéis com hibridização sp\textsuperscript {2} ; \item não possui carbono terciário. \end {enumerate} \end {minipage} \par Estão corretas apenas \par \begin {choice}(3) \choice 1, 3 e 4. \choice 1, 2 e 3. \choice 2, 3 e 4. \choice 1 e 2. \choice 3 e 4.​ \end {choice}}}
 \XSIM{goal}{exercise}{points}{0}
 \XSIM{goal}{test}{points}{0}
 \XSIM{totalgoal}{points}{0}
 \XSIM{goal}{exercise}{bonus-points}{0}
 \XSIM{goal}{test}{bonus-points}{0}
 \XSIM{totalgoal}{bonus-points}{0}
-\XSIM{order}{}
+\XSIM{order}{1||2||3||4}
 \XSIM{use}{}
 \XSIM{use!}{}
-\XSIM{used}{}
+\XSIM{used}{test-1=={true}||test-2=={true}||test-3=={true}||test-4=={true}}
 \XSIM{print}{}
 \XSIM{print!}{}
-\XSIM{printed}{}
-\XSIM{total-number}{0}
+\XSIM{printed}{test-1=={true}||test-2=={true}||test-3=={true}||test-4=={true}}
+\XSIM{total-number}{4}
 \XSIM{exercise}{0}
-\XSIM{test}{0}
+\XSIM{test}{4}
 \XSIM{types}{exercise||test}
-\XSIM{idtypes}{}
-\XSIM{collections}{}
-\XSIM{collection:all exercises}{}
+\XSIM{idtypes}{1=={test}||2=={test}||3=={test}||4=={test}}
+\XSIM{collections}{test-1=={all exercises}||test-2=={all exercises}||test-3=={all exercises}||test-4=={all exercises}}
+\XSIM{collection:all exercises}{test-1||test-2||test-3||test-4}
 \setcounter{totalexerciseinall exercises}{0}
-\setcounter{totaltestinall exercises}{0}
-\XSIM{id}{}
-\XSIM{ID}{}
-\XSIM{counter}{}
-\XSIM{counter-value}{}
+\setcounter{totaltestinall exercises}{4}
+\XSIM{id}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}}
+\XSIM{ID}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}}
+\XSIM{counter}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}}
+\XSIM{counter-value}{test-1=={1}||test-2=={2}||test-3=={3}||test-4=={4}}
 \XSIM{solution}{}
-\XSIM{section-value}{}
-\XSIM{section}{}
-\XSIM{sectioning}{}
+\XSIM{section-value}{test-1=={6}||test-2=={6}||test-3=={6}||test-4=={6}}
+\XSIM{section}{test-1=={6}||test-2=={6}||test-3=={6}||test-4=={6}}
+\XSIM{sectioning}{test-1=={{0}{6}{0}{0}{0}}||test-2=={{0}{6}{0}{0}{0}}||test-3=={{0}{6}{0}{0}{0}}||test-4=={{0}{6}{0}{0}{0}}}
 \XSIM{subtitle}{}
 \XSIM{points}{}
 \XSIM{bonus-points}{}
-\XSIM{page-value}{}
-\XSIM{page}{}
+\XSIM{page-value}{test-1=={26}||test-2=={28}||test-3=={30}||test-4=={32}}
+\XSIM{page}{test-1=={26}||test-2=={28}||test-3=={30}||test-4=={32}}
 \XSIM{tags}{}
 \XSIM{topics}{}
 \XSIM{userpoints}{}

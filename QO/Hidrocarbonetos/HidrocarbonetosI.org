@@ -2,7 +2,7 @@
 ** Hidrocarbonetos
   
 #+begin_export latex
-
+\vspace{-.4cm}
 \begin{tikzpicture}
 %\tikzstyle{every node}=[fill=red!30,rounded corners]
 %\tikzstyle{edge from parent}=[red,thick,draw]
@@ -41,7 +41,7 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 		\node[draw=none,text width=10cm, minimum size=10mm, font=\small] (-5,5) {$\bullet$ São compostos orgânicos formados exclusivamente por átomos de C e de H.
 			};
 		\end{scope}
-		\begin{scope}[yshift=5cm,xshift=-8cm]
+		\begin{scope}[yshift=5cm,xshift=-12cm]
 		\coordinate (dv) at (0,0);
 		\coordinate (base) at (25pt,0pt);
 		\coordinate (height) at (0pt,25pt);
@@ -68,7 +68,7 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 
 
 #+begin_export  latex
-%		{\centering \small
+\resizebox{\columnwidth}{!}{%
 			\begin{talltblr}[
 				theme= fancy,
 				caption={Composição do Petróleo},
@@ -79,7 +79,7 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 					%row{2-Z} = {3em,font=\large},
 				}
 				%	\hline
-				Fração   &  {Temperatura de Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
+				Fração   &  {Temperatura \\ de Ebulição (°C)}   &  {Composição \\  aproximada}  &  Usos \\
 				%	\hline
 				Gás residual & - &  \ch{C1-C2} & gás combustível\\
 				\hline
@@ -98,8 +98,9 @@ grand/.style={grow=down,xshift=1em,anchor=west, edge from parent path={(\tikzpar
 				Resíduo & Acima de 510 & \ch{C38-} & asfalto, piche, impermeabilizantes \\
 				\hline
 			\end{talltblr}
-%		}
+		}
 #+end_export
+
 
 * Classificação
 
@@ -178,11 +179,11 @@ Subgrupo  & Característica  & Exemplos  & Fórmula geral \\
  {Alcinos \\ ou alquinos} & {Cadeia aberta \\ 1 ligação tripla} & {\chemfig{HC~C-CH_3} \\ \chemfig{H_3C-C([:90]-CH_3)([:-90]-CH_3)-C~C-CH_3}} & \(\mathrm{ C_nH_{2n-2}}\)\\ 
  \hline
  {Alcadienos \\ ou dienos} & {Cadeia aberta \\ 2 ligações duplas} & {\chemfig{H_2C=C=CH_2} \\[1pt] \chemfig{H_2C=CH-CH=CH_2}} & \(\mathrm{C_nH_{2n-2}}\)\\
- \hline \pagebreak
+ \hline \pagebreak 
  Ciclanos & {Cadeia fechada \\ Ligações simples} & {\chemfig{*6(------)}} & \(\mathrm{C_nH_{2n}}\)\\
  \hline 
  Ciclenos & { Cadeia fechada \\  uma ligação dupla} & {  \chemfig{*6(-----=)}} & \(\mathrm{C_nH_{2n-2}}\)\\
- \hline \pagebreak
+ \pagebreak
  Aromáticos & Contêm anel benzênico & {\chemfig{**6(-----(-CH_3)-)} \\   \chemfig{*6(-=-(*6(-=-=---))=-=)}} & \(\mathrm{C_nH_{2n-6}}\)\\
  \hline 
 \end{longtblr}
@@ -249,12 +250,13 @@ Portanto, o *etino* possui apenas dois átomos de carbono (\ch{C2H2}), sendo o a
 
    #+latex: \end{myrule}
    
+
 ** Nomenclatura dos compostos orgânicos
    
    - O prefixo, a parte inicial, indica o número de átomos de carbono presentes na molécula.
 
    #+begin_export latex
-
+{\small
 \begin{longtblr}[theme=fancy,
     caption = {Grupos substituintes orgânicos formados por carbono e hidrogênio},]
     {
@@ -277,8 +279,10 @@ non & 9 & nonadec & 19\\[0pt]
 dec & 10 & icosa & 20\\[0pt]
 \hline
 \end{longtblr}
-   #+end_export
+}
+#+end_export
    
+
 ** Nomenclatura dos compostos orgânicos
 
 - O *infixo* indica o tipo de ligação química entre os átomos de carbono.

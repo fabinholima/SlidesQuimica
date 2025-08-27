@@ -349,7 +349,7 @@ Posição da dupla ligação difere entre as moléculas
 #+BEGIN_bclogo
 Quando houver mais de uma possibilidade para a localização da insaturação, deve-se indicar sua posição de modo similar ao que foi feito no caso dos alcenos.
 
-| \chemfig{HC~C-CH_3}   | *but-1-ino* |
+| \chemfig{HC~C-CH_2-CH_3} | *but-1-ino* |
 | \chemfig{H_3C-C~C-CH_3}  | but-2-ino |
 | \chemfig{H_3C-CH_2-C~CH} | *but-1-ino* |
 

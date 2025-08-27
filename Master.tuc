@@ -1,0 +1,761 @@
+local utilitydata = { }
+
+utilitydata.comment={
+ ["escape"]="[===[ ... ]===]",
+ ["file"]="Master",
+ ["format"]="cont-en",
+ ["stamp"]="2025.02.28 18:12",
+ ["version"]=0x1.547ae147ae148p+0,
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.checksums={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.variables then utilitydata.job.variables = { } end
+
+utilitydata.job.variables.collected={
+ ["macros"]={},
+ ["mathblobs"]={
+  [2]=2,
+  [16]=16,
+  [17]=17,
+  [18]=18,
+  [19]=19,
+  [20]=20,
+  [21]=21,
+  [27]=27,
+  [28]=28,
+  [29]=29,
+ },
+ ["randomseed"]=0x1.5b77652042aeep-2,
+ ["sectionblockorder"]={},
+ ["tagging"]={
+  ["basetreesize"]=11,
+  ["destinations"]={},
+  ["pages"]={ 24, 30, 35, 74, 87, 116, 126, 140, 151, 163, 174 },
+ },
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.structure then utilitydata.job.structure = { } end
+
+utilitydata.job.structure.collected={
+ ["branches"]={
+  {
+   ["branches"]={},
+   ["name"]="slides",
+   ["type"]="environment",
+  },
+ },
+ ["name"]="",
+ ["type"]="text",
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.positions then utilitydata.job.positions = { } end
+
+utilitydata.job.positions.collected={
+ ["free"]={
+  {
+   ["bo"]=177852,
+   ["h"]=15776712,
+   ["k"]=1,
+   ["p"]=8,
+   ["to"]=-711408,
+   ["w"]=25095594,
+   ["x"]=559403,
+   ["y"]=1235494,
+  },
+  {
+   ["bo"]=177852,
+   ["h"]=11285429,
+   ["k"]=1,
+   ["p"]=9,
+   ["to"]=-711408,
+   ["w"]=25095594,
+   ["x"]=559403,
+   ["y"]=1400602,
+  },
+  {
+   ["bo"]=177852,
+   ["h"]=14353935,
+   ["k"]=1,
+   ["p"]=10,
+   ["to"]=-711408,
+   ["w"]=25095594,
+   ["x"]=559403,
+   ["y"]=2480419,
+  },
+  {
+   ["bo"]=177852,
+   ["h"]=14975231,
+   ["k"]=2,
+   ["p"]=11,
+   ["ro"]=786000,
+   ["w"]=11463718,
+   ["x"]=559403,
+   ["y"]=2124715,
+  },
+ },
+ ["p"]={
+  {
+   ["i"]=1,
+   ["ls"]=1179000,
+   ["p"]=5,
+   ["y"]=16085865,
+  },
+  {
+   ["i"]=2,
+   ["ls"]=1179000,
+   ["p"]=5,
+   ["y"]=14425912,
+  },
+  {
+   ["i"]=3,
+   ["ls"]=1687149,
+   ["p"]=5,
+   ["y"]=12054551,
+  },
+  11106006,
+  {
+   ["i"]=1,
+   ["ls"]=1179000,
+   ["p"]=5,
+   ["y"]=8734645,
+  },
+  7074692,
+  {
+   ["i"]=4,
+   ["p"]=6,
+   ["y"]=16214688,
+  },
+  12657645,
+  {
+   ["i"]=5,
+   ["p"]=6,
+   ["y"]=8152057,
+  },
+  {
+   ["i"]=5,
+   ["p"]=7,
+   ["y"]=16223334,
+  },
+  {
+   ["ha"]=-1,
+   ["i"]=5,
+   ["p"]=7,
+   ["y"]=13448872,
+  },
+  {
+   ["i"]=4,
+   ["p"]=9,
+   ["y"]=16361677,
+  },
+  {
+   ["i"]=5,
+   ["p"]=11,
+   ["y"]=16151401,
+  },
+  {
+   ["ha"]=-16,
+   ["hi"]=12249718,
+   ["i"]=6,
+   ["p"]=11,
+   ["y"]=16151401,
+  },
+ },
+ ["page"]={
+  {
+   ["h"]=19660800,
+   ["w"]=26214400,
+   ["x"]=0,
+   ["y"]=0,
+  },
+ },
+ ["shared"]={
+  ["x_h_d"]={},
+  ["x_h_d_hs"]={
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=1738403,
+   },
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=1708927,
+   },
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=2246552,
+   },
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=531028,
+   },
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=559403,
+   },
+   {
+    ["d"]=265592,
+    ["h"]=682953,
+    ["hs"]=25095594,
+    ["x"]=12780746,
+   },
+  },
+  ["x_y_w_h"]={
+   {
+    ["h"]=18152854,
+    ["w"]=25095594,
+    ["x"]=559403,
+    ["y"]=1135011,
+   },
+  },
+  ["y_w_h_d"]={},
+ },
+ ["text"]={
+  {
+   ["i"]=1,
+   ["p"]=1,
+  },
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+ },
+ ["user"]={},
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.datasets then utilitydata.job.datasets = { } end
+
+utilitydata.job.datasets.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.pagestates then utilitydata.job.pagestates = { } end
+
+utilitydata.job.pagestates.collected={
+ ["float"]={ 8, 9, 10, 11 },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.specials then utilitydata.structures.specials = { } end
+
+utilitydata.structures.specials.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.sections then utilitydata.structures.sections = { } end
+
+utilitydata.structures.sections.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.counters then utilitydata.structures.counters = { } end
+
+utilitydata.structures.counters.collected={
+ ["chemical"]={
+  { 0 },
+ },
+ ["combination"]={
+  { 0 },
+ },
+ ["endnote"]={
+  { 0 },
+ },
+ ["figure"]={
+  { 0 },
+ },
+ ["float"]={
+  { 0 },
+ },
+ ["footnote"]={
+  { 0 },
+ },
+ ["formula"]={
+  { 0 },
+ },
+ ["graphic"]={
+  { 0 },
+ },
+ ["intermezzo"]={
+  { 0 },
+ },
+ ["itemgroup:itemize"]={
+  { 0, 2 },
+  { 0, 2, 0 },
+ },
+ ["itemgroup:itemize:note"]={
+  { 0 },
+ },
+ ["linenote"]={
+  { 0 },
+ },
+ ["mathnote"]={
+  { 0 },
+ },
+ ["paragraph"]={
+  { 0 },
+ },
+ ["publicationnote"]={
+  { 0 },
+ },
+ ["realpage"]={
+  { 11 },
+ },
+ ["subpage"]={
+  { 11 },
+ },
+ ["table"]={
+  { 0 },
+ },
+ ["textnote:note"]={
+  { 0 },
+ },
+ ["userpage"]={
+  { 10 },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
+
+utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=1,
+   ["realpage"]=3,
+   ["section"]=0,
+   ["tag"]=1,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Teste",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=2,
+   ["realpage"]=5,
+   ["section"]=0,
+   ["tag"]=2,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="First Slide",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=3,
+   ["realpage"]=6,
+   ["section"]=0,
+   ["tag"]=3,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Sample Slide",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=4,
+   ["realpage"]=7,
+   ["section"]=0,
+   ["tag"]=4,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Some math",
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=5,
+   ["realpage"]=8,
+   ["section"]=0,
+   ["tag"]=5,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Horizontal Image",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["references"]={
+   ["internal"]=6,
+   ["realpage"]=8,
+   ["section"]=0,
+   ["tag"]=1,
+   ["view"]="fit",
+   ["x"]=1274667,
+   ["y"]=17012206,
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=7,
+   ["realpage"]=9,
+   ["section"]=0,
+   ["tag"]=6,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Horizontal Image with text",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["references"]={
+   ["internal"]=8,
+   ["realpage"]=9,
+   ["section"]=0,
+   ["tag"]=2,
+   ["view"]="fit",
+   ["x"]=4643129,
+   ["y"]=12686031,
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=9,
+   ["realpage"]=10,
+   ["section"]=0,
+   ["tag"]=7,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Vertical Image",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["references"]={
+   ["internal"]=10,
+   ["realpage"]=10,
+   ["section"]=0,
+   ["tag"]=3,
+   ["view"]="fit",
+   ["x"]=7375341,
+   ["y"]=16834354,
+  },
+ },
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["internal"]=11,
+   ["realpage"]=11,
+   ["section"]=0,
+   ["tag"]=8,
+   ["x"]=25654997,
+   ["y"]=18033549,
+  },
+  ["titledata"]={
+   ["label"]="section",
+   ["title"]="Vertical Image with text",
+  },
+ },
+ {
+  ["metadata"]=4,
+  ["references"]={
+   ["internal"]=12,
+   ["realpage"]=11,
+   ["section"]=0,
+   ["tag"]=4,
+   ["view"]="fit",
+   ["x"]=559403,
+   ["y"]=16834354,
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
+
+utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=1,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=2,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="stop",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=2,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=3,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=4,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=5,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=6,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=7,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=8,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=9,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+ {
+  ["block"]="bodypart",
+  ["label"]=false,
+  ["number"]=10,
+  ["numberdata"]=5,
+  ["prefixdata"]=6,
+  ["state"]="start",
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.references then utilitydata.structures.references = { } end
+
+utilitydata.structures.references.referred={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.parwrappers then utilitydata.job.parwrappers = { } end
+
+utilitydata.job.parwrappers.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.objects then utilitydata.job.objects = { } end
+
+utilitydata.job.objects.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.itemgroups then utilitydata.structures.itemgroups = { } end
+
+utilitydata.structures.itemgroups.collected={
+ ["itemize"]={
+  {
+   { 2, 0 },
+   { 2, 0 },
+  },
+ },
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.synonyms then utilitydata.structures.synonyms = { } end
+
+utilitydata.structures.synonyms.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.registers then utilitydata.structures.registers = { } end
+
+utilitydata.structures.registers.collected={
+}
+
+if not utilitydata.structures then utilitydata.structures = { } end
+if not utilitydata.structures.blocks then utilitydata.structures.blocks = { } end
+
+utilitydata.structures.blocks.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.linkedlists then utilitydata.job.linkedlists = { } end
+
+utilitydata.job.linkedlists.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.files then utilitydata.job.files = { } end
+
+utilitydata.job.files.collected={
+}
+
+if not utilitydata.publications then utilitydata.publications = { } end
+
+utilitydata.publications.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.meshedup then utilitydata.job.meshedup = { } end
+
+utilitydata.job.meshedup.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.fileobjreferences then utilitydata.job.fileobjreferences = { } end
+
+utilitydata.job.fileobjreferences.collected={
+}
+
+if not utilitydata.job then utilitydata.job = { } end
+if not utilitydata.job.embedded then utilitydata.job.embedded = { } end
+
+utilitydata.job.embedded.collected={
+}
+
+utilitydata.job.packed={
+ ["index"]={
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="section",
+   ["level"]=3,
+   ["name"]="slide",
+   ["nolist"]=true,
+  },
+  { 0, 0, 0 },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["hidenumber"]=true,
+   ["language"]="en",
+   ["numbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["catcodes"]=9,
+   ["coding"]="tex",
+   ["kind"]="float",
+   ["level"]=3,
+   ["name"]="figure",
+  },
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+ },
+ ["keys"]={
+  ["directives"]=true,
+  ["metadata"]=true,
+  ["numberdata"]=true,
+  ["numbers"]=true,
+  ["ownnumbers"]=true,
+  ["pagedata"]=true,
+  ["prefixdata"]=true,
+  ["processors"]=true,
+  ["sectiondata"]=true,
+  ["specification"]=true,
+ },
+ ["skip"]={
+  ["datasets"]=true,
+  ["positions"]=true,
+  ["userdata"]=true,
+ },
+ ["version"]=0x1.051eb851eb852p+0,
+}
+
+return utilitydata

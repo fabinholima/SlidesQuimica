@@ -1,0 +1,102 @@
+\environment slides
+\usemodule{ppchtex}
+
+% To enable the use of sample images in ConTeXt distrubtion
+\setupexternalfigures[location={local,global,default}]
+
+\starttext
+
+\setvariables
+    [metadata]
+    [
+      title={Creating slides in ConTeXt},
+      author={ConTeXt user},
+      date={Jan 13, 2013},
+      location={ConTeXt Interactive Tutorial},
+    ]
+
+
+\startslide[title={Teste}]
+\setupcolors[state=start]
+\startchemical[axis=on,frame=on,width=5000]
+\chemical[SIX,B]
+\color[red]{\chemical[SIX,R1,RZ1][COOH]}
+\stopchemical
+
+\startchemical
+\chemical[SIX,DB135,SB246,Z,SR6,RZ6][C,C,N,HC,N,C,NH_2]
+\chemical[SIX,MOV1,DB1,SB23,SS6,Z1..5,SR3,RZ3][N,CH,N,C,C,H]
+\stopchemical
+
+
+\startchemical[frame=on]
+\chemical[ONE,SD1,SB4,BB2,SB7,Z01247][C,H,H,H,H]
+\stopchemical
+
+\stopslide
+
+\startslide[title={First Slide}]
+
+\startitemize
+    \starthead {First bullet}
+      Avoid using too many bullets. It is better to use paragraphs.
+      \startitemize
+        \item Especially nested bullet lists
+        \item That make it hard to understand the main point
+      \stopitemize
+    \stophead
+
+    \starthead {Second bullet}
+      Nonetheless sometimes you are stuck at using bullets. In such cases, make
+      sure that the bullets look nice.
+    \stophead
+\stopitemize
+
+\stopslide
+
+\startslide[title={Sample Slide}]
+
+  \input knuth
+
+\stopslide
+
+\startslide[title={Some math}]
+
+  Here is an example with display math with a long line preceeding it
+  \startformula
+    f(x) =  a_i x^i
+  \stopformula
+  and a long line following the display math. 
+
+\stopslide
+
+\startslide[title={Horizontal Image}]
+  \startplacefigure
+    \externalfigure[hacker][horizontal]
+  \stopplacefigure
+\stopslide
+
+\startslide[title={Horizontal Image with text}]
+  \input ward
+
+  \startplacefigure
+    \externalfigure[hacker][horizontal]
+  \stopplacefigure
+\stopslide
+
+\startslide[title={Vertical Image}]
+  \startplacefigure
+    \externalfigure[mill][vertical]
+  \stopplacefigure
+\stopslide
+
+\startslide[title={Vertical Image with text}]
+  \startplacefigure[location=left]
+    \externalfigure[mill][vertical]
+  \stopplacefigure
+  \input ward
+
+\stopslide
+
+
+\stoptext

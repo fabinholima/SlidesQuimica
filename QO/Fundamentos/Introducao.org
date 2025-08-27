@@ -1,3 +1,5 @@
+#+TITLE: Intrdução a Química Orgânica
+
 * Introdução
 
 ** Breve Histórico
@@ -79,10 +81,113 @@
 
    - As quatro valências do carbono são equivalentes.
 
-   #+NAME:cloroform
+#+NAME:cloroform
 #+CAPTION: Clorofórmio
-#+attr_latex:  :width 0.45\textwidth
-[[../Fundamentos/cloroformio.png]]
+#+begin_export latex
+
+\begin{tikzpicture}[scale=1.0]
+
+    % Define as cores
+    \definecolor{carbon}{HTML}{800080} % Roxo
+    \definecolor{chlorine}{HTML}{FFD700} % Amarelo ouro
+    \definecolor{hydrogen}{HTML}{0000FF} % Azul
+
+    % Estrutura 1: CCl3H (H para cima)
+    \node (C1) at (0,0) [circle, fill=carbon, draw=black, inner sep=2pt] {\textbf{\color{white}C}};
+    \node (H1) at (0,1) [circle, fill=hydrogen, draw=black, inner sep=2pt] {\textbf{\color{white}H}};
+    \node (Cl1a) at (-0.866,-0.5) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl1b) at (0.866,-0.5) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl1c) at (0,-1) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+
+    % Ligações
+    \draw[thick, blue!50!white] (C1) -- (H1);
+    \draw[thick, blue!50!white] (C1) -- (Cl1a);
+    \draw[thick, blue!50!white] (C1) -- (Cl1b);
+    \draw[thick, blue!50!white] (C1) -- (Cl1c);
+
+    % Linhas tracejadas (tetraedro)
+    \draw[dashed, gray] (H1) -- (Cl1a);
+    \draw[dashed, gray] (H1) -- (Cl1b);
+    \draw[dashed, gray] (H1) -- (Cl1c);
+    \draw[dashed, gray] (Cl1a) -- (Cl1b);
+    \draw[dashed, gray] (Cl1b) -- (Cl1c);
+    \draw[dashed, gray] (Cl1c) -- (Cl1a);
+
+    % Sinal de igual
+    \node at (2,0) {\textbf{=}};
+
+    % Estrutura 2: CCl3H (H para a direita)
+    \node (C2) at (4,0) [circle, fill=carbon, draw=black, inner sep=2pt] {\textbf{\color{white}C}};
+    \node (H2) at (5,0) [circle, fill=hydrogen, draw=black, inner sep=2pt] {\textbf{\color{white}H}};
+    \node (Cl2a) at (3.5,0.866) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl2b) at (3.5,-0.866) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl2c) at (4.5,-0.866) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+
+    % Ligações
+    \draw[thick, blue!50!white] (C2) -- (H2);
+    \draw[thick, blue!50!white] (C2) -- (Cl2a);
+    \draw[thick, blue!50!white] (C2) -- (Cl2b);
+    \draw[thick, blue!50!white] (C2) -- (Cl2c);
+
+    % Linhas tracejadas (tetraedro)
+    \draw[dashed, gray] (H2) -- (Cl2a);
+    \draw[dashed, gray] (H2) -- (Cl2b);
+    \draw[dashed, gray] (H2) -- (Cl2c);
+    \draw[dashed, gray] (Cl2a) -- (Cl2b);
+    \draw[dashed, gray] (Cl2b) -- (Cl2c);
+    \draw[dashed, gray] (Cl2c) -- (Cl2a);
+
+    % Sinal de igual
+    \node at (6,0) {\textbf{=}};
+
+    % Estrutura 3: CCl3H (H para baixo)
+    \node (C3) at (0,-3) [circle, fill=carbon, draw=black, inner sep=2pt] {\textbf{\color{white}C}};
+    \node (H3) at (0,-4) [circle, fill=hydrogen, draw=black, inner sep=2pt] {\textbf{\color{white}H}};
+    \node (Cl3a) at (-0.866,-3.5) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl3b) at (0.866,-3.5) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl3c) at (0,-2) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+
+    % Ligações
+    \draw[thick, blue!50!white] (C3) -- (H3);
+    \draw[thick, blue!50!white] (C3) -- (Cl3a);
+    \draw[thick, blue!50!white] (C3) -- (Cl3b);
+    \draw[thick, blue!50!white] (C3) -- (Cl3c);
+
+    % Linhas tracejadas (tetraedro)
+    \draw[dashed, gray] (H3) -- (Cl3a);
+    \draw[dashed, gray] (H3) -- (Cl3b);
+    \draw[dashed, gray] (H3) -- (Cl3c);
+    \draw[dashed, gray] (Cl3a) -- (Cl3b);
+    \draw[dashed, gray] (Cl3b) -- (Cl3c);
+    \draw[dashed, gray] (Cl3c) -- (Cl3a);
+
+    % Sinal de igual
+    \node at (2,-3) {\textbf{=}};
+
+    % Estrutura 4: CCl3H (H para a esquerda)
+    \node (C4) at (4,-3) [circle, fill=carbon, draw=black, inner sep=2pt] {\textbf{\color{white}C}};
+    \node (H4) at (3,-3) [circle, fill=hydrogen, draw=black, inner sep=2pt] {\textbf{\color{white}H}};
+    \node (Cl4a) at (4.5,-2.134) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl4b) at (4.5,-3.866) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+    \node (Cl4c) at (3.5,-2.134) [circle, fill=chlorine, draw=black, inner sep=2pt] {\textbf{\color{black}Cl}};
+
+    % Ligações
+    \draw[thick, blue!50!white] (C4) -- (H4);
+    \draw[thick, blue!50!white] (C4) -- (Cl4a);
+    \draw[thick, blue!50!white] (C4) -- (Cl4b);
+    \draw[thick, blue!50!white] (C4) -- (Cl4c);
+
+    % Linhas tracejadas (tetraedro)
+    \draw[dashed, gray] (H4) -- (Cl4a);
+    \draw[dashed, gray] (H4) -- (Cl4b);
+    \draw[dashed, gray] (H4) -- (Cl4c);
+    \draw[dashed, gray] (Cl4a) -- (Cl4b);
+    \draw[dashed, gray] (Cl4b) -- (Cl4c);
+    \draw[dashed, gray] (Cl4c) -- (Cl4a);
+
+\end{tikzpicture}
+#+end_export
+
 
 #+LATEX: \end{myrule}
 
@@ -296,7 +401,7 @@ Este \emph{oxigênio} não é heteroátomo & \\
 Cadeia aberta saturada   &  Cadeia aberta insaturada \\
 Apresentam somentes átomos de carbono apresentam ligações simples & Apresenta ao menos dois átomos de  carbono ligados pela dupla ou tripla ligação\\
  \chemfig{-C([:-90]-)([:90]-)-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} &  \chemfig{-C([:90]-)([:-90]-)-{\color{blue}C}([:-90]-)={\color{blue}C}([:-90]-)-} \\
- \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[4,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
+ \chemfig{-C([:90]-)([:-90]-)-C([:90]-)([:-90]-C([:180]-)([:0]-)-)-C([:90]-)([:-90]-)-{\color{red} O}-}  &  \chemfig{-C([:90]-)([:-90]-)-C-{\color{blue}C}(~[6,,,,blue]{\color{blue}C})-C([:90]-)([:-90]-)-C([:90]-)([:-90]-)-} \\
 O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono saturado}. & A átomo que apresenta ligação dupla ou tripla é chamado de \emph{carbono insaturado.}\\
 \hline
 \end{tblr}
@@ -312,7 +417,6 @@ O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono 
 
 
 #+begin_export latex
-	{\small
 \begin{tblr}[
 		theme= fancy,
 		caption={Classificação das Cadeias Fechadas},
@@ -323,34 +427,41 @@ O átomo de carbono que apresenta ligação simples é chamado de \emph{carbono 
 		}
  Cadeia fechada aromática   &  Cadeia fechada alicíclica \\
 Cadeia cíclica formada por 6 átomos de carbono alternados em simples e duplas ligação & Cadeia cíclica que não constitui anel benzênico\\
- \chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)} & \chemfig{C*6((-)=C(-)-C(-)-C(-)-C(-)=C(-)-)} \\ 
- \chemfig{C*6((-)-C(-)=C(-)-C(-)=C(-)-C(-)=)}   &    \chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
+  \schemestart[0, 1.0, thick]
+\chemfig{=^[:30]-[:90]=^[:150]-[:210]=^[:270](-[:330])}
+\arrow{<=>}
+\chemfig{-[:30]=^[:90]-[:150]=^[:210]-[:270](=^[:330])}
+\schemestop 
+\\
+\chemfig{-[:150]=_[:210]-[:150]=_[:210]-[:150]=_[:90]-[:30]=_[:330](-[:270]%
+)-[:30]=_[:330](-[:270])}
+& 
+\qquad \chemfig{=^[:36]-[:108]-[:180]-[:252](-[:324])} \qquad \chemfig{-[:30]-[:90]=^[:150]-[:210]-[:270](=^[:330])} \\
 Esses ciclos recebem o nome de \emph{benzeno} & \\
 \hline
 \end{tblr}
-}
+
 #+end_export
 
 
 #+begin_export latex
 
-	{ \setchemfig{atom style={scale=0.5}}
 	\begin{tblr}[
-		theme= fancy,
-		caption={Classificação das Cadeias Fechadas},
-		]{
-			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
-			%row{odd} = {brown8}, row{even} = {gray8},
-			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
-		}
+	theme= fancy,
+	caption={Classificação das Cadeias Fechadas},
+	]{
+	colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
+	row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
+	}
 		Cadeia aromática mononuclear   &  Cadeia aromática polinuclear \\
 		%\hline 
 		Cadeia aromática com apenas um núcleo benzênico & Cadeia aromática com dois ou mais núcleos benzênicos\\ 
-		\chemfig{C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-)}   &  \chemname{\chemfig{C*6((-)=C(-)-C(*6(-C(-)=C(-)-C(-)=C(-)-C))=C-C(-)=C(-)-)}}{Cadeia aromática\\ polinuclear condensada} \\ & \chemname{\chemfig{C*6((-)=C(-)-C(-)=C(-C*6((-)=C(-)-C(-)=C(-)-C(-)=C(-)-))-C(-)=C(-)-)}}{Cadeia aromática \\ polinuclear isolada}\\
-		%Esses clicos recebem o nome de \emph{benzeno} & \\[0pt]
+		\chemfig{=^[:30]-[:90]=^[:150]-[:210]=^[:270](-[:330])}  &  \chemname{\chemfig{=^[:30]-[:90](=^[:150]-[:210]=^[:270]-[:330])-[:30]=_[:330]-[:270]%
+=_[:210](-[:150])}}{Cadeia aromática polinuclear condensada} \\ & \chemname{\chemfig{=^[:30]-[:90](=^[:150]-[:210]=^[:270]-[:330])-[:30]-[:330]-[:270]%
+=^[:330]-[:30]=^[:90]-[:150](=^[:210])}}{Cadeia aromática polinuclear isolada}\\
 		\hline
 	\end{tblr}
-}
+
 #+end_export
 
 
@@ -368,9 +479,12 @@ Esses ciclos recebem o nome de \emph{benzeno} & \\
 		Cadeia alicíclica homocíclica   &  Cadeia alicíclica heterocíclica \\
 		\hline
 		Cadeia cíclica alicíclica formada apenas por átomos de carbono & Cadeia cíclica alicíclica que apresenta heteroátomo\\
-		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} & \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}\\ \chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} & \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}\\
+		\chemfig{-[:90]C(-[:180])-C(-[:270])(-)-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} &
+		\chemfig{-[:90]C(-[:180])-O([:270])-[:90]C(-)(-[:90])-[:180]C(-[:270]\phantom{C})(-[:90])-[:180]} \\
+				 \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}  &
+		 \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]N([:342])-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]}\\
 		& \\
-		\hline
+                \hline
 	\end{tblr}
 #+end_export
  
@@ -382,7 +496,7 @@ Esses ciclos recebem o nome de \emph{benzeno} & \\
 		theme= fancy,
 		caption={Classificação das Cadeias Fechadas},
 		]{
-			colspec = {cX}, colsep = 2mm, hlines = {2pt, white},
+			colspec = {XX}, colsep = 2mm, hlines = {2pt, white},
 			rowspec={QQ},
 			%row{odd} = {brown8}, row{even} = {gray8},
 			row{1} = {2em,azure2,fg=white,font=\bfseries\sffamily},
@@ -390,9 +504,15 @@ Esses ciclos recebem o nome de \emph{benzeno} & \\
 %		\hline
 Cadeia alicíclica saturada & Cadeia alicíclica insaturada\\
 Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cíclica alicíclica formada apenas por ligações duplas ou triplas\\
-\chemfig{-[:18,,2]C(-[:261])-[:72]C(-[:126])(-[:73])-C(-[:54])(-[:97])-[:288]C(-[:342])(-[:299])-[:216]O(-[:144]\phantom{C})} &  \chemfig{-[:18]C=_[:72]C([:126]-)-C(-[:54,,,1])=_[:288]C([:342]-)-[:216]C(-[:144]\phantom{C})([:207]-)-[:333]} %\chemfig{H_3C-[:18,,2]\mcfbelow{C}{H}-[:72]C~C-[:288]\mcfbelow{C}{H}(-[:342,,,1]CH_3)-[:216]C(-[:144]\phantom{C})(-[:207,,,2]H_3C)-[:333,,,1]CH_3} \\ 		\hline
-	\end{tblr}
-#+end_export
+
+\chemfig{-[:30]-[:90]-[:150]-[:210]-[:270](-[:330])} & \chemfig{-[:30]-[:90]=^[:150]-[:210]-[:270](-[:330])}\\
+\chemfig{-[:36]-[:108]-[:180]-[:252](-[:324])} &
+\chemfig{-[:20]=[:60]-[:100]-[:140]=[:180]-[:220]-[:260]=[:300](-[:340])}\\
+\hline 
+\end{tblr}
+
+
+ #+end_export
 
 
 * Exercícios
@@ -400,6 +520,7 @@ Cadeia cíclica alicíclica formada apenas por ligações simples & Cadeia cícl
 ** Exemplo 1
 
 #+begin_question
+\small
 (*UFAM-PSC*) O pau-rosa, típico da região amazônica, é uma rica fonte natural do óleo essencial conhecido por linalol, o qual também pode ser isolado do óleo de alfazema. Esse óleo apresenta a seguinte fórmula estrutural:
 
 #+begin_export latex
@@ -459,7 +580,7 @@ Alternativa *d*.
 
 #+ATTR_LATEX: :options [print=true]
 #+begin_answer
-\small
+\scriptsize
 Tendo conhecimento que carbonos primários fazem somente uma ligação com outro carbono, secundário faz duas ligações, terciário três ligações e quaternário quatro ligações, vamos analisar as alternativas:
 
 a) três carbonos terciários:
@@ -500,6 +621,7 @@ Alternativa correta: *A*.
 
 
 #+begin_question
+\scriptsize
 (*PUC-RS*) O ácido etilenodiaminotetracético, conhecido como *EDTA*, utilizado como antioxidante em margarinas, de fórmula
 
 #+begin_export latex
@@ -543,31 +665,32 @@ Apresenta cadeia carbônica
 ALTERNATIVA *B*
 #+end_answer
 
-** Exemplo 4 
-:PROPERTIES:
-:BEAMER_opt: allowframebreaks
-:END:
+** Exemplo 4
 
 
 #+begin_question
+\scriptsize
 A teobromina é um alcaloide presente no cacau e, consequentemente, no chocolate, sobretudo no chocolate amargo e meio amargo. 
 
+#+LATEX:  \begin{minipage}[b]{2.5cm}
 #+begin_export latex
 \chemfig{-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom{N})-[:30](%
 =[:330]O)-[:90,,,1]NH-[:150,,1](=[:90]O)-[:210]N(-[:270])-[:150]}
 #+end_export
 
-
+#+LATEX: \end{minipage}\hfill
+#+LATEX: \begin{minipage}[b]{8cm}
 Essa molécula:
 #+ATTR_LATEX: :options [label=\Roman*]
 1. contém em sua estrutura quatro ligações $\pi$;
 2. possui cadeia carbônica saturada;
 3. apresenta todos os carbonos dos anéis com hibridização sp^2 ;
 4. não possui carbono terciário.
+#+LATEX: \end{minipage}
 
 Estão corretas apenas  
 
-#+ATTR_LATEX: :option (3)
+#+ATTR_LATEX: :options (3)
 #+begin_choice
 \choice 1, 3 e 4.
 \choice 1, 2 e 3.
@@ -581,7 +704,7 @@ Estão corretas apenas
 
 #+ATTR_LATEX: :options [print=true]
 #+begin_answer
-
+#+LATEX: {\scriptsize
 
 #+begin_export latex
 \chemfig{-[:132]N-[:186]=_[:114]N-[:42]=_[:330](-[:258]\phantom{N})-[:30](%
@@ -595,7 +718,7 @@ Estão corretas apenas
 - Correta: :: nenhum átomo de carbono na molécula de teobromina está ligado a três outros átomos de carbono.
 
 ALTERNATIVA *A*
-
+#+LATEX:}
 #+end_answer
 
 

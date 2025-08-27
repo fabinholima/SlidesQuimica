@@ -30,9 +30,9 @@
 #+LATEX_HEADER: %\usepackage{fontawesome}
 #+LATEX_HEADER: \usepackage{tasks}
 #+LATEX_HEADER: \newcounter{paragraph}
-#+LATEX_HEADER: %\usepackage[dvipsnames,svgnames]{xcolor}
-#+LATEX_HEADER: \usepackage[dvipsnames]{xcolor}
-#+LATEX_HEADER: %\usepackage{annotate-equations}
+#+LATEX_HEADER: \usepackage[dvipsnames,svgnames]{xcolor}
+#+LATEX_HEADER: %\usepackage[dvipsnames]{xcolor}
+#+LATEX_HEADER: \usepackage{annotate-equations}
 
 #+LATEX_HEADER:  %%% BOX EXERCISE BEAMER 
 
@@ -91,7 +91,7 @@
 #+LATEX_HEADER: \usepackage{colortbl}
 #+LATEX_HEADER: \usepackage[tikz]{bclogo}
 #+LATEX_HEADER: \usetikzlibrary{calc,fadings,shadings}
-#+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap}
+#+LATEX_HEADER: \usetikzlibrary{fit,patterns,shadows.blur,shapes,mindmap,tikzmark}
 #+LATEX_HEADER: \usetikzlibrary{arrows,snakes,shapes,arrows.meta,decorations.markings,shapes.symbols}
 #+LATEX_HEADER: \usetikzlibrary{backgrounds,shapes.geometric}
 #+LATEX_HEADER: \usetikzlibrary{decorations.pathreplacing, decorations.pathmorphing,arrows,positioning}
@@ -141,7 +141,11 @@
 #+LATEX_HEADER: \NewChemState\Enthalpy{symbol=H,superscript=,unit=\kilo\joule\per\mole}%
 #+LATEX_HEADER: \NewChemState\Entalpia{symbol=H,superscript=,unit=\kilo\cal\per\mole}%
 #+LATEX_HEADER: \usepackage{siunitx}
-#+LATEX_HEADER: \setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+#+LATEX_HEADER: %\setchemfig{fixed length=false, atom sep=2.5em, arrow offset=6pt, scheme debug=false}
+#+LATEX_HEADER: \setchemfig{angle increment=30, atom sep=1.67em, double bond sep=0.67ex, bond style={line width=0.1em}, cram width=0.8ex, cram dash width=0.1em, cram dash sep=0.2em, arrow style={line width=0.067em},  arrow head=-{Triangle}, arrow label sep=1ex, cycle radius coeff=0.75, chemfig style={line width=0.1em}, }
+
+
+
 #+LATEX_HEADER: %% == NUMEROS PARA FORMULES
 #+LATEX_HEADER: \renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}} % This line changes the font of the atoms to sans serif
 #+LATEX_HEADER: %%% INCLUDE PAGES PDFs

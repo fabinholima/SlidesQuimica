@@ -1,3 +1,4 @@
+#+LATEX_HEADER: \usepackage[usenames,dvipsnames]{xcolor}
 
 #+TITLE:
 
@@ -10,6 +11,7 @@
 #+LATEX_CLASS_OPTIONS: [presentation,professionalfonts,aspectratio=169]
 
 #+BEAMER_THEME: minflat
+
 
 #+LATEX_HEADER: % \input{packages2.tex}
 
@@ -24,17 +26,16 @@
 #+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
 
 
-#+LATEX_COMPILER: lualatex
-
-#+INCLUDE: "FQ/EquilibrioQuimico/EquilibrioIonico.org"
-
-#+begin_comment
-#+INCLUDE: "QG/SeparacaoMisturas/SeparacaoMisturas.org"
+#+LATEX_COMPILER: xelatex
 
 
-#+INCLUDE: "QG/ModelosAtomicos/TeoriaAtomica.org"
+#+BEGIN_COMMENT
+#+INCLUDE: "QG/FuncoesInorganicas/Acidos.org"
 
 
-#+INCLUDE: "FQ/CineticaQuimica/CineticaQuimica.org"
 
-#+end_comment
+#+INCLUDE:"QO/Hidrocarbonetos/HidrocarbonetosI.org"
+
+#+END_COMMENT
+
+#+INCLUDE: "QO/Fundamentos/Introducao.org"
